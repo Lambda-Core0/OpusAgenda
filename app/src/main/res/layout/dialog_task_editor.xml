@@ -1,0 +1,137 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@color/terminal_panel">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:padding="16dp">
+
+        <EditText
+            android:id="@+id/editTaskText"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@drawable/bg_terminal_input"
+            android:hint="@string/task_text_hint"
+            android:inputType="textCapSentences"
+            android:minHeight="48dp"
+            android:padding="12dp"
+            android:textColor="@color/terminal_text"
+            android:textColorHint="@color/terminal_text_muted" />
+
+        <TextView
+            android:id="@+id/textImportanceLabel"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="16dp"
+            android:text="@string/importance_label"
+            android:textColor="@color/terminal_text_muted" />
+
+        <Spinner
+            android:id="@+id/spinnerImportance"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="8dp"
+            android:background="@drawable/bg_terminal_input"
+            android:popupBackground="@color/terminal_panel" />
+
+        <TextView
+            android:id="@+id/textDueDate"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="16dp"
+            android:textColor="@color/terminal_text"
+            android:textSize="14sp" />
+
+        <LinearLayout
+            android:id="@+id/layoutDueActions"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            android:orientation="horizontal">
+
+            <Button
+                android:id="@+id/buttonPickDueDate"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:background="@drawable/bg_terminal_action"
+                android:backgroundTint="@null"
+                android:text="@string/pick_due_date_label"
+                android:textAllCaps="false"
+                android:textColor="@color/terminal_black" />
+
+            <Button
+                android:id="@+id/buttonClearDueDate"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="8dp"
+                android:layout_weight="1"
+                android:background="@drawable/bg_terminal_action"
+                android:backgroundTint="@null"
+                android:text="@string/clear_due_date_label"
+                android:textAllCaps="false"
+                android:textColor="@color/terminal_black" />
+        </LinearLayout>
+
+        <TextView
+            android:id="@+id/textReminder"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="16dp"
+            android:textColor="@color/terminal_text"
+            android:textSize="14sp" />
+
+        <TextView
+            android:id="@+id/textRepeat"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="8dp"
+            android:textColor="@color/terminal_text"
+            android:textSize="14sp" />
+
+        <LinearLayout
+            android:id="@+id/layoutReminderActions"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            android:orientation="horizontal">
+
+            <Button
+                android:id="@+id/buttonPickReminder"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:background="@drawable/bg_terminal_action"
+                android:backgroundTint="@null"
+                android:text="@string/pick_reminder_label"
+                android:textAllCaps="false"
+                android:textColor="@color/terminal_black" />
+
+            <Button
+                android:id="@+id/buttonPickRepeat"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="8dp"
+                android:layout_weight="1"
+                android:background="@drawable/bg_terminal_action"
+                android:backgroundTint="@null"
+                android:text="@string/pick_repeat_label"
+                android:textAllCaps="false"
+                android:textColor="@color/terminal_black" />
+        </LinearLayout>
+
+        <CheckBox
+            android:id="@+id/checkPinned"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="16dp"
+            android:buttonTint="@color/terminal_yellow"
+            android:text="@string/pinned_label"
+            android:textColor="@color/terminal_text" />
+    </LinearLayout>
+</ScrollView>

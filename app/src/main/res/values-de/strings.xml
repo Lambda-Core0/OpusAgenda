@@ -1,0 +1,155 @@
+<resources>
+    <string name="app_name">OpusAgenda</string>
+    <string name="app_header_title">♱ OpusAgenda v1.2</string>
+
+    <string name="app_font_family">UnifrakturMaguntia</string>
+
+    <string name="search_hint">Aufgaben suchen...</string>
+    <string name="empty_state_all">Noch keine Aufgaben. Verwende NEU, um eine zu erstellen</string>
+    <string name="empty_state_today">Keine dringenden Aufgaben für heute</string>
+    <string name="all_label">ALLE</string>
+    <string name="today_label">HEUTE</string>
+    <string name="new_task_label">NEU</string>
+    <string name="run_command_label">AUSFÜHREN</string>
+    <string name="task_text_hint">Aufgabentext</string>
+    <string name="save_label">SPEICHERN</string>
+    <string name="cancel_label">ABBRECHEN</string>
+    <string name="pick_due_date_label">FÄLLIGKEITSDATUM</string>
+    <string name="clear_due_date_label">FÄLLIGKEIT LÖSCHEN</string>
+    <string name="pinned_label">ANGEHEFTET</string>
+    <string name="completed_label">Abgeschlossen</string>
+    <string name="importance_label">Wichtigkeit</string>
+    <string name="task_dialog_title_new">Neue Aufgabe</string>
+    <string name="task_dialog_title_edit">Aufgabe bearbeiten</string>
+    <string name="task_text_required">Aufgabentext eingeben</string>
+    <string name="default_category_name">Kategorie</string>
+    <string name="category_badge_label">KAT</string>
+    <string name="category_edit_label">UMBEN</string>
+    <string name="category_due_label">Kategorie</string>
+    <string name="category_meta_format">Kinder: %1$d  Prio: %2$d</string>
+    <string name="category_move_invalid">Diese Verschiebung wuerde eine ungueltige verschachtelte Kategorie erzeugen</string>
+    <string name="task_due_label">fällig: %1$s</string>
+    <string name="task_reminder_value_label">Erinnerung: %1$s</string>
+    <string name="task_date_with_relative">%1$s - %2$s</string>
+    <string name="no_due_date">kein Fälligkeitsdatum</string>
+    <string name="no_reminder">keine</string>
+    <string name="due_relative_overdue">überfällig %1$dd</string>
+    <string name="due_relative_today">heute</string>
+    <string name="due_relative_tomorrow">morgen</string>
+    <string name="due_relative_in">in %1$dd</string>
+    <string name="pick_reminder_label">ERINNERN</string>
+    <string name="pick_repeat_label">WIEDERHOLEN</string>
+    <string name="clear_reminder_label">ERINNERUNG LÖSCHEN</string>
+    <string name="reminder_dialog_title">Erinnerung auswählen</string>
+    <string name="reminder_option_none">Keine Erinnerung</string>
+    <string name="reminder_option_hour">1 Stunde vorher</string>
+    <string name="reminder_option_day">1 Tag vorher</string>
+    <string name="reminder_option_week">1 Woche vorher</string>
+    <string name="reminder_option_month">1 Monat vorher</string>
+    <string name="reminder_option_custom">Benutzerdefiniertes Datum und Uhrzeit</string>
+    <string name="reminder_summary_with_datetime">%1$s (%2$s)</string>
+    <string name="reminder_requires_due_date">Lege zuerst ein Fälligkeitsdatum fest, um Presets zu verwenden</string>
+    <string name="reminder_time_in_past">Die Erinnerungszeit muss in der Zukunft liegen</string>
+    <string name="reminder_custom_date_title">Erinnerungsdatum</string>
+    <string name="reminder_custom_time_title">Erinnerungszeit</string>
+    <string name="reminder_channel_name">Aufgabenerinnerungen</string>
+    <string name="reminder_channel_description">Benachrichtigungen für geplante Aufgabenerinnerungen</string>
+    <string name="reminder_notification_title">Aufgabenerinnerung</string>
+    <string name="notifications_permission_denied">Für Erinnerungen ist die Benachrichtigungsberechtigung erforderlich</string>
+    <string name="task_repeat_value_label">Wiederholung: %1$s</string>
+    <string name="repeat_none">keine</string>
+    <string name="repeat_dialog_title">Wiederholung auswählen</string>
+     <string name="repeat_option_none">Keine Wiederholung</string>
+     <string name="repeat_option_hour">Jede Stunde</string>
+     <string name="repeat_option_day">Jeden Tag</string>
+    <string name="repeat_option_week">Jede Woche</string>
+    <string name="repeat_option_month">Jeden Monat</string>
+    <string name="repeat_option_year">Jedes Jahr</string>
+    <string name="repeat_option_custom">Benutzerdefiniertes Intervall</string>
+    <string name="repeat_requires_reminder">Lege zuerst eine Erinnerung fest, um Wiederholungen zu nutzen</string>
+    <string name="repeat_custom_title">Benutzerdefinierte Wiederholung</string>
+    <string name="repeat_custom_amount_hint">Intervallmenge</string>
+    <string name="repeat_custom_amount_invalid">Gib eine gültige Wiederholungsmenge ein</string>
+     <string name="repeat_unit_minutes_label">Minuten</string>
+     <string name="repeat_unit_hours_label">Stunden</string>
+     <string name="repeat_unit_days_label">Tage</string>
+    <string name="repeat_unit_weeks_label">Wochen</string>
+    <string name="repeat_unit_months_label">Monate</string>
+    <string name="repeat_unit_years_label">Jahre</string>
+    <string name="link_open_label">ÖFFNEN</string>
+    <string name="link_missing">Kein Link zum Öffnen verfügbar</string>
+    <string name="invalid_command">Ungültiger Befehl</string>
+    <string name="task_saved">Aufgabe gespeichert</string>
+    <string name="task_deleted">Aufgabe gelöscht</string>
+    <string name="task_completed">Aufgabe aktualisiert</string>
+    <string name="task_failed">Aufgabe konnte nicht aktualisiert werden</string>
+    <string name="summary_format">offen: %1$d  heute: %2$d  gesamt: %3$d</string>
+    <string name="task_meta_format">prio: %1$d  fällig: %2$s  wert: %3$d</string>
+    <string name="task_pin_label">ANHEFTEN</string>
+    <string name="task_unpin_label">LÖSEN</string>
+    <string name="task_edit_label">BEARB</string>
+    <string name="task_delete_label">LÖSCHEN</string>
+    <string name="quick_links_title">SCHNELLLINKS</string>
+    <string name="new_link_label">NEUER LINK</string>
+    <string name="quick_link_label_hint">Kurzname</string>
+    <string name="quick_link_url_hint">https://quick.link</string>
+    <string name="quick_link_new_title">Neuer Schnelllink</string>
+    <string name="quick_link_edit_title">Schnelllink bearbeiten</string>
+    <string name="quick_link_saved">Schnelllink gespeichert</string>
+    <string name="quick_link_deleted">Schnelllink gelöscht</string>
+    <string name="quick_link_invalid">Gültigen Namen und URL eingeben</string>
+    <string name="quick_link_delete_label">LÖSCHEN</string>
+    <string name="widget_tasks_title">AUFGABEN</string>
+    <string name="widget_tasks_description">Liste mit ALL- und HEUTE-Filtern. Zeile antippen zum Erledigen</string>
+    <string name="widget_quick_links_description">In OpusAgenda gespeicherte Schnelllinks. Tippen zum Öffnen</string>
+    <string name="widget_quick_links_empty">Keine Schnelllinks. In der App hinzufügen</string>
+    <string name="clock_time_placeholder">00:00:00</string>
+    <string name="clock_date_placeholder">10 Apr 2026</string>
+    <string name="font_dialog_title">Schriftart wählen</string>
+    <string name="font_applied">Schriftart angewendet: %1$s</string>
+
+    <string-array name="font_option_labels">
+        <item>Inter</item>
+        <item>Geo</item>
+        <item>MedievalSharp</item>
+        <item>Octosquares</item>
+        <item>UnifrakturMaguntia</item>
+    </string-array>
+
+    <string-array name="importance_options">
+        <item>1 NIEDRIG</item>
+        <item>2 NORMAL</item>
+        <item>3 HOCH</item>
+        <item>4 KRITISCH</item>
+    </string-array>
+
+    <plurals name="repeat_unit_minutes">
+        <item quantity="one">%1$d Minute</item>
+        <item quantity="other">%1$d Minuten</item>
+    </plurals>
+
+    <plurals name="repeat_unit_hours">
+        <item quantity="one">%1$d Stunde</item>
+        <item quantity="other">%1$d Stunden</item>
+    </plurals>
+
+    <plurals name="repeat_unit_days">
+        <item quantity="one">%1$d Tag</item>
+        <item quantity="other">%1$d Tage</item>
+    </plurals>
+
+    <plurals name="repeat_unit_weeks">
+        <item quantity="one">%1$d Woche</item>
+        <item quantity="other">%1$d Wochen</item>
+    </plurals>
+
+    <plurals name="repeat_unit_months">
+        <item quantity="one">%1$d Monat</item>
+        <item quantity="other">%1$d Monate</item>
+    </plurals>
+
+    <plurals name="repeat_unit_years">
+        <item quantity="one">%1$d Jahr</item>
+        <item quantity="other">%1$d Jahre</item>
+    </plurals>
+</resources>

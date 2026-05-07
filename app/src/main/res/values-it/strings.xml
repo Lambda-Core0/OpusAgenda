@@ -1,0 +1,149 @@
+<resources>
+    <string name="app_name">OpusAgenda</string>
+    <string name="app_header_title">OpusAgenda v1.2</string>
+
+    <string name="app_font_family">UnifrakturMaguntia</string>
+
+    <string name="search_hint">cerca attività...</string>
+    <string name="empty_state_all">Nessuna attività. Usa NUOVA per crearne una</string>
+    <string name="empty_state_today">Nessuna attività urgente per oggi</string>
+    <string name="all_label">TUTTE</string>
+    <string name="today_label">OGGI</string>
+    <string name="new_task_label">NUOVA</string>
+    <string name="run_command_label">ESEGUI</string>
+    <string name="task_text_hint">Testo attività</string>
+    <string name="save_label">SALVA</string>
+    <string name="cancel_label">ANNULLA</string>
+    <string name="pick_due_date_label">SCADENZA</string>
+    <string name="clear_due_date_label">RIMUOVI SCADENZA</string>
+    <string name="pinned_label">FISSATA</string>
+    <string name="completed_label">Completata</string>
+    <string name="importance_label">Importanza</string>
+    <string name="task_dialog_title_new">Nuova attività</string>
+    <string name="task_dialog_title_edit">Modifica attività</string>
+    <string name="task_text_required">Inserisci il testo della attività</string>
+    <string name="default_category_name">Categoria</string>
+    <string name="category_badge_label">CAT</string>
+    <string name="category_edit_label">RINOM</string>
+    <string name="category_due_label">categoria</string>
+    <string name="category_meta_format">figli: %1$d  imp: %2$d</string>
+    <string name="category_move_invalid">Questo spostamento creerebbe una categoria annidata non valida</string>
+    <string name="task_due_label">scade: %1$s</string>
+    <string name="task_reminder_value_label">promemoria: %1$s</string>
+    <string name="task_date_with_relative">%1$s - %2$s</string>
+    <string name="no_due_date">nessuna scadenza</string>
+    <string name="no_reminder">nessuno</string>
+    <string name="due_relative_overdue">in ritardo %1$dd</string>
+    <string name="due_relative_today">oggi</string>
+    <string name="due_relative_tomorrow">domani</string>
+    <string name="due_relative_in">tra %1$dd</string>
+    <string name="pick_reminder_label">RICORDA</string>
+    <string name="pick_repeat_label">RIPETI</string>
+    <string name="clear_reminder_label">RIMUOVI PROMEMORIA</string>
+    <string name="reminder_dialog_title">Scegli promemoria</string>
+    <string name="reminder_option_none">Nessun promemoria</string>
+    <string name="reminder_option_hour">1 ora prima</string>
+    <string name="reminder_option_day">1 giorno prima</string>
+    <string name="reminder_option_week">1 settimana prima</string>
+    <string name="reminder_option_month">1 mese prima</string>
+    <string name="reminder_option_custom">Data e ora personalizzate</string>
+    <string name="reminder_summary_with_datetime">%1$s (%2$s)</string>
+    <string name="reminder_requires_due_date">Imposta prima una scadenza per usare i preset</string>
+    <string name="reminder_time_in_past">L orario del promemoria deve essere nel futuro</string>
+    <string name="reminder_custom_date_title">Data promemoria</string>
+    <string name="reminder_custom_time_title">Ora promemoria</string>
+    <string name="reminder_channel_name">Promemoria attività</string>
+    <string name="reminder_channel_description">Notifiche per i promemoria pianificati delle attività</string>
+    <string name="reminder_notification_title">Promemoria attività</string>
+    <string name="notifications_permission_denied">Il permesso per le notifiche è necessario per i promemoria</string>
+    <string name="task_repeat_value_label">ripetizione: %1$s</string>
+    <string name="repeat_none">nessuna</string>
+    <string name="repeat_dialog_title">Scegli ripetizione</string>
+     <string name="repeat_option_none">Nessuna ripetizione</string>
+     <string name="repeat_option_hour">Ogni ora</string>
+     <string name="repeat_option_day">Ogni giorno</string>
+    <string name="repeat_option_week">Ogni settimana</string>
+    <string name="repeat_option_month">Ogni mese</string>
+    <string name="repeat_option_year">Ogni anno</string>
+    <string name="repeat_option_custom">Intervallo personalizzato</string>
+    <string name="repeat_requires_reminder">Imposta prima un promemoria per usare la ripetizione</string>
+    <string name="repeat_custom_title">Ripetizione personalizzata</string>
+    <string name="repeat_custom_amount_hint">Quantita intervallo</string>
+    <string name="repeat_custom_amount_invalid">Inserisci una quantita valida per la ripetizione</string>
+    <string name="repeat_unit_minutes_label">Minuti</string>
+    <string name="repeat_unit_days_label">Giorni</string>
+    <string name="repeat_unit_weeks_label">Settimane</string>
+    <string name="repeat_unit_months_label">Mesi</string>
+    <string name="repeat_unit_years_label">Anni</string>
+    <string name="link_open_label">APRI</string>
+    <string name="link_missing">Nessun link disponibile</string>
+    <string name="invalid_command">Comando non valido</string>
+    <string name="task_saved">Attività salvata</string>
+    <string name="task_deleted">Attività eliminata</string>
+    <string name="task_completed">Attività aggiornata</string>
+    <string name="task_failed">Impossibile aggiornare questa attività</string>
+    <string name="summary_format">aperte: %1$d  oggi: %2$d  totale: %3$d</string>
+    <string name="task_meta_format">imp: %1$d  scad: %2$s  punteggio: %3$d</string>
+    <string name="task_pin_label">FISSA</string>
+    <string name="task_unpin_label">SFISSA</string>
+    <string name="task_edit_label">MODIF</string>
+    <string name="task_delete_label">ELIM</string>
+    <string name="quick_links_title">LINK RAPIDI</string>
+    <string name="new_link_label">NUOVO LINK</string>
+    <string name="quick_link_label_hint">Nome breve</string>
+    <string name="quick_link_url_hint">https://quick.link</string>
+    <string name="quick_link_new_title">Nuovo link rapido</string>
+    <string name="quick_link_edit_title">Modifica link rapido</string>
+    <string name="quick_link_saved">Link rapido salvato</string>
+    <string name="quick_link_deleted">Link rapido eliminato</string>
+    <string name="quick_link_invalid">Inserisci nome e URL validi</string>
+    <string name="quick_link_delete_label">ELIMINA</string>
+    <string name="widget_tasks_title">COMPITI</string>
+    <string name="widget_tasks_description">Elenco con filtri TUTTI e OGGI. Tocca una riga per completare</string>
+    <string name="widget_quick_links_description">Link rapidi salvati in OpusAgenda. Tocca per aprire</string>
+    <string name="widget_quick_links_empty">Nessun link. Aggiungili nell\'app</string>
+    <string name="clock_time_placeholder">00:00:00</string>
+    <string name="clock_date_placeholder">10 Apr 2026</string>
+    <string name="font_dialog_title">Seleziona font</string>
+    <string name="font_applied">Font applicato: %1$s</string>
+
+    <string-array name="font_option_labels">
+        <item>Inter</item>
+        <item>Geo</item>
+        <item>MedievalSharp</item>
+        <item>Octosquares</item>
+        <item>UnifrakturMaguntia</item>
+    </string-array>
+
+    <string-array name="importance_options">
+        <item>1 BASSA</item>
+        <item>2 NORMALE</item>
+        <item>3 ALTA</item>
+        <item>4 CRITICA</item>
+    </string-array>
+
+    <plurals name="repeat_unit_minutes">
+        <item quantity="one">%1$d minuto</item>
+        <item quantity="other">%1$d minuti</item>
+    </plurals>
+
+    <plurals name="repeat_unit_days">
+        <item quantity="one">%1$d giorno</item>
+        <item quantity="other">%1$d giorni</item>
+    </plurals>
+
+    <plurals name="repeat_unit_weeks">
+        <item quantity="one">%1$d settimana</item>
+        <item quantity="other">%1$d settimane</item>
+    </plurals>
+
+    <plurals name="repeat_unit_months">
+        <item quantity="one">%1$d mese</item>
+        <item quantity="other">%1$d mesi</item>
+    </plurals>
+
+    <plurals name="repeat_unit_years">
+        <item quantity="one">%1$d anno</item>
+        <item quantity="other">%1$d anni</item>
+    </plurals>
+</resources>

@@ -1,0 +1,124 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_marginBottom="12dp"
+    android:background="@drawable/bg_terminal_panel"
+    android:orientation="vertical"
+    android:padding="14dp">
+
+    <!-- Cabecera de la fila: check, título y badge de pin. -->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center_vertical"
+        android:orientation="horizontal">
+
+        <TextView
+            android:id="@+id/textExpandIndicator"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="8dp"
+            android:textColor="@color/terminal_green"
+            android:textSize="11sp"
+            android:visibility="gone" />
+
+        <CheckBox
+            android:id="@+id/checkCompleted"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:buttonTint="@color/terminal_green"
+            android:textColor="@color/terminal_text" />
+
+        <TextView
+            android:id="@+id/textTask"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:textColor="@color/terminal_text"
+            android:textSize="17sp"
+            android:textStyle="bold" />
+
+        <TextView
+            android:id="@+id/textBadge"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="@drawable/bg_terminal_action"
+            android:paddingStart="8dp"
+            android:paddingTop="4dp"
+            android:paddingEnd="8dp"
+            android:paddingBottom="4dp"
+            android:text="@string/task_pin_label"
+            android:textColor="@color/terminal_yellow"
+            android:textSize="11sp" />
+    </LinearLayout>
+
+    <!-- Línea secundaria con metadatos derivados para lectura rápida. -->
+    <TextView
+        android:id="@+id/textMeta"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        android:textColor="@color/terminal_text_muted"
+        android:textSize="12sp" />
+
+    <!-- Acciones rápidas sobre la tarea actual. -->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="12dp"
+        android:gravity="end"
+        android:orientation="horizontal">
+
+        <TextView
+            android:id="@+id/actionPin"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:padding="6dp"
+            android:text="@string/task_pin_label"
+            android:textColor="@color/terminal_yellow"
+            android:textSize="12sp" />
+
+        <TextView
+            android:id="@+id/actionEdit"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="10dp"
+            android:padding="6dp"
+            android:text="@string/task_edit_label"
+            android:textColor="@color/terminal_text"
+            android:textSize="12sp" />
+
+        <TextView
+            android:id="@+id/actionNewCategory"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="10dp"
+            android:padding="6dp"
+            android:text="@string/new_subcategory_label"
+            android:textColor="@color/terminal_green"
+            android:textSize="12sp"
+            android:visibility="gone" />
+
+        <TextView
+            android:id="@+id/actionNewTask"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="10dp"
+            android:padding="6dp"
+            android:text="@string/new_child_task_label"
+            android:textColor="@color/terminal_green"
+            android:textSize="12sp"
+            android:visibility="gone" />
+
+        <TextView
+            android:id="@+id/actionDelete"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="10dp"
+            android:padding="6dp"
+            android:text="@string/task_delete_label"
+            android:textColor="@color/terminal_red"
+            android:textSize="12sp" />
+    </LinearLayout>
+</LinearLayout>

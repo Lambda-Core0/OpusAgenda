@@ -1,0 +1,98 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <style name="Theme.OpusAgenda" parent="Theme.MaterialComponents.DayNight.NoActionBar">
+        <item name="android:fontFamily">@font/app_font_inter</item>
+        <item name="fontFamily">@font/app_font_inter</item>
+        <item name="colorPrimary">@color/terminal_green</item>
+        <item name="colorPrimaryVariant">@color/terminal_green_dim</item>
+        <item name="colorSecondary">@color/terminal_yellow</item>
+        <item name="colorSecondaryVariant">@color/terminal_yellow</item>
+        <item name="colorSurface">@color/terminal_panel</item>
+        <item name="colorOnBackground">@color/terminal_text</item>
+        <item name="colorOnPrimary">@color/terminal_black</item>
+        <item name="colorOnSecondary">@color/terminal_black</item>
+        <item name="colorOnSurface">@color/terminal_text</item>
+        <item name="colorOnError">@color/terminal_black</item>
+        <item name="materialCalendarTheme">@style/ThemeOverlay.OpusAgenda.MaterialCalendar</item>
+        <item name="android:windowBackground">@color/terminal_black</item>
+        <item name="android:statusBarColor">@color/terminal_black</item>
+        <item name="android:navigationBarColor">@color/terminal_black</item>
+    </style>
+
+    <style name="Theme.OpusAgenda.Geo" parent="Theme.OpusAgenda">
+        <item name="android:fontFamily">@font/app_font_geo</item>
+        <item name="fontFamily">@font/app_font_geo</item>
+    </style>
+
+    <style name="Theme.OpusAgenda.MedievalSharp" parent="Theme.OpusAgenda">
+        <item name="android:fontFamily">@font/app_font_medievalsharp</item>
+        <item name="fontFamily">@font/app_font_medievalsharp</item>
+    </style>
+
+    <style name="Theme.OpusAgenda.Octosquares" parent="Theme.OpusAgenda">
+        <item name="android:fontFamily">@font/app_font_octosquares</item>
+        <item name="fontFamily">@font/app_font_octosquares</item>
+    </style>
+
+    <style name="Theme.OpusAgenda.UnifrakturMaguntia" parent="Theme.OpusAgenda">
+        <item name="android:fontFamily">@font/app_font_unifrakturmaguntia</item>
+        <item name="fontFamily">@font/app_font_unifrakturmaguntia</item>
+    </style>
+
+    <style name="ThemeOverlay.OpusAgenda.MaterialCalendar" parent="ThemeOverlay.MaterialComponents.MaterialCalendar">
+        <item name="colorPrimary">@color/terminal_yellow</item>
+        <item name="colorOnPrimary">@color/terminal_black</item>
+        <item name="colorSurface">@color/terminal_black</item>
+        <item name="colorOnSurface">@color/terminal_yellow</item>
+        <item name="materialCalendarDayOfWeekLabel">@style/Widget.OpusAgenda.CalendarDayOfWeekLabel</item>
+        <item name="materialCalendarStyle">@style/Widget.OpusAgenda.MaterialCalendar</item>
+        <item name="materialCalendarHeaderConfirmButton">@style/Widget.OpusAgenda.CalendarButton</item>
+        <item name="materialCalendarHeaderCancelButton">@style/Widget.OpusAgenda.CalendarButton</item>
+    </style>
+
+    <style name="Widget.OpusAgenda.MaterialCalendar" parent="Widget.MaterialComponents.MaterialCalendar">
+        <item name="dayStyle">@style/Widget.OpusAgenda.CalendarDay</item>
+        <item name="dayTodayStyle">@style/Widget.OpusAgenda.CalendarTodayDay</item>
+        <item name="daySelectedStyle">@style/Widget.OpusAgenda.CalendarSelectedDay</item>
+        <item name="rangeFillColor">@color/terminal_green_dim</item>
+        <item name="yearStyle">@style/Widget.OpusAgenda.CalendarYear</item>
+        <item name="yearSelectedStyle">@style/Widget.OpusAgenda.CalendarYearSelected</item>
+        <item name="yearTodayStyle">@style/Widget.OpusAgenda.CalendarYearToday</item>
+    </style>
+
+    <style name="Widget.OpusAgenda.CalendarDay" parent="Widget.MaterialComponents.MaterialCalendar.Day">
+        <item name="itemTextColor">@color/terminal_yellow</item>
+    </style>
+
+    <style name="Widget.OpusAgenda.CalendarDayOfWeekLabel" parent="Widget.MaterialComponents.MaterialCalendar.DayOfWeekLabel">
+        <item name="android:textColor">@color/terminal_yellow</item>
+    </style>
+
+    <style name="Widget.OpusAgenda.CalendarTodayDay" parent="Widget.MaterialComponents.MaterialCalendar.Day.Today">
+        <item name="itemTextColor">@color/terminal_yellow</item>
+        <item name="itemStrokeColor">@color/terminal_yellow</item>
+    </style>
+
+    <style name="Widget.OpusAgenda.CalendarSelectedDay" parent="Widget.MaterialComponents.MaterialCalendar.Day.Selected">
+        <item name="itemFillColor">@color/terminal_yellow</item>
+        <item name="itemTextColor">@color/terminal_black</item>
+    </style>
+
+    <style name="Widget.OpusAgenda.CalendarYear" parent="Widget.MaterialComponents.MaterialCalendar.Year">
+        <item name="itemTextColor">@color/terminal_yellow</item>
+    </style>
+
+    <style name="Widget.OpusAgenda.CalendarYearSelected" parent="Widget.MaterialComponents.MaterialCalendar.Year.Selected">
+        <item name="itemFillColor">@color/terminal_yellow</item>
+        <item name="itemTextColor">@color/terminal_black</item>
+    </style>
+
+    <style name="Widget.OpusAgenda.CalendarYearToday" parent="Widget.MaterialComponents.MaterialCalendar.Year.Today">
+        <item name="itemTextColor">@color/terminal_yellow</item>
+        <item name="itemStrokeColor">@color/terminal_yellow</item>
+    </style>
+
+    <style name="Widget.OpusAgenda.CalendarButton" parent="Widget.MaterialComponents.Button.TextButton.Dialog">
+        <item name="android:textColor">@color/terminal_yellow</item>
+    </style>
+</resources>

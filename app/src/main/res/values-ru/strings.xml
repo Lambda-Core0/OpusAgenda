@@ -1,0 +1,158 @@
+<resources>
+    <string name="app_name">OpusAgenda</string>
+    <string name="app_header_title">♱ OpusAgenda v1.2</string>
+
+    <string name="app_font_family">UnifrakturMaguntia</string>
+
+    <string name="search_hint">поиск задач...</string>
+    <string name="empty_state_all">Задач пока нет. Используйте НОВАЯ, чтобы создать</string>
+    <string name="empty_state_today">Нет срочных задач на сегодня</string>
+    <string name="all_label">ВСЕ</string>
+    <string name="today_label">СЕГОДНЯ</string>
+    <string name="new_task_label">НОВАЯ</string>
+    <string name="run_command_label">ЗАПУСК</string>
+    <string name="task_text_hint">Текст задачи</string>
+    <string name="save_label">СОХРАНИТЬ</string>
+    <string name="cancel_label">ОТМЕНА</string>
+    <string name="pick_due_date_label">СРОК</string>
+    <string name="clear_due_date_label">УБРАТЬ СРОК</string>
+    <string name="pinned_label">ЗАКРЕПЛЕНО</string>
+    <string name="completed_label">Завершено</string>
+    <string name="importance_label">Важность</string>
+    <string name="task_dialog_title_new">Новая задача</string>
+    <string name="task_dialog_title_edit">Редактировать задачу</string>
+    <string name="task_text_required">Введите текст задачи</string>
+    <string name="default_category_name">Категория</string>
+    <string name="category_badge_label">КАТ</string>
+    <string name="category_edit_label">ИМЯ</string>
+    <string name="category_due_label">категория</string>
+    <string name="category_meta_format">дети: %1$d  важн: %2$d</string>
+    <string name="category_move_invalid">Такое перемещение создаст недопустимую вложенную категорию</string>
+    <string name="task_due_label">срок: %1$s</string>
+    <string name="task_reminder_value_label">напоминание: %1$s</string>
+    <string name="task_date_with_relative">%1$s - %2$s</string>
+    <string name="no_due_date">без срока</string>
+    <string name="no_reminder">нет</string>
+    <string name="due_relative_overdue">просрочено %1$dd</string>
+    <string name="due_relative_today">сегодня</string>
+    <string name="due_relative_tomorrow">завтра</string>
+    <string name="due_relative_in">через %1$dd</string>
+    <string name="pick_reminder_label">НАПОМНИТЬ</string>
+    <string name="pick_repeat_label">ПОВТОР</string>
+    <string name="clear_reminder_label">УБРАТЬ НАПОМИНАНИЕ</string>
+    <string name="reminder_dialog_title">Выбрать напоминание</string>
+    <string name="reminder_option_none">Без напоминания</string>
+    <string name="reminder_option_hour">За 1 час</string>
+    <string name="reminder_option_day">За 1 день</string>
+    <string name="reminder_option_week">За 1 неделю</string>
+    <string name="reminder_option_month">За 1 месяц</string>
+    <string name="reminder_option_custom">Своя дата и время</string>
+    <string name="reminder_summary_with_datetime">%1$s (%2$s)</string>
+    <string name="reminder_requires_due_date">Сначала укажите срок выполнения, чтобы использовать предустановки</string>
+    <string name="reminder_time_in_past">Время напоминания должно быть в будущем</string>
+    <string name="reminder_custom_date_title">Дата напоминания</string>
+    <string name="reminder_custom_time_title">Время напоминания</string>
+    <string name="reminder_channel_name">Напоминания о задачах</string>
+    <string name="reminder_channel_description">Уведомления для запланированных напоминаний о задачах</string>
+    <string name="reminder_notification_title">Напоминание о задаче</string>
+    <string name="notifications_permission_denied">Для напоминаний требуется разрешение на уведомления</string>
+    <string name="task_repeat_value_label">повтор: %1$s</string>
+    <string name="repeat_none">нет</string>
+    <string name="repeat_dialog_title">Выбрать повтор</string>
+    <string name="repeat_option_none">Без повтора</string>
+    <string name="repeat_option_day">Каждый день</string>
+    <string name="repeat_option_week">Каждую неделю</string>
+    <string name="repeat_option_month">Каждый месяц</string>
+    <string name="repeat_option_year">Каждый год</string>
+    <string name="repeat_option_custom">Свой интервал</string>
+    <string name="repeat_requires_reminder">Сначала задайте напоминание, чтобы использовать повтор</string>
+    <string name="repeat_custom_title">Свой повтор</string>
+    <string name="repeat_custom_amount_hint">Размер интервала</string>
+    <string name="repeat_custom_amount_invalid">Введите корректное значение повтора</string>
+    <string name="repeat_unit_minutes_label">Минуты</string>
+    <string name="repeat_unit_days_label">Дни</string>
+    <string name="repeat_unit_weeks_label">Недели</string>
+    <string name="repeat_unit_months_label">Месяцы</string>
+    <string name="repeat_unit_years_label">Годы</string>
+    <string name="link_open_label">ОТКРЫТЬ</string>
+    <string name="link_missing">Нет ссылки для открытия</string>
+    <string name="invalid_command">Неверная команда</string>
+    <string name="task_saved">Задача сохранена</string>
+    <string name="task_deleted">Задача удалена</string>
+    <string name="task_completed">Задача обновлена</string>
+    <string name="task_failed">Не удалось обновить задачу</string>
+    <string name="summary_format">открыто: %1$d  сегодня: %2$d  всего: %3$d</string>
+    <string name="task_meta_format">важн: %1$d  срок: %2$s  балл: %3$d</string>
+    <string name="task_pin_label">ЗАКРЕПИТЬ</string>
+    <string name="task_unpin_label">ОТКРЕПИТЬ</string>
+    <string name="task_edit_label">ИЗМ</string>
+    <string name="task_delete_label">УДАЛ</string>
+    <string name="quick_links_title">БЫСТРЫЕ ССЫЛКИ</string>
+    <string name="new_link_label">НОВАЯ ССЫЛКА</string>
+    <string name="quick_link_label_hint">Короткое имя</string>
+    <string name="quick_link_url_hint">https://quick.link</string>
+    <string name="quick_link_new_title">Новая быстрая ссылка</string>
+    <string name="quick_link_edit_title">Редактировать ссылку</string>
+    <string name="quick_link_saved">Ссылка сохранена</string>
+    <string name="quick_link_deleted">Ссылка удалена</string>
+    <string name="quick_link_invalid">Введите корректное имя и URL</string>
+    <string name="quick_link_delete_label">УДАЛИТЬ</string>
+    <string name="widget_tasks_title">ЗАДАЧИ</string>
+    <string name="widget_tasks_description">Список с фильтрами ВСЕ и СЕГОДНЯ. Нажмите строку, чтобы отметить</string>
+    <string name="widget_quick_links_description">Быстрые ссылки из OpusAgenda. Нажмите, чтобы открыть</string>
+    <string name="widget_quick_links_empty">Нет ссылок. Добавьте в приложении</string>
+    <string name="clock_time_placeholder">00:00:00</string>
+    <string name="clock_date_placeholder">10 Apr 2026</string>
+    <string name="font_dialog_title">Выбрать шрифт</string>
+    <string name="font_applied">Шрифт применён: %1$s</string>
+
+    <string-array name="font_option_labels">
+        <item>Inter</item>
+        <item>Geo</item>
+        <item>MedievalSharp</item>
+        <item>Octosquares</item>
+        <item>UnifrakturMaguntia</item>
+    </string-array>
+
+    <string-array name="importance_options">
+        <item>1 НИЗКАЯ</item>
+        <item>2 НОРМАЛЬНАЯ</item>
+        <item>3 ВЫСОКАЯ</item>
+        <item>4 КРИТИЧЕСКАЯ</item>
+    </string-array>
+
+    <plurals name="repeat_unit_minutes">
+        <item quantity="one">%1$d минута</item>
+        <item quantity="few">%1$d минуты</item>
+        <item quantity="many">%1$d минут</item>
+        <item quantity="other">%1$d минуты</item>
+    </plurals>
+
+    <plurals name="repeat_unit_days">
+        <item quantity="one">%1$d день</item>
+        <item quantity="few">%1$d дня</item>
+        <item quantity="many">%1$d дней</item>
+        <item quantity="other">%1$d дня</item>
+    </plurals>
+
+    <plurals name="repeat_unit_weeks">
+        <item quantity="one">%1$d неделя</item>
+        <item quantity="few">%1$d недели</item>
+        <item quantity="many">%1$d недель</item>
+        <item quantity="other">%1$d недели</item>
+    </plurals>
+
+    <plurals name="repeat_unit_months">
+        <item quantity="one">%1$d месяц</item>
+        <item quantity="few">%1$d месяца</item>
+        <item quantity="many">%1$d месяцев</item>
+        <item quantity="other">%1$d месяца</item>
+    </plurals>
+
+    <plurals name="repeat_unit_years">
+        <item quantity="one">%1$d год</item>
+        <item quantity="few">%1$d года</item>
+        <item quantity="many">%1$d лет</item>
+        <item quantity="other">%1$d года</item>
+    </plurals>
+</resources>
