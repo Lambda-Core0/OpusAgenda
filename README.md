@@ -11,7 +11,7 @@ OpusAgenda es una app Android de agenda y tareas con enfoque local, pensada para
 
 ## Complementos incluidos
 
-- `Widget de tareas`: muestra la lista en la pantalla de inicio, cambia entre `ALL` y `TODAY`(Botón de filtro encendido para 'TODAY', botón de filtro apagado para 'ALL'), permite marcar tareas como hechas y expandir o contraer categorías
+- `Widget de tareas`: muestra la lista en la pantalla de inicio, cambia entre `ALL` y `TODAY` (Botón de filtro encendido para 'TODAY', botón de filtro apagado para 'ALL'), permite marcar tareas como hechas y expandir o contraer categorías
 - `Widget de accesos rápidos`: expone enlaces guardados para abrir servicios o paginas frecuentes desde el escritorio
 - `Accesos rápidos editables`: incluye valores iniciales para Mail, Drive y Calendar, y permite agregar o modificar enlaces personalizados
 - `Personalización visual`: tema inspirado en terminal con cambio de tipografía entre Inter, Geo, MedievalSharp, Octosquares y UnifrakturMaguntia
