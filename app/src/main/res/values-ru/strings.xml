@@ -1,6 +1,6 @@
 <resources>
     <string name="app_name">OpusAgenda</string>
-    <string name="app_header_title">♱ OpusAgenda v1.2</string>
+    <string name="app_header_title">♱ OpusAgenda v1.3</string>
 
     <string name="app_font_family">UnifrakturMaguntia</string>
 
@@ -60,6 +60,7 @@
     <string name="repeat_none">нет</string>
     <string name="repeat_dialog_title">Выбрать повтор</string>
     <string name="repeat_option_none">Без повтора</string>
+    <string name="repeat_option_hour">Каждый час</string>
     <string name="repeat_option_day">Каждый день</string>
     <string name="repeat_option_week">Каждую неделю</string>
     <string name="repeat_option_month">Каждый месяц</string>
@@ -71,6 +72,7 @@
     <string name="repeat_custom_amount_invalid">Введите корректное значение повтора</string>
     <string name="repeat_unit_minutes_label">Минуты</string>
     <string name="repeat_unit_days_label">Дни</string>
+    <string name="repeat_unit_hours_label">Часы</string>
     <string name="repeat_unit_weeks_label">Недели</string>
     <string name="repeat_unit_months_label">Месяцы</string>
     <string name="repeat_unit_years_label">Годы</string>
@@ -102,9 +104,42 @@
     <string name="widget_quick_links_description">Быстрые ссылки из OpusAgenda. Нажмите, чтобы открыть</string>
     <string name="widget_quick_links_empty">Нет ссылок. Добавьте в приложении</string>
     <string name="clock_time_placeholder">00:00:00</string>
-    <string name="clock_date_placeholder">10 Apr 2026</string>
+    <string name="clock_date_placeholder">10 апр 2026</string>
     <string name="font_dialog_title">Выбрать шрифт</string>
-    <string name="font_applied">Шрифт применён: %1$s</string>
+    <string name="font_applied">Шрифт применен: %1$s</string>
+    <string name="new_category_label">НОВАЯ КАТ</string>
+    <string name="new_subcategory_label">НОВАЯ ПОДК</string>
+    <string name="new_child_task_label">НОВАЯ ЗАДАЧА</string>
+
+    <string name="task_description_label">Описание</string>
+    <string name="task_description_hint">Добавьте контекст для этой задачи</string>
+    <string name="task_description_save">СОХР ОПИС</string>
+    <string name="task_description_clear">УБРАТЬ ОПИС</string>
+    <string name="task_description_required">Описание не может быть пустым</string>
+    <string name="task_description_saved">Описание подготовлено</string>
+    <string name="task_description_title">Описание задачи</string>
+    <string name="task_description_icon_label">Открыть описание</string>
+
+    <string name="task_link_label">Связанная ссылка</string>
+    <string name="task_link_hint">https://svyazannyj.resurs</string>
+    <string name="task_link_save">СОХР ССЫЛКУ</string>
+    <string name="task_link_clear">УБРАТЬ ССЫЛКУ</string>
+    <string name="task_link_required">Сначала введите корректную ссылку</string>
+    <string name="task_link_saved">Ссылка подготовлена</string>
+    <string name="task_link_title">Ссылка задачи</string>
+    <string name="task_link_icon_label">Открыть детали ссылки</string>
+
+    <string name="task_attachment_label">Прикрепленный файл</string>
+    <string name="task_attachment_empty">Файл не выбран</string>
+    <string name="task_attachment_pick">ВЫБРАТЬ ФАЙЛ</string>
+    <string name="task_attachment_clear">УБРАТЬ ФАЙЛ</string>
+    <string name="task_attachment_saved">Файл прикреплен</string>
+    <string name="task_attachment_picker_failed">Не удалось прочитать выбранный файл</string>
+    <string name="task_attachment_open_failed">Нет приложения, которое может открыть это вложение</string>
+    <string name="task_attachment_title">Вложение задачи</string>
+    <string name="task_attachment_icon_label">Открыть детали вложения</string>
+    <string name="task_attachment_name_label">файл: %1$s</string>
+    <string name="task_attachment_type_label">тип: %1$s</string>
 
     <string-array name="font_option_labels">
         <item>Inter</item>
@@ -126,6 +161,13 @@
         <item quantity="few">%1$d минуты</item>
         <item quantity="many">%1$d минут</item>
         <item quantity="other">%1$d минуты</item>
+    </plurals>
+
+    <plurals name="repeat_unit_hours">
+        <item quantity="one">%1$d час</item>
+        <item quantity="few">%1$d часа</item>
+        <item quantity="many">%1$d часов</item>
+        <item quantity="other">%1$d часа</item>
     </plurals>
 
     <plurals name="repeat_unit_days">

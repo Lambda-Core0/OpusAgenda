@@ -29,8 +29,16 @@ data class TaskEntity(
     val expanded: Boolean = true,
     /** Fecha limite en epoch millis o `null` si no existe. */
     val dueDate: Long?,
+    /** Texto descriptivo opcional, separado del titulo principal. */
+    val description: String? = null,
     /** Campo opcional heredado del modelo base. */
     val link: String?,
+    /** URI persistida del adjunto local asociado a la tarea. */
+    val attachmentUri: String? = null,
+    /** Nombre visible del adjunto, usado para preview y UI. */
+    val attachmentName: String? = null,
+    /** MIME type original o inferido del adjunto. */
+    val attachmentMimeType: String? = null,
     /** Marca si la tarea debe subir visualmente en la lista. */
     val pinned: Boolean = false,
     /** Momento exacto del recordatorio local en epoch millis o `null` si no existe. */

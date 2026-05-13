@@ -8,6 +8,7 @@ import android.graphics.Typeface
 import android.net.Uri
 import android.os.Build
 import android.os.Bundle
+import android.provider.OpenableColumns
 import android.text.InputType
 import android.view.Gravity
 import android.view.View
@@ -15,9 +16,22 @@ import android.view.ViewGroup
 import android.widget.ArrayAdapter
 import android.widget.Button
 import android.widget.EditText
+import android.widget.ImageButton
+import android.widget.ImageView
 import android.widget.LinearLayout
 import android.widget.Spinner
 import android.widget.TextView
+import android.widget.ScrollView
+import android.widget.MediaController
+import android.widget.VideoView
+import android.media.MediaPlayer
+import java.io.BufferedReader
+import java.io.InputStreamReader
+import java.util.regex.Pattern
+import android.graphics.pdf.PdfRenderer
+import android.os.ParcelFileDescriptor
+import android.graphics.Bitmap
+
 import androidx.activity.result.contract.ActivityResultContracts
 import androidx.activity.viewModels
 import androidx.appcompat.app.AlertDialog
@@ -42,6 +56,8 @@ import com.lambda.opusagenda.databinding.ActivityMainBinding
 import com.lambda.opusagenda.databinding.DialogQuickLinkBinding
 import com.lambda.opusagenda.databinding.DialogTaskEditorBinding
 import com.lambda.opusagenda.repository.TaskRepository
+import com.lambda.opusagenda.util.TaskAttachmentKind
+import com.lambda.opusagenda.util.TaskContentSupport
 import com.lambda.opusagenda.util.TaskDateFormatter
 import com.lambda.opusagenda.util.TaskHierarchyManager.DropMode
 import com.lambda.opusagenda.util.TaskRepeatCalculator
@@ -95,6 +111,7 @@ class MainActivity : AppCompatActivity(), TaskAdapter.TaskItemActions {
     private lateinit var taskAdapter: TaskAdapter
     private lateinit var quickLinksStore: QuickLinksStore
     private lateinit var taskTouchHelper: ItemTouchHelper
+    private var selectedTypeface: Typeface? = null
 
     private val quickLinks = mutableListOf<QuickLink>()
     private var latestVisibleTasks: List<TaskListItem> = emptyList()
@@ -102,6 +119,7 @@ class MainActivity : AppCompatActivity(), TaskAdapter.TaskItemActions {
     private val dateFormatter = DateTimeFormatter.ofPattern("EEE, dd MMM yyyy", Locale.getDefault())
 
     private var statusClearJob: Job? = null
+    private var pendingAttachmentSelection: ((Uri?) -> Unit)? = null
 
     private val notificationPermissionLauncher = registerForActivityResult(
         ActivityResultContracts.RequestPermission()
@@ -109,6 +127,13 @@ class MainActivity : AppCompatActivity(), TaskAdapter.TaskItemActions {
         if (!granted) {
             showStatus(getString(R.string.notifications_permission_denied))
         }
+    }
+
+    private val attachmentPickerLauncher = registerForActivityResult(
+        ActivityResultContracts.OpenDocument()
+    ) { uri ->
+        pendingAttachmentSelection?.invoke(uri)
+        pendingAttachmentSelection = null
     }
 
     private val viewModel: MainViewModel by viewModels {
@@ -237,6 +262,7 @@ class MainActivity : AppCompatActivity(), TaskAdapter.TaskItemActions {
             else -> R.font.app_font_inter
         }
         val typeface = ResourcesCompat.getFont(this, fontRes) ?: Typeface.SANS_SERIF
+        selectedTypeface = typeface
         applyTypefaceRecursively(binding.root, typeface)
     }
 
@@ -295,6 +321,9 @@ class MainActivity : AppCompatActivity(), TaskAdapter.TaskItemActions {
         dialogBinding.editTaskText.setText(task?.text.orEmpty())
         dialogBinding.spinnerImportance.setSelection((task?.importance ?: 2) - 1)
         dialogBinding.checkPinned.isChecked = task?.pinned == true
+        dialogBinding.editDescription.setText(task?.description.orEmpty())
+        dialogBinding.editLink.setText(task?.link.orEmpty())
+
         if (isCategory) {
             dialogBinding.textImportanceLabel.visibility = View.GONE
             dialogBinding.spinnerImportance.visibility = View.GONE
@@ -303,6 +332,15 @@ class MainActivity : AppCompatActivity(), TaskAdapter.TaskItemActions {
             dialogBinding.textReminder.visibility = View.GONE
             dialogBinding.textRepeat.visibility = View.GONE
             dialogBinding.layoutReminderActions.visibility = View.GONE
+            dialogBinding.textDescriptionLabel.visibility = View.GONE
+            dialogBinding.editDescription.visibility = View.GONE
+            dialogBinding.layoutDescriptionActions.visibility = View.GONE
+            dialogBinding.textLinkLabel.visibility = View.GONE
+            dialogBinding.editLink.visibility = View.GONE
+            dialogBinding.layoutLinkActions.visibility = View.GONE
+            dialogBinding.textAttachmentLabel.visibility = View.GONE
+            dialogBinding.textAttachmentName.visibility = View.GONE
+            dialogBinding.layoutAttachmentActions.visibility = View.GONE
             dialogBinding.checkPinned.visibility = View.GONE
         }
 
@@ -311,6 +349,11 @@ class MainActivity : AppCompatActivity(), TaskAdapter.TaskItemActions {
         var selectedReminderPreset: ReminderPreset? = null
         var selectedRepeatAmount = task?.repeatAmount
         var selectedRepeatUnit = task?.repeatUnit
+        var selectedDescription = task?.description
+        var selectedLink = task?.link
+        var selectedAttachmentUri = task?.attachmentUri
+        var selectedAttachmentName = task?.attachmentName
+        var selectedAttachmentMimeType = task?.attachmentMimeType
 
         fun updateDueLabel() {
             dialogBinding.textDueDate.text = getString(
@@ -341,6 +384,11 @@ class MainActivity : AppCompatActivity(), TaskAdapter.TaskItemActions {
             dialogBinding.textRepeat.text = getString(R.string.task_repeat_value_label, value)
         }
 
+        fun updateAttachmentLabel() {
+            dialogBinding.textAttachmentName.text = selectedAttachmentName
+                ?: getString(R.string.task_attachment_empty)
+        }
+
         fun refreshPresetReminder() {
             val preset = selectedReminderPreset ?: return
             val recomputed = computeReminderForPreset(selectedDueDate, preset)
@@ -365,6 +413,7 @@ class MainActivity : AppCompatActivity(), TaskAdapter.TaskItemActions {
         updateDueLabel()
         updateReminderLabel()
         updateRepeatLabel()
+        updateAttachmentLabel()
 
         dialogBinding.buttonPickDueDate.setOnClickListener {
             showDueDatePicker(selectedDueDate) { millis ->
@@ -415,6 +464,61 @@ class MainActivity : AppCompatActivity(), TaskAdapter.TaskItemActions {
             }
         }
 
+        dialogBinding.buttonSaveDescription.setOnClickListener {
+            val description = dialogBinding.editDescription.text?.toString()?.trim().orEmpty()
+            if (description.isBlank()) {
+                showStatus(getString(R.string.task_description_required))
+                return@setOnClickListener
+            }
+            selectedDescription = description
+            showStatus(getString(R.string.task_description_saved))
+        }
+
+        dialogBinding.buttonClearDescription.setOnClickListener {
+            selectedDescription = null
+            dialogBinding.editDescription.setText("")
+        }
+
+        dialogBinding.buttonSaveLink.setOnClickListener {
+            val rawLink = dialogBinding.editLink.text?.toString()?.trim().orEmpty()
+            if (rawLink.isBlank()) {
+                showStatus(getString(R.string.task_link_required))
+                return@setOnClickListener
+            }
+            selectedLink = normalizeUrl(rawLink)
+            dialogBinding.editLink.setText(selectedLink)
+            showStatus(getString(R.string.task_link_saved))
+        }
+
+        dialogBinding.buttonClearLink.setOnClickListener {
+            selectedLink = null
+            dialogBinding.editLink.setText("")
+        }
+
+        dialogBinding.buttonPickAttachment.setOnClickListener {
+            launchAttachmentPicker { uri ->
+                if (uri == null) return@launchAttachmentPicker
+                if (!persistReadPermission(uri)) {
+                    showStatus(getString(R.string.task_attachment_picker_failed))
+                    return@launchAttachmentPicker
+                }
+
+                selectedAttachmentUri = uri.toString()
+                selectedAttachmentName = resolveAttachmentName(uri) ?: uri.lastPathSegment
+                selectedAttachmentMimeType = contentResolver.getType(uri)
+                    ?: TaskContentSupport.normalizeMimeType(null, selectedAttachmentName)
+                updateAttachmentLabel()
+                showStatus(getString(R.string.task_attachment_saved))
+            }
+        }
+
+        dialogBinding.buttonClearAttachment.setOnClickListener {
+            selectedAttachmentUri = null
+            selectedAttachmentName = null
+            selectedAttachmentMimeType = null
+            updateAttachmentLabel()
+        }
+
         val dialog = MaterialAlertDialogBuilder(this)
             .setTitle(if (task == null) R.string.task_dialog_title_new else R.string.task_dialog_title_edit)
             .setView(dialogBinding.root)
@@ -428,6 +532,10 @@ class MainActivity : AppCompatActivity(), TaskAdapter.TaskItemActions {
             val text = dialogBinding.editTaskText.text?.toString().orEmpty()
             val importance = dialogBinding.spinnerImportance.selectedItemPosition + 1
             val pinned = dialogBinding.checkPinned.isChecked
+            val descriptionDraft = dialogBinding.editDescription.text?.toString()?.trim().orEmpty()
+            val linkDraft = dialogBinding.editLink.text?.toString()?.trim().orEmpty()
+            val finalDescription = if (descriptionDraft.isNotBlank()) descriptionDraft else selectedDescription
+            val finalLink = if (linkDraft.isNotBlank()) normalizeUrl(linkDraft) else selectedLink
 
             if (text.isBlank()) {
                 showStatus(getString(R.string.task_text_required))
@@ -451,7 +559,11 @@ class MainActivity : AppCompatActivity(), TaskAdapter.TaskItemActions {
                     text = text,
                     importance = importance,
                     dueDate = selectedDueDate,
-                    link = null,
+                    description = finalDescription,
+                    link = finalLink,
+                    attachmentUri = selectedAttachmentUri,
+                    attachmentName = selectedAttachmentName,
+                    attachmentMimeType = selectedAttachmentMimeType,
                     pinned = pinned,
                     reminderAt = selectedReminderAt,
                     repeatAmount = selectedRepeatAmount,
@@ -465,7 +577,11 @@ class MainActivity : AppCompatActivity(), TaskAdapter.TaskItemActions {
                     text = text,
                     importance = importance,
                     dueDate = selectedDueDate,
-                    link = task.link,
+                    description = finalDescription,
+                    link = finalLink,
+                    attachmentUri = selectedAttachmentUri,
+                    attachmentName = selectedAttachmentName,
+                    attachmentMimeType = selectedAttachmentMimeType,
                     pinned = pinned,
                     completed = task.completed,
                     reminderAt = selectedReminderAt,
@@ -701,6 +817,39 @@ class MainActivity : AppCompatActivity(), TaskAdapter.TaskItemActions {
         showTaskDialog(task = null, parentId = item.id, forceIsCategory = false)
     }
 
+    override fun onShowDescription(item: TaskListItem) {
+        val description = item.description?.trim().orEmpty()
+        if (description.isBlank()) return
+        MaterialAlertDialogBuilder(this)
+            .setTitle(R.string.task_description_title)
+            .setMessage(description)
+            .setPositiveButton(android.R.string.ok, null)
+            .show()
+            .also(::applyDialogPanelBackgrounds)
+    }
+
+    override fun onShowLink(item: TaskListItem) {
+        val link = item.link?.trim().orEmpty()
+        if (link.isBlank()) return
+        MaterialAlertDialogBuilder(this)
+            .setTitle(R.string.task_link_title)
+            .setMessage(link)
+            .setNegativeButton(R.string.cancel_label, null)
+            .setPositiveButton(R.string.link_open_label) { _, _ ->
+                openUrl(link)
+            }
+            .show()
+            .also(::applyDialogPanelBackgrounds)
+    }
+
+    override fun onShowAttachment(item: TaskListItem) {
+        showAttachmentDialog(
+            attachmentUri = item.attachmentUri,
+            attachmentName = item.attachmentName,
+            attachmentMimeType = item.attachmentMimeType
+        )
+    }
+
     private inner class TaskDragCallback : ItemTouchHelper.SimpleCallback(
         ItemTouchHelper.UP or ItemTouchHelper.DOWN,
         0
@@ -918,6 +1067,484 @@ class MainActivity : AppCompatActivity(), TaskAdapter.TaskItemActions {
         }
     }
 
+    private fun launchAttachmentPicker(onPicked: (Uri?) -> Unit) {
+        pendingAttachmentSelection = onPicked
+        attachmentPickerLauncher.launch(arrayOf("*/*"))
+    }
+
+    private fun persistReadPermission(uri: Uri): Boolean {
+        return try {
+            contentResolver.takePersistableUriPermission(
+                uri,
+                Intent.FLAG_GRANT_READ_URI_PERMISSION
+            )
+            true
+        } catch (_: SecurityException) {
+            true
+        } catch (_: Exception) {
+            false
+        }
+    }
+
+    private fun resolveAttachmentName(uri: Uri): String? {
+        return contentResolver.query(
+            uri,
+            arrayOf(OpenableColumns.DISPLAY_NAME),
+            null,
+            null,
+            null
+        )?.use { cursor ->
+            val nameIndex = cursor.getColumnIndex(OpenableColumns.DISPLAY_NAME)
+            if (nameIndex >= 0 && cursor.moveToFirst()) cursor.getString(nameIndex) else null
+        }
+    }
+
+    private fun showAttachmentDialog(
+        attachmentUri: String?,
+        attachmentName: String?,
+        attachmentMimeType: String?
+    ) {
+        val rawUri = attachmentUri ?: return
+        val uri = Uri.parse(rawUri)
+        val displayName = attachmentName ?: uri.lastPathSegment ?: rawUri
+        val normalizedMimeType = TaskContentSupport.normalizeMimeType(attachmentMimeType, displayName)
+        val ext = displayName.substringAfterLast('.', "").lowercase(Locale.getDefault())
+
+        when {
+            TaskContentSupport.isPreviewableImage(normalizedMimeType, displayName) -> {
+                showImageAttachmentDialog(uri, displayName, normalizedMimeType)
+                return
+            }
+            normalizedMimeType.startsWith("video/") || ext in listOf("mp4", "mkv", "webm", "mov") -> {
+                showVideoAttachmentDialog(uri, displayName, normalizedMimeType)
+                return
+            }
+            normalizedMimeType.startsWith("audio/") || ext in listOf("mp3", "m4a", "wav", "ogg", "flac") -> {
+                showAudioAttachmentDialog(uri, displayName, normalizedMimeType)
+                return
+            }
+            normalizedMimeType.startsWith("text/") || ext in listOf("txt", "csv") -> {
+                showTextAttachmentDialog(uri, displayName, normalizedMimeType)
+                return
+            }
+            normalizedMimeType == "application/pdf" || ext == "pdf" -> {
+                showPdfPreviewDialog(uri, displayName, normalizedMimeType)
+                return
+            }
+            else -> {
+                val info = buildString {
+                    append(getString(R.string.task_attachment_name_label, displayName))
+                    if (normalizedMimeType.isNotBlank()) {
+                        append("\n")
+                        append(getString(R.string.task_attachment_type_label, normalizedMimeType))
+                    }
+                }
+
+                MaterialAlertDialogBuilder(this)
+                    .setTitle(R.string.task_attachment_title)
+                    .setMessage(info)
+                    .setNegativeButton(R.string.cancel_label, null)
+                    .setPositiveButton(R.string.link_open_label) { _, _ ->
+                        openAttachment(uri, normalizedMimeType)
+                    }
+                    .show()
+                    .also(::applyDialogPanelBackgrounds)
+            }
+        }
+    }
+
+    private fun showImageAttachmentDialog(uri: Uri, displayName: String, mimeType: String) {
+        val container = LinearLayout(this).apply {
+            orientation = LinearLayout.VERTICAL
+            setPadding((20 * resources.displayMetrics.density).toInt())
+        }
+
+        val titleView = TextView(this).apply {
+            text = getString(R.string.task_attachment_name_label, displayName)
+            setTextColor(getColor(R.color.terminal_text))
+        }
+
+        val imageView = ImageView(this).apply {
+            adjustViewBounds = true
+            setImageURI(uri)
+        }
+
+        container.addView(titleView)
+        container.addView(imageView.apply {
+            layoutParams = LinearLayout.LayoutParams(
+                ViewGroup.LayoutParams.MATCH_PARENT,
+                ViewGroup.LayoutParams.WRAP_CONTENT
+            ).apply {
+                topMargin = (12 * resources.displayMetrics.density).toInt()
+            }
+        })
+
+        if (mimeType.isNotBlank()) {
+            container.addView(TextView(this).apply {
+                text = getString(R.string.task_attachment_type_label, mimeType)
+                setTextColor(getColor(R.color.terminal_text_muted))
+                layoutParams = LinearLayout.LayoutParams(
+                    ViewGroup.LayoutParams.MATCH_PARENT,
+                    ViewGroup.LayoutParams.WRAP_CONTENT
+                ).apply {
+                    topMargin = (12 * resources.displayMetrics.density).toInt()
+                }
+            })
+        }
+
+        MaterialAlertDialogBuilder(this)
+            .setTitle(R.string.task_attachment_title)
+            .setView(container)
+            .setNegativeButton(R.string.cancel_label, null)
+            .setPositiveButton(R.string.link_open_label) { _, _ ->
+                openAttachment(uri, mimeType)
+            }
+            .show()
+            .also(::applyDialogPanelBackgrounds)
+    }
+
+    private fun showVideoAttachmentDialog(uri: Uri, displayName: String, mimeType: String) {
+        val container = LinearLayout(this).apply {
+            orientation = LinearLayout.VERTICAL
+            setPadding((8 * resources.displayMetrics.density).toInt())
+        }
+
+        val titleView = TextView(this).apply {
+            text = getString(R.string.task_attachment_name_label, displayName)
+            setTextColor(getColor(R.color.terminal_text))
+        }
+
+        val videoView = VideoView(this).apply {
+            setVideoURI(uri)
+            val mc = MediaController(this@MainActivity)
+            mc.setAnchorView(this)
+            setMediaController(mc)
+        }
+
+        container.addView(titleView)
+        container.addView(videoView.apply {
+            layoutParams = LinearLayout.LayoutParams(
+                ViewGroup.LayoutParams.MATCH_PARENT,
+                ViewGroup.LayoutParams.WRAP_CONTENT
+            ).apply {
+                topMargin = (12 * resources.displayMetrics.density).toInt()
+            }
+        })
+
+        val dialog = MaterialAlertDialogBuilder(this)
+            .setTitle(R.string.task_attachment_title)
+            .setView(container)
+            .setNegativeButton(R.string.cancel_label, null)
+            .setPositiveButton(R.string.link_open_label) { _, _ ->
+                openAttachment(uri, mimeType)
+            }
+            .show()
+            .also(::applyDialogPanelBackgrounds)
+
+        // Adjust VideoView height to keep aspect ratio and start playback when prepared
+        try {
+            videoView.setOnPreparedListener { mp ->
+                try {
+                    val vw = mp.videoWidth
+                    val vh = mp.videoHeight
+                    if (vw > 0 && vh > 0) {
+                        val metrics = resources.displayMetrics
+                        val horizontalPadding = (16 * metrics.density).toInt() // container padding + margins
+                        val availableWidth = metrics.widthPixels - horizontalPadding
+                        val desiredHeight = (availableWidth.toFloat() * vh / vw).toInt()
+                        videoView.layoutParams = videoView.layoutParams.apply {
+                            height = desiredHeight
+                        }
+                        videoView.requestLayout()
+                    }
+                } catch (_: Exception) {}
+                try { videoView.start() } catch (_: Exception) {}
+            }
+        } catch (_: Exception) {}
+    }
+
+    private fun showAudioAttachmentDialog(uri: Uri, displayName: String, mimeType: String) {
+        val container = LinearLayout(this).apply {
+            orientation = LinearLayout.VERTICAL
+            setPadding((12 * resources.displayMetrics.density).toInt())
+        }
+
+        val titleView = TextView(this).apply {
+            text = getString(R.string.task_attachment_name_label, displayName)
+            setTextColor(getColor(R.color.terminal_text))
+        }
+
+        val descriptionView = TextView(this).apply {
+            setTextColor(getColor(R.color.terminal_text_muted))
+            text = mimeType
+            setPadding((6 * resources.displayMetrics.density).toInt())
+            layoutParams = LinearLayout.LayoutParams(
+                ViewGroup.LayoutParams.MATCH_PARENT,
+                ViewGroup.LayoutParams.WRAP_CONTENT
+            ).apply {
+                topMargin = (8 * resources.displayMetrics.density).toInt()
+            }
+        }
+
+        val playButton = ImageButton(this).apply {
+            setImageResource(R.drawable.play_btn)
+            background = null
+            setColorFilter(ContextCompat.getColor(this@MainActivity, R.color.terminal_green))
+            contentDescription = getString(R.string.play_label)
+            val size = (44 * resources.displayMetrics.density).toInt()
+            layoutParams = LinearLayout.LayoutParams(size, size)
+        }
+
+        val controls = LinearLayout(this).apply {
+            orientation = LinearLayout.HORIZONTAL
+            gravity = android.view.Gravity.CENTER_HORIZONTAL
+            layoutParams = LinearLayout.LayoutParams(ViewGroup.LayoutParams.MATCH_PARENT, ViewGroup.LayoutParams.WRAP_CONTENT).apply {
+                topMargin = (12 * resources.displayMetrics.density).toInt()
+            }
+        }
+        var player: MediaPlayer? = null
+
+        playButton.setOnClickListener {
+            if (player == null) {
+                player = MediaPlayer().apply {
+                    setDataSource(this@MainActivity, uri)
+                    setOnPreparedListener {
+                        try {
+                            start()
+                            playButton.setImageResource(R.drawable.stop_btn)
+                            playButton.contentDescription = getString(R.string.stop_label)
+                        } catch (_: Exception) { }
+                    }
+                    setOnCompletionListener {
+                        playButton.setImageResource(R.drawable.play_btn)
+                        playButton.contentDescription = getString(R.string.play_label)
+                        try { stop(); reset(); release(); } catch (_: Exception) {}
+                        player = null
+                    }
+                    prepareAsync()
+                }
+            } else {
+                try { player?.stop(); player?.release() } catch (_: Exception) {}
+                player = null
+                playButton.setImageResource(R.drawable.play_btn)
+                playButton.contentDescription = getString(R.string.play_label)
+            }
+        }
+
+        container.addView(titleView)
+        container.addView(descriptionView)
+        controls.addView(playButton.apply {
+            layoutParams = LinearLayout.LayoutParams(
+                ViewGroup.LayoutParams.WRAP_CONTENT,
+                ViewGroup.LayoutParams.WRAP_CONTENT
+            )
+        })
+        container.addView(controls)
+
+        val dialog = MaterialAlertDialogBuilder(this)
+            .setTitle(R.string.task_attachment_title)
+            .setView(container)
+            .setNegativeButton(R.string.cancel_label) { _, _ ->
+                try { player?.stop(); player?.release() } catch (_: Exception) {}
+            }
+            .setPositiveButton(R.string.link_open_label) { _, _ ->
+                try { player?.stop(); player?.release() } catch (_: Exception) {}
+                openAttachment(uri, mimeType)
+            }
+            .show()
+            .also(::applyDialogPanelBackgrounds)
+
+        // ensure resources are released if dialog is dismissed by other means
+        dialog.setOnDismissListener {
+            try { player?.stop(); player?.release() } catch (_: Exception) {}
+        }
+    }
+
+    private fun showTextAttachmentDialog(uri: Uri, displayName: String, mimeType: String) {
+        val content = try {
+            contentResolver.openInputStream(uri)?.use { stream ->
+                BufferedReader(InputStreamReader(stream)).use { it.readText() }
+            } ?: ""
+        } catch (e: Exception) {
+            ""
+        }
+
+        val container = LinearLayout(this).apply {
+            orientation = LinearLayout.VERTICAL
+            setPadding((12 * resources.displayMetrics.density).toInt())
+        }
+
+        val titleView = TextView(this).apply {
+            text = getString(R.string.task_attachment_name_label, displayName)
+            setTextColor(getColor(R.color.terminal_text))
+        }
+
+        val textView = TextView(this).apply {
+            setTextColor(getColor(R.color.terminal_text))
+            text = if (content.length > 8000) content.substring(0, 8000) + "\n\n..." else content
+            setPadding((6 * resources.displayMetrics.density).toInt())
+        }
+
+        val scroll = ScrollView(this).apply {
+            addView(textView)
+            layoutParams = LinearLayout.LayoutParams(
+                ViewGroup.LayoutParams.MATCH_PARENT,
+                (300 * resources.displayMetrics.density).toInt()
+            ).apply {
+                topMargin = (12 * resources.displayMetrics.density).toInt()
+            }
+        }
+
+        container.addView(titleView)
+        container.addView(scroll)
+
+        MaterialAlertDialogBuilder(this)
+            .setTitle(R.string.task_attachment_title)
+            .setView(container)
+            .setNegativeButton(R.string.cancel_label, null)
+            .setPositiveButton(R.string.link_open_label) { _, _ ->
+                openAttachment(uri, mimeType)
+            }
+            .show()
+            .also(::applyDialogPanelBackgrounds)
+    }
+
+    private fun showPdfPreviewDialog(uri: Uri, displayName: String, mimeType: String) {
+        var pfd: ParcelFileDescriptor? = null
+        var renderer: PdfRenderer? = null
+        var currentPage = 0
+
+        val container = LinearLayout(this).apply {
+            orientation = LinearLayout.VERTICAL
+            setPadding((12 * resources.displayMetrics.density).toInt())
+        }
+
+        val titleView = TextView(this).apply {
+            text = getString(R.string.task_attachment_name_label, displayName)
+            setTextColor(getColor(R.color.terminal_text))
+        }
+
+        val imageView = ImageView(this).apply {
+            adjustViewBounds = true
+            scaleType = ImageView.ScaleType.FIT_CENTER
+        }
+
+        val pageIndicator = TextView(this).apply {
+            setTextColor(getColor(R.color.terminal_text_muted))
+            textSize = 12f
+            gravity = Gravity.CENTER
+        }
+
+        val prevBtn = ImageButton(this).apply {
+            setImageResource(R.drawable.prev_btn)
+            background = null
+            contentDescription = getString(R.string.previous_label)
+            val size = (44 * resources.displayMetrics.density).toInt()
+            layoutParams = LinearLayout.LayoutParams(size, size)
+        }
+        val nextBtn = ImageButton(this).apply {
+            setImageResource(R.drawable.next_btn)
+            background = null
+            contentDescription = getString(R.string.next_label)
+            val size = (44 * resources.displayMetrics.density).toInt()
+            layoutParams = LinearLayout.LayoutParams(size, size)
+        }
+
+        val controls = LinearLayout(this).apply {
+            orientation = LinearLayout.HORIZONTAL
+            gravity = Gravity.CENTER
+            addView(prevBtn)
+            addView(pageIndicator.apply {
+                layoutParams = LinearLayout.LayoutParams(
+                    (124 * resources.displayMetrics.density).toInt(),
+                    (44 * resources.displayMetrics.density).toInt()
+                ).apply {
+                    marginStart = (12 * resources.displayMetrics.density).toInt()
+                    marginEnd = (12 * resources.displayMetrics.density).toInt()
+                }
+            })
+            addView(nextBtn)
+        }
+
+        container.addView(titleView)
+        container.addView(imageView.apply {
+            layoutParams = LinearLayout.LayoutParams(ViewGroup.LayoutParams.MATCH_PARENT, (400 * resources.displayMetrics.density).toInt()).apply {
+                topMargin = (12 * resources.displayMetrics.density).toInt()
+            }
+        })
+        container.addView(controls)
+
+        val dialog = MaterialAlertDialogBuilder(this)
+            .setTitle(R.string.task_attachment_title)
+            .setView(container)
+            .setNegativeButton(R.string.cancel_label, null)
+            .setPositiveButton(R.string.link_open_label) { _, _ -> openAttachment(uri, mimeType) }
+            .show()
+            .also(::applyDialogPanelBackgrounds)
+
+        try {
+            pfd = contentResolver.openFileDescriptor(uri, "r")
+            if (pfd == null) {
+                showStatus(getString(R.string.task_attachment_open_failed))
+                dialog.dismiss()
+                return
+            }
+            renderer = PdfRenderer(pfd)
+
+            val pageCount = renderer.pageCount
+            fun renderPage(index: Int) {
+                val page = renderer.openPage(index)
+                val metrics = resources.displayMetrics
+                val desiredWidth = (metrics.widthPixels * 0.8).toInt()
+                val scale = desiredWidth.toFloat() / page.width.toFloat()
+                val bmp = Bitmap.createBitmap((page.width * scale).toInt(), (page.height * scale).toInt(), Bitmap.Config.ARGB_8888)
+                bmp.eraseColor(android.graphics.Color.WHITE) // Set white background to prevent transparency
+                page.render(bmp, null, null, PdfRenderer.Page.RENDER_MODE_FOR_DISPLAY)
+                imageView.setImageBitmap(bmp)
+                page.close()
+                pageIndicator.text = getString(R.string.pdf_page_indicator, index + 1, pageCount)
+                prevBtn.isEnabled = index > 0
+                nextBtn.isEnabled = index < pageCount - 1
+            }
+
+            renderPage(0)
+
+            prevBtn.setOnClickListener {
+                if (currentPage > 0) {
+                    currentPage--
+                    renderPage(currentPage)
+                }
+            }
+            nextBtn.setOnClickListener {
+                if (renderer != null && currentPage < renderer.pageCount - 1) {
+                    currentPage++
+                    renderPage(currentPage)
+                }
+            }
+
+        } catch (e: Exception) {
+            showStatus(getString(R.string.task_attachment_no_preview))
+        }
+
+        dialog.setOnDismissListener {
+            try { renderer?.close() } catch (_: Exception) {}
+            try { pfd?.close() } catch (_: Exception) {}
+        }
+    }
+
+    private fun openAttachment(uri: Uri, mimeType: String?) {
+        val intent = Intent(Intent.ACTION_VIEW).apply {
+            setDataAndType(uri, mimeType?.ifBlank { "*/*" } ?: "*/*")
+            addFlags(Intent.FLAG_GRANT_READ_URI_PERMISSION)
+        }
+
+        try {
+            startActivity(intent)
+        } catch (_: ActivityNotFoundException) {
+            showStatus(getString(R.string.task_attachment_open_failed))
+        }
+    }
+
     private fun openUrl(rawUrl: String) {
         try {
             startActivity(Intent(Intent.ACTION_VIEW, Uri.parse(normalizeUrl(rawUrl))))
@@ -965,13 +1592,25 @@ class MainActivity : AppCompatActivity(), TaskAdapter.TaskItemActions {
 
     private fun applyDialogPanelBackgrounds(dialog: AlertDialog) {
         val panelColor = getColor(R.color.terminal_panel)
-        listOf(
+        val panelIds = listOf(
             androidx.appcompat.R.id.topPanel,
             androidx.appcompat.R.id.contentPanel,
             androidx.appcompat.R.id.customPanel,
             androidx.appcompat.R.id.buttonPanel
-        ).forEach { panelId ->
+        )
+        panelIds.forEach { panelId ->
             dialog.findViewById<View>(panelId)?.setBackgroundColor(panelColor)
+        }
+
+        // Apply selected typeface to dialog content if available
+        try {
+            val contentView = dialog.findViewById<View>(android.R.id.content)
+                ?: dialog.window?.decorView
+            if (contentView != null && selectedTypeface != null) {
+                applyTypefaceRecursively(contentView, selectedTypeface!!)
+            }
+        } catch (_: Exception) {
+            // ignore failures when customizing system dialog internals
         }
     }
 
@@ -994,4 +1633,5 @@ class MainActivity : AppCompatActivity(), TaskAdapter.TaskItemActions {
             binding.textStatus.visibility = View.GONE
         }
     }
+
 }

@@ -1,8 +1,7 @@
 <resources>
     <string name="app_name">OpusAgenda</string>
-    <string name="app_header_title">♱ OpusAgenda v1.2</string>
+    <string name="app_header_title">♱ OpusAgenda v1.3</string>
 
-    <!-- Global Google Fonts -->
     <string name="app_font_family">UnifrakturMaguntia</string>
 
     <string name="search_hint">search tasks...</string>
@@ -61,7 +60,7 @@
     <string name="repeat_none">none</string>
     <string name="repeat_dialog_title">Choose repetition</string>
     <string name="repeat_option_none">No repeat</string>
-    <string name="repeat_option_hour">Every hour</string>>
+    <string name="repeat_option_hour">Every hour</string>
     <string name="repeat_option_day">Every day</string>
     <string name="repeat_option_week">Every week</string>
     <string name="repeat_option_month">Every month</string>
@@ -73,7 +72,7 @@
     <string name="repeat_custom_amount_invalid">Enter a valid repetition amount</string>
     <string name="repeat_unit_minutes_label">Minutes</string>
     <string name="repeat_unit_days_label">Days</string>
-    <string name="repeat_unit_hours_label">Hours</string>>
+    <string name="repeat_unit_hours_label">Hours</string>
     <string name="repeat_unit_weeks_label">Weeks</string>
     <string name="repeat_unit_months_label">Months</string>
     <string name="repeat_unit_years_label">Years</string>
@@ -108,6 +107,42 @@
     <string name="clock_date_placeholder">10 Apr 2026</string>
     <string name="font_dialog_title">Select font</string>
     <string name="font_applied">Font applied: %1$s</string>
+    <string name="new_category_label">NEW CAT</string>
+    <string name="new_subcategory_label">NEW SUBC</string>
+    <string name="new_child_task_label">NEW TASK</string>
+
+    <string name="task_description_label">Description</string>
+    <string name="task_description_hint">Add some context for this task</string>
+    <string name="task_description_save">SAVE DESC</string>
+    <string name="task_description_clear">CLEAR DESC</string>
+    <string name="task_description_required">Description cannot be empty</string>
+    <string name="task_description_saved">Description staged</string>
+    <string name="task_description_title">Task description</string>
+    <string name="task_description_icon_label">Open description</string>
+
+    <string name="task_link_label">Associated link</string>
+    <string name="task_link_hint">https://linked.resource</string>
+    <string name="task_link_save">SAVE LINK</string>
+    <string name="task_link_clear">CLEAR LINK</string>
+    <string name="task_link_required">Enter a valid link first</string>
+    <string name="task_link_saved">Link staged</string>
+    <string name="task_link_title">Task link</string>
+    <string name="task_link_icon_label">Open link details</string>
+
+    <string name="task_attachment_label">Attached file</string>
+    <string name="task_attachment_empty">No file selected</string>
+    <string name="task_attachment_pick">PICK FILE</string>
+    <string name="task_attachment_clear">CLEAR FILE</string>
+    <string name="task_attachment_saved">File attached</string>
+    <string name="task_attachment_picker_failed">Could not read the selected file</string>
+    <string name="task_attachment_open_failed">No app can open that attachment</string>
+    <string name="task_attachment_title">Task attachment</string>
+    <string name="task_attachment_icon_label">Open attachment details</string>
+    <string name="task_attachment_name_label">file: %1$s</string>
+    <string name="task_attachment_type_label">type: %1$s</string>
+    <string name="play_label">PLAY</string>
+    <string name="stop_label">STOP</string>
+    <string name="task_attachment_no_preview">No preview available</string>
 
     <string-array name="font_option_labels">
         <item>Inter</item>
@@ -116,10 +151,6 @@
         <item>Octosquares</item>
         <item>UnifrakturMaguntia</item>
     </string-array>
-
-    <string name="new_category_label">NEW CAT</string>
-    <string name="new_subcategory_label">NEW SUBC</string>
-    <string name="new_child_task_label">NEW TASK</string>
 
     <string-array name="importance_options">
         <item>1 LOW</item>
@@ -157,4 +188,9 @@
         <item quantity="one">%1$d year</item>
         <item quantity="other">%1$d years</item>
     </plurals>
+
+    <string name="previous_label">PREV</string>
+    <string name="next_label">NEXT</string>
+    <string name="pdf_page_indicator">Page %1$d / %2$d</string>
+
 </resources>

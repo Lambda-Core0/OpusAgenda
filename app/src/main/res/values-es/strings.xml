@@ -1,8 +1,7 @@
 <resources>
     <string name="app_name">OpusAgenda</string>
-    <string name="app_header_title">♱ OpusAgenda v1.2</string>
+    <string name="app_header_title">♱ OpusAgenda v1.3</string>
 
-    <!-- Global Google Fonts -->
     <string name="app_font_family">UnifrakturMaguntia</string>
 
     <string name="search_hint">buscar tareas...</string>
@@ -60,9 +59,9 @@
     <string name="task_repeat_value_label">repeticion: %1$s</string>
     <string name="repeat_none">ninguna</string>
     <string name="repeat_dialog_title">Elegir repeticion</string>
-     <string name="repeat_option_none">Sin repeticion</string>
-     <string name="repeat_option_hour">Cada hora</string>
-     <string name="repeat_option_day">Cada dia</string>
+    <string name="repeat_option_none">Sin repeticion</string>
+    <string name="repeat_option_hour">Cada hora</string>
+    <string name="repeat_option_day">Cada dia</string>
     <string name="repeat_option_week">Cada semana</string>
     <string name="repeat_option_month">Cada mes</string>
     <string name="repeat_option_year">Cada año</string>
@@ -109,6 +108,40 @@
     <string name="font_dialog_title">Selecciona fuente</string>
     <string name="font_applied">Fuente aplicada: %1$s</string>
 
+    <string name="new_category_label">NUEVA CAT</string>
+    <string name="new_subcategory_label">NUEVA SUBC</string>
+    <string name="new_child_task_label">NUEVA TAREA</string>
+
+    <string name="task_description_label">Descripcion</string>
+    <string name="task_description_hint">Agrega contexto para esta tarea</string>
+    <string name="task_description_save">GUARDAR DESC</string>
+    <string name="task_description_clear">LIMPIAR DESC</string>
+    <string name="task_description_required">La descripcion no puede quedar vacia</string>
+    <string name="task_description_saved">Descripcion preparada</string>
+    <string name="task_description_title">Descripcion de la tarea</string>
+    <string name="task_description_icon_label">Abrir descripcion</string>
+
+    <string name="task_link_label">Link asociado</string>
+    <string name="task_link_hint">https://recurso.asociado</string>
+    <string name="task_link_save">GUARDAR LINK</string>
+    <string name="task_link_clear">LIMPIAR LINK</string>
+    <string name="task_link_required">Ingresa un link valido primero</string>
+    <string name="task_link_saved">Link preparado</string>
+    <string name="task_link_title">Link de la tarea</string>
+    <string name="task_link_icon_label">Abrir detalle del link</string>
+
+    <string name="task_attachment_label">Archivo adjunto</string>
+    <string name="task_attachment_empty">No hay archivo seleccionado</string>
+    <string name="task_attachment_pick">ELEGIR ARCHIVO</string>
+    <string name="task_attachment_clear">LIMPIAR ARCHIVO</string>
+    <string name="task_attachment_saved">Archivo adjuntado</string>
+    <string name="task_attachment_picker_failed">No se pudo leer el archivo elegido</string>
+    <string name="task_attachment_open_failed">No hay una app para abrir ese adjunto</string>
+    <string name="task_attachment_title">Adjunto de la tarea</string>
+    <string name="task_attachment_icon_label">Abrir detalle del adjunto</string>
+    <string name="task_attachment_name_label">archivo: %1$s</string>
+    <string name="task_attachment_type_label">tipo: %1$s</string>
+
     <string-array name="font_option_labels">
         <item>Inter</item>
         <item>Geo</item>
@@ -153,4 +186,13 @@
         <item quantity="one">%1$d año</item>
         <item quantity="other">%1$d años</item>
     </plurals>
+
+    <string name="play_label">REPRODUCIR</string>
+    <string name="stop_label">DETENER</string>
+    <string name="task_attachment_no_preview">No hay vista previa disponible</string>
+
+    <string name="previous_label">ANTERIOR</string>
+    <string name="next_label">SIGUIENTE</string>
+    <string name="pdf_page_indicator">Página %1$d / %2$d</string>
+
 </resources>

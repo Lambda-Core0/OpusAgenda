@@ -1,17 +1,17 @@
 <resources>
     <string name="app_name">OpusAgenda</string>
-    <string name="app_header_title">OpusAgenda v1.2</string>
+    <string name="app_header_title">♱ OpusAgenda v1.3</string>
 
     <string name="app_font_family">UnifrakturMaguntia</string>
 
-    <string name="search_hint">cerca attività...</string>
-    <string name="empty_state_all">Nessuna attività. Usa NUOVA per crearne una</string>
-    <string name="empty_state_today">Nessuna attività urgente per oggi</string>
+    <string name="search_hint">cerca attivita...</string>
+    <string name="empty_state_all">Nessuna attivita. Usa NUOVA per crearne una</string>
+    <string name="empty_state_today">Nessuna attivita urgente per oggi</string>
     <string name="all_label">TUTTE</string>
     <string name="today_label">OGGI</string>
     <string name="new_task_label">NUOVA</string>
     <string name="run_command_label">ESEGUI</string>
-    <string name="task_text_hint">Testo attività</string>
+    <string name="task_text_hint">Testo attivita</string>
     <string name="save_label">SALVA</string>
     <string name="cancel_label">ANNULLA</string>
     <string name="pick_due_date_label">SCADENZA</string>
@@ -19,9 +19,9 @@
     <string name="pinned_label">FISSATA</string>
     <string name="completed_label">Completata</string>
     <string name="importance_label">Importanza</string>
-    <string name="task_dialog_title_new">Nuova attività</string>
-    <string name="task_dialog_title_edit">Modifica attività</string>
-    <string name="task_text_required">Inserisci il testo della attività</string>
+    <string name="task_dialog_title_new">Nuova attivita</string>
+    <string name="task_dialog_title_edit">Modifica attivita</string>
+    <string name="task_text_required">Inserisci il testo dell\'attivita</string>
     <string name="default_category_name">Categoria</string>
     <string name="category_badge_label">CAT</string>
     <string name="category_edit_label">RINOM</string>
@@ -49,19 +49,19 @@
     <string name="reminder_option_custom">Data e ora personalizzate</string>
     <string name="reminder_summary_with_datetime">%1$s (%2$s)</string>
     <string name="reminder_requires_due_date">Imposta prima una scadenza per usare i preset</string>
-    <string name="reminder_time_in_past">L orario del promemoria deve essere nel futuro</string>
+    <string name="reminder_time_in_past">L\'orario del promemoria deve essere nel futuro</string>
     <string name="reminder_custom_date_title">Data promemoria</string>
     <string name="reminder_custom_time_title">Ora promemoria</string>
-    <string name="reminder_channel_name">Promemoria attività</string>
-    <string name="reminder_channel_description">Notifiche per i promemoria pianificati delle attività</string>
-    <string name="reminder_notification_title">Promemoria attività</string>
-    <string name="notifications_permission_denied">Il permesso per le notifiche è necessario per i promemoria</string>
+    <string name="reminder_channel_name">Promemoria attivita</string>
+    <string name="reminder_channel_description">Notifiche per i promemoria pianificati delle attivita</string>
+    <string name="reminder_notification_title">Promemoria attivita</string>
+    <string name="notifications_permission_denied">Il permesso per le notifiche e necessario per i promemoria</string>
     <string name="task_repeat_value_label">ripetizione: %1$s</string>
     <string name="repeat_none">nessuna</string>
     <string name="repeat_dialog_title">Scegli ripetizione</string>
-     <string name="repeat_option_none">Nessuna ripetizione</string>
-     <string name="repeat_option_hour">Ogni ora</string>
-     <string name="repeat_option_day">Ogni giorno</string>
+    <string name="repeat_option_none">Nessuna ripetizione</string>
+    <string name="repeat_option_hour">Ogni ora</string>
+    <string name="repeat_option_day">Ogni giorno</string>
     <string name="repeat_option_week">Ogni settimana</string>
     <string name="repeat_option_month">Ogni mese</string>
     <string name="repeat_option_year">Ogni anno</string>
@@ -72,16 +72,17 @@
     <string name="repeat_custom_amount_invalid">Inserisci una quantita valida per la ripetizione</string>
     <string name="repeat_unit_minutes_label">Minuti</string>
     <string name="repeat_unit_days_label">Giorni</string>
+    <string name="repeat_unit_hours_label">Ore</string>
     <string name="repeat_unit_weeks_label">Settimane</string>
     <string name="repeat_unit_months_label">Mesi</string>
     <string name="repeat_unit_years_label">Anni</string>
     <string name="link_open_label">APRI</string>
     <string name="link_missing">Nessun link disponibile</string>
     <string name="invalid_command">Comando non valido</string>
-    <string name="task_saved">Attività salvata</string>
-    <string name="task_deleted">Attività eliminata</string>
-    <string name="task_completed">Attività aggiornata</string>
-    <string name="task_failed">Impossibile aggiornare questa attività</string>
+    <string name="task_saved">Attivita salvata</string>
+    <string name="task_deleted">Attivita eliminata</string>
+    <string name="task_completed">Attivita aggiornata</string>
+    <string name="task_failed">Impossibile aggiornare questa attivita</string>
     <string name="summary_format">aperte: %1$d  oggi: %2$d  totale: %3$d</string>
     <string name="task_meta_format">imp: %1$d  scad: %2$s  punteggio: %3$d</string>
     <string name="task_pin_label">FISSA</string>
@@ -98,14 +99,47 @@
     <string name="quick_link_deleted">Link rapido eliminato</string>
     <string name="quick_link_invalid">Inserisci nome e URL validi</string>
     <string name="quick_link_delete_label">ELIMINA</string>
-    <string name="widget_tasks_title">COMPITI</string>
-    <string name="widget_tasks_description">Elenco con filtri TUTTI e OGGI. Tocca una riga per completare</string>
+    <string name="widget_tasks_title">ATTIVITA</string>
+    <string name="widget_tasks_description">Elenco con filtri TUTTE e OGGI. Tocca una riga per completare</string>
     <string name="widget_quick_links_description">Link rapidi salvati in OpusAgenda. Tocca per aprire</string>
     <string name="widget_quick_links_empty">Nessun link. Aggiungili nell\'app</string>
     <string name="clock_time_placeholder">00:00:00</string>
     <string name="clock_date_placeholder">10 Apr 2026</string>
     <string name="font_dialog_title">Seleziona font</string>
     <string name="font_applied">Font applicato: %1$s</string>
+    <string name="new_category_label">NUOVA CAT</string>
+    <string name="new_subcategory_label">NUOVA SOTTOC</string>
+    <string name="new_child_task_label">NUOVA ATTIV</string>
+
+    <string name="task_description_label">Descrizione</string>
+    <string name="task_description_hint">Aggiungi contesto per questa attivita</string>
+    <string name="task_description_save">SALVA DESC</string>
+    <string name="task_description_clear">CANCELLA DESC</string>
+    <string name="task_description_required">La descrizione non puo essere vuota</string>
+    <string name="task_description_saved">Descrizione preparata</string>
+    <string name="task_description_title">Descrizione attivita</string>
+    <string name="task_description_icon_label">Apri descrizione</string>
+
+    <string name="task_link_label">Link associato</string>
+    <string name="task_link_hint">https://risorsa.collegata</string>
+    <string name="task_link_save">SALVA LINK</string>
+    <string name="task_link_clear">CANCELLA LINK</string>
+    <string name="task_link_required">Inserisci prima un link valido</string>
+    <string name="task_link_saved">Link preparato</string>
+    <string name="task_link_title">Link attivita</string>
+    <string name="task_link_icon_label">Apri dettagli link</string>
+
+    <string name="task_attachment_label">File allegato</string>
+    <string name="task_attachment_empty">Nessun file selezionato</string>
+    <string name="task_attachment_pick">SCEGLI FILE</string>
+    <string name="task_attachment_clear">RIMUOVI FILE</string>
+    <string name="task_attachment_saved">File allegato</string>
+    <string name="task_attachment_picker_failed">Impossibile leggere il file selezionato</string>
+    <string name="task_attachment_open_failed">Nessuna app puo aprire questo allegato</string>
+    <string name="task_attachment_title">Allegato attivita</string>
+    <string name="task_attachment_icon_label">Apri dettagli allegato</string>
+    <string name="task_attachment_name_label">file: %1$s</string>
+    <string name="task_attachment_type_label">tipo: %1$s</string>
 
     <string-array name="font_option_labels">
         <item>Inter</item>
@@ -125,6 +159,11 @@
     <plurals name="repeat_unit_minutes">
         <item quantity="one">%1$d minuto</item>
         <item quantity="other">%1$d minuti</item>
+    </plurals>
+
+    <plurals name="repeat_unit_hours">
+        <item quantity="one">%1$d ora</item>
+        <item quantity="other">%1$d ore</item>
     </plurals>
 
     <plurals name="repeat_unit_days">

@@ -15,7 +15,7 @@ import androidx.sqlite.db.SupportSQLiteDatabase
  */
 @Database(
     entities = [TaskEntity::class],
-    version = 4,
+    version = 5,
     exportSchema = false
 )
 abstract class AppDatabase : RoomDatabase() {
@@ -51,6 +51,15 @@ abstract class AppDatabase : RoomDatabase() {
             }
         }
 
+        private val MIGRATION_4_5 = object : Migration(4, 5) {
+            override fun migrate(db: SupportSQLiteDatabase) {
+                db.execSQL("ALTER TABLE tasks ADD COLUMN description TEXT")
+                db.execSQL("ALTER TABLE tasks ADD COLUMN attachmentUri TEXT")
+                db.execSQL("ALTER TABLE tasks ADD COLUMN attachmentName TEXT")
+                db.execSQL("ALTER TABLE tasks ADD COLUMN attachmentMimeType TEXT")
+            }
+        }
+
         /**
          * Devuelve una instancia unica inicializada de forma thread-safe.
          *
@@ -67,6 +76,7 @@ abstract class AppDatabase : RoomDatabase() {
                     .addMigrations(MIGRATION_1_2)
                     .addMigrations(MIGRATION_2_3)
                     .addMigrations(MIGRATION_3_4)
+                    .addMigrations(MIGRATION_4_5)
                     .build()
                     .also { database ->
                         INSTANCE = database

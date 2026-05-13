@@ -8,13 +8,11 @@ import androidx.core.content.ContextCompat
 import androidx.recyclerview.widget.RecyclerView
 import com.lambda.opusagenda.R
 import com.lambda.opusagenda.databinding.ItemTaskBinding
+import com.lambda.opusagenda.util.TaskAttachmentKind
+import com.lambda.opusagenda.util.TaskContentSupport
 import com.lambda.opusagenda.util.TaskDateFormatter
 import com.lambda.opusagenda.viewmodel.TaskListItem
-import java.util.Collections
 
-/**
- * Adaptador jerarquico principal de tareas y categorias.
- */
 class TaskAdapter(
     private val actions: TaskItemActions
 ) : RecyclerView.Adapter<TaskAdapter.TaskViewHolder>() {
@@ -50,10 +48,7 @@ class TaskAdapter(
 
     fun previewMove(fromPosition: Int, toPosition: Int) {
         if (fromPosition !in items.indices || toPosition !in items.indices) return
-        // Perform a move (remove + insert) so the adapter snapshot represents the dragged
-        // item being inserted at the target position instead of a simple swap.
         val item = items.removeAt(fromPosition)
-        // If removing an earlier index, the target index shifts by -1 when inserting.
         val insertIndex = if (fromPosition < toPosition) toPosition else toPosition
         items.add(insertIndex, item)
         notifyItemMoved(fromPosition, insertIndex)
@@ -130,6 +125,41 @@ class TaskAdapter(
                 if (item.isCategory) R.string.category_edit_label else R.string.task_edit_label
             )
 
+            val hasDescription = !item.description.isNullOrBlank()
+            val hasLink = !item.link.isNullOrBlank()
+            val hasAttachment = !item.attachmentUri.isNullOrBlank()
+            val attachmentKind = TaskContentSupport.classifyAttachment(
+                item.attachmentMimeType,
+                item.attachmentName
+            )
+
+
+            binding.buttonDescription.visibility = if (hasDescription) View.VISIBLE else View.GONE
+            binding.buttonLink.visibility = if (hasLink) View.VISIBLE else View.GONE
+            binding.buttonAttachment.visibility = if (hasAttachment) View.VISIBLE else View.GONE
+            if (hasAttachment) {
+                binding.buttonAttachment.setImageResource(attachmentIconFor(attachmentKind))
+                binding.buttonAttachment.setColorFilter(
+                    ContextCompat.getColor(
+                        context,
+                        when (attachmentKind) {
+                            TaskAttachmentKind.IMAGE -> R.color.terminal_green
+                            TaskAttachmentKind.VIDEO -> R.color.terminal_green
+                            TaskAttachmentKind.AUDIO -> R.color.terminal_green
+                            TaskAttachmentKind.FILE -> R.color.terminal_green
+                        }
+                    )
+                )
+            }
+
+            binding.layoutContentActions.visibility = if (
+                item.isCategory || (!hasDescription && !hasLink && !hasAttachment)
+            ) {
+                View.GONE
+            } else {
+                View.VISIBLE
+            }
+
             binding.checkCompleted.setOnCheckedChangeListener { _, checked ->
                 actions.onToggleCompleted(item, checked)
             }
@@ -138,14 +168,25 @@ class TaskAdapter(
             binding.actionNewCategory.setOnClickListener { actions.onCreateSubcategory(item) }
             binding.actionNewTask.setOnClickListener { actions.onCreateChildTask(item) }
             binding.actionDelete.setOnClickListener { actions.onDelete(item) }
+            binding.buttonDescription.setOnClickListener { actions.onShowDescription(item) }
+            binding.buttonLink.setOnClickListener { actions.onShowLink(item) }
+            binding.buttonAttachment.setOnClickListener { actions.onShowAttachment(item) }
             binding.actionNewCategory.visibility = if (item.isCategory) View.VISIBLE else View.GONE
             binding.actionNewTask.visibility = if (item.isCategory) View.VISIBLE else View.GONE
             binding.root.setOnClickListener {
                 if (item.isCategory) {
                     actions.onToggleExpanded(item)
-                } else {
-                    actions.onEdit(item)
                 }
+                // Removed edit on click for tasks to prevent misclicks on action buttons
+            }
+        }
+
+        private fun attachmentIconFor(kind: TaskAttachmentKind): Int {
+            return when (kind) {
+                TaskAttachmentKind.IMAGE -> R.drawable.img_btn
+                TaskAttachmentKind.VIDEO -> R.drawable.video_btn
+                TaskAttachmentKind.AUDIO -> R.drawable.audio_btn
+                TaskAttachmentKind.FILE -> R.drawable.file_btn
             }
         }
     }
@@ -158,5 +199,8 @@ class TaskAdapter(
         fun onToggleExpanded(item: TaskListItem)
         fun onCreateSubcategory(item: TaskListItem)
         fun onCreateChildTask(item: TaskListItem)
+        fun onShowDescription(item: TaskListItem)
+        fun onShowLink(item: TaskListItem)
+        fun onShowAttachment(item: TaskListItem)
     }
 }

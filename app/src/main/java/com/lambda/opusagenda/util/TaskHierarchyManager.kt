@@ -86,7 +86,11 @@ object TaskHierarchyManager {
                             directChildCount,
                             highestImportance
                         ),
+                        description = null,
                         link = null,
+                        attachmentUri = null,
+                        attachmentName = null,
+                        attachmentMimeType = null,
                         pinned = false,
                         reminderAt = null,
                         repeatAmount = null,
@@ -120,7 +124,11 @@ object TaskHierarchyManager {
                             TaskDateFormatter.formatForPicker(context, entity.dueDate),
                             TaskPriorityCalculator.calculate(entity, now)
                         ),
+                        description = entity.description,
                         link = entity.link,
+                        attachmentUri = entity.attachmentUri,
+                        attachmentName = entity.attachmentName,
+                        attachmentMimeType = entity.attachmentMimeType,
                         pinned = entity.pinned,
                         reminderAt = entity.reminderAt,
                         repeatAmount = entity.repeatAmount,
@@ -197,6 +205,8 @@ object TaskHierarchyManager {
 
     private fun matchesQuery(task: TaskEntity, normalizedQuery: String): Boolean {
         return task.text.lowercase().contains(normalizedQuery) ||
-            task.link.orEmpty().lowercase().contains(normalizedQuery)
+            task.description.orEmpty().lowercase().contains(normalizedQuery) ||
+            task.link.orEmpty().lowercase().contains(normalizedQuery) ||
+            task.attachmentName.orEmpty().lowercase().contains(normalizedQuery)
     }
 }
