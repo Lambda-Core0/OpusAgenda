@@ -139,19 +139,20 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_marginTop="12dp"
+            android:gravity="center"
             android:orientation="horizontal">
 
             <ImageButton
                 android:id="@+id/buttonAll"
                 android:layout_width="30dp"
                 android:layout_height="30dp"
-                android:layout_marginStart="50dp"
+                android:layout_marginStart="21dp"
                 android:layout_marginEnd="21dp"
                 android:background="@color/terminal_panel"
-                android:src="@drawable/filter_off"
-                android:text="@string/all_label"
-                android:textAllCaps="false"
-                android:textColor="@color/terminal_black" />
+                android:contentDescription="@string/all_label"
+                android:padding="0dp"
+                android:scaleType="centerInside"
+                android:src="@drawable/filter_off" />
 
             <ImageButton
                 android:id="@+id/buttonToday"
@@ -160,10 +161,10 @@
                 android:layout_marginStart="21dp"
                 android:layout_marginEnd="21dp"
                 android:background="@color/terminal_panel"
-                android:src="@drawable/filter"
-                android:text="@string/today_label"
-                android:textAllCaps="false"
-                android:textColor="@color/terminal_black" />
+                android:contentDescription="@string/today_label"
+                android:padding="0dp"
+                android:scaleType="centerInside"
+                android:src="@drawable/filter" />
 
             <ImageButton
                 android:id="@+id/buttonNew"
@@ -172,10 +173,10 @@
                 android:layout_marginStart="21dp"
                 android:layout_marginEnd="21dp"
                 android:background="@color/terminal_panel"
-                android:src="@drawable/new_task"
-                android:text="@string/new_task_label"
-                android:textAllCaps="false"
-                android:textColor="@color/terminal_black" />
+                android:contentDescription="@string/new_task_label"
+                android:padding="0dp"
+                android:scaleType="centerInside"
+                android:src="@drawable/new_task" />
 
             <ImageButton
                 android:id="@+id/buttonNewCategory"
@@ -184,10 +185,10 @@
                 android:layout_marginStart="21dp"
                 android:layout_marginEnd="21dp"
                 android:background="@color/terminal_panel"
-                android:src="@drawable/new_folder"
-                android:text="@string/new_category_label"
-                android:textAllCaps="false"
-                android:textColor="@color/terminal_black" />
+                android:contentDescription="@string/new_category_label"
+                android:padding="0dp"
+                android:scaleType="centerInside"
+                android:src="@drawable/new_folder" />
 
         </LinearLayout>
     </LinearLayout>

@@ -1,0 +1,263 @@
+﻿<resources>
+    <string name="search_hint">ã‚¿ã‚¹ã‚¯ã‚’æ¤œç´¢...</string>
+    <string name="empty_state_all">ã‚¿ã‚¹ã‚¯ã¯ã¾ã ã‚ã‚Šã¾ã›ã‚“ã€‚æ–°è¦ã§ä½œæˆã§ãã¾ã™</string>
+    <string name="empty_state_today">ä»Šæ—¥ã®ç·Šæ€¥ã‚¿ã‚¹ã‚¯ã¯ã‚ã‚Šã¾ã›ã‚“</string>
+    <string name="all_label">ã™ã¹ã¦</string>
+    <string name="today_label">ä»Šæ—¥</string>
+    <string name="new_task_label">æ–°è¦</string>
+    <string name="save_label">ä¿å­˜</string>
+    <string name="cancel_label">ã‚­ãƒ£ãƒ³ã‚»ãƒ«</string>
+    <string name="pick_due_date_label">æœŸé™</string>
+    <string name="clear_due_date_label">æœŸé™ã‚’ã‚¯ãƒªã‚¢</string>
+    <string name="completed_label">å®Œäº†</string>
+    <string name="importance_label">é‡è¦åº¦</string>
+    <string name="task_dialog_title_new">æ–°ã—ã„ã‚¿ã‚¹ã‚¯</string>
+    <string name="task_dialog_title_edit">ã‚¿ã‚¹ã‚¯ã‚’ç·¨é›†</string>
+    <string name="task_text_required">ã‚¿ã‚¹ã‚¯å†…å®¹ã‚’å…¥åŠ›ã—ã¦ãã ã•ã„</string>
+    <string name="default_category_name">ã‚«ãƒ†ã‚´ãƒª</string>
+    <string name="category_move_invalid">ã“ã®ç§»å‹•ã§ã¯ç„¡åŠ¹ãªå…¥ã‚Œå­ã‚«ãƒ†ã‚´ãƒªã«ãªã‚Šã¾ã™</string>
+    <string name="task_due_label">æœŸé™: %1$s</string>
+    <string name="no_due_date">æœŸé™ãªã—</string>
+    <string name="no_reminder">ãªã—</string>
+    <string name="due_relative_overdue">%1$dæ—¥é…ã‚Œ</string>
+    <string name="due_relative_today">ä»Šæ—¥</string>
+    <string name="due_relative_tomorrow">æ˜Žæ—¥</string>
+    <string name="due_relative_in">%1$dæ—¥å¾Œ</string>
+    <string name="pick_reminder_label">ãƒªãƒžã‚¤ãƒ³ãƒ€ãƒ¼</string>
+    <string name="pick_repeat_label">ç¹°ã‚Šè¿”ã—</string>
+    <string name="reminder_dialog_title">ãƒªãƒžã‚¤ãƒ³ãƒ€ãƒ¼ã‚’é¸æŠž</string>
+    <string name="reminder_option_none">ãƒªãƒžã‚¤ãƒ³ãƒ€ãƒ¼ãªã—</string>
+    <string name="reminder_option_hour">1æ™‚é–“å‰</string>
+    <string name="reminder_option_day">1æ—¥å‰</string>
+    <string name="reminder_option_week">1é€±é–“å‰</string>
+    <string name="reminder_option_month">1ã‹æœˆå‰</string>
+    <string name="reminder_option_custom">ã‚«ã‚¹ã‚¿ãƒ æ—¥æ™‚</string>
+    <string name="reminder_requires_due_date">ãƒ—ãƒªã‚»ãƒƒãƒˆã‚’ä½¿ã†ã«ã¯å…ˆã«æœŸé™ã‚’è¨­å®šã—ã¦ãã ã•ã„</string>
+    <string name="reminder_time_in_past">ãƒªãƒžã‚¤ãƒ³ãƒ€ãƒ¼æ™‚åˆ»ã¯æœªæ¥ã«ã—ã¦ãã ã•ã„</string>
+    <string name="notifications_permission_denied">ãƒªãƒžã‚¤ãƒ³ãƒ€ãƒ¼ã«ã¯é€šçŸ¥æ¨©é™ãŒå¿…è¦ã§ã™</string>
+    <string name="repeat_dialog_title">ç¹°ã‚Šè¿”ã—ã‚’é¸æŠž</string>
+    <string name="repeat_option_none">ç¹°ã‚Šè¿”ã—ãªã—</string>
+    <string name="repeat_option_hour">æ¯Žæ™‚</string>
+    <string name="repeat_option_day">æ¯Žæ—¥</string>
+    <string name="repeat_option_week">æ¯Žé€±</string>
+    <string name="repeat_option_month">æ¯Žæœˆ</string>
+    <string name="repeat_option_year">æ¯Žå¹´</string>
+    <string name="repeat_option_custom">ã‚«ã‚¹ã‚¿ãƒ é–“éš”</string>
+    <string name="task_saved">ã‚¿ã‚¹ã‚¯ã‚’ä¿å­˜ã—ã¾ã—ãŸ</string>
+    <string name="task_deleted">ã‚¿ã‚¹ã‚¯ã‚’å‰Šé™¤ã—ã¾ã—ãŸ</string>
+    <string name="task_completed">ã‚¿ã‚¹ã‚¯ã‚’æ›´æ–°ã—ã¾ã—ãŸ</string>
+    <string name="task_failed">ã‚¿ã‚¹ã‚¯ã‚’æ›´æ–°ã§ãã¾ã›ã‚“ã§ã—ãŸ</string>
+    <string name="summary_format">æœªå®Œäº†: %1$d  ä»Šæ—¥: %2$d  åˆè¨ˆ: %3$d</string>
+    <string name="task_pin_label">å›ºå®š</string>
+    <string name="task_unpin_label">å›ºå®šè§£é™¤</string>
+    <string name="task_edit_label">ç·¨é›†</string>
+    <string name="task_delete_label">å‰Šé™¤</string>
+    <string name="quick_links_title">ã‚¯ã‚¤ãƒƒã‚¯ãƒªãƒ³ã‚¯</string>
+    <string name="new_link_label">æ–°ã—ã„ãƒªãƒ³ã‚¯</string>
+    <string name="widget_tasks_title">ã‚¿ã‚¹ã‚¯</string>
+    <string name="font_dialog_title">ãƒ•ã‚©ãƒ³ãƒˆã‚’é¸æŠž</string>
+    <string name="new_category_label">æ–°ã‚«ãƒ†ã‚´ãƒª</string>
+    <string name="new_subcategory_label">æ–°ã‚µãƒ–ã‚«ãƒ†ã‚´ãƒª</string>
+    <string name="new_child_task_label">æ–°ã‚¿ã‚¹ã‚¯</string>
+    <string name="task_description_label">èª¬æ˜Ž</string>
+    <string name="task_link_label">é–¢é€£ãƒªãƒ³ã‚¯</string>
+    <string name="task_attachment_label">æ·»ä»˜ãƒ•ã‚¡ã‚¤ãƒ«</string>
+    <string name="task_attachment_empty">ãƒ•ã‚¡ã‚¤ãƒ«ãŒé¸æŠžã•ã‚Œã¦ã„ã¾ã›ã‚“</string>
+    <string name="play_label">å†ç”Ÿ</string>
+    <string name="stop_label">åœæ­¢</string>
+    <string name="previous_label">å‰ã¸</string>
+    <string name="next_label">æ¬¡ã¸</string>
+    <string name="pdf_page_indicator">%1$d / %2$d ãƒšãƒ¼ã‚¸</string>
+    <!-- Fallback entries added to keep this locale 1:1 with the base resources. -->
+    <string name="app_name">OpusAgenda</string>
+
+    <string name="app_header_title">â™± OpusAgenda v1.3</string>
+
+    <string name="app_font_family">UnifrakturMaguntia</string>
+
+    <string name="run_command_label">RUN</string>
+
+    <string name="task_text_hint">Task text</string>
+
+    <string name="pinned_label">PINNED</string>
+
+    <string name="category_badge_label">CAT</string>
+
+    <string name="category_edit_label">RENAME</string>
+
+    <string name="category_due_label">category</string>
+
+    <string name="category_meta_format">children: %1$d  imp: %2$d</string>
+
+    <string name="task_reminder_value_label">reminder: %1$s</string>
+
+    <string name="task_date_with_relative">%1$s - %2$s</string>
+
+    <string name="clear_reminder_label">CLEAR REMINDER</string>
+
+    <string name="reminder_summary_with_datetime">%1$s (%2$s)</string>
+
+    <string name="reminder_custom_date_title">Reminder date</string>
+
+    <string name="reminder_custom_time_title">Reminder time</string>
+
+    <string name="reminder_channel_name">Task reminders</string>
+
+    <string name="reminder_channel_description">Notifications for scheduled task reminders</string>
+
+    <string name="reminder_notification_title">Task reminder</string>
+
+    <string name="task_repeat_value_label">repeat: %1$s</string>
+
+    <string name="repeat_none">none</string>
+
+    <string name="repeat_requires_reminder">Set a reminder first to use repetition</string>
+
+    <string name="repeat_custom_title">Custom repetition</string>
+
+    <string name="repeat_custom_amount_hint">Interval amount</string>
+
+    <string name="repeat_custom_amount_invalid">Enter a valid repetition amount</string>
+
+    <string name="repeat_unit_minutes_label">Minutes</string>
+
+    <string name="repeat_unit_days_label">Days</string>
+
+    <string name="repeat_unit_hours_label">Hours</string>
+
+    <string name="repeat_unit_weeks_label">Weeks</string>
+
+    <string name="repeat_unit_months_label">Months</string>
+
+    <string name="repeat_unit_years_label">Years</string>
+
+    <string name="link_open_label">OPEN</string>
+
+    <string name="link_missing">No link available to open</string>
+
+    <string name="invalid_command">Invalid command</string>
+
+    <string name="task_meta_format">imp: %1$d  due: %2$s  score: %3$d</string>
+
+    <string name="quick_link_label_hint">Short name</string>
+
+    <string name="quick_link_url_hint">https://quick.link</string>
+
+    <string name="quick_link_new_title">New quick link</string>
+
+    <string name="quick_link_edit_title">Edit quick link</string>
+
+    <string name="quick_link_saved">Quick link saved</string>
+
+    <string name="quick_link_deleted">Quick link deleted</string>
+
+    <string name="quick_link_invalid">Enter a valid name and URL</string>
+
+    <string name="quick_link_delete_label">DELETE</string>
+
+    <string name="widget_tasks_description">Task list with ALL and TODAY filters. Tap a row to toggle done</string>
+
+    <string name="widget_quick_links_description">Quick links saved in OpusAgenda. Tap to open in the browser</string>
+
+    <string name="widget_quick_links_empty">No quick links. Add them in the app</string>
+
+    <string name="clock_time_placeholder">00:00:00</string>
+
+    <string name="clock_date_placeholder">10 Apr 2026</string>
+
+    <string name="font_applied">Font applied: %1$s</string>
+
+    <string name="task_description_hint">Add some context for this task</string>
+
+    <string name="task_description_save">SAVE DESC</string>
+
+    <string name="task_description_clear">CLEAR DESC</string>
+
+    <string name="task_description_required">Description cannot be empty</string>
+
+    <string name="task_description_saved">Description staged</string>
+
+    <string name="task_description_title">Task description</string>
+
+    <string name="task_description_icon_label">Open description</string>
+
+    <string name="task_link_hint">https://linked.resource</string>
+
+    <string name="task_link_save">SAVE LINK</string>
+
+    <string name="task_link_clear">CLEAR LINK</string>
+
+    <string name="task_link_required">Enter a valid link first</string>
+
+    <string name="task_link_saved">Link staged</string>
+
+    <string name="task_link_title">Task link</string>
+
+    <string name="task_link_icon_label">Open link details</string>
+
+    <string name="task_attachment_pick">PICK FILE</string>
+
+    <string name="task_attachment_clear">CLEAR FILE</string>
+
+    <string name="task_attachment_saved">File attached</string>
+
+    <string name="task_attachment_picker_failed">Could not read the selected file</string>
+
+    <string name="task_attachment_open_failed">No app can open that attachment</string>
+
+    <string name="task_attachment_title">Task attachment</string>
+
+    <string name="task_attachment_icon_label">Open attachment details</string>
+
+    <string name="task_attachment_name_label">file: %1$s</string>
+
+    <string name="task_attachment_type_label">type: %1$s</string>
+
+    <string name="task_attachment_no_preview">No preview available</string>
+
+    <string-array name="font_option_labels">
+            <item>Inter</item>
+            <item>Geo</item>
+            <item>MedievalSharp</item>
+            <item>Octosquares</item>
+            <item>UnifrakturMaguntia</item>
+        </string-array>
+
+    <string-array name="importance_options">
+            <item>1 LOW</item>
+            <item>2 NORMAL</item>
+            <item>3 HIGH</item>
+            <item>4 CRITICAL</item>
+        </string-array>
+
+    <plurals name="repeat_unit_minutes">
+            <item quantity="one">%1$d minute</item>
+            <item quantity="other">%1$d minutes</item>
+        </plurals>
+
+    <plurals name="repeat_unit_hours">
+            <item quantity="one">%1$d hour</item>
+            <item quantity="other">%1$d hours</item>
+        </plurals>
+
+    <plurals name="repeat_unit_days">
+            <item quantity="one">%1$d day</item>
+            <item quantity="other">%1$d days</item>
+        </plurals>
+
+    <plurals name="repeat_unit_weeks">
+            <item quantity="one">%1$d week</item>
+            <item quantity="other">%1$d weeks</item>
+        </plurals>
+
+    <plurals name="repeat_unit_months">
+            <item quantity="one">%1$d month</item>
+            <item quantity="other">%1$d months</item>
+        </plurals>
+
+    <plurals name="repeat_unit_years">
+            <item quantity="one">%1$d year</item>
+            <item quantity="other">%1$d years</item>
+        </plurals>
+</resources>
+
