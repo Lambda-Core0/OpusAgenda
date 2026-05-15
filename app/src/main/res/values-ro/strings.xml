@@ -1,263 +1,346 @@
 ﻿<resources>
-    <string name="search_hint">cautÄƒ sarcini...</string>
-    <string name="empty_state_all">Nu existÄƒ sarcini. FoloseÈ™te NOU pentru a crea una</string>
-    <string name="empty_state_today">Nu existÄƒ sarcini urgente pentru azi</string>
-    <string name="all_label">TOATE</string>
-    <string name="today_label">AZI</string>
-    <string name="new_task_label">NOU</string>
-    <string name="save_label">SALVEAZÄ‚</string>
-    <string name="cancel_label">ANULEAZÄ‚</string>
-    <string name="pick_due_date_label">SCADENÈšÄ‚</string>
-    <string name="clear_due_date_label">È˜TERGE SCADENÈšA</string>
-    <string name="completed_label">FinalizatÄƒ</string>
-    <string name="importance_label">ImportanÈ›Äƒ</string>
-    <string name="task_dialog_title_new">SarcinÄƒ nouÄƒ</string>
-    <string name="task_dialog_title_edit">EditeazÄƒ sarcina</string>
-    <string name="task_text_required">Introdu textul sarcinii</string>
-    <string name="default_category_name">Categorie</string>
-    <string name="category_move_invalid">AceastÄƒ mutare ar crea o categorie imbricatÄƒ invalidÄƒ</string>
-    <string name="task_due_label">scadenÈ›Äƒ: %1$s</string>
-    <string name="no_due_date">fÄƒrÄƒ scadenÈ›Äƒ</string>
-    <string name="no_reminder">niciunul</string>
-    <string name="due_relative_overdue">Ã®ntÃ¢rziatÄƒ %1$d z</string>
-    <string name="due_relative_today">azi</string>
-    <string name="due_relative_tomorrow">mÃ¢ine</string>
-    <string name="due_relative_in">Ã®n %1$d z</string>
-    <string name="pick_reminder_label">AMINTEÈ˜TE</string>
-    <string name="pick_repeat_label">REPETÄ‚</string>
-    <string name="reminder_dialog_title">Alege memento</string>
-    <string name="reminder_option_none">FÄƒrÄƒ memento</string>
-    <string name="reminder_option_hour">Cu 1 orÄƒ Ã®nainte</string>
-    <string name="reminder_option_day">Cu 1 zi Ã®nainte</string>
-    <string name="reminder_option_week">Cu 1 sÄƒptÄƒmÃ¢nÄƒ Ã®nainte</string>
-    <string name="reminder_option_month">Cu 1 lunÄƒ Ã®nainte</string>
-    <string name="reminder_option_custom">DatÄƒ È™i orÄƒ personalizate</string>
-    <string name="reminder_requires_due_date">SeteazÄƒ mai Ã®ntÃ¢i o scadenÈ›Äƒ pentru presetÄƒri</string>
-    <string name="reminder_time_in_past">Ora mementoului trebuie sÄƒ fie Ã®n viitor</string>
-    <string name="notifications_permission_denied">Permisiunea de notificÄƒri este necesarÄƒ pentru mementouri</string>
-    <string name="repeat_dialog_title">Alege repetarea</string>
-    <string name="repeat_option_none">FÄƒrÄƒ repetare</string>
-    <string name="repeat_option_hour">La fiecare orÄƒ</string>
-    <string name="repeat_option_day">ÃŽn fiecare zi</string>
-    <string name="repeat_option_week">ÃŽn fiecare sÄƒptÄƒmÃ¢nÄƒ</string>
-    <string name="repeat_option_month">ÃŽn fiecare lunÄƒ</string>
-    <string name="repeat_option_year">ÃŽn fiecare an</string>
-    <string name="repeat_option_custom">Interval personalizat</string>
-    <string name="task_saved">SarcinÄƒ salvatÄƒ</string>
-    <string name="task_deleted">SarcinÄƒ È™tearsÄƒ</string>
-    <string name="task_completed">SarcinÄƒ actualizatÄƒ</string>
-    <string name="task_failed">Sarcina nu a putut fi actualizatÄƒ</string>
-    <string name="summary_format">deschise: %1$d  azi: %2$d  total: %3$d</string>
-    <string name="task_pin_label">FIXEAZÄ‚</string>
-    <string name="task_unpin_label">ANULEAZÄ‚ FIX</string>
-    <string name="task_edit_label">EDITEAZÄ‚</string>
-    <string name="task_delete_label">È˜TERGE</string>
-    <string name="quick_links_title">LINKURI RAPIDE</string>
-    <string name="new_link_label">LINK NOU</string>
-    <string name="widget_tasks_title">SARCINI</string>
-    <string name="font_dialog_title">SelecteazÄƒ fontul</string>
-    <string name="new_category_label">CAT NOUÄ‚</string>
-    <string name="new_subcategory_label">SUBCAT NOUÄ‚</string>
-    <string name="new_child_task_label">SARCINÄ‚ NOUÄ‚</string>
-    <string name="task_description_label">Descriere</string>
-    <string name="task_link_label">Link asociat</string>
-    <string name="task_attachment_label">FiÈ™ier ataÈ™at</string>
-    <string name="task_attachment_empty">Niciun fiÈ™ier selectat</string>
-    <string name="play_label">REDARE</string>
-    <string name="stop_label">STOP</string>
-    <string name="previous_label">ANTERIOR</string>
-    <string name="next_label">URMÄ‚TOR</string>
-    <string name="pdf_page_indicator">Pagina %1$d / %2$d</string>
-    <!-- Fallback entries added to keep this locale 1:1 with the base resources. -->
     <string name="app_name">OpusAgenda</string>
 
-    <string name="app_header_title">â™± OpusAgenda v1.3</string>
+    <string name="app_header_title">♱ OpusAgenda v1.3</string>
 
     <string name="app_font_family">UnifrakturMaguntia</string>
 
-    <string name="run_command_label">RUN</string>
+    <string name="search_hint">sarcini de căutare...</string>
 
-    <string name="task_text_hint">Task text</string>
+    <string name="empty_state_all">Nicio sarcină încă. Folosiți NEW pentru a crea unul</string>
 
-    <string name="pinned_label">PINNED</string>
+    <string name="empty_state_today">Nicio sarcină urgentă pentru azi</string>
+
+    <string name="all_label">TOATE</string>
+
+    <string name="today_label">AZI</string>
+
+    <string name="new_task_label">NOU</string>
+
+    <string name="run_command_label">RULEAZĂ</string>
+
+    <string name="task_text_hint">Textul sarcinii</string>
+
+    <string name="category_text_hint">Numele categoriei</string>
+
+    <string name="save_label">SALVAȚI</string>
+
+    <string name="cancel_label">ANULAREA</string>
+
+    <string name="pick_due_date_label">DATA SCADĂ</string>
+
+    <string name="clear_due_date_label">LIMITĂ DATORITĂ</string>
+
+    <string name="pinned_label">PINITĂ</string>
+
+    <string name="completed_label">Terminat</string>
+
+    <string name="importance_label">importanță</string>
+
+    <string name="task_dialog_title_new">Sarcină nouă</string>
+
+    <string name="task_dialog_title_edit">Editați sarcina</string>
+
+    <string name="category_dialog_title_new">Noua categorie</string>
+
+    <string name="category_dialog_title_edit">Editați categoria</string>
+
+    <string name="task_text_required">Introduceți textul sarcinii</string>
+
+    <string name="default_category_name">categorie</string>
 
     <string name="category_badge_label">CAT</string>
 
-    <string name="category_edit_label">RENAME</string>
+    <string name="category_edit_label">RENUMIRE</string>
 
-    <string name="category_due_label">category</string>
+    <string name="category_due_label">categorie</string>
 
-    <string name="category_meta_format">children: %1$d  imp: %2$d</string>
+    <string name="category_meta_format">subelemente: %1$d  imp: %2$d</string>
 
-    <string name="task_reminder_value_label">reminder: %1$s</string>
+    <string name="category_move_invalid">Această mutare ar crea o categorie imbricată nevalidă</string>
+
+    <string name="task_due_label">datorat: %1$s</string>
+
+    <string name="task_reminder_value_label">memento: %1$s</string>
 
     <string name="task_date_with_relative">%1$s - %2$s</string>
 
-    <string name="clear_reminder_label">CLEAR REMINDER</string>
+    <string name="no_due_date">nici o data scadenta</string>
+
+    <string name="no_reminder">nici unul</string>
+
+    <string name="due_relative_overdue">întârziat %1$dd</string>
+
+    <string name="due_relative_today">azi</string>
+
+    <string name="due_relative_tomorrow">mâine</string>
+
+    <string name="due_relative_in">în %1$dd</string>
+
+    <string name="pick_reminder_label">AMINTEȘTE-MI</string>
+
+    <string name="pick_repeat_label">REPEȚI</string>
+
+    <string name="clear_reminder_label">ȘTERGE METOARE</string>
+
+    <string name="reminder_dialog_title">Alegeți memento</string>
+
+    <string name="reminder_option_none">Nici un memento</string>
+
+    <string name="reminder_option_hour">cu 1 oră înainte</string>
+
+    <string name="reminder_option_day">cu 1 zi inainte</string>
+
+    <string name="reminder_option_week">cu 1 saptamana inainte</string>
+
+    <string name="reminder_option_month">cu 1 luna inainte</string>
+
+    <string name="reminder_option_custom">Data și ora personalizate</string>
 
     <string name="reminder_summary_with_datetime">%1$s (%2$s)</string>
 
-    <string name="reminder_custom_date_title">Reminder date</string>
+    <string name="reminder_requires_due_date">Setați mai întâi o dată limită pentru a utiliza presetări</string>
 
-    <string name="reminder_custom_time_title">Reminder time</string>
+    <string name="reminder_time_in_past">Ora de memento trebuie să fie în viitor</string>
 
-    <string name="reminder_channel_name">Task reminders</string>
+    <string name="reminder_custom_date_title">Data reamintirii</string>
 
-    <string name="reminder_channel_description">Notifications for scheduled task reminders</string>
+    <string name="reminder_custom_time_title">Ora de memento</string>
 
-    <string name="reminder_notification_title">Task reminder</string>
+    <string name="reminder_channel_name">Memento-uri de sarcini</string>
 
-    <string name="task_repeat_value_label">repeat: %1$s</string>
+    <string name="reminder_channel_description">Notificări pentru mementourile de sarcini programate</string>
 
-    <string name="repeat_none">none</string>
+    <string name="reminder_notification_title">Memento de sarcină</string>
 
-    <string name="repeat_requires_reminder">Set a reminder first to use repetition</string>
+    <string name="notifications_permission_denied">Este necesară permisiunea de notificare pentru mementouri</string>
 
-    <string name="repeat_custom_title">Custom repetition</string>
+    <string name="task_repeat_value_label">repetați: %1$s</string>
 
-    <string name="repeat_custom_amount_hint">Interval amount</string>
+    <string name="repeat_none">nici unul</string>
 
-    <string name="repeat_custom_amount_invalid">Enter a valid repetition amount</string>
+    <string name="repeat_dialog_title">Alege repetiția</string>
 
-    <string name="repeat_unit_minutes_label">Minutes</string>
+    <string name="repeat_option_none">Fără repetare</string>
 
-    <string name="repeat_unit_days_label">Days</string>
+    <string name="repeat_option_hour">În fiecare oră</string>
 
-    <string name="repeat_unit_hours_label">Hours</string>
+    <string name="repeat_option_day">În fiecare zi</string>
 
-    <string name="repeat_unit_weeks_label">Weeks</string>
+    <string name="repeat_option_week">În fiecare săptămână</string>
 
-    <string name="repeat_unit_months_label">Months</string>
+    <string name="repeat_option_month">În fiecare lună</string>
 
-    <string name="repeat_unit_years_label">Years</string>
+    <string name="repeat_option_year">În fiecare an</string>
 
-    <string name="link_open_label">OPEN</string>
+    <string name="repeat_option_custom">Interval personalizat</string>
 
-    <string name="link_missing">No link available to open</string>
+    <string name="repeat_requires_reminder">Setați mai întâi un memento pentru a utiliza repetiția</string>
 
-    <string name="invalid_command">Invalid command</string>
+    <string name="repeat_custom_title">Repetare personalizată</string>
 
-    <string name="task_meta_format">imp: %1$d  due: %2$s  score: %3$d</string>
+    <string name="repeat_custom_amount_hint">Valoarea intervalului</string>
 
-    <string name="quick_link_label_hint">Short name</string>
+    <string name="repeat_custom_amount_invalid">Introduceți o sumă validă de repetare</string>
+
+    <string name="repeat_unit_minutes_label">Minute</string>
+
+    <string name="repeat_unit_days_label">Zile</string>
+
+    <string name="repeat_unit_hours_label">Ore</string>
+
+    <string name="repeat_unit_weeks_label">Săptămâni</string>
+
+    <string name="repeat_unit_months_label">Luni</string>
+
+    <string name="repeat_unit_years_label">ani</string>
+
+    <string name="link_open_label">DESCHIS</string>
+
+    <string name="link_missing">Niciun link disponibil pentru deschidere</string>
+
+    <string name="invalid_command">Comanda nevalidă</string>
+
+    <string name="task_saved">Sarcina salvată</string>
+
+    <string name="task_deleted">Sarcina ștearsă</string>
+
+    <string name="task_completed">Sarcina actualizată</string>
+
+    <string name="task_failed">Sarcina nu a putut fi actualizată</string>
+
+    <string name="summary_format">deschise: %1$d  azi: %2$d  total: %3$d</string>
+
+    <string name="task_meta_format">imp: %1$d  scadență: %2$s  scor: %3$d</string>
+
+    <string name="task_pin_label">FIXEAZĂ</string>
+
+    <string name="task_unpin_label">ANULEAZĂ FIX</string>
+
+    <string name="task_edit_label">EDITARE</string>
+
+    <string name="task_delete_label">ȘTERGE</string>
+
+    <string name="quick_links_title">LINK-URI RAPIDE</string>
+
+    <string name="new_link_label">LINK NOU</string>
+
+    <string name="quick_link_label_hint">Nume scurt</string>
 
     <string name="quick_link_url_hint">https://quick.link</string>
 
-    <string name="quick_link_new_title">New quick link</string>
+    <string name="quick_link_new_title">Link rapid nou</string>
 
-    <string name="quick_link_edit_title">Edit quick link</string>
+    <string name="quick_link_edit_title">Editați linkul rapid</string>
 
-    <string name="quick_link_saved">Quick link saved</string>
+    <string name="quick_link_saved">Link rapid salvat</string>
 
-    <string name="quick_link_deleted">Quick link deleted</string>
+    <string name="quick_link_deleted">Link rapid șters</string>
 
-    <string name="quick_link_invalid">Enter a valid name and URL</string>
+    <string name="quick_link_invalid">Introduceți un nume și o adresă URL valide</string>
 
-    <string name="quick_link_delete_label">DELETE</string>
+    <string name="quick_link_delete_label">ȘTERGE</string>
 
-    <string name="widget_tasks_description">Task list with ALL and TODAY filters. Tap a row to toggle done</string>
+    <string name="widget_tasks_title">SARCINI</string>
 
-    <string name="widget_quick_links_description">Quick links saved in OpusAgenda. Tap to open in the browser</string>
+    <string name="widget_tasks_description">Lista de activități cu filtrele ALL și TODAY. Atingeți un rând pentru a comuta gata</string>
 
-    <string name="widget_quick_links_empty">No quick links. Add them in the app</string>
+    <string name="widget_quick_links_description">Link-uri rapide salvate în OpusAgenda. Atingeți pentru a deschide în browser</string>
+
+    <string name="widget_quick_links_empty">Fără link-uri rapide. Adăugați-le în aplicație</string>
 
     <string name="clock_time_placeholder">00:00:00</string>
 
     <string name="clock_date_placeholder">10 Apr 2026</string>
 
-    <string name="font_applied">Font applied: %1$s</string>
+    <string name="font_dialog_title">Selectați fontul</string>
 
-    <string name="task_description_hint">Add some context for this task</string>
+    <string name="font_applied">Font aplicat: %1$s</string>
 
-    <string name="task_description_save">SAVE DESC</string>
+    <string name="new_category_label">CAT NOU</string>
 
-    <string name="task_description_clear">CLEAR DESC</string>
+    <string name="new_subcategory_label">NOU SUBC</string>
 
-    <string name="task_description_required">Description cannot be empty</string>
+    <string name="new_child_task_label">SARCINA NOUĂ</string>
 
-    <string name="task_description_saved">Description staged</string>
+    <string name="task_description_label">Descriere</string>
 
-    <string name="task_description_title">Task description</string>
+    <string name="task_description_hint">Adăugați un context pentru această sarcină</string>
 
-    <string name="task_description_icon_label">Open description</string>
+    <string name="task_description_save">SALVARE DESC</string>
+
+    <string name="task_description_clear">ȘTERGE DESC</string>
+
+    <string name="task_description_required">Descrierea nu poate fi goală</string>
+
+    <string name="task_description_saved">Descrierea pusă în scenă</string>
+
+    <string name="task_description_title">Descrierea sarcinii</string>
+
+    <string name="task_description_icon_label">Deschideți descrierea</string>
+
+    <string name="task_link_label">Link asociat</string>
 
     <string name="task_link_hint">https://linked.resource</string>
 
-    <string name="task_link_save">SAVE LINK</string>
+    <string name="task_link_save">SALVAȚI LINKUL</string>
 
-    <string name="task_link_clear">CLEAR LINK</string>
+    <string name="task_link_clear">ȘTERGE LINK</string>
 
-    <string name="task_link_required">Enter a valid link first</string>
+    <string name="task_link_required">Introduceți mai întâi un link valid</string>
 
-    <string name="task_link_saved">Link staged</string>
+    <string name="task_link_saved">Link pus în scenă</string>
 
-    <string name="task_link_title">Task link</string>
+    <string name="task_link_title">Link de sarcină</string>
 
-    <string name="task_link_icon_label">Open link details</string>
+    <string name="task_link_icon_label">Deschideți detaliile linkului</string>
 
-    <string name="task_attachment_pick">PICK FILE</string>
+    <string name="task_attachment_label">Fișier atașat</string>
 
-    <string name="task_attachment_clear">CLEAR FILE</string>
+    <string name="task_attachment_empty">Niciun fișier selectat</string>
 
-    <string name="task_attachment_saved">File attached</string>
+    <string name="task_attachment_pick">ALEGE FIȘIER</string>
 
-    <string name="task_attachment_picker_failed">Could not read the selected file</string>
+    <string name="task_attachment_clear">ȘTERGE FIȘIER</string>
 
-    <string name="task_attachment_open_failed">No app can open that attachment</string>
+    <string name="task_attachment_saved">Fișier atașat</string>
 
-    <string name="task_attachment_title">Task attachment</string>
+    <string name="task_attachment_picker_failed">Nu s-a putut citi fișierul selectat</string>
 
-    <string name="task_attachment_icon_label">Open attachment details</string>
+    <string name="task_attachment_open_failed">Nicio aplicație nu poate deschide atașamentul respectiv</string>
 
-    <string name="task_attachment_name_label">file: %1$s</string>
+    <string name="task_attachment_title">Atașament de sarcină</string>
 
-    <string name="task_attachment_type_label">type: %1$s</string>
+    <string name="task_attachment_icon_label">Deschideți detaliile atașamentului</string>
 
-    <string name="task_attachment_no_preview">No preview available</string>
+    <string name="task_attachment_name_label">fișier: %1$s</string>
+
+    <string name="task_attachment_type_label">tip: %1$s</string>
+
+    <string name="play_label">JOACĂ</string>
+
+    <string name="stop_label">OPREȘTE</string>
+
+    <string name="task_attachment_no_preview">Nicio previzualizare disponibilă</string>
 
     <string-array name="font_option_labels">
-            <item>Inter</item>
-            <item>Geo</item>
-            <item>MedievalSharp</item>
-            <item>Octosquares</item>
-            <item>UnifrakturMaguntia</item>
-        </string-array>
+        <item>Inter</item>
+        <item>Geo</item>
+        <item>MedievalSharp</item>
+        <item>Octosquares</item>
+        <item>UnifrakturMaguntia</item>
+    </string-array>
 
     <string-array name="importance_options">
-            <item>1 LOW</item>
-            <item>2 NORMAL</item>
-            <item>3 HIGH</item>
-            <item>4 CRITICAL</item>
-        </string-array>
+        <item>1 SCĂZUT</item>
+        <item>2 NORMAL</item>
+        <item>3 ÎNALTĂ</item>
+        <item>4 CRITICE</item>
+    </string-array>
 
     <plurals name="repeat_unit_minutes">
-            <item quantity="one">%1$d minute</item>
-            <item quantity="other">%1$d minutes</item>
-        </plurals>
+        <item quantity="one">%1$d minut</item>
+        <item quantity="other">%1$d minute</item>
+    </plurals>
 
     <plurals name="repeat_unit_hours">
-            <item quantity="one">%1$d hour</item>
-            <item quantity="other">%1$d hours</item>
-        </plurals>
+        <item quantity="one">%1$d oră</item>
+        <item quantity="other">%1$d ore</item>
+    </plurals>
 
     <plurals name="repeat_unit_days">
-            <item quantity="one">%1$d day</item>
-            <item quantity="other">%1$d days</item>
-        </plurals>
+        <item quantity="one">%1$d zi</item>
+        <item quantity="other">%1$d zile</item>
+    </plurals>
 
     <plurals name="repeat_unit_weeks">
-            <item quantity="one">%1$d week</item>
-            <item quantity="other">%1$d weeks</item>
-        </plurals>
+        <item quantity="one">%1$d săptămână</item>
+        <item quantity="other">%1$d săptămâni</item>
+    </plurals>
 
     <plurals name="repeat_unit_months">
-            <item quantity="one">%1$d month</item>
-            <item quantity="other">%1$d months</item>
-        </plurals>
+        <item quantity="one">%1$d lună</item>
+        <item quantity="other">%1$d luni</item>
+    </plurals>
 
     <plurals name="repeat_unit_years">
-            <item quantity="one">%1$d year</item>
-            <item quantity="other">%1$d years</item>
-        </plurals>
+        <item quantity="one">%1$d an</item>
+        <item quantity="other">%1$d ani</item>
+    </plurals>
+
+    <string name="previous_label">ANTERIOR</string>
+
+    <string name="next_label">URMĂTORUL</string>
+
+    <string name="pdf_page_indicator">Pagina %1$d / %2$d</string>
 </resources>
+
+
+
+
+
+
+
+
+
 

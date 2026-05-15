@@ -1,262 +1,343 @@
 ﻿<resources>
     <string name="app_name">OpusAgenda</string>
-    <string name="app_header_title">â™± OpusAgenda v1.3</string>
+
+    <string name="app_header_title">♱ OpusAgenda v1.3</string>
 
     <string name="app_font_family">UnifrakturMaguntia</string>
 
-    <string name="search_hint">hledat Ãºkoly...</string>
-    <string name="empty_state_all">ZatÃ­m Å¾Ã¡dnÃ© Ãºkoly. PouÅ¾ijte NOVÃ pro vytvoÅ™enÃ­</string>
-    <string name="empty_state_today">Na dnes nejsou Å¾Ã¡dnÃ© nalÃ©havÃ© Ãºkoly</string>
-    <string name="all_label">VÅ E</string>
+    <string name="search_hint">vyhledávací úkoly...</string>
+
+    <string name="empty_state_all">Zatím žádné úkoly. K vytvoření použijte NEW</string>
+
+    <string name="empty_state_today">Dnes žádné naléhavé úkoly</string>
+
+    <string name="all_label">VŠECHNY</string>
+
     <string name="today_label">DNES</string>
-    <string name="new_task_label">NOVÃ</string>
-    <string name="save_label">ULOÅ½IT</string>
-    <string name="cancel_label">ZRUÅ IT</string>
-    <string name="pick_due_date_label">TERMÃN</string>
-    <string name="clear_due_date_label">VYMAZAT TERMÃN</string>
-    <string name="completed_label">DokonÄeno</string>
-    <string name="importance_label">DÅ¯leÅ¾itost</string>
-    <string name="task_dialog_title_new">NovÃ½ Ãºkol</string>
-    <string name="task_dialog_title_edit">Upravit Ãºkol</string>
-    <string name="task_text_required">Zadejte text Ãºkolu</string>
+
+    <string name="new_task_label">NOVÉ</string>
+
+    <string name="run_command_label">SPUSTIT</string>
+
+    <string name="task_text_hint">Text úkolu</string>
+
+    <string name="category_text_hint">Název kategorie</string>
+
+    <string name="save_label">ULOŽIT</string>
+
+    <string name="cancel_label">ZRUŠIT</string>
+
+    <string name="pick_due_date_label">TERMÍN SPLATNOSTI</string>
+
+    <string name="clear_due_date_label">VYMAZAT</string>
+
+    <string name="pinned_label">PŘIPNUTO</string>
+
+    <string name="completed_label">Dokončeno</string>
+
+    <string name="importance_label">Důležitost</string>
+
+    <string name="task_dialog_title_new">Nový úkol</string>
+
+    <string name="task_dialog_title_edit">Upravit úkol</string>
+
+    <string name="category_dialog_title_new">Nová kategorie</string>
+
+    <string name="category_dialog_title_edit">Upravit kategorii</string>
+
+    <string name="task_text_required">Zadejte text úkolu</string>
+
     <string name="default_category_name">Kategorie</string>
-    <string name="category_move_invalid">Tento pÅ™esun by vytvoÅ™il neplatnou vnoÅ™enou kategorii</string>
-    <string name="task_due_label">termÃ­n: %1$s</string>
-    <string name="no_due_date">bez termÃ­nu</string>
-    <string name="no_reminder">Å¾Ã¡dnÃ©</string>
-    <string name="due_relative_overdue">po termÃ­nu %1$d d</string>
-    <string name="due_relative_today">dnes</string>
-    <string name="due_relative_tomorrow">zÃ­tra</string>
-    <string name="due_relative_in">za %1$d d</string>
-    <string name="pick_reminder_label">PÅ˜IPOMENOUT</string>
-    <string name="pick_repeat_label">OPAKOVAT</string>
-    <string name="reminder_dialog_title">Vybrat pÅ™ipomÃ­nku</string>
-    <string name="reminder_option_none">Bez pÅ™ipomÃ­nky</string>
-    <string name="reminder_option_hour">1 hodinu pÅ™edem</string>
-    <string name="reminder_option_day">1 den pÅ™edem</string>
-    <string name="reminder_option_week">1 tÃ½den pÅ™edem</string>
-    <string name="reminder_option_month">1 mÄ›sÃ­c pÅ™edem</string>
-    <string name="reminder_option_custom">VlastnÃ­ datum a Äas</string>
-    <string name="reminder_requires_due_date">Nejprve nastavte termÃ­n pro pouÅ¾itÃ­ pÅ™edvoleb</string>
-    <string name="reminder_time_in_past">ÄŒas pÅ™ipomÃ­nky musÃ­ bÃ½t v budoucnosti</string>
-    <string name="notifications_permission_denied">Pro pÅ™ipomÃ­nky je vyÅ¾adovÃ¡no oprÃ¡vnÄ›nÃ­ k oznÃ¡menÃ­m</string>
-    <string name="repeat_dialog_title">Vybrat opakovÃ¡nÃ­</string>
-    <string name="repeat_option_none">Bez opakovÃ¡nÃ­</string>
-    <string name="repeat_option_hour">KaÅ¾dou hodinu</string>
-    <string name="repeat_option_day">KaÅ¾dÃ½ den</string>
-    <string name="repeat_option_week">KaÅ¾dÃ½ tÃ½den</string>
-    <string name="repeat_option_month">KaÅ¾dÃ½ mÄ›sÃ­c</string>
-    <string name="repeat_option_year">KaÅ¾dÃ½ rok</string>
-    <string name="repeat_option_custom">VlastnÃ­ interval</string>
-    <string name="task_saved">Ãškol uloÅ¾en</string>
-    <string name="task_deleted">Ãškol smazÃ¡n</string>
-    <string name="task_completed">Ãškol aktualizovÃ¡n</string>
-    <string name="task_failed">Ãškol se nepodaÅ™ilo aktualizovat</string>
-    <string name="summary_format">otevÅ™enÃ©: %1$d  dnes: %2$d  celkem: %3$d</string>
-    <string name="task_pin_label">PÅ˜IPNOUT</string>
-    <string name="task_unpin_label">ODEPNOUT</string>
-    <string name="task_edit_label">UPRAVIT</string>
-    <string name="task_delete_label">SMAZAT</string>
-    <string name="quick_links_title">RYCHLÃ‰ ODKAZY</string>
-    <string name="new_link_label">NOVÃ ODKAZ</string>
-    <string name="widget_tasks_title">ÃšKOLY</string>
-    <string name="font_dialog_title">Vybrat pÃ­smo</string>
-    <string name="new_category_label">NOVÃ KAT</string>
-    <string name="new_subcategory_label">NOVÃ PODKAT</string>
-    <string name="new_child_task_label">NOVÃ ÃšKOL</string>
-    <string name="task_description_label">Popis</string>
-    <string name="task_link_label">PÅ™idruÅ¾enÃ½ odkaz</string>
-    <string name="task_attachment_label">PÅ™iloÅ¾enÃ½ soubor</string>
-    <string name="task_attachment_empty">NenÃ­ vybrÃ¡n Å¾Ã¡dnÃ½ soubor</string>
-    <string name="play_label">PÅ˜EHRÃT</string>
-    <string name="stop_label">STOP</string>
-    <string name="previous_label">PÅ˜EDCHOZÃ</string>
-    <string name="next_label">DALÅ Ã</string>
-    <string name="pdf_page_indicator">Strana %1$d / %2$d</string>
-    <!-- Fallback entries added to keep this locale 1:1 with the base resources. -->
-    <string name="run_command_label">RUN</string>
 
-    <string name="task_text_hint">Task text</string>
+    <string name="category_badge_label">KOCOUR</string>
 
-    <string name="pinned_label">PINNED</string>
+    <string name="category_edit_label">PŘEJMENOVAT</string>
 
-    <string name="category_badge_label">CAT</string>
+    <string name="category_due_label">kategorie</string>
 
-    <string name="category_edit_label">RENAME</string>
+    <string name="category_meta_format">podřízené: %1$d  důl.: %2$d</string>
 
-    <string name="category_due_label">category</string>
+    <string name="category_move_invalid">Tento přesun by vytvořil neplatnou vnořenou kategorii</string>
 
-    <string name="category_meta_format">children: %1$d  imp: %2$d</string>
+    <string name="task_due_label">kvůli: %1$s</string>
 
-    <string name="task_reminder_value_label">reminder: %1$s</string>
+    <string name="task_reminder_value_label">připomenutí: %1$s</string>
 
     <string name="task_date_with_relative">%1$s - %2$s</string>
 
-    <string name="clear_reminder_label">CLEAR REMINDER</string>
+    <string name="no_due_date">žádný termín splatnosti</string>
+
+    <string name="no_reminder">žádný</string>
+
+    <string name="due_relative_overdue">po splatnosti %1$dd</string>
+
+    <string name="due_relative_today">dnes</string>
+
+    <string name="due_relative_tomorrow">zítra</string>
+
+    <string name="due_relative_in">v %1$dd</string>
+
+    <string name="pick_reminder_label">PŘIPOMÍNEJ MI</string>
+
+    <string name="pick_repeat_label">OPAKOVÁNÍ</string>
+
+    <string name="clear_reminder_label">VYMAZAT PŘIPOMÍNKU</string>
+
+    <string name="reminder_dialog_title">Vyberte připomenutí</string>
+
+    <string name="reminder_option_none">Žádná připomínka</string>
+
+    <string name="reminder_option_hour">1 hodinu předem</string>
+
+    <string name="reminder_option_day">1 den předem</string>
+
+    <string name="reminder_option_week">1 týden předem</string>
+
+    <string name="reminder_option_month">1 měsíc předtím</string>
+
+    <string name="reminder_option_custom">Vlastní datum a čas</string>
 
     <string name="reminder_summary_with_datetime">%1$s (%2$s)</string>
 
-    <string name="reminder_custom_date_title">Reminder date</string>
+    <string name="reminder_requires_due_date">Chcete-li použít předvolby, nejprve nastavte termín dokončení</string>
 
-    <string name="reminder_custom_time_title">Reminder time</string>
+    <string name="reminder_time_in_past">Čas připomenutí musí být v budoucnosti</string>
 
-    <string name="reminder_channel_name">Task reminders</string>
+    <string name="reminder_custom_date_title">Datum připomenutí</string>
 
-    <string name="reminder_channel_description">Notifications for scheduled task reminders</string>
+    <string name="reminder_custom_time_title">Čas připomenutí</string>
 
-    <string name="reminder_notification_title">Task reminder</string>
+    <string name="reminder_channel_name">Připomenutí úkolů</string>
 
-    <string name="task_repeat_value_label">repeat: %1$s</string>
+    <string name="reminder_channel_description">Upozornění na připomenutí naplánovaných úkolů</string>
 
-    <string name="repeat_none">none</string>
+    <string name="reminder_notification_title">Připomenutí úkolu</string>
 
-    <string name="repeat_requires_reminder">Set a reminder first to use repetition</string>
+    <string name="notifications_permission_denied">Pro připomenutí je vyžadováno oprávnění k oznámení</string>
 
-    <string name="repeat_custom_title">Custom repetition</string>
+    <string name="task_repeat_value_label">opakování: %1$s</string>
 
-    <string name="repeat_custom_amount_hint">Interval amount</string>
+    <string name="repeat_none">žádný</string>
 
-    <string name="repeat_custom_amount_invalid">Enter a valid repetition amount</string>
+    <string name="repeat_dialog_title">Zvolte opakování</string>
 
-    <string name="repeat_unit_minutes_label">Minutes</string>
+    <string name="repeat_option_none">Žádné opakování</string>
 
-    <string name="repeat_unit_days_label">Days</string>
+    <string name="repeat_option_hour">Každou hodinu</string>
 
-    <string name="repeat_unit_hours_label">Hours</string>
+    <string name="repeat_option_day">Každý den</string>
 
-    <string name="repeat_unit_weeks_label">Weeks</string>
+    <string name="repeat_option_week">Každý týden</string>
 
-    <string name="repeat_unit_months_label">Months</string>
+    <string name="repeat_option_month">Každý měsíc</string>
 
-    <string name="repeat_unit_years_label">Years</string>
+    <string name="repeat_option_year">Každý rok</string>
 
-    <string name="link_open_label">OPEN</string>
+    <string name="repeat_option_custom">Vlastní interval</string>
 
-    <string name="link_missing">No link available to open</string>
+    <string name="repeat_requires_reminder">Chcete-li použít opakování, nastavte nejprve připomenutí</string>
 
-    <string name="invalid_command">Invalid command</string>
+    <string name="repeat_custom_title">Vlastní opakování</string>
 
-    <string name="task_meta_format">imp: %1$d  due: %2$s  score: %3$d</string>
+    <string name="repeat_custom_amount_hint">Částka intervalu</string>
 
-    <string name="quick_link_label_hint">Short name</string>
+    <string name="repeat_custom_amount_invalid">Zadejte platný počet opakování</string>
+
+    <string name="repeat_unit_minutes_label">minut</string>
+
+    <string name="repeat_unit_days_label">Dny</string>
+
+    <string name="repeat_unit_hours_label">hodiny</string>
+
+    <string name="repeat_unit_weeks_label">týdny</string>
+
+    <string name="repeat_unit_months_label">měsíce</string>
+
+    <string name="repeat_unit_years_label">let</string>
+
+    <string name="link_open_label">OTEVŘENO</string>
+
+    <string name="link_missing">Není k dispozici žádný odkaz k otevření</string>
+
+    <string name="invalid_command">Neplatný příkaz</string>
+
+    <string name="task_saved">Úkol uložen</string>
+
+    <string name="task_deleted">Úkol smazán</string>
+
+    <string name="task_completed">Úkol aktualizován</string>
+
+    <string name="task_failed">Úkol nelze aktualizovat</string>
+
+    <string name="summary_format">otevřené: %1$d  dnes: %2$d  celkem: %3$d</string>
+
+    <string name="task_meta_format">důl.: %1$d  termín: %2$s  skóre: %3$d</string>
+
+    <string name="task_pin_label">PŘIPNOUT</string>
+
+    <string name="task_unpin_label">ODEPNOUT</string>
+
+    <string name="task_edit_label">UPRAVIT</string>
+
+    <string name="task_delete_label">SMAZAT</string>
+
+    <string name="quick_links_title">RYCHLÉ ODKAZY</string>
+
+    <string name="new_link_label">NOVÝ ODKAZ</string>
+
+    <string name="quick_link_label_hint">Krátké jméno</string>
 
     <string name="quick_link_url_hint">https://quick.link</string>
 
-    <string name="quick_link_new_title">New quick link</string>
+    <string name="quick_link_new_title">Nový rychlý odkaz</string>
 
-    <string name="quick_link_edit_title">Edit quick link</string>
+    <string name="quick_link_edit_title">Upravit rychlý odkaz</string>
 
-    <string name="quick_link_saved">Quick link saved</string>
+    <string name="quick_link_saved">Rychlý odkaz uložen</string>
 
-    <string name="quick_link_deleted">Quick link deleted</string>
+    <string name="quick_link_deleted">Rychlý odkaz smazán</string>
 
-    <string name="quick_link_invalid">Enter a valid name and URL</string>
+    <string name="quick_link_invalid">Zadejte platný název a adresu URL</string>
 
-    <string name="quick_link_delete_label">DELETE</string>
+    <string name="quick_link_delete_label">ODSTRANIT</string>
 
-    <string name="widget_tasks_description">Task list with ALL and TODAY filters. Tap a row to toggle done</string>
+    <string name="widget_tasks_title">ÚKOLY</string>
 
-    <string name="widget_quick_links_description">Quick links saved in OpusAgenda. Tap to open in the browser</string>
+    <string name="widget_tasks_description">Seznam úkolů s filtry VŠECHNY a DNES. Klepnutím na řádek přepnete na hotovo</string>
 
-    <string name="widget_quick_links_empty">No quick links. Add them in the app</string>
+    <string name="widget_quick_links_description">Rychlé odkazy uložené v OpusAgenda. Klepnutím otevřete v prohlížeči</string>
+
+    <string name="widget_quick_links_empty">Žádné rychlé odkazy. Přidejte je do aplikace</string>
 
     <string name="clock_time_placeholder">00:00:00</string>
 
     <string name="clock_date_placeholder">10 Apr 2026</string>
 
-    <string name="font_applied">Font applied: %1$s</string>
+    <string name="font_dialog_title">Vyberte písmo</string>
 
-    <string name="task_description_hint">Add some context for this task</string>
+    <string name="font_applied">Použité písmo: %1$s</string>
 
-    <string name="task_description_save">SAVE DESC</string>
+    <string name="new_category_label">NOVÁ KOČKA</string>
 
-    <string name="task_description_clear">CLEAR DESC</string>
+    <string name="new_subcategory_label">NOVÉ SUBC</string>
 
-    <string name="task_description_required">Description cannot be empty</string>
+    <string name="new_child_task_label">NOVÝ ÚKOL</string>
 
-    <string name="task_description_saved">Description staged</string>
+    <string name="task_description_label">Popis</string>
 
-    <string name="task_description_title">Task description</string>
+    <string name="task_description_hint">Přidejte k tomuto úkolu kontext</string>
 
-    <string name="task_description_icon_label">Open description</string>
+    <string name="task_description_save">ULOŽIT POPIS</string>
+
+    <string name="task_description_clear">CLEAR POPIS</string>
+
+    <string name="task_description_required">Popis nemůže být prázdný</string>
+
+    <string name="task_description_saved">Popis inscenován</string>
+
+    <string name="task_description_title">Popis úkolu</string>
+
+    <string name="task_description_icon_label">Otevřít popis</string>
+
+    <string name="task_link_label">Přidružený odkaz</string>
 
     <string name="task_link_hint">https://linked.resource</string>
 
-    <string name="task_link_save">SAVE LINK</string>
+    <string name="task_link_save">ULOŽIT ODKAZ</string>
 
-    <string name="task_link_clear">CLEAR LINK</string>
+    <string name="task_link_clear">VYMAZAT ODKAZ</string>
 
-    <string name="task_link_required">Enter a valid link first</string>
+    <string name="task_link_required">Nejprve zadejte platný odkaz</string>
 
-    <string name="task_link_saved">Link staged</string>
+    <string name="task_link_saved">Odkaz zinscenován</string>
 
-    <string name="task_link_title">Task link</string>
+    <string name="task_link_title">Odkaz na úkol</string>
 
-    <string name="task_link_icon_label">Open link details</string>
+    <string name="task_link_icon_label">Otevřít podrobnosti odkazu</string>
 
-    <string name="task_attachment_pick">PICK FILE</string>
+    <string name="task_attachment_label">Přiložený soubor</string>
 
-    <string name="task_attachment_clear">CLEAR FILE</string>
+    <string name="task_attachment_empty">Nebyl vybrán žádný soubor</string>
 
-    <string name="task_attachment_saved">File attached</string>
+    <string name="task_attachment_pick">VYBRAT SOUBOR</string>
 
-    <string name="task_attachment_picker_failed">Could not read the selected file</string>
+    <string name="task_attachment_clear">VYMAZAT SOUBOR</string>
 
-    <string name="task_attachment_open_failed">No app can open that attachment</string>
+    <string name="task_attachment_saved">Přiložený soubor</string>
 
-    <string name="task_attachment_title">Task attachment</string>
+    <string name="task_attachment_picker_failed">Vybraný soubor nelze přečíst</string>
 
-    <string name="task_attachment_icon_label">Open attachment details</string>
+    <string name="task_attachment_open_failed">Tuto přílohu nemůže otevřít žádná aplikace</string>
 
-    <string name="task_attachment_name_label">file: %1$s</string>
+    <string name="task_attachment_title">Příloha úkolu</string>
 
-    <string name="task_attachment_type_label">type: %1$s</string>
+    <string name="task_attachment_icon_label">Otevřete podrobnosti přílohy</string>
 
-    <string name="task_attachment_no_preview">No preview available</string>
+    <string name="task_attachment_name_label">soubor: %1$s</string>
+
+    <string name="task_attachment_type_label">typ: %1$s</string>
+
+    <string name="play_label">PŘEHRÁT</string>
+
+    <string name="stop_label">ZASTAVIT</string>
+
+    <string name="task_attachment_no_preview">Náhled není k dispozici</string>
 
     <string-array name="font_option_labels">
-            <item>Inter</item>
-            <item>Geo</item>
-            <item>MedievalSharp</item>
-            <item>Octosquares</item>
-            <item>UnifrakturMaguntia</item>
-        </string-array>
+        <item>Inter</item>
+        <item>Geo</item>
+        <item>MedievalSharp</item>
+        <item>Octosquares</item>
+        <item>UnifrakturMaguntia</item>
+    </string-array>
 
     <string-array name="importance_options">
-            <item>1 LOW</item>
-            <item>2 NORMAL</item>
-            <item>3 HIGH</item>
-            <item>4 CRITICAL</item>
-        </string-array>
+        <item>1 NÍZKÁ</item>
+        <item>2 NORMÁLNÍ</item>
+        <item>3 VYSOKÉ</item>
+        <item>4 KRITICKÉ</item>
+    </string-array>
 
     <plurals name="repeat_unit_minutes">
-            <item quantity="one">%1$d minute</item>
-            <item quantity="other">%1$d minutes</item>
-        </plurals>
+        <item quantity="one">%1$d minuta</item>
+        <item quantity="other">%1$d minut</item>
+    </plurals>
 
     <plurals name="repeat_unit_hours">
-            <item quantity="one">%1$d hour</item>
-            <item quantity="other">%1$d hours</item>
-        </plurals>
+        <item quantity="one">%1$d hodina</item>
+        <item quantity="other">%1$d hodin</item>
+    </plurals>
 
     <plurals name="repeat_unit_days">
-            <item quantity="one">%1$d day</item>
-            <item quantity="other">%1$d days</item>
-        </plurals>
+        <item quantity="one">%1$d den</item>
+        <item quantity="other">%1$d dní</item>
+    </plurals>
 
     <plurals name="repeat_unit_weeks">
-            <item quantity="one">%1$d week</item>
-            <item quantity="other">%1$d weeks</item>
-        </plurals>
+        <item quantity="one">%1$d týden</item>
+        <item quantity="other">%1$d týdnů</item>
+    </plurals>
 
     <plurals name="repeat_unit_months">
-            <item quantity="one">%1$d month</item>
-            <item quantity="other">%1$d months</item>
-        </plurals>
+        <item quantity="one">%1$d měsíc</item>
+        <item quantity="other">%1$d měsíců</item>
+    </plurals>
 
     <plurals name="repeat_unit_years">
-            <item quantity="one">%1$d year</item>
-            <item quantity="other">%1$d years</item>
-        </plurals>
+        <item quantity="one">%1$d rok</item>
+        <item quantity="other">%1$d let</item>
+    </plurals>
+
+    <string name="previous_label">PŘEDCHOZÍ</string>
+
+    <string name="next_label">DALŠÍ</string>
+
+    <string name="pdf_page_indicator">Strana %1$d / %2$d</string>
 </resources>
+
+
+
+
+
+
 

@@ -1,263 +1,342 @@
 ﻿<resources>
-    <string name="search_hint">×—×™×¤×•×© ×ž×©×™×ž×•×ª...</string>
-    <string name="empty_state_all">××™×Ÿ ×ž×©×™×ž×•×ª ×¢×“×™×™×Ÿ. ×”×©×ª×ž×© ×‘×—×“×© ×›×“×™ ×œ×™×¦×•×¨ ××—×ª</string>
-    <string name="empty_state_today">××™×Ÿ ×ž×©×™×ž×•×ª ×“×—×•×¤×•×ª ×œ×”×™×•×</string>
-    <string name="all_label">×”×›×œ</string>
-    <string name="today_label">×”×™×•×</string>
-    <string name="new_task_label">×—×“×©</string>
-    <string name="save_label">×©×ž×•×¨</string>
-    <string name="cancel_label">×‘×™×˜×•×œ</string>
-    <string name="pick_due_date_label">×ª××¨×™×š ×™×¢×“</string>
-    <string name="clear_due_date_label">× ×§×” ×ª××¨×™×š</string>
-    <string name="completed_label">×”×•×©×œ×</string>
-    <string name="importance_label">×—×©×™×‘×•×ª</string>
-    <string name="task_dialog_title_new">×ž×©×™×ž×” ×—×“×©×”</string>
-    <string name="task_dialog_title_edit">×¢×¨×™×›×ª ×ž×©×™×ž×”</string>
-    <string name="task_text_required">×”×–×Ÿ ×˜×§×¡×˜ ×ž×©×™×ž×”</string>
-    <string name="default_category_name">×§×˜×’×•×¨×™×”</string>
-    <string name="category_move_invalid">×”×¢×‘×¨×” ×–×• ×ª×™×¦×•×¨ ×§×˜×’×•×¨×™×” ×ž×§×•× × ×ª ×œ× ×ª×§×™× ×”</string>
-    <string name="task_due_label">×™×¢×“: %1$s</string>
-    <string name="no_due_date">××™×Ÿ ×ª××¨×™×š ×™×¢×“</string>
-    <string name="no_reminder">××™×Ÿ</string>
-    <string name="due_relative_overdue">×‘××™×—×•×¨ %1$d ×™×ž×™×</string>
-    <string name="due_relative_today">×”×™×•×</string>
-    <string name="due_relative_tomorrow">×ž×—×¨</string>
-    <string name="due_relative_in">×‘×¢×•×“ %1$d ×™×ž×™×</string>
-    <string name="pick_reminder_label">×”×–×›×¨ ×œ×™</string>
-    <string name="pick_repeat_label">×—×–×¨×”</string>
-    <string name="reminder_dialog_title">×‘×—×¨ ×ª×–×›×•×¨×ª</string>
-    <string name="reminder_option_none">×œ×œ× ×ª×–×›×•×¨×ª</string>
-    <string name="reminder_option_hour">×©×¢×” ×œ×¤× ×™</string>
-    <string name="reminder_option_day">×™×•× ×œ×¤× ×™</string>
-    <string name="reminder_option_week">×©×‘×•×¢ ×œ×¤× ×™</string>
-    <string name="reminder_option_month">×—×•×“×© ×œ×¤× ×™</string>
-    <string name="reminder_option_custom">×ª××¨×™×š ×•×©×¢×” ×ž×•×ª××ž×™×</string>
-    <string name="reminder_requires_due_date">×”×’×“×¨ ×ª××¨×™×š ×™×¢×“ ×ª×—×™×œ×” ×›×“×™ ×œ×”×©×ª×ž×© ×‘×”×’×“×¨×•×ª ×ž×•×›× ×•×ª</string>
-    <string name="reminder_time_in_past">×–×ž×Ÿ ×”×ª×–×›×•×¨×ª ×—×™×™×‘ ×œ×”×™×•×ª ×‘×¢×ª×™×“</string>
-    <string name="notifications_permission_denied">× ×“×¨×©×ª ×”×¨×©××ª ×”×ª×¨××•×ª ×œ×ª×–×›×•×¨×•×ª</string>
-    <string name="repeat_dialog_title">×‘×—×¨ ×—×–×¨×”</string>
-    <string name="repeat_option_none">×œ×œ× ×—×–×¨×”</string>
-    <string name="repeat_option_hour">×›×œ ×©×¢×”</string>
-    <string name="repeat_option_day">×›×œ ×™×•×</string>
-    <string name="repeat_option_week">×›×œ ×©×‘×•×¢</string>
-    <string name="repeat_option_month">×›×œ ×—×•×“×©</string>
-    <string name="repeat_option_year">×›×œ ×©× ×”</string>
-    <string name="repeat_option_custom">×ž×¨×•×•×— ×ž×•×ª××</string>
-    <string name="task_saved">×”×ž×©×™×ž×” × ×©×ž×¨×”</string>
-    <string name="task_deleted">×”×ž×©×™×ž×” × ×ž×—×§×”</string>
-    <string name="task_completed">×”×ž×©×™×ž×” ×¢×•×“×›× ×”</string>
-    <string name="task_failed">×œ× × ×™×ª×Ÿ ×œ×¢×“×›×Ÿ ××ª ×”×ž×©×™×ž×”</string>
-    <string name="summary_format">×¤×ª×•×—×•×ª: %1$d  ×”×™×•×: %2$d  ×¡×”×›: %3$d</string>
-    <string name="task_pin_label">×”×¦×ž×“</string>
-    <string name="task_unpin_label">×‘×˜×œ ×”×¦×ž×“×”</string>
-    <string name="task_edit_label">×¢×¨×•×š</string>
-    <string name="task_delete_label">×ž×—×§</string>
-    <string name="quick_links_title">×§×™×©×•×¨×™× ×ž×”×™×¨×™×</string>
-    <string name="new_link_label">×§×™×©×•×¨ ×—×“×©</string>
-    <string name="widget_tasks_title">×ž×©×™×ž×•×ª</string>
-    <string name="font_dialog_title">×‘×—×¨ ×’×•×¤×Ÿ</string>
-    <string name="new_category_label">×§×˜×’×•×¨×™×” ×—×“×©×”</string>
-    <string name="new_subcategory_label">×ª×ª ×§×˜×’×•×¨×™×” ×—×“×©×”</string>
-    <string name="new_child_task_label">×ž×©×™×ž×” ×—×“×©×”</string>
-    <string name="task_description_label">×ª×™××•×¨</string>
-    <string name="task_link_label">×§×™×©×•×¨ ×ž×©×•×™×š</string>
-    <string name="task_attachment_label">×§×•×‘×¥ ×ž×¦×•×¨×£</string>
-    <string name="task_attachment_empty">×œ× × ×‘×—×¨ ×§×•×‘×¥</string>
-    <string name="play_label">× ×’×Ÿ</string>
-    <string name="stop_label">×¢×¦×•×¨</string>
-    <string name="previous_label">×”×§×•×“×</string>
-    <string name="next_label">×”×‘×</string>
-    <string name="pdf_page_indicator">×¢×ž×•×“ %1$d / %2$d</string>
-    <!-- Fallback entries added to keep this locale 1:1 with the base resources. -->
     <string name="app_name">OpusAgenda</string>
 
-    <string name="app_header_title">â™± OpusAgenda v1.3</string>
+    <string name="app_header_title">♱ OpusAgenda v1.3</string>
 
     <string name="app_font_family">UnifrakturMaguntia</string>
 
-    <string name="run_command_label">RUN</string>
+    <string name="search_hint">משימות חיפוש...</string>
 
-    <string name="task_text_hint">Task text</string>
+    <string name="empty_state_all">עדיין אין משימות. השתמש ב-NEW כדי ליצור אחד</string>
 
-    <string name="pinned_label">PINNED</string>
+    <string name="empty_state_today">אין משימות דחופות להיום</string>
+
+    <string name="all_label">הכל</string>
+
+    <string name="today_label">היום</string>
+
+    <string name="new_task_label">חדש</string>
+
+    <string name="run_command_label">הפעל</string>
+
+    <string name="task_text_hint">טקסט משימה</string>
+
+    <string name="category_text_hint">שם הקטגוריה</string>
+
+    <string name="save_label">שמור</string>
+
+    <string name="cancel_label">ביטול</string>
+
+    <string name="pick_due_date_label">תאריך יעד</string>
+
+    <string name="clear_due_date_label">נקה בשל</string>
+
+    <string name="pinned_label">מוצמד</string>
+
+    <string name="completed_label">הושלם</string>
+
+    <string name="importance_label">חשיבות</string>
+
+    <string name="task_dialog_title_new">משימה חדשה</string>
+
+    <string name="task_dialog_title_edit">ערוך משימה</string>
+
+    <string name="category_dialog_title_new">קטגוריה חדשה</string>
+
+    <string name="category_dialog_title_edit">ערוך קטגוריה</string>
+
+    <string name="task_text_required">הזן טקסט משימה</string>
+
+    <string name="default_category_name">קטגוריה</string>
 
     <string name="category_badge_label">CAT</string>
 
-    <string name="category_edit_label">RENAME</string>
+    <string name="category_edit_label">שנה שם</string>
 
-    <string name="category_due_label">category</string>
+    <string name="category_due_label">קטגוריה</string>
 
-    <string name="category_meta_format">children: %1$d  imp: %2$d</string>
+    <string name="category_meta_format">פריטי משנה: %1$d  חשיבות: %2$d</string>
 
-    <string name="task_reminder_value_label">reminder: %1$s</string>
+    <string name="category_move_invalid">מהלך זה ייצור קטגוריה מקוננת לא חוקית</string>
+
+    <string name="task_due_label">בשל: %1$s</string>
+
+    <string name="task_reminder_value_label">תזכורת: %1$s</string>
 
     <string name="task_date_with_relative">%1$s - %2$s</string>
 
-    <string name="clear_reminder_label">CLEAR REMINDER</string>
+    <string name="no_due_date">ללא תאריך יעד</string>
+
+    <string name="no_reminder">אף אחד</string>
+
+    <string name="due_relative_overdue">%1$dd באיחור</string>
+
+    <string name="due_relative_today">היום</string>
+
+    <string name="due_relative_tomorrow">מחר</string>
+
+    <string name="due_relative_in">ב-%1$dd</string>
+
+    <string name="pick_reminder_label">תזכיר לי</string>
+
+    <string name="pick_repeat_label">חזור</string>
+
+    <string name="clear_reminder_label">תזכורת ברורה</string>
+
+    <string name="reminder_dialog_title">בחר תזכורת</string>
+
+    <string name="reminder_option_none">אין תזכורת</string>
+
+    <string name="reminder_option_hour">שעה אחת לפני</string>
+
+    <string name="reminder_option_day">יום אחד לפני</string>
+
+    <string name="reminder_option_week">שבוע אחד לפני</string>
+
+    <string name="reminder_option_month">1 חודש לפני</string>
+
+    <string name="reminder_option_custom">תאריך ושעה מותאמים אישית</string>
 
     <string name="reminder_summary_with_datetime">%1$s (%2$s)</string>
 
-    <string name="reminder_custom_date_title">Reminder date</string>
+    <string name="reminder_requires_due_date">הגדר תחילה תאריך יעד לשימוש בהגדרות קבועות מראש</string>
 
-    <string name="reminder_custom_time_title">Reminder time</string>
+    <string name="reminder_time_in_past">זמן התזכורת חייב להיות בעתיד</string>
 
-    <string name="reminder_channel_name">Task reminders</string>
+    <string name="reminder_custom_date_title">תאריך תזכורת</string>
 
-    <string name="reminder_channel_description">Notifications for scheduled task reminders</string>
+    <string name="reminder_custom_time_title">זמן תזכורת</string>
 
-    <string name="reminder_notification_title">Task reminder</string>
+    <string name="reminder_channel_name">תזכורות למשימות</string>
 
-    <string name="task_repeat_value_label">repeat: %1$s</string>
+    <string name="reminder_channel_description">התראות עבור תזכורות משימות מתוזמנות</string>
 
-    <string name="repeat_none">none</string>
+    <string name="reminder_notification_title">תזכורת למשימה</string>
 
-    <string name="repeat_requires_reminder">Set a reminder first to use repetition</string>
+    <string name="notifications_permission_denied">נדרשת אישור הודעה לתזכורות</string>
 
-    <string name="repeat_custom_title">Custom repetition</string>
+    <string name="task_repeat_value_label">חזרה: %1$s</string>
 
-    <string name="repeat_custom_amount_hint">Interval amount</string>
+    <string name="repeat_none">אף אחד</string>
 
-    <string name="repeat_custom_amount_invalid">Enter a valid repetition amount</string>
+    <string name="repeat_dialog_title">בחר חזרה</string>
 
-    <string name="repeat_unit_minutes_label">Minutes</string>
+    <string name="repeat_option_none">אין חזרה</string>
 
-    <string name="repeat_unit_days_label">Days</string>
+    <string name="repeat_option_hour">כל שעה</string>
 
-    <string name="repeat_unit_hours_label">Hours</string>
+    <string name="repeat_option_day">כל יום</string>
 
-    <string name="repeat_unit_weeks_label">Weeks</string>
+    <string name="repeat_option_week">כל שבוע</string>
 
-    <string name="repeat_unit_months_label">Months</string>
+    <string name="repeat_option_month">כל חודש</string>
 
-    <string name="repeat_unit_years_label">Years</string>
+    <string name="repeat_option_year">כל שנה</string>
 
-    <string name="link_open_label">OPEN</string>
+    <string name="repeat_option_custom">מרווח מותאם אישית</string>
 
-    <string name="link_missing">No link available to open</string>
+    <string name="repeat_requires_reminder">הגדר תזכורת תחילה להשתמש בחזרה</string>
 
-    <string name="invalid_command">Invalid command</string>
+    <string name="repeat_custom_title">חזרה מותאמת אישית</string>
 
-    <string name="task_meta_format">imp: %1$d  due: %2$s  score: %3$d</string>
+    <string name="repeat_custom_amount_hint">כמות מרווחים</string>
 
-    <string name="quick_link_label_hint">Short name</string>
+    <string name="repeat_custom_amount_invalid">הזן סכום חוזר חוקי</string>
+
+    <string name="repeat_unit_minutes_label">דקות</string>
+
+    <string name="repeat_unit_days_label">ימים</string>
+
+    <string name="repeat_unit_hours_label">שעות</string>
+
+    <string name="repeat_unit_weeks_label">שבועות</string>
+
+    <string name="repeat_unit_months_label">חודשים</string>
+
+    <string name="repeat_unit_years_label">שנים</string>
+
+    <string name="link_open_label">פתוח</string>
+
+    <string name="link_missing">אין קישור זמין לפתיחה</string>
+
+    <string name="invalid_command">פקודה לא חוקית</string>
+
+    <string name="task_saved">המשימה נשמרה</string>
+
+    <string name="task_deleted">המשימה נמחקה</string>
+
+    <string name="task_completed">המשימה עודכנה</string>
+
+    <string name="task_failed">לא ניתן היה לעדכן את המשימה</string>
+
+    <string name="summary_format">פתוחות: %1$d  היום: %2$d  סהכ: %3$d</string>
+
+    <string name="task_meta_format">חשיבות: %1$d  יעד: %2$s  ציון: %3$d</string>
+
+    <string name="task_pin_label">הצמד</string>
+
+    <string name="task_unpin_label">בטל PIN</string>
+
+    <string name="task_edit_label">ערוך</string>
+
+    <string name="task_delete_label">מחק</string>
+
+    <string name="quick_links_title">קישורים מהירים</string>
+
+    <string name="new_link_label">קישור חדש</string>
+
+    <string name="quick_link_label_hint">שם קצר</string>
 
     <string name="quick_link_url_hint">https://quick.link</string>
 
-    <string name="quick_link_new_title">New quick link</string>
+    <string name="quick_link_new_title">קישור מהיר חדש</string>
 
-    <string name="quick_link_edit_title">Edit quick link</string>
+    <string name="quick_link_edit_title">ערוך קישור מהיר</string>
 
-    <string name="quick_link_saved">Quick link saved</string>
+    <string name="quick_link_saved">קישור מהיר נשמר</string>
 
-    <string name="quick_link_deleted">Quick link deleted</string>
+    <string name="quick_link_deleted">קישור מהיר נמחק</string>
 
-    <string name="quick_link_invalid">Enter a valid name and URL</string>
+    <string name="quick_link_invalid">הזן שם וכתובת אתר חוקיים</string>
 
-    <string name="quick_link_delete_label">DELETE</string>
+    <string name="quick_link_delete_label">מחק</string>
 
-    <string name="widget_tasks_description">Task list with ALL and TODAY filters. Tap a row to toggle done</string>
+    <string name="widget_tasks_title">משימות</string>
 
-    <string name="widget_quick_links_description">Quick links saved in OpusAgenda. Tap to open in the browser</string>
+    <string name="widget_tasks_description">רשימת משימות עם מסנני הכל והיום. הקש על שורה כדי לעבור למצב \'סיום\'</string>
 
-    <string name="widget_quick_links_empty">No quick links. Add them in the app</string>
+    <string name="widget_quick_links_description">קישורים מהירים נשמרים ב-OpusAgenda. הקש כדי לפתוח בדפדפן</string>
+
+    <string name="widget_quick_links_empty">אין קישורים מהירים. הוסף אותם באפליקציה</string>
 
     <string name="clock_time_placeholder">00:00:00</string>
 
     <string name="clock_date_placeholder">10 Apr 2026</string>
 
-    <string name="font_applied">Font applied: %1$s</string>
+    <string name="font_dialog_title">בחר גופן</string>
 
-    <string name="task_description_hint">Add some context for this task</string>
+    <string name="font_applied">הגופן הוחל: %1$s</string>
 
-    <string name="task_description_save">SAVE DESC</string>
+    <string name="new_category_label">חתול חדש</string>
 
-    <string name="task_description_clear">CLEAR DESC</string>
+    <string name="new_subcategory_label">SUBC חדש</string>
 
-    <string name="task_description_required">Description cannot be empty</string>
+    <string name="new_child_task_label">משימה חדשה</string>
 
-    <string name="task_description_saved">Description staged</string>
+    <string name="task_description_label">תיאור</string>
 
-    <string name="task_description_title">Task description</string>
+    <string name="task_description_hint">הוסף קצת הקשר למשימה זו</string>
 
-    <string name="task_description_icon_label">Open description</string>
+    <string name="task_description_save">שמור תיאור</string>
+
+    <string name="task_description_clear">נקה DESC</string>
+
+    <string name="task_description_required">התיאור לא יכול להיות ריק</string>
+
+    <string name="task_description_saved">תיאור מבוים</string>
+
+    <string name="task_description_title">תיאור המשימה</string>
+
+    <string name="task_description_icon_label">פתח את התיאור</string>
+
+    <string name="task_link_label">קישור משויך</string>
 
     <string name="task_link_hint">https://linked.resource</string>
 
-    <string name="task_link_save">SAVE LINK</string>
+    <string name="task_link_save">שמור קישור</string>
 
-    <string name="task_link_clear">CLEAR LINK</string>
+    <string name="task_link_clear">נקה קישור</string>
 
-    <string name="task_link_required">Enter a valid link first</string>
+    <string name="task_link_required">הזן קודם קישור חוקי</string>
 
-    <string name="task_link_saved">Link staged</string>
+    <string name="task_link_saved">קישור מבוים</string>
 
-    <string name="task_link_title">Task link</string>
+    <string name="task_link_title">קישור למשימה</string>
 
-    <string name="task_link_icon_label">Open link details</string>
+    <string name="task_link_icon_label">פתח את פרטי הקישור</string>
 
-    <string name="task_attachment_pick">PICK FILE</string>
+    <string name="task_attachment_label">קובץ מצורף</string>
 
-    <string name="task_attachment_clear">CLEAR FILE</string>
+    <string name="task_attachment_empty">לא נבחר קובץ</string>
 
-    <string name="task_attachment_saved">File attached</string>
+    <string name="task_attachment_pick">בחר קובץ</string>
 
-    <string name="task_attachment_picker_failed">Could not read the selected file</string>
+    <string name="task_attachment_clear">נקה קובץ</string>
 
-    <string name="task_attachment_open_failed">No app can open that attachment</string>
+    <string name="task_attachment_saved">מצורף קובץ</string>
 
-    <string name="task_attachment_title">Task attachment</string>
+    <string name="task_attachment_picker_failed">לא ניתן היה לקרוא את הקובץ שנבחר</string>
 
-    <string name="task_attachment_icon_label">Open attachment details</string>
+    <string name="task_attachment_open_failed">אף אפליקציה לא יכולה לפתוח את הקובץ המצורף הזה</string>
 
-    <string name="task_attachment_name_label">file: %1$s</string>
+    <string name="task_attachment_title">מצורף משימה</string>
 
-    <string name="task_attachment_type_label">type: %1$s</string>
+    <string name="task_attachment_icon_label">פתח את פרטי הקובץ המצורפים</string>
 
-    <string name="task_attachment_no_preview">No preview available</string>
+    <string name="task_attachment_name_label">קובץ: %1$s</string>
+
+    <string name="task_attachment_type_label">סוג: %1$s</string>
+
+    <string name="play_label">נגן</string>
+
+    <string name="stop_label">עצור</string>
+
+    <string name="task_attachment_no_preview">אין תצוגה מקדימה זמינה</string>
 
     <string-array name="font_option_labels">
-            <item>Inter</item>
-            <item>Geo</item>
-            <item>MedievalSharp</item>
-            <item>Octosquares</item>
-            <item>UnifrakturMaguntia</item>
-        </string-array>
+        <item>Inter</item>
+        <item>Geo</item>
+        <item>MedievalSharp</item>
+        <item>Octosquares</item>
+        <item>UnifrakturMaguntia</item>
+    </string-array>
 
     <string-array name="importance_options">
-            <item>1 LOW</item>
-            <item>2 NORMAL</item>
-            <item>3 HIGH</item>
-            <item>4 CRITICAL</item>
-        </string-array>
+        <item>1 נמוך</item>
+        <item>2 רגיל</item>
+        <item>3 גבוה</item>
+        <item>4 קריטי</item>
+    </string-array>
 
     <plurals name="repeat_unit_minutes">
-            <item quantity="one">%1$d minute</item>
-            <item quantity="other">%1$d minutes</item>
-        </plurals>
+        <item quantity="one">דקה %1$d</item>
+        <item quantity="other">%1$d דקות</item>
+    </plurals>
 
     <plurals name="repeat_unit_hours">
-            <item quantity="one">%1$d hour</item>
-            <item quantity="other">%1$d hours</item>
-        </plurals>
+        <item quantity="one">%1$d שעה</item>
+        <item quantity="other">%1$d שעות</item>
+    </plurals>
 
     <plurals name="repeat_unit_days">
-            <item quantity="one">%1$d day</item>
-            <item quantity="other">%1$d days</item>
-        </plurals>
+        <item quantity="one">%1$d יום</item>
+        <item quantity="other">%1$d ימים</item>
+    </plurals>
 
     <plurals name="repeat_unit_weeks">
-            <item quantity="one">%1$d week</item>
-            <item quantity="other">%1$d weeks</item>
-        </plurals>
+        <item quantity="one">%1$d שבוע</item>
+        <item quantity="other">%1$d שבועות</item>
+    </plurals>
 
     <plurals name="repeat_unit_months">
-            <item quantity="one">%1$d month</item>
-            <item quantity="other">%1$d months</item>
-        </plurals>
+        <item quantity="one">חודש %1$d</item>
+        <item quantity="other">%1$d חודשים</item>
+    </plurals>
 
     <plurals name="repeat_unit_years">
-            <item quantity="one">%1$d year</item>
-            <item quantity="other">%1$d years</item>
-        </plurals>
+        <item quantity="one">שנה %1$d</item>
+        <item quantity="other">%1$d שנים</item>
+    </plurals>
+
+    <string name="previous_label">הקודם</string>
+
+    <string name="next_label">הבא</string>
+
+    <string name="pdf_page_indicator">עמוד %1$d / %2$d</string>
 </resources>
+
+
+
+
+
 

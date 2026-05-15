@@ -1,6 +1,6 @@
-<resources>
+﻿<resources>
     <string name="app_name">OpusAgenda</string>
-    <string name="app_header_title">♱ OpusAgenda v1.3</string>
+    <string name="app_header_title">â™± OpusAgenda v1.3</string>
 
     <string name="app_font_family">UnifrakturMaguntia</string>
 
@@ -12,6 +12,7 @@
     <string name="new_task_label">NEW</string>
     <string name="run_command_label">RUN</string>
     <string name="task_text_hint">Task text</string>
+    <string name="category_text_hint">Category name</string>
     <string name="save_label">SAVE</string>
     <string name="cancel_label">CANCEL</string>
     <string name="pick_due_date_label">DUE DATE</string>
@@ -21,6 +22,8 @@
     <string name="importance_label">Importance</string>
     <string name="task_dialog_title_new">New task</string>
     <string name="task_dialog_title_edit">Edit task</string>
+    <string name="category_dialog_title_new">New category</string>
+    <string name="category_dialog_title_edit">Edit category</string>
     <string name="task_text_required">Enter task text</string>
     <string name="default_category_name">Category</string>
     <string name="category_badge_label">CAT</string>
@@ -194,3 +197,4 @@
     <string name="pdf_page_indicator">Page %1$d / %2$d</string>
 
 </resources>
+

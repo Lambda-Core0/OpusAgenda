@@ -1,263 +1,338 @@
 ﻿<resources>
-    <string name="search_hint">à¸„à¹‰à¸™à¸«à¸²à¸‡à¸²à¸™...</string>
-    <string name="empty_state_all">à¸¢à¸±à¸‡à¹„à¸¡à¹ˆà¸¡à¸µà¸‡à¸²à¸™ à¹ƒà¸Šà¹‰ à¹ƒà¸«à¸¡à¹ˆ à¹€à¸žà¸·à¹ˆà¸­à¸ªà¸£à¹‰à¸²à¸‡à¸‡à¸²à¸™</string>
-    <string name="empty_state_today">à¸§à¸±à¸™à¸™à¸µà¹‰à¹„à¸¡à¹ˆà¸¡à¸µà¸‡à¸²à¸™à¹€à¸£à¹ˆà¸‡à¸”à¹ˆà¸§à¸™</string>
-    <string name="all_label">à¸—à¸±à¹‰à¸‡à¸«à¸¡à¸”</string>
-    <string name="today_label">à¸§à¸±à¸™à¸™à¸µà¹‰</string>
-    <string name="new_task_label">à¹ƒà¸«à¸¡à¹ˆ</string>
-    <string name="save_label">à¸šà¸±à¸™à¸—à¸¶à¸</string>
-    <string name="cancel_label">à¸¢à¸à¹€à¸¥à¸´à¸</string>
-    <string name="pick_due_date_label">à¸§à¸±à¸™à¸„à¸£à¸šà¸à¸³à¸«à¸™à¸”</string>
-    <string name="clear_due_date_label">à¸¥à¹‰à¸²à¸‡à¸§à¸±à¸™à¸—à¸µà¹ˆ</string>
-    <string name="completed_label">à¹€à¸ªà¸£à¹‡à¸ˆà¹à¸¥à¹‰à¸§</string>
-    <string name="importance_label">à¸„à¸§à¸²à¸¡à¸ªà¸³à¸„à¸±à¸</string>
-    <string name="task_dialog_title_new">à¸‡à¸²à¸™à¹ƒà¸«à¸¡à¹ˆ</string>
-    <string name="task_dialog_title_edit">à¹à¸à¹‰à¹„à¸‚à¸‡à¸²à¸™</string>
-    <string name="task_text_required">à¸›à¹‰à¸­à¸™à¸‚à¹‰à¸­à¸„à¸§à¸²à¸¡à¸‡à¸²à¸™</string>
-    <string name="default_category_name">à¸«à¸¡à¸§à¸”à¸«à¸¡à¸¹à¹ˆ</string>
-    <string name="category_move_invalid">à¸à¸²à¸£à¸¢à¹‰à¸²à¸¢à¸™à¸µà¹‰à¸ˆà¸°à¸ªà¸£à¹‰à¸²à¸‡à¸«à¸¡à¸§à¸”à¸«à¸¡à¸¹à¹ˆà¸‹à¹‰à¸­à¸™à¸—à¸µà¹ˆà¹„à¸¡à¹ˆà¸–à¸¹à¸à¸•à¹‰à¸­à¸‡</string>
-    <string name="task_due_label">à¸„à¸£à¸šà¸à¸³à¸«à¸™à¸”: %1$s</string>
-    <string name="no_due_date">à¹„à¸¡à¹ˆà¸¡à¸µà¸§à¸±à¸™à¸„à¸£à¸šà¸à¸³à¸«à¸™à¸”</string>
-    <string name="no_reminder">à¹„à¸¡à¹ˆà¸¡à¸µ</string>
-    <string name="due_relative_overdue">à¹€à¸à¸´à¸™à¸à¸³à¸«à¸™à¸” %1$d à¸§à¸±à¸™</string>
-    <string name="due_relative_today">à¸§à¸±à¸™à¸™à¸µà¹‰</string>
-    <string name="due_relative_tomorrow">à¸žà¸£à¸¸à¹ˆà¸‡à¸™à¸µà¹‰</string>
-    <string name="due_relative_in">à¸­à¸µà¸ %1$d à¸§à¸±à¸™</string>
-    <string name="pick_reminder_label">à¹€à¸•à¸·à¸­à¸™à¸‰à¸±à¸™</string>
-    <string name="pick_repeat_label">à¸—à¸³à¸‹à¹‰à¸³</string>
-    <string name="reminder_dialog_title">à¹€à¸¥à¸·à¸­à¸à¸à¸²à¸£à¹€à¸•à¸·à¸­à¸™</string>
-    <string name="reminder_option_none">à¹„à¸¡à¹ˆà¹€à¸•à¸·à¸­à¸™</string>
-    <string name="reminder_option_hour">à¸à¹ˆà¸­à¸™ 1 à¸Šà¸±à¹ˆà¸§à¹‚à¸¡à¸‡</string>
-    <string name="reminder_option_day">à¸à¹ˆà¸­à¸™ 1 à¸§à¸±à¸™</string>
-    <string name="reminder_option_week">à¸à¹ˆà¸­à¸™ 1 à¸ªà¸±à¸›à¸”à¸²à¸«à¹Œ</string>
-    <string name="reminder_option_month">à¸à¹ˆà¸­à¸™ 1 à¹€à¸”à¸·à¸­à¸™</string>
-    <string name="reminder_option_custom">à¸§à¸±à¸™à¸—à¸µà¹ˆà¹à¸¥à¸°à¹€à¸§à¸¥à¸²à¹à¸šà¸šà¸à¸³à¸«à¸™à¸”à¹€à¸­à¸‡</string>
-    <string name="reminder_requires_due_date">à¸•à¸±à¹‰à¸‡à¸§à¸±à¸™à¸„à¸£à¸šà¸à¸³à¸«à¸™à¸”à¸à¹ˆà¸­à¸™à¹€à¸žà¸·à¹ˆà¸­à¹ƒà¸Šà¹‰à¸„à¹ˆà¸²à¸—à¸µà¹ˆà¸•à¸±à¹‰à¸‡à¹„à¸§à¹‰</string>
-    <string name="reminder_time_in_past">à¹€à¸§à¸¥à¸²à¹€à¸•à¸·à¸­à¸™à¸•à¹‰à¸­à¸‡à¸­à¸¢à¸¹à¹ˆà¹ƒà¸™à¸­à¸™à¸²à¸„à¸•</string>
-    <string name="notifications_permission_denied">à¸•à¹‰à¸­à¸‡à¸¡à¸µà¸ªà¸´à¸—à¸˜à¸´à¹Œà¸à¸²à¸£à¹à¸ˆà¹‰à¸‡à¹€à¸•à¸·à¸­à¸™à¸ªà¸³à¸«à¸£à¸±à¸šà¸à¸²à¸£à¹€à¸•à¸·à¸­à¸™</string>
-    <string name="repeat_dialog_title">à¹€à¸¥à¸·à¸­à¸à¸à¸²à¸£à¸—à¸³à¸‹à¹‰à¸³</string>
-    <string name="repeat_option_none">à¹„à¸¡à¹ˆà¸—à¸³à¸‹à¹‰à¸³</string>
-    <string name="repeat_option_hour">à¸—à¸¸à¸à¸Šà¸±à¹ˆà¸§à¹‚à¸¡à¸‡</string>
-    <string name="repeat_option_day">à¸—à¸¸à¸à¸§à¸±à¸™</string>
-    <string name="repeat_option_week">à¸—à¸¸à¸à¸ªà¸±à¸›à¸”à¸²à¸«à¹Œ</string>
-    <string name="repeat_option_month">à¸—à¸¸à¸à¹€à¸”à¸·à¸­à¸™</string>
-    <string name="repeat_option_year">à¸—à¸¸à¸à¸›à¸µ</string>
-    <string name="repeat_option_custom">à¸Šà¹ˆà¸§à¸‡à¹à¸šà¸šà¸à¸³à¸«à¸™à¸”à¹€à¸­à¸‡</string>
-    <string name="task_saved">à¸šà¸±à¸™à¸—à¸¶à¸à¸‡à¸²à¸™à¹à¸¥à¹‰à¸§</string>
-    <string name="task_deleted">à¸¥à¸šà¸‡à¸²à¸™à¹à¸¥à¹‰à¸§</string>
-    <string name="task_completed">à¸­à¸±à¸›à¹€à¸”à¸•à¸‡à¸²à¸™à¹à¸¥à¹‰à¸§</string>
-    <string name="task_failed">à¸­à¸±à¸›à¹€à¸”à¸•à¸‡à¸²à¸™à¹„à¸¡à¹ˆà¹„à¸”à¹‰</string>
-    <string name="summary_format">à¹€à¸›à¸´à¸”: %1$d  à¸§à¸±à¸™à¸™à¸µà¹‰: %2$d  à¸£à¸§à¸¡: %3$d</string>
-    <string name="task_pin_label">à¸›à¸±à¸à¸«à¸¡à¸¸à¸”</string>
-    <string name="task_unpin_label">à¹€à¸¥à¸´à¸à¸›à¸±à¸à¸«à¸¡à¸¸à¸”</string>
-    <string name="task_edit_label">à¹à¸à¹‰à¹„à¸‚</string>
-    <string name="task_delete_label">à¸¥à¸š</string>
-    <string name="quick_links_title">à¸¥à¸´à¸‡à¸à¹Œà¸”à¹ˆà¸§à¸™</string>
-    <string name="new_link_label">à¸¥à¸´à¸‡à¸à¹Œà¹ƒà¸«à¸¡à¹ˆ</string>
-    <string name="widget_tasks_title">à¸‡à¸²à¸™</string>
-    <string name="font_dialog_title">à¹€à¸¥à¸·à¸­à¸à¹à¸šà¸šà¸­à¸±à¸à¸©à¸£</string>
-    <string name="new_category_label">à¸«à¸¡à¸§à¸”à¹ƒà¸«à¸¡à¹ˆ</string>
-    <string name="new_subcategory_label">à¸«à¸¡à¸§à¸”à¸¢à¹ˆà¸­à¸¢à¹ƒà¸«à¸¡à¹ˆ</string>
-    <string name="new_child_task_label">à¸‡à¸²à¸™à¹ƒà¸«à¸¡à¹ˆ</string>
-    <string name="task_description_label">à¸„à¸³à¸­à¸˜à¸´à¸šà¸²à¸¢</string>
-    <string name="task_link_label">à¸¥à¸´à¸‡à¸à¹Œà¸—à¸µà¹ˆà¹€à¸à¸µà¹ˆà¸¢à¸§à¸‚à¹‰à¸­à¸‡</string>
-    <string name="task_attachment_label">à¹„à¸Ÿà¸¥à¹Œà¹à¸™à¸š</string>
-    <string name="task_attachment_empty">à¹„à¸¡à¹ˆà¹„à¸”à¹‰à¹€à¸¥à¸·à¸­à¸à¹„à¸Ÿà¸¥à¹Œ</string>
-    <string name="play_label">à¹€à¸¥à¹ˆà¸™</string>
-    <string name="stop_label">à¸«à¸¢à¸¸à¸”</string>
-    <string name="previous_label">à¸à¹ˆà¸­à¸™à¸«à¸™à¹‰à¸²</string>
-    <string name="next_label">à¸–à¸±à¸”à¹„à¸›</string>
-    <string name="pdf_page_indicator">à¸«à¸™à¹‰à¸² %1$d / %2$d</string>
-    <!-- Fallback entries added to keep this locale 1:1 with the base resources. -->
     <string name="app_name">OpusAgenda</string>
 
-    <string name="app_header_title">â™± OpusAgenda v1.3</string>
+    <string name="app_header_title">♱ OpusAgenda v1.3</string>
 
     <string name="app_font_family">UnifrakturMaguntia</string>
 
-    <string name="run_command_label">RUN</string>
+    <string name="search_hint">ค้นหางาน...</string>
 
-    <string name="task_text_hint">Task text</string>
+    <string name="empty_state_all">ยังไม่มีงาน ใช้ NEW เพื่อสร้าง</string>
 
-    <string name="pinned_label">PINNED</string>
+    <string name="empty_state_today">ไม่มีงานด่วนสำหรับวันนี้</string>
 
-    <string name="category_badge_label">CAT</string>
+    <string name="all_label">ทั้งหมด</string>
 
-    <string name="category_edit_label">RENAME</string>
+    <string name="today_label">วันนี้</string>
 
-    <string name="category_due_label">category</string>
+    <string name="new_task_label">ใหม่</string>
 
-    <string name="category_meta_format">children: %1$d  imp: %2$d</string>
+    <string name="run_command_label">วิ่ง</string>
 
-    <string name="task_reminder_value_label">reminder: %1$s</string>
+    <string name="task_text_hint">ข้อความงาน</string>
+
+    <string name="category_text_hint">ชื่อหมวดหมู่</string>
+
+    <string name="save_label">บันทึก</string>
+
+    <string name="cancel_label">ยกเลิก</string>
+
+    <string name="pick_due_date_label">วันครบกำหนด</string>
+
+    <string name="clear_due_date_label">ครบกำหนดชำระ</string>
+
+    <string name="pinned_label">ปักหมุดแล้ว</string>
+
+    <string name="completed_label">เสร็จสิ้น</string>
+
+    <string name="importance_label">ความสำคัญ</string>
+
+    <string name="task_dialog_title_new">งานใหม่</string>
+
+    <string name="task_dialog_title_edit">แก้ไขงาน</string>
+
+    <string name="category_dialog_title_new">หมวดหมู่ใหม่</string>
+
+    <string name="category_dialog_title_edit">แก้ไขหมวดหมู่</string>
+
+    <string name="task_text_required">ป้อนข้อความงาน</string>
+
+    <string name="default_category_name">หมวดหมู่</string>
+
+    <string name="category_badge_label">กสท</string>
+
+    <string name="category_edit_label">เปลี่ยนชื่อ</string>
+
+    <string name="category_due_label">หมวดหมู่</string>
+
+    <string name="category_meta_format">รายการย่อย: %1$d  ความสำคัญ: %2$d</string>
+
+    <string name="category_move_invalid">การย้ายนั้นจะสร้างหมวดหมู่ที่ซ้อนกันที่ไม่ถูกต้อง</string>
+
+    <string name="task_due_label">ครบกำหนด: %1$s</string>
+
+    <string name="task_reminder_value_label">คำเตือน: %1$s</string>
 
     <string name="task_date_with_relative">%1$s - %2$s</string>
 
-    <string name="clear_reminder_label">CLEAR REMINDER</string>
+    <string name="no_due_date">ไม่มีวันครบกำหนด</string>
+
+    <string name="no_reminder">ไม่มี</string>
+
+    <string name="due_relative_overdue">ค้างชำระ %1$dd</string>
+
+    <string name="due_relative_today">วันนี้</string>
+
+    <string name="due_relative_tomorrow">พรุ่งนี้</string>
+
+    <string name="due_relative_in">ใน %1$dd</string>
+
+    <string name="pick_reminder_label">เตือนฉัน</string>
+
+    <string name="pick_repeat_label">ทำซ้ำ</string>
+
+    <string name="clear_reminder_label">การแจ้งเตือนที่ชัดเจน</string>
+
+    <string name="reminder_dialog_title">เลือกการช่วยเตือน</string>
+
+    <string name="reminder_option_none">ไม่มีการช่วยเตือน</string>
+
+    <string name="reminder_option_hour">1 ชั่วโมงก่อน</string>
+
+    <string name="reminder_option_day">1 วันก่อน</string>
+
+    <string name="reminder_option_week">1 สัปดาห์ก่อน</string>
+
+    <string name="reminder_option_month">1 เดือนก่อน</string>
+
+    <string name="reminder_option_custom">วันที่และเวลาที่กำหนดเอง</string>
 
     <string name="reminder_summary_with_datetime">%1$s (%2$s)</string>
 
-    <string name="reminder_custom_date_title">Reminder date</string>
+    <string name="reminder_requires_due_date">ตั้งวันครบกำหนดก่อนเพื่อใช้ค่าที่ตั้งล่วงหน้า</string>
 
-    <string name="reminder_custom_time_title">Reminder time</string>
+    <string name="reminder_time_in_past">เวลาเตือนจะต้องเป็นเวลาในอนาคต</string>
 
-    <string name="reminder_channel_name">Task reminders</string>
+    <string name="reminder_custom_date_title">วันที่เตือนความจำ</string>
 
-    <string name="reminder_channel_description">Notifications for scheduled task reminders</string>
+    <string name="reminder_custom_time_title">เวลาเตือนความจำ</string>
 
-    <string name="reminder_notification_title">Task reminder</string>
+    <string name="reminder_channel_name">การแจ้งเตือนงาน</string>
 
-    <string name="task_repeat_value_label">repeat: %1$s</string>
+    <string name="reminder_channel_description">การแจ้งเตือนสำหรับการแจ้งเตือนงานที่กำหนดเวลาไว้</string>
 
-    <string name="repeat_none">none</string>
+    <string name="reminder_notification_title">การแจ้งเตือนงาน</string>
 
-    <string name="repeat_requires_reminder">Set a reminder first to use repetition</string>
+    <string name="notifications_permission_denied">จำเป็นต้องได้รับอนุญาตการแจ้งเตือนสำหรับการแจ้งเตือน</string>
 
-    <string name="repeat_custom_title">Custom repetition</string>
+    <string name="task_repeat_value_label">ทำซ้ำ: %1$s</string>
 
-    <string name="repeat_custom_amount_hint">Interval amount</string>
+    <string name="repeat_none">ไม่มี</string>
 
-    <string name="repeat_custom_amount_invalid">Enter a valid repetition amount</string>
+    <string name="repeat_dialog_title">เลือกการทำซ้ำ</string>
 
-    <string name="repeat_unit_minutes_label">Minutes</string>
+    <string name="repeat_option_none">ไม่มีการทำซ้ำ</string>
 
-    <string name="repeat_unit_days_label">Days</string>
+    <string name="repeat_option_hour">ทุกชั่วโมง</string>
 
-    <string name="repeat_unit_hours_label">Hours</string>
+    <string name="repeat_option_day">ทุกวัน</string>
 
-    <string name="repeat_unit_weeks_label">Weeks</string>
+    <string name="repeat_option_week">ทุกสัปดาห์</string>
 
-    <string name="repeat_unit_months_label">Months</string>
+    <string name="repeat_option_month">ทุกเดือน</string>
 
-    <string name="repeat_unit_years_label">Years</string>
+    <string name="repeat_option_year">ทุกปี</string>
 
-    <string name="link_open_label">OPEN</string>
+    <string name="repeat_option_custom">ช่วงเวลาที่กำหนดเอง</string>
 
-    <string name="link_missing">No link available to open</string>
+    <string name="repeat_requires_reminder">ตั้งการเตือนก่อนเพื่อใช้การทำซ้ำ</string>
 
-    <string name="invalid_command">Invalid command</string>
+    <string name="repeat_custom_title">การทำซ้ำแบบกำหนดเอง</string>
 
-    <string name="task_meta_format">imp: %1$d  due: %2$s  score: %3$d</string>
+    <string name="repeat_custom_amount_hint">จำนวนเงินช่วง</string>
 
-    <string name="quick_link_label_hint">Short name</string>
+    <string name="repeat_custom_amount_invalid">ป้อนจำนวนการทำซ้ำที่ถูกต้อง</string>
+
+    <string name="repeat_unit_minutes_label">รายงานการประชุม</string>
+
+    <string name="repeat_unit_days_label">วัน</string>
+
+    <string name="repeat_unit_hours_label">ชั่วโมง</string>
+
+    <string name="repeat_unit_weeks_label">สัปดาห์</string>
+
+    <string name="repeat_unit_months_label">เดือน</string>
+
+    <string name="repeat_unit_years_label">ปี</string>
+
+    <string name="link_open_label">เปิด</string>
+
+    <string name="link_missing">ไม่มีลิงก์ให้เปิด</string>
+
+    <string name="invalid_command">คำสั่งไม่ถูกต้อง</string>
+
+    <string name="task_saved">บันทึกงานแล้ว</string>
+
+    <string name="task_deleted">ลบงานแล้ว</string>
+
+    <string name="task_completed">อัปเดตงานแล้ว</string>
+
+    <string name="task_failed">ไม่สามารถอัปเดตงานได้</string>
+
+    <string name="summary_format">เปิดอยู่: %1$d  วันนี้: %2$d  รวม: %3$d</string>
+
+    <string name="task_meta_format">ความสำคัญ: %1$d  ครบกำหนด: %2$s  คะแนน: %3$d</string>
+
+    <string name="task_pin_label">รหัส PIN</string>
+
+    <string name="task_unpin_label">เลิกพิน</string>
+
+    <string name="task_edit_label">แก้ไข</string>
+
+    <string name="task_delete_label">เดล</string>
+
+    <string name="quick_links_title">ลิงค์ด่วน</string>
+
+    <string name="new_link_label">ลิงค์ใหม่</string>
+
+    <string name="quick_link_label_hint">ชื่อสั้น</string>
 
     <string name="quick_link_url_hint">https://quick.link</string>
 
-    <string name="quick_link_new_title">New quick link</string>
+    <string name="quick_link_new_title">ลิงค์ใหม่ด่วน</string>
 
-    <string name="quick_link_edit_title">Edit quick link</string>
+    <string name="quick_link_edit_title">แก้ไขลิงค์ด่วน</string>
 
-    <string name="quick_link_saved">Quick link saved</string>
+    <string name="quick_link_saved">บันทึกลิงก์ด่วนแล้ว</string>
 
-    <string name="quick_link_deleted">Quick link deleted</string>
+    <string name="quick_link_deleted">ลบลิงค์ด่วนแล้ว</string>
 
-    <string name="quick_link_invalid">Enter a valid name and URL</string>
+    <string name="quick_link_invalid">ป้อนชื่อและ URL ที่ถูกต้อง</string>
 
-    <string name="quick_link_delete_label">DELETE</string>
+    <string name="quick_link_delete_label">ลบ</string>
 
-    <string name="widget_tasks_description">Task list with ALL and TODAY filters. Tap a row to toggle done</string>
+    <string name="widget_tasks_title">งาน</string>
 
-    <string name="widget_quick_links_description">Quick links saved in OpusAgenda. Tap to open in the browser</string>
+    <string name="widget_tasks_description">รายการงานพร้อมตัวกรองทั้งหมดและวันนี้ แตะแถวเพื่อสลับเสร็จสิ้น</string>
 
-    <string name="widget_quick_links_empty">No quick links. Add them in the app</string>
+    <string name="widget_quick_links_description">ลิงก์ด่วนที่บันทึกไว้ใน OpusAgenda แตะเพื่อเปิดในเบราว์เซอร์</string>
+
+    <string name="widget_quick_links_empty">ไม่มีลิงค์ด่วน เพิ่มพวกเขาในแอป</string>
 
     <string name="clock_time_placeholder">00:00:00</string>
 
     <string name="clock_date_placeholder">10 Apr 2026</string>
 
-    <string name="font_applied">Font applied: %1$s</string>
+    <string name="font_dialog_title">เลือกแบบอักษร</string>
 
-    <string name="task_description_hint">Add some context for this task</string>
+    <string name="font_applied">ใช้แบบอักษร: %1$s</string>
 
-    <string name="task_description_save">SAVE DESC</string>
+    <string name="new_category_label">แมวตัวใหม่</string>
 
-    <string name="task_description_clear">CLEAR DESC</string>
+    <string name="new_subcategory_label">ใหม่</string>
 
-    <string name="task_description_required">Description cannot be empty</string>
+    <string name="new_child_task_label">งานใหม่</string>
 
-    <string name="task_description_saved">Description staged</string>
+    <string name="task_description_label">คำอธิบาย</string>
 
-    <string name="task_description_title">Task description</string>
+    <string name="task_description_hint">เพิ่มบริบทสำหรับงานนี้</string>
 
-    <string name="task_description_icon_label">Open description</string>
+    <string name="task_description_save">บันทึกคำอธิบาย</string>
+
+    <string name="task_description_clear">คำอธิบายที่ชัดเจน</string>
+
+    <string name="task_description_required">คำอธิบายต้องไม่เว้นว่าง</string>
+
+    <string name="task_description_saved">คำอธิบายจัดฉาก</string>
+
+    <string name="task_description_title">คำอธิบายงาน</string>
+
+    <string name="task_description_icon_label">เปิดคำอธิบาย</string>
+
+    <string name="task_link_label">ลิงค์ที่เกี่ยวข้อง</string>
 
     <string name="task_link_hint">https://linked.resource</string>
 
-    <string name="task_link_save">SAVE LINK</string>
+    <string name="task_link_save">บันทึกลิงก์</string>
 
-    <string name="task_link_clear">CLEAR LINK</string>
+    <string name="task_link_clear">ล้างลิงค์</string>
 
-    <string name="task_link_required">Enter a valid link first</string>
+    <string name="task_link_required">ป้อนลิงก์ที่ถูกต้องก่อน</string>
 
-    <string name="task_link_saved">Link staged</string>
+    <string name="task_link_saved">ลิงค์จัดฉาก</string>
 
-    <string name="task_link_title">Task link</string>
+    <string name="task_link_title">ลิงค์งาน</string>
 
-    <string name="task_link_icon_label">Open link details</string>
+    <string name="task_link_icon_label">เปิดรายละเอียดลิงค์</string>
 
-    <string name="task_attachment_pick">PICK FILE</string>
+    <string name="task_attachment_label">ไฟล์แนบ</string>
 
-    <string name="task_attachment_clear">CLEAR FILE</string>
+    <string name="task_attachment_empty">ไม่ได้เลือกไฟล์</string>
 
-    <string name="task_attachment_saved">File attached</string>
+    <string name="task_attachment_pick">เลือกไฟล์</string>
 
-    <string name="task_attachment_picker_failed">Could not read the selected file</string>
+    <string name="task_attachment_clear">ล้างไฟล์</string>
 
-    <string name="task_attachment_open_failed">No app can open that attachment</string>
+    <string name="task_attachment_saved">แนบไฟล์</string>
 
-    <string name="task_attachment_title">Task attachment</string>
+    <string name="task_attachment_picker_failed">ไม่สามารถอ่านไฟล์ที่เลือกได้</string>
 
-    <string name="task_attachment_icon_label">Open attachment details</string>
+    <string name="task_attachment_open_failed">ไม่มีแอปใดที่สามารถเปิดไฟล์แนบนั้นได้</string>
 
-    <string name="task_attachment_name_label">file: %1$s</string>
+    <string name="task_attachment_title">สิ่งที่แนบมากับงาน</string>
 
-    <string name="task_attachment_type_label">type: %1$s</string>
+    <string name="task_attachment_icon_label">เปิดรายละเอียดไฟล์แนบ</string>
 
-    <string name="task_attachment_no_preview">No preview available</string>
+    <string name="task_attachment_name_label">ไฟล์: %1$s</string>
+
+    <string name="task_attachment_type_label">ประเภท: %1$s</string>
+
+    <string name="play_label">เล่น</string>
+
+    <string name="stop_label">หยุด</string>
+
+    <string name="task_attachment_no_preview">ไม่มีการแสดงตัวอย่าง</string>
 
     <string-array name="font_option_labels">
-            <item>Inter</item>
-            <item>Geo</item>
-            <item>MedievalSharp</item>
-            <item>Octosquares</item>
-            <item>UnifrakturMaguntia</item>
-        </string-array>
+        <item>Inter</item>
+        <item>Geo</item>
+        <item>MedievalSharp</item>
+        <item>Octosquares</item>
+        <item>UnifrakturMaguntia</item>
+    </string-array>
 
     <string-array name="importance_options">
-            <item>1 LOW</item>
-            <item>2 NORMAL</item>
-            <item>3 HIGH</item>
-            <item>4 CRITICAL</item>
-        </string-array>
+        <item>1 ต่ำ</item>
+        <item>2 ปกติ</item>
+        <item>3 สูง</item>
+        <item>4 สำคัญ</item>
+    </string-array>
 
     <plurals name="repeat_unit_minutes">
-            <item quantity="one">%1$d minute</item>
-            <item quantity="other">%1$d minutes</item>
-        </plurals>
+        <item quantity="one">%1$d นาที</item>
+        <item quantity="other">%1$d นาที</item>
+    </plurals>
 
     <plurals name="repeat_unit_hours">
-            <item quantity="one">%1$d hour</item>
-            <item quantity="other">%1$d hours</item>
-        </plurals>
+        <item quantity="one">%1$d ชั่วโมง</item>
+        <item quantity="other">%1$d ชั่วโมง</item>
+    </plurals>
 
     <plurals name="repeat_unit_days">
-            <item quantity="one">%1$d day</item>
-            <item quantity="other">%1$d days</item>
-        </plurals>
+        <item quantity="one">%1$d วัน</item>
+        <item quantity="other">%1$d วัน</item>
+    </plurals>
 
     <plurals name="repeat_unit_weeks">
-            <item quantity="one">%1$d week</item>
-            <item quantity="other">%1$d weeks</item>
-        </plurals>
+        <item quantity="one">%1$d สัปดาห์</item>
+        <item quantity="other">%1$d สัปดาห์</item>
+    </plurals>
 
     <plurals name="repeat_unit_months">
-            <item quantity="one">%1$d month</item>
-            <item quantity="other">%1$d months</item>
-        </plurals>
+        <item quantity="one">%1$d เดือน</item>
+        <item quantity="other">%1$d เดือน</item>
+    </plurals>
 
     <plurals name="repeat_unit_years">
-            <item quantity="one">%1$d year</item>
-            <item quantity="other">%1$d years</item>
-        </plurals>
+        <item quantity="one">%1$d ปี</item>
+        <item quantity="other">%1$d ปี</item>
+    </plurals>
+
+    <string name="previous_label">ก่อนหน้า</string>
+
+    <string name="next_label">ถัดไป</string>
+
+    <string name="pdf_page_indicator">หน้า %1$d / %2$d</string>
 </resources>
+
 

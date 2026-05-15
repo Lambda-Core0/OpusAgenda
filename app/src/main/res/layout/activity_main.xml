@@ -207,19 +207,6 @@
         android:textSize="15sp"
         android:visibility="gone" />
 
-    <!-- Feedback temporal inline para reemplazar Toast del sistema. -->
-    <TextView
-        android:id="@+id/textStatus"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="12dp"
-        android:background="@drawable/bg_terminal_panel"
-        android:gravity="center"
-        android:padding="12dp"
-        android:textColor="@color/terminal_yellow"
-        android:textSize="13sp"
-        android:visibility="gone" />
-
     <!-- Lista principal de tareas ordenadas por prioridad. -->
     <androidx.recyclerview.widget.RecyclerView
         android:id="@+id/recyclerTasks"

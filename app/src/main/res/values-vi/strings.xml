@@ -1,263 +1,340 @@
 ﻿<resources>
-    <string name="search_hint">tÃ¬m nhiá»‡m vá»¥...</string>
-    <string name="empty_state_all">ChÆ°a cÃ³ nhiá»‡m vá»¥. DÃ¹ng Má»šI Ä‘á»ƒ táº¡o</string>
-    <string name="empty_state_today">HÃ´m nay khÃ´ng cÃ³ nhiá»‡m vá»¥ kháº©n cáº¥p</string>
-    <string name="all_label">Táº¤T Cáº¢</string>
-    <string name="today_label">HÃ”M NAY</string>
-    <string name="new_task_label">Má»šI</string>
-    <string name="save_label">LÆ¯U</string>
-    <string name="cancel_label">Há»¦Y</string>
-    <string name="pick_due_date_label">Háº N CHÃ“T</string>
-    <string name="clear_due_date_label">XÃ“A Háº N</string>
-    <string name="completed_label">ÄÃ£ hoÃ n táº¥t</string>
-    <string name="importance_label">Má»©c quan trá»ng</string>
-    <string name="task_dialog_title_new">Nhiá»‡m vá»¥ má»›i</string>
-    <string name="task_dialog_title_edit">Sá»­a nhiá»‡m vá»¥</string>
-    <string name="task_text_required">Nháº­p ná»™i dung nhiá»‡m vá»¥</string>
-    <string name="default_category_name">Danh má»¥c</string>
-    <string name="category_move_invalid">Thao tÃ¡c nÃ y sáº½ táº¡o danh má»¥c lá»“ng nhau khÃ´ng há»£p lá»‡</string>
-    <string name="task_due_label">háº¡n: %1$s</string>
-    <string name="no_due_date">khÃ´ng cÃ³ háº¡n</string>
-    <string name="no_reminder">khÃ´ng cÃ³</string>
-    <string name="due_relative_overdue">quÃ¡ háº¡n %1$d ngÃ y</string>
-    <string name="due_relative_today">hÃ´m nay</string>
-    <string name="due_relative_tomorrow">ngÃ y mai</string>
-    <string name="due_relative_in">trong %1$d ngÃ y</string>
-    <string name="pick_reminder_label">NHáº®C TÃ”I</string>
-    <string name="pick_repeat_label">Láº¶P Láº I</string>
-    <string name="reminder_dialog_title">Chá»n nháº¯c nhá»Ÿ</string>
-    <string name="reminder_option_none">KhÃ´ng nháº¯c nhá»Ÿ</string>
-    <string name="reminder_option_hour">TrÆ°á»›c 1 giá»</string>
-    <string name="reminder_option_day">TrÆ°á»›c 1 ngÃ y</string>
-    <string name="reminder_option_week">TrÆ°á»›c 1 tuáº§n</string>
-    <string name="reminder_option_month">TrÆ°á»›c 1 thÃ¡ng</string>
-    <string name="reminder_option_custom">NgÃ y vÃ  giá» tÃ¹y chá»‰nh</string>
-    <string name="reminder_requires_due_date">Äáº·t háº¡n trÆ°á»›c Ä‘á»ƒ dÃ¹ng tÃ¹y chá»n sáºµn</string>
-    <string name="reminder_time_in_past">Thá»i gian nháº¯c pháº£i á»Ÿ tÆ°Æ¡ng lai</string>
-    <string name="notifications_permission_denied">Cáº§n quyá»n thÃ´ng bÃ¡o cho nháº¯c nhá»Ÿ</string>
-    <string name="repeat_dialog_title">Chá»n láº·p láº¡i</string>
-    <string name="repeat_option_none">KhÃ´ng láº·p láº¡i</string>
-    <string name="repeat_option_hour">Má»—i giá»</string>
-    <string name="repeat_option_day">Má»—i ngÃ y</string>
-    <string name="repeat_option_week">Má»—i tuáº§n</string>
-    <string name="repeat_option_month">Má»—i thÃ¡ng</string>
-    <string name="repeat_option_year">Má»—i nÄƒm</string>
-    <string name="repeat_option_custom">Khoáº£ng tÃ¹y chá»‰nh</string>
-    <string name="task_saved">ÄÃ£ lÆ°u nhiá»‡m vá»¥</string>
-    <string name="task_deleted">ÄÃ£ xÃ³a nhiá»‡m vá»¥</string>
-    <string name="task_completed">ÄÃ£ cáº­p nháº­t nhiá»‡m vá»¥</string>
-    <string name="task_failed">KhÃ´ng thá»ƒ cáº­p nháº­t nhiá»‡m vá»¥</string>
-    <string name="summary_format">má»Ÿ: %1$d  hÃ´m nay: %2$d  tá»•ng: %3$d</string>
-    <string name="task_pin_label">GHIM</string>
-    <string name="task_unpin_label">Bá»Ž GHIM</string>
-    <string name="task_edit_label">Sá»¬A</string>
-    <string name="task_delete_label">XÃ“A</string>
-    <string name="quick_links_title">LIÃŠN Káº¾T NHANH</string>
-    <string name="new_link_label">LIÃŠN Káº¾T Má»šI</string>
-    <string name="widget_tasks_title">NHIá»†M Vá»¤</string>
-    <string name="font_dialog_title">Chá»n phÃ´ng chá»¯</string>
-    <string name="new_category_label">DM Má»šI</string>
-    <string name="new_subcategory_label">DM CON Má»šI</string>
-    <string name="new_child_task_label">NHIá»†M Vá»¤ Má»šI</string>
-    <string name="task_description_label">MÃ´ táº£</string>
-    <string name="task_link_label">LiÃªn káº¿t liÃªn quan</string>
-    <string name="task_attachment_label">Tá»‡p Ä‘Ã­nh kÃ¨m</string>
-    <string name="task_attachment_empty">ChÆ°a chá»n tá»‡p</string>
-    <string name="play_label">PHÃT</string>
-    <string name="stop_label">Dá»ªNG</string>
-    <string name="previous_label">TRÆ¯á»šC</string>
-    <string name="next_label">TIáº¾P</string>
-    <string name="pdf_page_indicator">Trang %1$d / %2$d</string>
-    <!-- Fallback entries added to keep this locale 1:1 with the base resources. -->
     <string name="app_name">OpusAgenda</string>
 
-    <string name="app_header_title">â™± OpusAgenda v1.3</string>
+    <string name="app_header_title">♱ OpusAgenda v1.3</string>
 
     <string name="app_font_family">UnifrakturMaguntia</string>
 
-    <string name="run_command_label">RUN</string>
+    <string name="search_hint">nhiệm vụ tìm kiếm...</string>
 
-    <string name="task_text_hint">Task text</string>
+    <string name="empty_state_all">Chưa có nhiệm vụ nào. Sử dụng MỚI để tạo một cái</string>
 
-    <string name="pinned_label">PINNED</string>
+    <string name="empty_state_today">Không có nhiệm vụ khẩn cấp nào cho ngày hôm nay</string>
 
-    <string name="category_badge_label">CAT</string>
+    <string name="all_label">TẤT CẢ</string>
 
-    <string name="category_edit_label">RENAME</string>
+    <string name="today_label">HÔM NAY</string>
 
-    <string name="category_due_label">category</string>
+    <string name="new_task_label">MỚI</string>
 
-    <string name="category_meta_format">children: %1$d  imp: %2$d</string>
+    <string name="run_command_label">CHẠY</string>
 
-    <string name="task_reminder_value_label">reminder: %1$s</string>
+    <string name="task_text_hint">văn bản nhiệm vụ</string>
+
+    <string name="category_text_hint">Tên danh mục</string>
+
+    <string name="save_label">LƯU</string>
+
+    <string name="cancel_label">HỦY</string>
+
+    <string name="pick_due_date_label">NGÀY HẠN</string>
+
+    <string name="clear_due_date_label">RÕ RÀNG ĐẾN HẠN</string>
+
+    <string name="pinned_label">ĐƯỢC ĐÁNH DẤU</string>
+
+    <string name="completed_label">Đã hoàn thành</string>
+
+    <string name="importance_label">Tầm quan trọng</string>
+
+    <string name="task_dialog_title_new">Nhiệm vụ mới</string>
+
+    <string name="task_dialog_title_edit">Chỉnh sửa tác vụ</string>
+
+    <string name="category_dialog_title_new">Danh mục mới</string>
+
+    <string name="category_dialog_title_edit">Chỉnh sửa danh mục</string>
+
+    <string name="task_text_required">Nhập văn bản nhiệm vụ</string>
+
+    <string name="default_category_name">Danh mục</string>
+
+    <string name="category_badge_label">MÈO</string>
+
+    <string name="category_edit_label">ĐỔI TÊN</string>
+
+    <string name="category_due_label">thể loại</string>
+
+    <string name="category_meta_format">mục con: %1$d  quan trọng: %2$d</string>
+
+    <string name="category_move_invalid">Việc di chuyển đó sẽ tạo ra một danh mục lồng nhau không hợp lệ</string>
+
+    <string name="task_due_label">đến hạn: %1$s</string>
+
+    <string name="task_reminder_value_label">nhắc nhở: %1$s</string>
 
     <string name="task_date_with_relative">%1$s - %2$s</string>
 
-    <string name="clear_reminder_label">CLEAR REMINDER</string>
+    <string name="no_due_date">không có ngày đáo hạn</string>
+
+    <string name="no_reminder">không có</string>
+
+    <string name="due_relative_overdue">quá hạn %1$dd</string>
+
+    <string name="due_relative_today">hôm nay</string>
+
+    <string name="due_relative_tomorrow">ngày mai</string>
+
+    <string name="due_relative_in">trong %1$dd</string>
+
+    <string name="pick_reminder_label">NHẮC TÔI</string>
+
+    <string name="pick_repeat_label">LẶP LẠI</string>
+
+    <string name="clear_reminder_label">XÓA NHẮC NHỞ</string>
+
+    <string name="reminder_dialog_title">Chọn lời nhắc</string>
+
+    <string name="reminder_option_none">Không có lời nhắc</string>
+
+    <string name="reminder_option_hour">1 giờ trước</string>
+
+    <string name="reminder_option_day">1 ngày trước</string>
+
+    <string name="reminder_option_week">1 tuần trước</string>
+
+    <string name="reminder_option_month">1 tháng trước</string>
+
+    <string name="reminder_option_custom">Ngày và giờ tùy chỉnh</string>
 
     <string name="reminder_summary_with_datetime">%1$s (%2$s)</string>
 
-    <string name="reminder_custom_date_title">Reminder date</string>
+    <string name="reminder_requires_due_date">Đặt ngày đến hạn trước để sử dụng giá trị đặt trước</string>
 
-    <string name="reminder_custom_time_title">Reminder time</string>
+    <string name="reminder_time_in_past">Thời gian nhắc nhở phải ở trong tương lai</string>
 
-    <string name="reminder_channel_name">Task reminders</string>
+    <string name="reminder_custom_date_title">Ngày nhắc nhở</string>
 
-    <string name="reminder_channel_description">Notifications for scheduled task reminders</string>
+    <string name="reminder_custom_time_title">Thời gian nhắc nhở</string>
 
-    <string name="reminder_notification_title">Task reminder</string>
+    <string name="reminder_channel_name">Lời nhắc nhiệm vụ</string>
 
-    <string name="task_repeat_value_label">repeat: %1$s</string>
+    <string name="reminder_channel_description">Thông báo nhắc nhở nhiệm vụ theo lịch trình</string>
 
-    <string name="repeat_none">none</string>
+    <string name="reminder_notification_title">Lời nhắc nhiệm vụ</string>
 
-    <string name="repeat_requires_reminder">Set a reminder first to use repetition</string>
+    <string name="notifications_permission_denied">Cần có quyền thông báo để nhắc nhở</string>
 
-    <string name="repeat_custom_title">Custom repetition</string>
+    <string name="task_repeat_value_label">nhắc lại: %1$s</string>
 
-    <string name="repeat_custom_amount_hint">Interval amount</string>
+    <string name="repeat_none">không có</string>
 
-    <string name="repeat_custom_amount_invalid">Enter a valid repetition amount</string>
+    <string name="repeat_dialog_title">Chọn sự lặp lại</string>
 
-    <string name="repeat_unit_minutes_label">Minutes</string>
+    <string name="repeat_option_none">Không lặp lại</string>
 
-    <string name="repeat_unit_days_label">Days</string>
+    <string name="repeat_option_hour">Mỗi giờ</string>
 
-    <string name="repeat_unit_hours_label">Hours</string>
+    <string name="repeat_option_day">Mỗi ngày</string>
 
-    <string name="repeat_unit_weeks_label">Weeks</string>
+    <string name="repeat_option_week">Hàng tuần</string>
 
-    <string name="repeat_unit_months_label">Months</string>
+    <string name="repeat_option_month">Hàng tháng</string>
 
-    <string name="repeat_unit_years_label">Years</string>
+    <string name="repeat_option_year">Hàng năm</string>
 
-    <string name="link_open_label">OPEN</string>
+    <string name="repeat_option_custom">Khoảng thời gian tùy chỉnh</string>
 
-    <string name="link_missing">No link available to open</string>
+    <string name="repeat_requires_reminder">Đặt lời nhắc trước tiên để sử dụng tính năng lặp lại</string>
 
-    <string name="invalid_command">Invalid command</string>
+    <string name="repeat_custom_title">Sự lặp lại tùy chỉnh</string>
 
-    <string name="task_meta_format">imp: %1$d  due: %2$s  score: %3$d</string>
+    <string name="repeat_custom_amount_hint">Khoảng thời gian</string>
 
-    <string name="quick_link_label_hint">Short name</string>
+    <string name="repeat_custom_amount_invalid">Nhập số lần lặp lại hợp lệ</string>
+
+    <string name="repeat_unit_minutes_label">Phút</string>
+
+    <string name="repeat_unit_days_label">Ngày</string>
+
+    <string name="repeat_unit_hours_label">Giờ</string>
+
+    <string name="repeat_unit_weeks_label">Tuần</string>
+
+    <string name="repeat_unit_months_label">Tháng</string>
+
+    <string name="repeat_unit_years_label">Năm</string>
+
+    <string name="link_open_label">MỞ</string>
+
+    <string name="link_missing">Không có liên kết nào để mở</string>
+
+    <string name="invalid_command">Lệnh không hợp lệ</string>
+
+    <string name="task_saved">Đã lưu nhiệm vụ</string>
+
+    <string name="task_deleted">Đã xóa tác vụ</string>
+
+    <string name="task_completed">Đã cập nhật nhiệm vụ</string>
+
+    <string name="task_failed">Không thể cập nhật nhiệm vụ</string>
+
+    <string name="summary_format">mở: %1$d  hôm nay: %2$d  tổng: %3$d</string>
+
+    <string name="task_meta_format">quan trọng: %1$d  hạn: %2$s  điểm: %3$d</string>
+
+    <string name="task_pin_label">MÃ PIN</string>
+
+    <string name="task_unpin_label">BỎ GHIM</string>
+
+    <string name="task_edit_label">CHỈNH SỬA</string>
+
+    <string name="task_delete_label">XÓA</string>
+
+    <string name="quick_links_title">LIÊN KẾT NHANH</string>
+
+    <string name="new_link_label">LIÊN KẾT MỚI</string>
+
+    <string name="quick_link_label_hint">Tên ngắn</string>
 
     <string name="quick_link_url_hint">https://quick.link</string>
 
-    <string name="quick_link_new_title">New quick link</string>
+    <string name="quick_link_new_title">Liên kết nhanh mới</string>
 
-    <string name="quick_link_edit_title">Edit quick link</string>
+    <string name="quick_link_edit_title">Chỉnh sửa liên kết nhanh</string>
 
-    <string name="quick_link_saved">Quick link saved</string>
+    <string name="quick_link_saved">Đã lưu liên kết nhanh</string>
 
-    <string name="quick_link_deleted">Quick link deleted</string>
+    <string name="quick_link_deleted">Đã xóa liên kết nhanh</string>
 
-    <string name="quick_link_invalid">Enter a valid name and URL</string>
+    <string name="quick_link_invalid">Nhập tên và URL hợp lệ</string>
 
-    <string name="quick_link_delete_label">DELETE</string>
+    <string name="quick_link_delete_label">XÓA</string>
 
-    <string name="widget_tasks_description">Task list with ALL and TODAY filters. Tap a row to toggle done</string>
+    <string name="widget_tasks_title">NHIỆM VỤ</string>
 
-    <string name="widget_quick_links_description">Quick links saved in OpusAgenda. Tap to open in the browser</string>
+    <string name="widget_tasks_description">Danh sách nhiệm vụ với bộ lọc TẤT CẢ và HÔM NAY. Nhấn vào một hàng để chuyển đổi xong</string>
 
-    <string name="widget_quick_links_empty">No quick links. Add them in the app</string>
+    <string name="widget_quick_links_description">Liên kết nhanh được lưu trong OpusAgenda. Nhấn để mở trong trình duyệt</string>
+
+    <string name="widget_quick_links_empty">Không có liên kết nhanh. Thêm chúng vào ứng dụng</string>
 
     <string name="clock_time_placeholder">00:00:00</string>
 
     <string name="clock_date_placeholder">10 Apr 2026</string>
 
-    <string name="font_applied">Font applied: %1$s</string>
+    <string name="font_dialog_title">Chọn phông chữ</string>
 
-    <string name="task_description_hint">Add some context for this task</string>
+    <string name="font_applied">Phông chữ được áp dụng: %1$s</string>
 
-    <string name="task_description_save">SAVE DESC</string>
+    <string name="new_category_label">MÈO MỚI</string>
 
-    <string name="task_description_clear">CLEAR DESC</string>
+    <string name="new_subcategory_label">SUBC MỚI</string>
 
-    <string name="task_description_required">Description cannot be empty</string>
+    <string name="new_child_task_label">NHIỆM VỤ MỚI</string>
 
-    <string name="task_description_saved">Description staged</string>
+    <string name="task_description_label">Mô tả</string>
 
-    <string name="task_description_title">Task description</string>
+    <string name="task_description_hint">Thêm một số ngữ cảnh cho nhiệm vụ này</string>
 
-    <string name="task_description_icon_label">Open description</string>
+    <string name="task_description_save">LƯU MÔ TẢ</string>
+
+    <string name="task_description_clear">MÔ TẢ XÓA</string>
+
+    <string name="task_description_required">Mô tả không thể trống</string>
+
+    <string name="task_description_saved">Mô tả được dàn dựng</string>
+
+    <string name="task_description_title">Mô tả nhiệm vụ</string>
+
+    <string name="task_description_icon_label">Mở mô tả</string>
+
+    <string name="task_link_label">Liên kết liên kết</string>
 
     <string name="task_link_hint">https://linked.resource</string>
 
-    <string name="task_link_save">SAVE LINK</string>
+    <string name="task_link_save">LƯU LIÊN KẾT</string>
 
-    <string name="task_link_clear">CLEAR LINK</string>
+    <string name="task_link_clear">XÓA LIÊN KẾT</string>
 
-    <string name="task_link_required">Enter a valid link first</string>
+    <string name="task_link_required">Trước tiên hãy nhập một liên kết hợp lệ</string>
 
-    <string name="task_link_saved">Link staged</string>
+    <string name="task_link_saved">Liên kết được dàn dựng</string>
 
-    <string name="task_link_title">Task link</string>
+    <string name="task_link_title">Liên kết nhiệm vụ</string>
 
-    <string name="task_link_icon_label">Open link details</string>
+    <string name="task_link_icon_label">Mở chi tiết liên kết</string>
 
-    <string name="task_attachment_pick">PICK FILE</string>
+    <string name="task_attachment_label">Tệp đính kèm</string>
 
-    <string name="task_attachment_clear">CLEAR FILE</string>
+    <string name="task_attachment_empty">Không có tập tin nào được chọn</string>
 
-    <string name="task_attachment_saved">File attached</string>
+    <string name="task_attachment_pick">CHỌN TẬP TIN</string>
 
-    <string name="task_attachment_picker_failed">Could not read the selected file</string>
+    <string name="task_attachment_clear">XÓA TẬP TIN</string>
 
-    <string name="task_attachment_open_failed">No app can open that attachment</string>
+    <string name="task_attachment_saved">Tệp đính kèm</string>
 
-    <string name="task_attachment_title">Task attachment</string>
+    <string name="task_attachment_picker_failed">Không thể đọc tệp đã chọn</string>
 
-    <string name="task_attachment_icon_label">Open attachment details</string>
+    <string name="task_attachment_open_failed">Không ứng dụng nào có thể mở tệp đính kèm đó</string>
 
-    <string name="task_attachment_name_label">file: %1$s</string>
+    <string name="task_attachment_title">Tệp đính kèm nhiệm vụ</string>
 
-    <string name="task_attachment_type_label">type: %1$s</string>
+    <string name="task_attachment_icon_label">Mở chi tiết tệp đính kèm</string>
 
-    <string name="task_attachment_no_preview">No preview available</string>
+    <string name="task_attachment_name_label">tập tin: %1$s</string>
+
+    <string name="task_attachment_type_label">loại: %1$s</string>
+
+    <string name="play_label">CHƠI</string>
+
+    <string name="stop_label">DỪNG</string>
+
+    <string name="task_attachment_no_preview">Không có bản xem trước nào</string>
 
     <string-array name="font_option_labels">
-            <item>Inter</item>
-            <item>Geo</item>
-            <item>MedievalSharp</item>
-            <item>Octosquares</item>
-            <item>UnifrakturMaguntia</item>
-        </string-array>
+        <item>Inter</item>
+        <item>Geo</item>
+        <item>MedievalSharp</item>
+        <item>Octosquares</item>
+        <item>UnifrakturMaguntia</item>
+    </string-array>
 
     <string-array name="importance_options">
-            <item>1 LOW</item>
-            <item>2 NORMAL</item>
-            <item>3 HIGH</item>
-            <item>4 CRITICAL</item>
-        </string-array>
+        <item>1 THẤP</item>
+        <item>2 BÌNH THƯỜNG</item>
+        <item>3 CAO</item>
+        <item>4 QUAN TRỌNG</item>
+    </string-array>
 
     <plurals name="repeat_unit_minutes">
-            <item quantity="one">%1$d minute</item>
-            <item quantity="other">%1$d minutes</item>
-        </plurals>
+        <item quantity="one">%1$d phút</item>
+        <item quantity="other">%1$d phút</item>
+    </plurals>
 
     <plurals name="repeat_unit_hours">
-            <item quantity="one">%1$d hour</item>
-            <item quantity="other">%1$d hours</item>
-        </plurals>
+        <item quantity="one">%1$d giờ</item>
+        <item quantity="other">%1$d giờ</item>
+    </plurals>
 
     <plurals name="repeat_unit_days">
-            <item quantity="one">%1$d day</item>
-            <item quantity="other">%1$d days</item>
-        </plurals>
+        <item quantity="one">ngày %1$d</item>
+        <item quantity="other">%1$d ngày</item>
+    </plurals>
 
     <plurals name="repeat_unit_weeks">
-            <item quantity="one">%1$d week</item>
-            <item quantity="other">%1$d weeks</item>
-        </plurals>
+        <item quantity="one">tuần %1$d</item>
+        <item quantity="other">%1$d tuần</item>
+    </plurals>
 
     <plurals name="repeat_unit_months">
-            <item quantity="one">%1$d month</item>
-            <item quantity="other">%1$d months</item>
-        </plurals>
+        <item quantity="one">%1$d tháng</item>
+        <item quantity="other">%1$d tháng</item>
+    </plurals>
 
     <plurals name="repeat_unit_years">
-            <item quantity="one">%1$d year</item>
-            <item quantity="other">%1$d years</item>
-        </plurals>
+        <item quantity="one">%1$d năm</item>
+        <item quantity="other">%1$d năm</item>
+    </plurals>
+
+    <string name="previous_label">TRƯỚC</string>
+
+    <string name="next_label">TIẾP THEO</string>
+
+    <string name="pdf_page_indicator">Trang %1$d / %2$d</string>
 </resources>
+
+
+
 

@@ -1,263 +1,340 @@
 ﻿<resources>
-    <string name="search_hint">gÃ¶rev ara...</string>
-    <string name="empty_state_all">HenÃ¼z gÃ¶rev yok. OluÅŸturmak iÃ§in YENÄ° kullan</string>
-    <string name="empty_state_today">BugÃ¼n iÃ§in acil gÃ¶rev yok</string>
-    <string name="all_label">TÃœMÃœ</string>
-    <string name="today_label">BUGÃœN</string>
-    <string name="new_task_label">YENÄ°</string>
-    <string name="save_label">KAYDET</string>
-    <string name="cancel_label">Ä°PTAL</string>
-    <string name="pick_due_date_label">BÄ°TÄ°Åž TARÄ°HÄ°</string>
-    <string name="clear_due_date_label">TARÄ°HÄ° TEMÄ°ZLE</string>
-    <string name="completed_label">TamamlandÄ±</string>
-    <string name="importance_label">Ã–nem</string>
-    <string name="task_dialog_title_new">Yeni gÃ¶rev</string>
-    <string name="task_dialog_title_edit">GÃ¶revi dÃ¼zenle</string>
-    <string name="task_text_required">GÃ¶rev metnini gir</string>
-    <string name="default_category_name">Kategori</string>
-    <string name="category_move_invalid">Bu taÅŸÄ±ma geÃ§ersiz bir iÃ§ iÃ§e kategori oluÅŸturur</string>
-    <string name="task_due_label">bitiÅŸ: %1$s</string>
-    <string name="no_due_date">bitiÅŸ tarihi yok</string>
-    <string name="no_reminder">yok</string>
-    <string name="due_relative_overdue">%1$d gÃ¼n gecikti</string>
-    <string name="due_relative_today">bugÃ¼n</string>
-    <string name="due_relative_tomorrow">yarÄ±n</string>
-    <string name="due_relative_in">%1$d gÃ¼n iÃ§inde</string>
-    <string name="pick_reminder_label">HATIRLAT</string>
-    <string name="pick_repeat_label">TEKRARLA</string>
-    <string name="reminder_dialog_title">HatÄ±rlatÄ±cÄ± seÃ§</string>
-    <string name="reminder_option_none">HatÄ±rlatÄ±cÄ± yok</string>
-    <string name="reminder_option_hour">1 saat Ã¶nce</string>
-    <string name="reminder_option_day">1 gÃ¼n Ã¶nce</string>
-    <string name="reminder_option_week">1 hafta Ã¶nce</string>
-    <string name="reminder_option_month">1 ay Ã¶nce</string>
-    <string name="reminder_option_custom">Ã–zel tarih ve saat</string>
-    <string name="reminder_requires_due_date">Ã–n ayarlarÄ± kullanmak iÃ§in Ã¶nce bitiÅŸ tarihi belirle</string>
-    <string name="reminder_time_in_past">HatÄ±rlatÄ±cÄ± zamanÄ± gelecekte olmalÄ±</string>
-    <string name="notifications_permission_denied">HatÄ±rlatÄ±cÄ±lar iÃ§in bildirim izni gerekir</string>
-    <string name="repeat_dialog_title">Tekrar seÃ§</string>
-    <string name="repeat_option_none">Tekrar yok</string>
-    <string name="repeat_option_hour">Her saat</string>
-    <string name="repeat_option_day">Her gÃ¼n</string>
-    <string name="repeat_option_week">Her hafta</string>
-    <string name="repeat_option_month">Her ay</string>
-    <string name="repeat_option_year">Her yÄ±l</string>
-    <string name="repeat_option_custom">Ã–zel aralÄ±k</string>
-    <string name="task_saved">GÃ¶rev kaydedildi</string>
-    <string name="task_deleted">GÃ¶rev silindi</string>
-    <string name="task_completed">GÃ¶rev gÃ¼ncellendi</string>
-    <string name="task_failed">GÃ¶rev gÃ¼ncellenemedi</string>
-    <string name="summary_format">aÃ§Ä±k: %1$d  bugÃ¼n: %2$d  toplam: %3$d</string>
-    <string name="task_pin_label">SABÄ°TLE</string>
-    <string name="task_unpin_label">SABÄ°TLEME</string>
-    <string name="task_edit_label">DÃœZENLE</string>
-    <string name="task_delete_label">SÄ°L</string>
-    <string name="quick_links_title">HIZLI BAÄžLANTILAR</string>
-    <string name="new_link_label">YENÄ° BAÄžLANTI</string>
-    <string name="widget_tasks_title">GÃ–REVLER</string>
-    <string name="font_dialog_title">YazÄ± tipi seÃ§</string>
-    <string name="new_category_label">YENÄ° KAT</string>
-    <string name="new_subcategory_label">YENÄ° ALT KAT</string>
-    <string name="new_child_task_label">YENÄ° GÃ–REV</string>
-    <string name="task_description_label">AÃ§Ä±klama</string>
-    <string name="task_link_label">Ä°liÅŸkili baÄŸlantÄ±</string>
-    <string name="task_attachment_label">Ekli dosya</string>
-    <string name="task_attachment_empty">Dosya seÃ§ilmedi</string>
-    <string name="play_label">OYNAT</string>
-    <string name="stop_label">DURDUR</string>
-    <string name="previous_label">Ã–NCEKÄ°</string>
-    <string name="next_label">SONRAKÄ°</string>
-    <string name="pdf_page_indicator">Sayfa %1$d / %2$d</string>
-    <!-- Fallback entries added to keep this locale 1:1 with the base resources. -->
     <string name="app_name">OpusAgenda</string>
 
-    <string name="app_header_title">â™± OpusAgenda v1.3</string>
+    <string name="app_header_title">♱ OpusAgenda v1.3</string>
 
     <string name="app_font_family">UnifrakturMaguntia</string>
 
-    <string name="run_command_label">RUN</string>
+    <string name="search_hint">arama görevleri...</string>
 
-    <string name="task_text_hint">Task text</string>
+    <string name="empty_state_all">Henüz görev yok. Bir tane oluşturmak için YENİ\'yi kullanın</string>
 
-    <string name="pinned_label">PINNED</string>
+    <string name="empty_state_today">Bugün için acil görev yok</string>
 
-    <string name="category_badge_label">CAT</string>
+    <string name="all_label">TÜMÜ</string>
 
-    <string name="category_edit_label">RENAME</string>
+    <string name="today_label">BUGÜN</string>
 
-    <string name="category_due_label">category</string>
+    <string name="new_task_label">YENİ</string>
 
-    <string name="category_meta_format">children: %1$d  imp: %2$d</string>
+    <string name="run_command_label">KOŞ</string>
 
-    <string name="task_reminder_value_label">reminder: %1$s</string>
+    <string name="task_text_hint">Görev metni</string>
+
+    <string name="category_text_hint">Kategori adı</string>
+
+    <string name="save_label">KAYDET</string>
+
+    <string name="cancel_label">İPTAL</string>
+
+    <string name="pick_due_date_label">SON TARİH</string>
+
+    <string name="clear_due_date_label">DURUMU TEMİZLEYİN</string>
+
+    <string name="pinned_label">SABITLENDI</string>
+
+    <string name="completed_label">Tamamlandı</string>
+
+    <string name="importance_label">Önem</string>
+
+    <string name="task_dialog_title_new">Yeni görev</string>
+
+    <string name="task_dialog_title_edit">Görevi düzenle</string>
+
+    <string name="category_dialog_title_new">Yeni kategori</string>
+
+    <string name="category_dialog_title_edit">Kategoriyi düzenle</string>
+
+    <string name="task_text_required">Görev metnini girin</string>
+
+    <string name="default_category_name">Kategori</string>
+
+    <string name="category_badge_label">KEDİ</string>
+
+    <string name="category_edit_label">YENİDEN ADLANDIR</string>
+
+    <string name="category_due_label">kategori</string>
+
+    <string name="category_meta_format">alt öğeler: %1$d  önem: %2$d</string>
+
+    <string name="category_move_invalid">Bu hareket, geçersiz bir iç içe geçmiş kategori oluşturur</string>
+
+    <string name="task_due_label">son tarih: %1$s</string>
+
+    <string name="task_reminder_value_label">hatırlatma: %1$s</string>
 
     <string name="task_date_with_relative">%1$s - %2$s</string>
 
-    <string name="clear_reminder_label">CLEAR REMINDER</string>
+    <string name="no_due_date">son tarih yok</string>
+
+    <string name="no_reminder">hiçbiri</string>
+
+    <string name="due_relative_overdue">vadesi geçmiş %1$dd</string>
+
+    <string name="due_relative_today">bugün</string>
+
+    <string name="due_relative_tomorrow">yarın</string>
+
+    <string name="due_relative_in">%1$dd\'de</string>
+
+    <string name="pick_reminder_label">BANA HATIRLAT</string>
+
+    <string name="pick_repeat_label">TEKRAR</string>
+
+    <string name="clear_reminder_label">HATIRLATICIYI TEMİZLE</string>
+
+    <string name="reminder_dialog_title">Hatırlatıcı seç</string>
+
+    <string name="reminder_option_none">Hatırlatma yok</string>
+
+    <string name="reminder_option_hour">1 saat önce</string>
+
+    <string name="reminder_option_day">1 gün önce</string>
+
+    <string name="reminder_option_week">1 hafta önce</string>
+
+    <string name="reminder_option_month">1 ay önce</string>
+
+    <string name="reminder_option_custom">Özel tarih ve saat</string>
 
     <string name="reminder_summary_with_datetime">%1$s (%2$s)</string>
 
-    <string name="reminder_custom_date_title">Reminder date</string>
+    <string name="reminder_requires_due_date">Ön ayarları kullanmak için önce bir son tarih belirleyin</string>
 
-    <string name="reminder_custom_time_title">Reminder time</string>
+    <string name="reminder_time_in_past">Hatırlatma zamanı gelecekte olmalıdır</string>
 
-    <string name="reminder_channel_name">Task reminders</string>
+    <string name="reminder_custom_date_title">Hatırlatma tarihi</string>
 
-    <string name="reminder_channel_description">Notifications for scheduled task reminders</string>
+    <string name="reminder_custom_time_title">Hatırlatma zamanı</string>
 
-    <string name="reminder_notification_title">Task reminder</string>
+    <string name="reminder_channel_name">Görev hatırlatıcıları</string>
 
-    <string name="task_repeat_value_label">repeat: %1$s</string>
+    <string name="reminder_channel_description">Zamanlanmış görev hatırlatıcıları için bildirimler</string>
 
-    <string name="repeat_none">none</string>
+    <string name="reminder_notification_title">Görev hatırlatıcısı</string>
 
-    <string name="repeat_requires_reminder">Set a reminder first to use repetition</string>
+    <string name="notifications_permission_denied">Hatırlatıcılar için bildirim izni gereklidir</string>
 
-    <string name="repeat_custom_title">Custom repetition</string>
+    <string name="task_repeat_value_label">tekrarla: %1$s</string>
 
-    <string name="repeat_custom_amount_hint">Interval amount</string>
+    <string name="repeat_none">hiçbiri</string>
 
-    <string name="repeat_custom_amount_invalid">Enter a valid repetition amount</string>
+    <string name="repeat_dialog_title">Tekrarı seçin</string>
 
-    <string name="repeat_unit_minutes_label">Minutes</string>
+    <string name="repeat_option_none">Tekrar yok</string>
 
-    <string name="repeat_unit_days_label">Days</string>
+    <string name="repeat_option_hour">Her saat</string>
 
-    <string name="repeat_unit_hours_label">Hours</string>
+    <string name="repeat_option_day">Her gün</string>
 
-    <string name="repeat_unit_weeks_label">Weeks</string>
+    <string name="repeat_option_week">Her hafta</string>
 
-    <string name="repeat_unit_months_label">Months</string>
+    <string name="repeat_option_month">Her ay</string>
 
-    <string name="repeat_unit_years_label">Years</string>
+    <string name="repeat_option_year">Her yıl</string>
 
-    <string name="link_open_label">OPEN</string>
+    <string name="repeat_option_custom">Özel aralık</string>
 
-    <string name="link_missing">No link available to open</string>
+    <string name="repeat_requires_reminder">Tekrarlamayı kullanmak için önce bir hatırlatıcı ayarlayın</string>
 
-    <string name="invalid_command">Invalid command</string>
+    <string name="repeat_custom_title">Özel tekrar</string>
 
-    <string name="task_meta_format">imp: %1$d  due: %2$s  score: %3$d</string>
+    <string name="repeat_custom_amount_hint">Aralık tutarı</string>
 
-    <string name="quick_link_label_hint">Short name</string>
+    <string name="repeat_custom_amount_invalid">Geçerli bir tekrar miktarı girin</string>
+
+    <string name="repeat_unit_minutes_label">dakika</string>
+
+    <string name="repeat_unit_days_label">Günler</string>
+
+    <string name="repeat_unit_hours_label">Saatler</string>
+
+    <string name="repeat_unit_weeks_label">Haftalar</string>
+
+    <string name="repeat_unit_months_label">Aylar</string>
+
+    <string name="repeat_unit_years_label">Yıllar</string>
+
+    <string name="link_open_label">AÇIK</string>
+
+    <string name="link_missing">Açılacak bağlantı yok</string>
+
+    <string name="invalid_command">Geçersiz komut</string>
+
+    <string name="task_saved">Görev kaydedildi</string>
+
+    <string name="task_deleted">Görev silindi</string>
+
+    <string name="task_completed">Görev güncellendi</string>
+
+    <string name="task_failed">Görev güncellenemedi</string>
+
+    <string name="summary_format">açık: %1$d  bugün: %2$d  toplam: %3$d</string>
+
+    <string name="task_meta_format">önem: %1$d  bitiş: %2$s  puan: %3$d</string>
+
+    <string name="task_pin_label">SABİTLE</string>
+
+    <string name="task_unpin_label">PIN\'İ KALDIR</string>
+
+    <string name="task_edit_label">DÜZENLE</string>
+
+    <string name="task_delete_label">SİL</string>
+
+    <string name="quick_links_title">HIZLI BAĞLANTILAR</string>
+
+    <string name="new_link_label">YENİ BAĞLANTI</string>
+
+    <string name="quick_link_label_hint">Kısa ad</string>
 
     <string name="quick_link_url_hint">https://quick.link</string>
 
-    <string name="quick_link_new_title">New quick link</string>
+    <string name="quick_link_new_title">Yeni hızlı bağlantı</string>
 
-    <string name="quick_link_edit_title">Edit quick link</string>
+    <string name="quick_link_edit_title">Hızlı bağlantıyı düzenle</string>
 
-    <string name="quick_link_saved">Quick link saved</string>
+    <string name="quick_link_saved">Hızlı bağlantı kaydedildi</string>
 
-    <string name="quick_link_deleted">Quick link deleted</string>
+    <string name="quick_link_deleted">Hızlı bağlantı silindi</string>
 
-    <string name="quick_link_invalid">Enter a valid name and URL</string>
+    <string name="quick_link_invalid">Geçerli bir ad ve URL girin</string>
 
-    <string name="quick_link_delete_label">DELETE</string>
+    <string name="quick_link_delete_label">SİL</string>
 
-    <string name="widget_tasks_description">Task list with ALL and TODAY filters. Tap a row to toggle done</string>
+    <string name="widget_tasks_title">GÖREVLER</string>
 
-    <string name="widget_quick_links_description">Quick links saved in OpusAgenda. Tap to open in the browser</string>
+    <string name="widget_tasks_description">TÜMÜ ve BUGÜN filtrelerini içeren görev listesi. Bitti\'ye geçiş yapmak için bir satıra dokunun</string>
 
-    <string name="widget_quick_links_empty">No quick links. Add them in the app</string>
+    <string name="widget_quick_links_description">Hızlı bağlantılar OpusAgenda\'ya kaydedildi. Tarayıcıda açmak için dokunun</string>
+
+    <string name="widget_quick_links_empty">Hızlı bağlantı yok. Bunları uygulamaya ekleyin</string>
 
     <string name="clock_time_placeholder">00:00:00</string>
 
     <string name="clock_date_placeholder">10 Apr 2026</string>
 
-    <string name="font_applied">Font applied: %1$s</string>
+    <string name="font_dialog_title">Yazı tipini seçin</string>
 
-    <string name="task_description_hint">Add some context for this task</string>
+    <string name="font_applied">Yazı tipi uygulandı: %1$s</string>
 
-    <string name="task_description_save">SAVE DESC</string>
+    <string name="new_category_label">YENİ KEDİ</string>
 
-    <string name="task_description_clear">CLEAR DESC</string>
+    <string name="new_subcategory_label">YENİ ALT</string>
 
-    <string name="task_description_required">Description cannot be empty</string>
+    <string name="new_child_task_label">YENİ GÖREV</string>
 
-    <string name="task_description_saved">Description staged</string>
+    <string name="task_description_label">Açıklama</string>
 
-    <string name="task_description_title">Task description</string>
+    <string name="task_description_hint">Bu görev için biraz bağlam ekleyin</string>
 
-    <string name="task_description_icon_label">Open description</string>
+    <string name="task_description_save">TANIMI KAYDET</string>
+
+    <string name="task_description_clear">TANIMI TEMİZLE</string>
+
+    <string name="task_description_required">Açıklama boş olamaz</string>
+
+    <string name="task_description_saved">Açıklama aşamalı</string>
+
+    <string name="task_description_title">Görev açıklaması</string>
+
+    <string name="task_description_icon_label">Açıklamayı aç</string>
+
+    <string name="task_link_label">İlgili bağlantı</string>
 
     <string name="task_link_hint">https://linked.resource</string>
 
-    <string name="task_link_save">SAVE LINK</string>
+    <string name="task_link_save">BAĞLANTIYI KAYDET</string>
 
-    <string name="task_link_clear">CLEAR LINK</string>
+    <string name="task_link_clear">BAĞLANTIYI TEMİZLE</string>
 
-    <string name="task_link_required">Enter a valid link first</string>
+    <string name="task_link_required">Önce geçerli bir bağlantı girin</string>
 
-    <string name="task_link_saved">Link staged</string>
+    <string name="task_link_saved">Bağlantı aşamalı</string>
 
-    <string name="task_link_title">Task link</string>
+    <string name="task_link_title">Görev bağlantısı</string>
 
-    <string name="task_link_icon_label">Open link details</string>
+    <string name="task_link_icon_label">Bağlantı ayrıntılarını aç</string>
 
-    <string name="task_attachment_pick">PICK FILE</string>
+    <string name="task_attachment_label">Ekli dosya</string>
 
-    <string name="task_attachment_clear">CLEAR FILE</string>
+    <string name="task_attachment_empty">Hiçbir dosya seçilmedi</string>
 
-    <string name="task_attachment_saved">File attached</string>
+    <string name="task_attachment_pick">DOSYA SEÇ</string>
 
-    <string name="task_attachment_picker_failed">Could not read the selected file</string>
+    <string name="task_attachment_clear">DOSYAYI TEMİZLE</string>
 
-    <string name="task_attachment_open_failed">No app can open that attachment</string>
+    <string name="task_attachment_saved">Dosya ekli</string>
 
-    <string name="task_attachment_title">Task attachment</string>
+    <string name="task_attachment_picker_failed">Seçilen dosya okunamadı</string>
 
-    <string name="task_attachment_icon_label">Open attachment details</string>
+    <string name="task_attachment_open_failed">Hiçbir uygulama bu eki açamaz</string>
 
-    <string name="task_attachment_name_label">file: %1$s</string>
+    <string name="task_attachment_title">Görev eki</string>
 
-    <string name="task_attachment_type_label">type: %1$s</string>
+    <string name="task_attachment_icon_label">Ek ayrıntılarını aç</string>
 
-    <string name="task_attachment_no_preview">No preview available</string>
+    <string name="task_attachment_name_label">dosya: %1$s</string>
+
+    <string name="task_attachment_type_label">tür: %1$s</string>
+
+    <string name="play_label">OYNA</string>
+
+    <string name="stop_label">DUR</string>
+
+    <string name="task_attachment_no_preview">Önizleme mevcut değil</string>
 
     <string-array name="font_option_labels">
-            <item>Inter</item>
-            <item>Geo</item>
-            <item>MedievalSharp</item>
-            <item>Octosquares</item>
-            <item>UnifrakturMaguntia</item>
-        </string-array>
+        <item>Inter</item>
+        <item>Geo</item>
+        <item>MedievalSharp</item>
+        <item>Octosquares</item>
+        <item>UnifrakturMaguntia</item>
+    </string-array>
 
     <string-array name="importance_options">
-            <item>1 LOW</item>
-            <item>2 NORMAL</item>
-            <item>3 HIGH</item>
-            <item>4 CRITICAL</item>
-        </string-array>
+        <item>1 DÜŞÜK</item>
+        <item>2 NORMAL</item>
+        <item>3 YÜKSEK</item>
+        <item>4 KRİTİK</item>
+    </string-array>
 
     <plurals name="repeat_unit_minutes">
-            <item quantity="one">%1$d minute</item>
-            <item quantity="other">%1$d minutes</item>
-        </plurals>
+        <item quantity="one">%1$d dakika</item>
+        <item quantity="other">%1$d dakika</item>
+    </plurals>
 
     <plurals name="repeat_unit_hours">
-            <item quantity="one">%1$d hour</item>
-            <item quantity="other">%1$d hours</item>
-        </plurals>
+        <item quantity="one">%1$d saat</item>
+        <item quantity="other">%1$d saat</item>
+    </plurals>
 
     <plurals name="repeat_unit_days">
-            <item quantity="one">%1$d day</item>
-            <item quantity="other">%1$d days</item>
-        </plurals>
+        <item quantity="one">%1$d gün</item>
+        <item quantity="other">%1$d gün</item>
+    </plurals>
 
     <plurals name="repeat_unit_weeks">
-            <item quantity="one">%1$d week</item>
-            <item quantity="other">%1$d weeks</item>
-        </plurals>
+        <item quantity="one">%1$d hafta</item>
+        <item quantity="other">%1$d hafta</item>
+    </plurals>
 
     <plurals name="repeat_unit_months">
-            <item quantity="one">%1$d month</item>
-            <item quantity="other">%1$d months</item>
-        </plurals>
+        <item quantity="one">%1$d ay</item>
+        <item quantity="other">%1$d ay</item>
+    </plurals>
 
     <plurals name="repeat_unit_years">
-            <item quantity="one">%1$d year</item>
-            <item quantity="other">%1$d years</item>
-        </plurals>
+        <item quantity="one">%1$d yıl</item>
+        <item quantity="other">%1$d yıl</item>
+    </plurals>
+
+    <string name="previous_label">ÖNCEKİ</string>
+
+    <string name="next_label">SONRAKİ</string>
+
+    <string name="pdf_page_indicator">Sayfa %1$d / %2$d</string>
 </resources>
+
+
+
 

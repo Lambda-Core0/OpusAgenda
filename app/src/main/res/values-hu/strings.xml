@@ -1,263 +1,342 @@
 ﻿<resources>
-    <string name="search_hint">feladatok keresÃ©se...</string>
-    <string name="empty_state_all">MÃ©g nincs feladat. Ãšj lÃ©trehozÃ¡sÃ¡hoz hasznÃ¡ld az ÃšJ gombot</string>
-    <string name="empty_state_today">Ma nincs sÃ¼rgÅ‘s feladat</string>
-    <string name="all_label">MIND</string>
-    <string name="today_label">MA</string>
-    <string name="new_task_label">ÃšJ</string>
-    <string name="save_label">MENTÃ‰S</string>
-    <string name="cancel_label">MÃ‰GSE</string>
-    <string name="pick_due_date_label">HATÃRIDÅ</string>
-    <string name="clear_due_date_label">HATÃRIDÅ TÃ–RLÃ‰SE</string>
-    <string name="completed_label">KÃ©sz</string>
-    <string name="importance_label">FontossÃ¡g</string>
-    <string name="task_dialog_title_new">Ãšj feladat</string>
-    <string name="task_dialog_title_edit">Feladat szerkesztÃ©se</string>
-    <string name="task_text_required">Add meg a feladat szÃ¶vegÃ©t</string>
-    <string name="default_category_name">KategÃ³ria</string>
-    <string name="category_move_invalid">Ez az Ã¡thelyezÃ©s Ã©rvÃ©nytelen beÃ¡gyazott kategÃ³riÃ¡t hozna lÃ©tre</string>
-    <string name="task_due_label">hatÃ¡ridÅ‘: %1$s</string>
-    <string name="no_due_date">nincs hatÃ¡ridÅ‘</string>
-    <string name="no_reminder">nincs</string>
-    <string name="due_relative_overdue">%1$d nap kÃ©sÃ©s</string>
-    <string name="due_relative_today">ma</string>
-    <string name="due_relative_tomorrow">holnap</string>
-    <string name="due_relative_in">%1$d nap mÃºlva</string>
-    <string name="pick_reminder_label">EMLÃ‰KEZTETÅ</string>
-    <string name="pick_repeat_label">ISMÃ‰TLÃ‰S</string>
-    <string name="reminder_dialog_title">EmlÃ©keztetÅ‘ kivÃ¡lasztÃ¡sa</string>
-    <string name="reminder_option_none">Nincs emlÃ©keztetÅ‘</string>
-    <string name="reminder_option_hour">1 Ã³rÃ¡val elÅ‘tte</string>
-    <string name="reminder_option_day">1 nappal elÅ‘tte</string>
-    <string name="reminder_option_week">1 hÃ©ttel elÅ‘tte</string>
-    <string name="reminder_option_month">1 hÃ³nappal elÅ‘tte</string>
-    <string name="reminder_option_custom">EgyÃ©ni dÃ¡tum Ã©s idÅ‘</string>
-    <string name="reminder_requires_due_date">Az elÅ‘beÃ¡llÃ­tÃ¡sokhoz elÅ‘bb adj meg hatÃ¡ridÅ‘t</string>
-    <string name="reminder_time_in_past">Az emlÃ©keztetÅ‘ ideje jÃ¶vÅ‘beli legyen</string>
-    <string name="notifications_permission_denied">Az emlÃ©keztetÅ‘khÃ¶z Ã©rtesÃ­tÃ©si engedÃ©ly szÃ¼ksÃ©ges</string>
-    <string name="repeat_dialog_title">IsmÃ©tlÃ©s kivÃ¡lasztÃ¡sa</string>
-    <string name="repeat_option_none">Nincs ismÃ©tlÃ©s</string>
-    <string name="repeat_option_hour">Ã“rÃ¡nkÃ©nt</string>
-    <string name="repeat_option_day">Naponta</string>
-    <string name="repeat_option_week">Hetente</string>
-    <string name="repeat_option_month">Havonta</string>
-    <string name="repeat_option_year">Ã‰vente</string>
-    <string name="repeat_option_custom">EgyÃ©ni intervallum</string>
-    <string name="task_saved">Feladat mentve</string>
-    <string name="task_deleted">Feladat tÃ¶rÃ¶lve</string>
-    <string name="task_completed">Feladat frissÃ­tve</string>
-    <string name="task_failed">A feladat nem frissÃ­thetÅ‘</string>
-    <string name="summary_format">nyitott: %1$d  ma: %2$d  Ã¶sszesen: %3$d</string>
-    <string name="task_pin_label">RÃ–GZÃT</string>
-    <string name="task_unpin_label">FELOLD</string>
-    <string name="task_edit_label">SZERK</string>
-    <string name="task_delete_label">TÃ–RÃ–L</string>
-    <string name="quick_links_title">GYORS LINKEK</string>
-    <string name="new_link_label">ÃšJ LINK</string>
-    <string name="widget_tasks_title">FELADATOK</string>
-    <string name="font_dialog_title">BetÅ±tÃ­pus kivÃ¡lasztÃ¡sa</string>
-    <string name="new_category_label">ÃšJ KAT</string>
-    <string name="new_subcategory_label">ÃšJ ALKAT</string>
-    <string name="new_child_task_label">ÃšJ FELADAT</string>
-    <string name="task_description_label">LeÃ­rÃ¡s</string>
-    <string name="task_link_label">KapcsolÃ³dÃ³ link</string>
-    <string name="task_attachment_label">Csatolt fÃ¡jl</string>
-    <string name="task_attachment_empty">Nincs kivÃ¡lasztott fÃ¡jl</string>
-    <string name="play_label">LEJÃTSZÃS</string>
-    <string name="stop_label">LEÃLLÃTÃS</string>
-    <string name="previous_label">ELÅZÅ</string>
-    <string name="next_label">KÃ–VETKEZÅ</string>
-    <string name="pdf_page_indicator">%1$d / %2$d oldal</string>
-    <!-- Fallback entries added to keep this locale 1:1 with the base resources. -->
     <string name="app_name">OpusAgenda</string>
 
-    <string name="app_header_title">â™± OpusAgenda v1.3</string>
+    <string name="app_header_title">♱ OpusAgenda v1.3</string>
 
     <string name="app_font_family">UnifrakturMaguntia</string>
 
-    <string name="run_command_label">RUN</string>
+    <string name="search_hint">keresési feladatok...</string>
 
-    <string name="task_text_hint">Task text</string>
+    <string name="empty_state_all">Még nincsenek feladatok. A NEW használatával hozzon létre egyet</string>
 
-    <string name="pinned_label">PINNED</string>
+    <string name="empty_state_today">Ma nincs sürgős feladat</string>
+
+    <string name="all_label">ÖSSZES</string>
+
+    <string name="today_label">MA</string>
+
+    <string name="new_task_label">ÚJ</string>
+
+    <string name="run_command_label">FUTÁS</string>
+
+    <string name="task_text_hint">Feladat szövege</string>
+
+    <string name="category_text_hint">Kategória neve</string>
+
+    <string name="save_label">MENTÉS</string>
+
+    <string name="cancel_label">MÉGSEM</string>
+
+    <string name="pick_due_date_label">ESEDÉSI DÁTUM</string>
+
+    <string name="clear_due_date_label">ESEDÉS TÖRLÉSE</string>
+
+    <string name="pinned_label">TŰZVE</string>
+
+    <string name="completed_label">Befejezve</string>
+
+    <string name="importance_label">Fontosság</string>
+
+    <string name="task_dialog_title_new">Új feladat</string>
+
+    <string name="task_dialog_title_edit">Feladat szerkesztése</string>
+
+    <string name="category_dialog_title_new">Új kategória</string>
+
+    <string name="category_dialog_title_edit">Kategória szerkesztése</string>
+
+    <string name="task_text_required">Írja be a feladat szövegét</string>
+
+    <string name="default_category_name">Kategória</string>
 
     <string name="category_badge_label">CAT</string>
 
-    <string name="category_edit_label">RENAME</string>
+    <string name="category_edit_label">ÁTNEVEZÉS</string>
 
-    <string name="category_due_label">category</string>
+    <string name="category_due_label">kategória</string>
 
-    <string name="category_meta_format">children: %1$d  imp: %2$d</string>
+    <string name="category_meta_format">alárendeltek: %1$d  font.: %2$d</string>
 
-    <string name="task_reminder_value_label">reminder: %1$s</string>
+    <string name="category_move_invalid">Ez a lépés érvénytelen beágyazott kategóriát hozna létre</string>
+
+    <string name="task_due_label">esedékesség: %1$s</string>
+
+    <string name="task_reminder_value_label">emlékeztető: %1$s</string>
 
     <string name="task_date_with_relative">%1$s - %2$s</string>
 
-    <string name="clear_reminder_label">CLEAR REMINDER</string>
+    <string name="no_due_date">nincs határidő</string>
+
+    <string name="no_reminder">egyik sem</string>
+
+    <string name="due_relative_overdue">lejárt %1$dd</string>
+
+    <string name="due_relative_today">ma</string>
+
+    <string name="due_relative_tomorrow">holnap</string>
+
+    <string name="due_relative_in">%1$dd-ben</string>
+
+    <string name="pick_reminder_label">EMLÉKEZTETÉS</string>
+
+    <string name="pick_repeat_label">ISMÉTLÉS</string>
+
+    <string name="clear_reminder_label">EMLÉKEZTETŐ TÖRLÉSE</string>
+
+    <string name="reminder_dialog_title">Válasszon emlékeztetőt</string>
+
+    <string name="reminder_option_none">Nincs emlékeztető</string>
+
+    <string name="reminder_option_hour">1 órával előtte</string>
+
+    <string name="reminder_option_day">1 nappal előtte</string>
+
+    <string name="reminder_option_week">1 héttel előtte</string>
+
+    <string name="reminder_option_month">1 hónappal korábban</string>
+
+    <string name="reminder_option_custom">Egyedi dátum és idő</string>
 
     <string name="reminder_summary_with_datetime">%1$s (%2$s)</string>
 
-    <string name="reminder_custom_date_title">Reminder date</string>
+    <string name="reminder_requires_due_date">Az előre beállított értékek használatához először állítson be egy határidőt</string>
 
-    <string name="reminder_custom_time_title">Reminder time</string>
+    <string name="reminder_time_in_past">Az emlékeztető időpontjának a jövőben kell lennie</string>
 
-    <string name="reminder_channel_name">Task reminders</string>
+    <string name="reminder_custom_date_title">Emlékeztető dátuma</string>
 
-    <string name="reminder_channel_description">Notifications for scheduled task reminders</string>
+    <string name="reminder_custom_time_title">Emlékeztető ideje</string>
 
-    <string name="reminder_notification_title">Task reminder</string>
+    <string name="reminder_channel_name">Feladatok emlékeztetők</string>
 
-    <string name="task_repeat_value_label">repeat: %1$s</string>
+    <string name="reminder_channel_description">Értesítések ütemezett feladatokra vonatkozó emlékeztetőkről</string>
 
-    <string name="repeat_none">none</string>
+    <string name="reminder_notification_title">Feladat emlékeztető</string>
 
-    <string name="repeat_requires_reminder">Set a reminder first to use repetition</string>
+    <string name="notifications_permission_denied">Az emlékeztetőkhöz értesítési engedély szükséges</string>
 
-    <string name="repeat_custom_title">Custom repetition</string>
+    <string name="task_repeat_value_label">ismétlés: %1$s</string>
 
-    <string name="repeat_custom_amount_hint">Interval amount</string>
+    <string name="repeat_none">egyik sem</string>
 
-    <string name="repeat_custom_amount_invalid">Enter a valid repetition amount</string>
+    <string name="repeat_dialog_title">Válassza az ismétlést</string>
 
-    <string name="repeat_unit_minutes_label">Minutes</string>
+    <string name="repeat_option_none">Nincs ismétlés</string>
 
-    <string name="repeat_unit_days_label">Days</string>
+    <string name="repeat_option_hour">Minden órában</string>
 
-    <string name="repeat_unit_hours_label">Hours</string>
+    <string name="repeat_option_day">Minden nap</string>
 
-    <string name="repeat_unit_weeks_label">Weeks</string>
+    <string name="repeat_option_week">Minden héten</string>
 
-    <string name="repeat_unit_months_label">Months</string>
+    <string name="repeat_option_month">Minden hónapban</string>
 
-    <string name="repeat_unit_years_label">Years</string>
+    <string name="repeat_option_year">Minden évben</string>
 
-    <string name="link_open_label">OPEN</string>
+    <string name="repeat_option_custom">Egyéni intervallum</string>
 
-    <string name="link_missing">No link available to open</string>
+    <string name="repeat_requires_reminder">Először állítson be emlékeztetőt az ismétlés használatához</string>
 
-    <string name="invalid_command">Invalid command</string>
+    <string name="repeat_custom_title">Egyedi ismétlés</string>
 
-    <string name="task_meta_format">imp: %1$d  due: %2$s  score: %3$d</string>
+    <string name="repeat_custom_amount_hint">Intervallum összege</string>
 
-    <string name="quick_link_label_hint">Short name</string>
+    <string name="repeat_custom_amount_invalid">Adjon meg egy érvényes ismétlési mennyiséget</string>
+
+    <string name="repeat_unit_minutes_label">Percek</string>
+
+    <string name="repeat_unit_days_label">Napok</string>
+
+    <string name="repeat_unit_hours_label">Órák</string>
+
+    <string name="repeat_unit_weeks_label">Hetek</string>
+
+    <string name="repeat_unit_months_label">Hónapok</string>
+
+    <string name="repeat_unit_years_label">Évek</string>
+
+    <string name="link_open_label">NYITVA</string>
+
+    <string name="link_missing">Nincs elérhető link a megnyitáshoz</string>
+
+    <string name="invalid_command">Érvénytelen parancs</string>
+
+    <string name="task_saved">Feladat mentve</string>
+
+    <string name="task_deleted">Feladat törölve</string>
+
+    <string name="task_completed">Feladat frissítve</string>
+
+    <string name="task_failed">Nem sikerült frissíteni a feladatot</string>
+
+    <string name="summary_format">nyitott: %1$d  ma: %2$d  összesen: %3$d</string>
+
+    <string name="task_meta_format">font.: %1$d  határidő: %2$s  pontszám: %3$d</string>
+
+    <string name="task_pin_label">PIN KÓDOT</string>
+
+    <string name="task_unpin_label">FELOLD</string>
+
+    <string name="task_edit_label">SZERKESZTÉS</string>
+
+    <string name="task_delete_label">TÖRÖL</string>
+
+    <string name="quick_links_title">GYORS LINKEK</string>
+
+    <string name="new_link_label">ÚJ LINK</string>
+
+    <string name="quick_link_label_hint">Rövid név</string>
 
     <string name="quick_link_url_hint">https://quick.link</string>
 
-    <string name="quick_link_new_title">New quick link</string>
+    <string name="quick_link_new_title">Új gyorslink</string>
 
-    <string name="quick_link_edit_title">Edit quick link</string>
+    <string name="quick_link_edit_title">Gyorshivatkozás szerkesztése</string>
 
-    <string name="quick_link_saved">Quick link saved</string>
+    <string name="quick_link_saved">Gyors link mentve</string>
 
-    <string name="quick_link_deleted">Quick link deleted</string>
+    <string name="quick_link_deleted">Gyorslink törölve</string>
 
-    <string name="quick_link_invalid">Enter a valid name and URL</string>
+    <string name="quick_link_invalid">Adjon meg egy érvényes nevet és URL-t</string>
 
-    <string name="quick_link_delete_label">DELETE</string>
+    <string name="quick_link_delete_label">TÖRLÉS</string>
 
-    <string name="widget_tasks_description">Task list with ALL and TODAY filters. Tap a row to toggle done</string>
+    <string name="widget_tasks_title">FELADATOK</string>
 
-    <string name="widget_quick_links_description">Quick links saved in OpusAgenda. Tap to open in the browser</string>
+    <string name="widget_tasks_description">Feladatlista ALL és TODAY szűrőkkel. Koppintson egy sorra a kész váltáshoz</string>
 
-    <string name="widget_quick_links_empty">No quick links. Add them in the app</string>
+    <string name="widget_quick_links_description">Az OpusAgendába mentett gyorshivatkozások. Érintse meg a böngészőben való megnyitáshoz</string>
+
+    <string name="widget_quick_links_empty">Nincsenek gyorslinkek. Adja hozzá őket az alkalmazáshoz</string>
 
     <string name="clock_time_placeholder">00:00:00</string>
 
     <string name="clock_date_placeholder">10 Apr 2026</string>
 
-    <string name="font_applied">Font applied: %1$s</string>
+    <string name="font_dialog_title">Válassza ki a betűtípust</string>
 
-    <string name="task_description_hint">Add some context for this task</string>
+    <string name="font_applied">Alkalmazott betűtípus: %1$s</string>
 
-    <string name="task_description_save">SAVE DESC</string>
+    <string name="new_category_label">ÚJ CAT</string>
 
-    <string name="task_description_clear">CLEAR DESC</string>
+    <string name="new_subcategory_label">ÚJ SUBC</string>
 
-    <string name="task_description_required">Description cannot be empty</string>
+    <string name="new_child_task_label">ÚJ FELADAT</string>
 
-    <string name="task_description_saved">Description staged</string>
+    <string name="task_description_label">Leírás</string>
 
-    <string name="task_description_title">Task description</string>
+    <string name="task_description_hint">Adjon hozzá némi kontextust ehhez a feladathoz</string>
 
-    <string name="task_description_icon_label">Open description</string>
+    <string name="task_description_save">LEÍRÁS MENTÉSE</string>
+
+    <string name="task_description_clear">LEÍRÁS TÖRLÉSE</string>
+
+    <string name="task_description_required">A leírás nem lehet üres</string>
+
+    <string name="task_description_saved">Leírás színpadra</string>
+
+    <string name="task_description_title">Feladat leírása</string>
+
+    <string name="task_description_icon_label">Nyissa meg a leírást</string>
+
+    <string name="task_link_label">Kapcsolódó link</string>
 
     <string name="task_link_hint">https://linked.resource</string>
 
-    <string name="task_link_save">SAVE LINK</string>
+    <string name="task_link_save">LINK MENTÉSE</string>
 
-    <string name="task_link_clear">CLEAR LINK</string>
+    <string name="task_link_clear">LINK TÖRLÉSE</string>
 
-    <string name="task_link_required">Enter a valid link first</string>
+    <string name="task_link_required">Először írjon be egy érvényes linket</string>
 
-    <string name="task_link_saved">Link staged</string>
+    <string name="task_link_saved">Link rendezve</string>
 
-    <string name="task_link_title">Task link</string>
+    <string name="task_link_title">Feladat link</string>
 
-    <string name="task_link_icon_label">Open link details</string>
+    <string name="task_link_icon_label">Nyissa meg a link részleteit</string>
 
-    <string name="task_attachment_pick">PICK FILE</string>
+    <string name="task_attachment_label">Csatolt fájl</string>
 
-    <string name="task_attachment_clear">CLEAR FILE</string>
+    <string name="task_attachment_empty">Nincs kiválasztva fájl</string>
 
-    <string name="task_attachment_saved">File attached</string>
+    <string name="task_attachment_pick">FÁJL KIVÁLASZTÁSA</string>
 
-    <string name="task_attachment_picker_failed">Could not read the selected file</string>
+    <string name="task_attachment_clear">FÁJL TÖRLÉSE</string>
 
-    <string name="task_attachment_open_failed">No app can open that attachment</string>
+    <string name="task_attachment_saved">Fájl csatolva</string>
 
-    <string name="task_attachment_title">Task attachment</string>
+    <string name="task_attachment_picker_failed">Nem sikerült beolvasni a kiválasztott fájlt</string>
 
-    <string name="task_attachment_icon_label">Open attachment details</string>
+    <string name="task_attachment_open_failed">Egyetlen alkalmazás sem tudja megnyitni ezt a mellékletet</string>
 
-    <string name="task_attachment_name_label">file: %1$s</string>
+    <string name="task_attachment_title">Feladat melléklet</string>
 
-    <string name="task_attachment_type_label">type: %1$s</string>
+    <string name="task_attachment_icon_label">Nyissa meg a melléklet részleteit</string>
 
-    <string name="task_attachment_no_preview">No preview available</string>
+    <string name="task_attachment_name_label">fájl: %1$s</string>
+
+    <string name="task_attachment_type_label">típus: %1$s</string>
+
+    <string name="play_label">JÁTÉK</string>
+
+    <string name="stop_label">LEÁLLÍT</string>
+
+    <string name="task_attachment_no_preview">Nincs elérhető előnézet</string>
 
     <string-array name="font_option_labels">
-            <item>Inter</item>
-            <item>Geo</item>
-            <item>MedievalSharp</item>
-            <item>Octosquares</item>
-            <item>UnifrakturMaguntia</item>
-        </string-array>
+        <item>Inter</item>
+        <item>Geo</item>
+        <item>MedievalSharp</item>
+        <item>Octosquares</item>
+        <item>UnifrakturMaguntia</item>
+    </string-array>
 
     <string-array name="importance_options">
-            <item>1 LOW</item>
-            <item>2 NORMAL</item>
-            <item>3 HIGH</item>
-            <item>4 CRITICAL</item>
-        </string-array>
+        <item>1 ALACSONY</item>
+        <item>2 NORMÁL</item>
+        <item>3 MAGAS</item>
+        <item>4 KRITIKUS</item>
+    </string-array>
 
     <plurals name="repeat_unit_minutes">
-            <item quantity="one">%1$d minute</item>
-            <item quantity="other">%1$d minutes</item>
-        </plurals>
+        <item quantity="one">%1$d perc</item>
+        <item quantity="other">%1$d perc</item>
+    </plurals>
 
     <plurals name="repeat_unit_hours">
-            <item quantity="one">%1$d hour</item>
-            <item quantity="other">%1$d hours</item>
-        </plurals>
+        <item quantity="one">%1$d óra</item>
+        <item quantity="other">%1$d óra</item>
+    </plurals>
 
     <plurals name="repeat_unit_days">
-            <item quantity="one">%1$d day</item>
-            <item quantity="other">%1$d days</item>
-        </plurals>
+        <item quantity="one">%1$d nap</item>
+        <item quantity="other">%1$d nap</item>
+    </plurals>
 
     <plurals name="repeat_unit_weeks">
-            <item quantity="one">%1$d week</item>
-            <item quantity="other">%1$d weeks</item>
-        </plurals>
+        <item quantity="one">%1$d hét</item>
+        <item quantity="other">%1$d hét</item>
+    </plurals>
 
     <plurals name="repeat_unit_months">
-            <item quantity="one">%1$d month</item>
-            <item quantity="other">%1$d months</item>
-        </plurals>
+        <item quantity="one">%1$d hónap</item>
+        <item quantity="other">%1$d hónap</item>
+    </plurals>
 
     <plurals name="repeat_unit_years">
-            <item quantity="one">%1$d year</item>
-            <item quantity="other">%1$d years</item>
-        </plurals>
+        <item quantity="one">%1$d év</item>
+        <item quantity="other">%1$d év</item>
+    </plurals>
+
+    <string name="previous_label">ELŐZŐ</string>
+
+    <string name="next_label">KÖVETKEZŐ</string>
+
+    <string name="pdf_page_indicator">%1$d / %2$d oldal</string>
 </resources>
+
+
+
+
+
 

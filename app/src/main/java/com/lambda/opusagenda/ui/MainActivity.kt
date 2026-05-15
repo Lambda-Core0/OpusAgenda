@@ -23,6 +23,7 @@ import android.widget.Spinner
 import android.widget.TextView
 import android.widget.ScrollView
 import android.widget.MediaController
+import android.widget.Toast
 import android.widget.VideoView
 import android.media.MediaPlayer
 import java.io.BufferedReader
@@ -118,7 +119,7 @@ class MainActivity : AppCompatActivity(), TaskAdapter.TaskItemActions {
     private val timeFormatter = DateTimeFormatter.ofPattern("HH:mm:ss", Locale.getDefault())
     private val dateFormatter = DateTimeFormatter.ofPattern("EEE, dd MMM yyyy", Locale.getDefault())
 
-    private var statusClearJob: Job? = null
+    private var statusToast: Toast? = null
     private var pendingAttachmentSelection: ((Uri?) -> Unit)? = null
 
     private val notificationPermissionLauncher = registerForActivityResult(
@@ -325,6 +326,7 @@ class MainActivity : AppCompatActivity(), TaskAdapter.TaskItemActions {
         dialogBinding.editLink.setText(task?.link.orEmpty())
 
         if (isCategory) {
+            dialogBinding.editTaskText.setHint(R.string.category_text_hint)
             dialogBinding.textImportanceLabel.visibility = View.GONE
             dialogBinding.spinnerImportance.visibility = View.GONE
             dialogBinding.textDueDate.visibility = View.GONE
@@ -519,8 +521,15 @@ class MainActivity : AppCompatActivity(), TaskAdapter.TaskItemActions {
             updateAttachmentLabel()
         }
 
+        val titleRes = when {
+            isCategory && task == null -> R.string.category_dialog_title_new
+            isCategory -> R.string.category_dialog_title_edit
+            task == null -> R.string.task_dialog_title_new
+            else -> R.string.task_dialog_title_edit
+        }
+
         val dialog = MaterialAlertDialogBuilder(this)
-            .setTitle(if (task == null) R.string.task_dialog_title_new else R.string.task_dialog_title_edit)
+            .setTitle(titleRes)
             .setView(dialogBinding.root)
             .setNegativeButton(R.string.cancel_label, null)
             .setPositiveButton(R.string.save_label, null)
@@ -1625,13 +1634,29 @@ class MainActivity : AppCompatActivity(), TaskAdapter.TaskItemActions {
     }
 
     private fun showStatus(message: String) {
-        binding.textStatus.text = message
-        binding.textStatus.visibility = View.VISIBLE
-        statusClearJob?.cancel()
-        statusClearJob = lifecycleScope.launch {
-            delay(2200)
-            binding.textStatus.visibility = View.GONE
+        statusToast?.cancel()
+
+        val toastView = TextView(this).apply {
+            background = ContextCompat.getDrawable(this@MainActivity, R.drawable.bg_terminal_panel)
+            setTextColor(ContextCompat.getColor(this@MainActivity, R.color.terminal_yellow))
+            text = message
+            textSize = 14f
+            typeface = selectedTypeface ?: typeface
+            gravity = Gravity.CENTER
+            setPadding(18.dp, 12.dp, 18.dp, 12.dp)
+            maxWidth = (resources.displayMetrics.widthPixels * 0.88f).toInt()
+            elevation = 8f
+        }
+
+        statusToast = Toast(this).apply {
+            duration = Toast.LENGTH_LONG
+            view = toastView
+            setGravity(Gravity.BOTTOM or Gravity.CENTER_HORIZONTAL, 0, 96.dp)
+            show()
         }
     }
+
+    private val Int.dp: Int
+        get() = (this * resources.displayMetrics.density).toInt()
 
 }

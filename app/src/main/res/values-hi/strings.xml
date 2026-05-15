@@ -1,263 +1,339 @@
 ﻿<resources>
-    <string name="search_hint">à¤•à¤¾à¤°à¥à¤¯ à¤–à¥‹à¤œà¥‡à¤‚...</string>
-    <string name="empty_state_all">à¤…à¤­à¥€ à¤•à¥‹à¤ˆ à¤•à¤¾à¤°à¥à¤¯ à¤¨à¤¹à¥€à¤‚à¥¤ à¤¨à¤¯à¤¾ à¤¬à¤¨à¤¾à¤à¤‚</string>
-    <string name="empty_state_today">à¤†à¤œ à¤•à¥‡ à¤²à¤¿à¤ à¤•à¥‹à¤ˆ à¤œà¤°à¥‚à¤°à¥€ à¤•à¤¾à¤°à¥à¤¯ à¤¨à¤¹à¥€à¤‚</string>
-    <string name="all_label">à¤¸à¤­à¥€</string>
-    <string name="today_label">à¤†à¤œ</string>
-    <string name="new_task_label">à¤¨à¤¯à¤¾</string>
-    <string name="save_label">à¤¸à¤¹à¥‡à¤œà¥‡à¤‚</string>
-    <string name="cancel_label">à¤°à¤¦à¥à¤¦ à¤•à¤°à¥‡à¤‚</string>
-    <string name="pick_due_date_label">à¤¦à¥‡à¤¯ à¤¤à¤¾à¤°à¥€à¤–</string>
-    <string name="clear_due_date_label">à¤¤à¤¾à¤°à¥€à¤– à¤¹à¤Ÿà¤¾à¤à¤‚</string>
-    <string name="completed_label">à¤ªà¥‚à¤°à¥à¤£</string>
-    <string name="importance_label">à¤®à¤¹à¤¤à¥à¤µ</string>
-    <string name="task_dialog_title_new">à¤¨à¤¯à¤¾ à¤•à¤¾à¤°à¥à¤¯</string>
-    <string name="task_dialog_title_edit">à¤•à¤¾à¤°à¥à¤¯ à¤¸à¤‚à¤ªà¤¾à¤¦à¤¿à¤¤ à¤•à¤°à¥‡à¤‚</string>
-    <string name="task_text_required">à¤•à¤¾à¤°à¥à¤¯ à¤•à¤¾ à¤ªà¤¾à¤  à¤¦à¤°à¥à¤œ à¤•à¤°à¥‡à¤‚</string>
-    <string name="default_category_name">à¤¶à¥à¤°à¥‡à¤£à¥€</string>
-    <string name="category_move_invalid">à¤¯à¤¹ à¤¸à¥à¤¥à¤¾à¤¨à¤¾à¤‚à¤¤à¤°à¤£ à¤…à¤®à¤¾à¤¨à¥à¤¯ à¤¨à¥‡à¤¸à¥à¤Ÿà¥‡à¤¡ à¤¶à¥à¤°à¥‡à¤£à¥€ à¤¬à¤¨à¤¾à¤à¤—à¤¾</string>
-    <string name="task_due_label">à¤¦à¥‡à¤¯: %1$s</string>
-    <string name="no_due_date">à¤•à¥‹à¤ˆ à¤¦à¥‡à¤¯ à¤¤à¤¾à¤°à¥€à¤– à¤¨à¤¹à¥€à¤‚</string>
-    <string name="no_reminder">à¤•à¥‹à¤ˆ à¤¨à¤¹à¥€à¤‚</string>
-    <string name="due_relative_overdue">%1$d à¤¦à¤¿à¤¨ à¤µà¤¿à¤²à¤‚à¤¬à¤¿à¤¤</string>
-    <string name="due_relative_today">à¤†à¤œ</string>
-    <string name="due_relative_tomorrow">à¤•à¤²</string>
-    <string name="due_relative_in">%1$d à¤¦à¤¿à¤¨ à¤®à¥‡à¤‚</string>
-    <string name="pick_reminder_label">à¤¯à¤¾à¤¦ à¤¦à¤¿à¤²à¤¾à¤à¤‚</string>
-    <string name="pick_repeat_label">à¤¦à¥‹à¤¹à¤°à¤¾à¤à¤‚</string>
-    <string name="reminder_dialog_title">à¤°à¤¿à¤®à¤¾à¤‡à¤‚à¤¡à¤° à¤šà¥à¤¨à¥‡à¤‚</string>
-    <string name="reminder_option_none">à¤•à¥‹à¤ˆ à¤°à¤¿à¤®à¤¾à¤‡à¤‚à¤¡à¤° à¤¨à¤¹à¥€à¤‚</string>
-    <string name="reminder_option_hour">1 à¤˜à¤‚à¤Ÿà¤¾ à¤ªà¤¹à¤²à¥‡</string>
-    <string name="reminder_option_day">1 à¤¦à¤¿à¤¨ à¤ªà¤¹à¤²à¥‡</string>
-    <string name="reminder_option_week">1 à¤¸à¤ªà¥à¤¤à¤¾à¤¹ à¤ªà¤¹à¤²à¥‡</string>
-    <string name="reminder_option_month">1 à¤®à¤¹à¥€à¤¨à¤¾ à¤ªà¤¹à¤²à¥‡</string>
-    <string name="reminder_option_custom">à¤•à¤¸à¥à¤Ÿà¤® à¤¤à¤¾à¤°à¥€à¤– à¤”à¤° à¤¸à¤®à¤¯</string>
-    <string name="reminder_requires_due_date">à¤ªà¥à¤°à¥€à¤¸à¥‡à¤Ÿ à¤‰à¤ªà¤¯à¥‹à¤— à¤•à¤°à¤¨à¥‡ à¤•à¥‡ à¤²à¤¿à¤ à¤ªà¤¹à¤²à¥‡ à¤¦à¥‡à¤¯ à¤¤à¤¾à¤°à¥€à¤– à¤¸à¥‡à¤Ÿ à¤•à¤°à¥‡à¤‚</string>
-    <string name="reminder_time_in_past">à¤°à¤¿à¤®à¤¾à¤‡à¤‚à¤¡à¤° à¤¸à¤®à¤¯ à¤­à¤µà¤¿à¤·à¥à¤¯ à¤®à¥‡à¤‚ à¤¹à¥‹à¤¨à¤¾ à¤šà¤¾à¤¹à¤¿à¤</string>
-    <string name="notifications_permission_denied">à¤°à¤¿à¤®à¤¾à¤‡à¤‚à¤¡à¤° à¤•à¥‡ à¤²à¤¿à¤ à¤¸à¥‚à¤šà¤¨à¤¾ à¤…à¤¨à¥à¤®à¤¤à¤¿ à¤†à¤µà¤¶à¥à¤¯à¤• à¤¹à¥ˆ</string>
-    <string name="repeat_dialog_title">à¤¦à¥‹à¤¹à¤°à¤¾à¤µ à¤šà¥à¤¨à¥‡à¤‚</string>
-    <string name="repeat_option_none">à¤¦à¥‹à¤¹à¤°à¤¾à¤µ à¤¨à¤¹à¥€à¤‚</string>
-    <string name="repeat_option_hour">à¤¹à¤° à¤˜à¤‚à¤Ÿà¥‡</string>
-    <string name="repeat_option_day">à¤¹à¤° à¤¦à¤¿à¤¨</string>
-    <string name="repeat_option_week">à¤¹à¤° à¤¸à¤ªà¥à¤¤à¤¾à¤¹</string>
-    <string name="repeat_option_month">à¤¹à¤° à¤®à¤¹à¥€à¤¨à¥‡</string>
-    <string name="repeat_option_year">à¤¹à¤° à¤¸à¤¾à¤²</string>
-    <string name="repeat_option_custom">à¤•à¤¸à¥à¤Ÿà¤® à¤…à¤‚à¤¤à¤°à¤¾à¤²</string>
-    <string name="task_saved">à¤•à¤¾à¤°à¥à¤¯ à¤¸à¤¹à¥‡à¤œà¤¾ à¤—à¤¯à¤¾</string>
-    <string name="task_deleted">à¤•à¤¾à¤°à¥à¤¯ à¤¹à¤Ÿà¤¾à¤¯à¤¾ à¤—à¤¯à¤¾</string>
-    <string name="task_completed">à¤•à¤¾à¤°à¥à¤¯ à¤…à¤ªà¤¡à¥‡à¤Ÿ à¤¹à¥à¤†</string>
-    <string name="task_failed">à¤•à¤¾à¤°à¥à¤¯ à¤…à¤ªà¤¡à¥‡à¤Ÿ à¤¨à¤¹à¥€à¤‚ à¤¹à¥‹ à¤¸à¤•à¤¾</string>
-    <string name="summary_format">à¤–à¥à¤²à¥‡: %1$d  à¤†à¤œ: %2$d  à¤•à¥à¤²: %3$d</string>
-    <string name="task_pin_label">à¤ªà¤¿à¤¨</string>
-    <string name="task_unpin_label">à¤…à¤¨à¤ªà¤¿à¤¨</string>
-    <string name="task_edit_label">à¤¸à¤‚à¤ªà¤¾à¤¦à¤¿à¤¤ à¤•à¤°à¥‡à¤‚</string>
-    <string name="task_delete_label">à¤¹à¤Ÿà¤¾à¤à¤‚</string>
-    <string name="quick_links_title">à¤¤à¥à¤µà¤°à¤¿à¤¤ à¤²à¤¿à¤‚à¤•</string>
-    <string name="new_link_label">à¤¨à¤¯à¤¾ à¤²à¤¿à¤‚à¤•</string>
-    <string name="widget_tasks_title">à¤•à¤¾à¤°à¥à¤¯</string>
-    <string name="font_dialog_title">à¤«à¤¼à¥‰à¤¨à¥à¤Ÿ à¤šà¥à¤¨à¥‡à¤‚</string>
-    <string name="new_category_label">à¤¨à¤ˆ à¤¶à¥à¤°à¥‡à¤£à¥€</string>
-    <string name="new_subcategory_label">à¤¨à¤ˆ à¤‰à¤ªà¤¶à¥à¤°à¥‡à¤£à¥€</string>
-    <string name="new_child_task_label">à¤¨à¤¯à¤¾ à¤•à¤¾à¤°à¥à¤¯</string>
-    <string name="task_description_label">à¤µà¤¿à¤µà¤°à¤£</string>
-    <string name="task_link_label">à¤¸à¤‚à¤¬à¤¦à¥à¤§ à¤²à¤¿à¤‚à¤•</string>
-    <string name="task_attachment_label">à¤¸à¤‚à¤²à¤—à¥à¤¨ à¤«à¤¼à¤¾à¤‡à¤²</string>
-    <string name="task_attachment_empty">à¤•à¥‹à¤ˆ à¤«à¤¼à¤¾à¤‡à¤² à¤šà¤¯à¤¨à¤¿à¤¤ à¤¨à¤¹à¥€à¤‚</string>
-    <string name="play_label">à¤šà¤²à¤¾à¤à¤‚</string>
-    <string name="stop_label">à¤°à¥‹à¤•à¥‡à¤‚</string>
-    <string name="previous_label">à¤ªà¤¿à¤›à¤²à¤¾</string>
-    <string name="next_label">à¤…à¤—à¤²à¤¾</string>
-    <string name="pdf_page_indicator">à¤ªà¥ƒà¤·à¥à¤  %1$d / %2$d</string>
-    <!-- Fallback entries added to keep this locale 1:1 with the base resources. -->
     <string name="app_name">OpusAgenda</string>
 
-    <string name="app_header_title">â™± OpusAgenda v1.3</string>
+    <string name="app_header_title">♱ OpusAgenda v1.3</string>
 
     <string name="app_font_family">UnifrakturMaguntia</string>
 
-    <string name="run_command_label">RUN</string>
+    <string name="search_hint">खोज कार्य...</string>
 
-    <string name="task_text_hint">Task text</string>
+    <string name="empty_state_all">अभी तक कोई कार्य नहीं. एक बनाने के लिए NEW का उपयोग करें</string>
 
-    <string name="pinned_label">PINNED</string>
+    <string name="empty_state_today">आज कोई जरूरी काम नहीं</string>
 
-    <string name="category_badge_label">CAT</string>
+    <string name="all_label">सब</string>
 
-    <string name="category_edit_label">RENAME</string>
+    <string name="today_label">आज</string>
 
-    <string name="category_due_label">category</string>
+    <string name="new_task_label">नया</string>
 
-    <string name="category_meta_format">children: %1$d  imp: %2$d</string>
+    <string name="run_command_label">भागो</string>
 
-    <string name="task_reminder_value_label">reminder: %1$s</string>
+    <string name="task_text_hint">कार्य पाठ</string>
+
+    <string name="category_text_hint">श्रेणी का नाम</string>
+
+    <string name="save_label">सहेजें</string>
+
+    <string name="cancel_label">रद्द करें</string>
+
+    <string name="pick_due_date_label">नियत तिथि</string>
+
+    <string name="clear_due_date_label">बकाया साफ़ करें</string>
+
+    <string name="pinned_label">पिन किया गया</string>
+
+    <string name="completed_label">पूरा हुआ</string>
+
+    <string name="importance_label">महत्व</string>
+
+    <string name="task_dialog_title_new">नया कार्य</string>
+
+    <string name="task_dialog_title_edit">कार्य संपादित करें</string>
+
+    <string name="category_dialog_title_new">नई श्रेणी</string>
+
+    <string name="category_dialog_title_edit">श्रेणी संपादित करें</string>
+
+    <string name="task_text_required">कार्य पाठ दर्ज करें</string>
+
+    <string name="default_category_name">श्रेणी</string>
+
+    <string name="category_badge_label">बिल्ली</string>
+
+    <string name="category_edit_label">नाम बदलें</string>
+
+    <string name="category_due_label">श्रेणी</string>
+
+    <string name="category_meta_format">उप-आइटम: %1$d  महत्व: %2$d</string>
+
+    <string name="category_move_invalid">उस कदम से एक अमान्य नेस्टेड श्रेणी बन जाएगी</string>
+
+    <string name="task_due_label">देय: %1$s</string>
+
+    <string name="task_reminder_value_label">अनुस्मारक: %1$s</string>
 
     <string name="task_date_with_relative">%1$s - %2$s</string>
 
-    <string name="clear_reminder_label">CLEAR REMINDER</string>
+    <string name="no_due_date">कोई नियत तारीख नहीं</string>
+
+    <string name="no_reminder">कोई नहीं</string>
+
+    <string name="due_relative_overdue">अतिदेय %1$dd</string>
+
+    <string name="due_relative_today">आज</string>
+
+    <string name="due_relative_tomorrow">कल</string>
+
+    <string name="due_relative_in">%1$dd में</string>
+
+    <string name="pick_reminder_label">मुझे याद दिलाओ</string>
+
+    <string name="pick_repeat_label">दोहराएँ</string>
+
+    <string name="clear_reminder_label">स्पष्ट अनुस्मारक</string>
+
+    <string name="reminder_dialog_title">अनुस्मारक चुनें</string>
+
+    <string name="reminder_option_none">कोई अनुस्मारक नहीं</string>
+
+    <string name="reminder_option_hour">1 घंटा पहले</string>
+
+    <string name="reminder_option_day">1 दिन पहले</string>
+
+    <string name="reminder_option_week">1 सप्ताह पहले</string>
+
+    <string name="reminder_option_month">1 महीने पहले</string>
+
+    <string name="reminder_option_custom">कस्टम दिनांक और समय</string>
 
     <string name="reminder_summary_with_datetime">%1$s (%2$s)</string>
 
-    <string name="reminder_custom_date_title">Reminder date</string>
+    <string name="reminder_requires_due_date">प्रीसेट का उपयोग करने के लिए पहले एक नियत तिथि निर्धारित करें</string>
 
-    <string name="reminder_custom_time_title">Reminder time</string>
+    <string name="reminder_time_in_past">अनुस्मारक समय भविष्य में होना चाहिए</string>
 
-    <string name="reminder_channel_name">Task reminders</string>
+    <string name="reminder_custom_date_title">अनुस्मारक दिनांक</string>
 
-    <string name="reminder_channel_description">Notifications for scheduled task reminders</string>
+    <string name="reminder_custom_time_title">अनुस्मारक समय</string>
 
-    <string name="reminder_notification_title">Task reminder</string>
+    <string name="reminder_channel_name">कार्य अनुस्मारक</string>
 
-    <string name="task_repeat_value_label">repeat: %1$s</string>
+    <string name="reminder_channel_description">निर्धारित कार्य अनुस्मारक के लिए अधिसूचनाएँ</string>
 
-    <string name="repeat_none">none</string>
+    <string name="reminder_notification_title">कार्य अनुस्मारक</string>
 
-    <string name="repeat_requires_reminder">Set a reminder first to use repetition</string>
+    <string name="notifications_permission_denied">अनुस्मारक के लिए अधिसूचना अनुमति आवश्यक है</string>
 
-    <string name="repeat_custom_title">Custom repetition</string>
+    <string name="task_repeat_value_label">दोहराएँ: %1$s</string>
 
-    <string name="repeat_custom_amount_hint">Interval amount</string>
+    <string name="repeat_none">कोई नहीं</string>
 
-    <string name="repeat_custom_amount_invalid">Enter a valid repetition amount</string>
+    <string name="repeat_dialog_title">दोहराव चुनें</string>
 
-    <string name="repeat_unit_minutes_label">Minutes</string>
+    <string name="repeat_option_none">कोई दोहराना नहीं</string>
 
-    <string name="repeat_unit_days_label">Days</string>
+    <string name="repeat_option_hour">हर घंटे</string>
 
-    <string name="repeat_unit_hours_label">Hours</string>
+    <string name="repeat_option_day">हर दिन</string>
 
-    <string name="repeat_unit_weeks_label">Weeks</string>
+    <string name="repeat_option_week">हर सप्ताह</string>
 
-    <string name="repeat_unit_months_label">Months</string>
+    <string name="repeat_option_month">हर महीने</string>
 
-    <string name="repeat_unit_years_label">Years</string>
+    <string name="repeat_option_year">हर साल</string>
 
-    <string name="link_open_label">OPEN</string>
+    <string name="repeat_option_custom">कस्टम अंतराल</string>
 
-    <string name="link_missing">No link available to open</string>
+    <string name="repeat_requires_reminder">दोहराव का उपयोग करने के लिए पहले एक अनुस्मारक सेट करें</string>
 
-    <string name="invalid_command">Invalid command</string>
+    <string name="repeat_custom_title">कस्टम पुनरावृत्ति</string>
 
-    <string name="task_meta_format">imp: %1$d  due: %2$s  score: %3$d</string>
+    <string name="repeat_custom_amount_hint">अंतराल राशि</string>
 
-    <string name="quick_link_label_hint">Short name</string>
+    <string name="repeat_custom_amount_invalid">एक वैध पुनरावृत्ति राशि दर्ज करें</string>
+
+    <string name="repeat_unit_minutes_label">मिनट</string>
+
+    <string name="repeat_unit_days_label">दिन</string>
+
+    <string name="repeat_unit_hours_label">घंटे</string>
+
+    <string name="repeat_unit_weeks_label">सप्ताह</string>
+
+    <string name="repeat_unit_months_label">महीने</string>
+
+    <string name="repeat_unit_years_label">साल</string>
+
+    <string name="link_open_label">खुला</string>
+
+    <string name="link_missing">खोलने के लिए कोई लिंक उपलब्ध नहीं है</string>
+
+    <string name="invalid_command">अमान्य आदेश</string>
+
+    <string name="task_saved">कार्य सहेजा गया</string>
+
+    <string name="task_deleted">कार्य हटा दिया गया</string>
+
+    <string name="task_completed">कार्य अद्यतन किया गया</string>
+
+    <string name="task_failed">कार्य अद्यतन नहीं किया जा सका</string>
+
+    <string name="summary_format">खुले: %1$d  आज: %2$d  कुल: %3$d</string>
+
+    <string name="task_meta_format">महत्व: %1$d  देय: %2$s  स्कोर: %3$d</string>
+
+    <string name="task_pin_label">पिन</string>
+
+    <string name="task_unpin_label">अनपिन</string>
+
+    <string name="task_edit_label">संपादित करें</string>
+
+    <string name="task_delete_label">हटाएं</string>
+
+    <string name="quick_links_title">त्वरित लिंक</string>
+
+    <string name="new_link_label">नया लिंक</string>
+
+    <string name="quick_link_label_hint">संक्षिप्त नाम</string>
 
     <string name="quick_link_url_hint">https://quick.link</string>
 
-    <string name="quick_link_new_title">New quick link</string>
+    <string name="quick_link_new_title">नया त्वरित लिंक</string>
 
-    <string name="quick_link_edit_title">Edit quick link</string>
+    <string name="quick_link_edit_title">त्वरित लिंक संपादित करें</string>
 
-    <string name="quick_link_saved">Quick link saved</string>
+    <string name="quick_link_saved">त्वरित लिंक सहेजा गया</string>
 
-    <string name="quick_link_deleted">Quick link deleted</string>
+    <string name="quick_link_deleted">त्वरित लिंक हटा दिया गया</string>
 
-    <string name="quick_link_invalid">Enter a valid name and URL</string>
+    <string name="quick_link_invalid">एक मान्य नाम और URL दर्ज करें</string>
 
-    <string name="quick_link_delete_label">DELETE</string>
+    <string name="quick_link_delete_label">हटाएँ</string>
 
-    <string name="widget_tasks_description">Task list with ALL and TODAY filters. Tap a row to toggle done</string>
+    <string name="widget_tasks_title">कार्य</string>
 
-    <string name="widget_quick_links_description">Quick links saved in OpusAgenda. Tap to open in the browser</string>
+    <string name="widget_tasks_description">सभी और आज के फ़िल्टर के साथ कार्य सूची। पूर्ण टॉगल करने के लिए किसी पंक्ति पर टैप करें</string>
 
-    <string name="widget_quick_links_empty">No quick links. Add them in the app</string>
+    <string name="widget_quick_links_description">त्वरित लिंक OpusAgenda में सहेजे गए। ब्राउज़र में खोलने के लिए टैप करें</string>
+
+    <string name="widget_quick_links_empty">कोई त्वरित लिंक नहीं. उन्हें ऐप में जोड़ें</string>
 
     <string name="clock_time_placeholder">00:00:00</string>
 
     <string name="clock_date_placeholder">10 Apr 2026</string>
 
-    <string name="font_applied">Font applied: %1$s</string>
+    <string name="font_dialog_title">फ़ॉन्ट चुनें</string>
 
-    <string name="task_description_hint">Add some context for this task</string>
+    <string name="font_applied">फ़ॉन्ट लागू: %1$s</string>
 
-    <string name="task_description_save">SAVE DESC</string>
+    <string name="new_category_label">नई बिल्ली</string>
 
-    <string name="task_description_clear">CLEAR DESC</string>
+    <string name="new_subcategory_label">नया विषय</string>
 
-    <string name="task_description_required">Description cannot be empty</string>
+    <string name="new_child_task_label">नया कार्य</string>
 
-    <string name="task_description_saved">Description staged</string>
+    <string name="task_description_label">विवरण</string>
 
-    <string name="task_description_title">Task description</string>
+    <string name="task_description_hint">इस कार्य के लिए कुछ संदर्भ जोड़ें</string>
 
-    <string name="task_description_icon_label">Open description</string>
+    <string name="task_description_save">विवरण सहेजें</string>
+
+    <string name="task_description_clear">स्पष्ट वर्णन</string>
+
+    <string name="task_description_required">विवरण खाली नहीं हो सकता</string>
+
+    <string name="task_description_saved">वर्णन का मंचन किया गया</string>
+
+    <string name="task_description_title">कार्य विवरण</string>
+
+    <string name="task_description_icon_label">विवरण खोलें</string>
+
+    <string name="task_link_label">संबद्ध लिंक</string>
 
     <string name="task_link_hint">https://linked.resource</string>
 
-    <string name="task_link_save">SAVE LINK</string>
+    <string name="task_link_save">लिंक सहेजें</string>
 
-    <string name="task_link_clear">CLEAR LINK</string>
+    <string name="task_link_clear">लिंक साफ़ करें</string>
 
-    <string name="task_link_required">Enter a valid link first</string>
+    <string name="task_link_required">पहले एक वैध लिंक दर्ज करें</string>
 
-    <string name="task_link_saved">Link staged</string>
+    <string name="task_link_saved">लिंक चरणबद्ध</string>
 
-    <string name="task_link_title">Task link</string>
+    <string name="task_link_title">कार्य लिंक</string>
 
-    <string name="task_link_icon_label">Open link details</string>
+    <string name="task_link_icon_label">लिंक विवरण खोलें</string>
 
-    <string name="task_attachment_pick">PICK FILE</string>
+    <string name="task_attachment_label">संलग्न फ़ाइल</string>
 
-    <string name="task_attachment_clear">CLEAR FILE</string>
+    <string name="task_attachment_empty">कोई फ़ाइल चयनित नहीं</string>
 
-    <string name="task_attachment_saved">File attached</string>
+    <string name="task_attachment_pick">फ़ाइल चुनें</string>
 
-    <string name="task_attachment_picker_failed">Could not read the selected file</string>
+    <string name="task_attachment_clear">फ़ाइल साफ़ करें</string>
 
-    <string name="task_attachment_open_failed">No app can open that attachment</string>
+    <string name="task_attachment_saved">फ़ाइल संलग्न है</string>
 
-    <string name="task_attachment_title">Task attachment</string>
+    <string name="task_attachment_picker_failed">चयनित फ़ाइल को पढ़ा नहीं जा सका</string>
 
-    <string name="task_attachment_icon_label">Open attachment details</string>
+    <string name="task_attachment_open_failed">कोई भी ऐप उस अटैचमेंट को नहीं खोल सकता</string>
 
-    <string name="task_attachment_name_label">file: %1$s</string>
+    <string name="task_attachment_title">कार्य अनुलग्नक</string>
 
-    <string name="task_attachment_type_label">type: %1$s</string>
+    <string name="task_attachment_icon_label">अनुलग्नक विवरण खोलें</string>
 
-    <string name="task_attachment_no_preview">No preview available</string>
+    <string name="task_attachment_name_label">फ़ाइल: %1$s</string>
+
+    <string name="task_attachment_type_label">प्रकार: %1$s</string>
+
+    <string name="play_label">खेलें</string>
+
+    <string name="stop_label">रुकें</string>
+
+    <string name="task_attachment_no_preview">कोई पूर्वावलोकन उपलब्ध नहीं है</string>
 
     <string-array name="font_option_labels">
-            <item>Inter</item>
-            <item>Geo</item>
-            <item>MedievalSharp</item>
-            <item>Octosquares</item>
-            <item>UnifrakturMaguntia</item>
-        </string-array>
+        <item>Inter</item>
+        <item>Geo</item>
+        <item>MedievalSharp</item>
+        <item>Octosquares</item>
+        <item>UnifrakturMaguntia</item>
+    </string-array>
 
     <string-array name="importance_options">
-            <item>1 LOW</item>
-            <item>2 NORMAL</item>
-            <item>3 HIGH</item>
-            <item>4 CRITICAL</item>
-        </string-array>
+        <item>1 कम</item>
+        <item>2 सामान्य</item>
+        <item>3 उच्च</item>
+        <item>4 गंभीर</item>
+    </string-array>
 
     <plurals name="repeat_unit_minutes">
-            <item quantity="one">%1$d minute</item>
-            <item quantity="other">%1$d minutes</item>
-        </plurals>
+        <item quantity="one">%1$d मिनट</item>
+        <item quantity="other">%1$d मिनट</item>
+    </plurals>
 
     <plurals name="repeat_unit_hours">
-            <item quantity="one">%1$d hour</item>
-            <item quantity="other">%1$d hours</item>
-        </plurals>
+        <item quantity="one">%1$d घंटा</item>
+        <item quantity="other">%1$d घंटे</item>
+    </plurals>
 
     <plurals name="repeat_unit_days">
-            <item quantity="one">%1$d day</item>
-            <item quantity="other">%1$d days</item>
-        </plurals>
+        <item quantity="one">%1$d दिन</item>
+        <item quantity="other">%1$d दिन</item>
+    </plurals>
 
     <plurals name="repeat_unit_weeks">
-            <item quantity="one">%1$d week</item>
-            <item quantity="other">%1$d weeks</item>
-        </plurals>
+        <item quantity="one">%1$d सप्ताह</item>
+        <item quantity="other">%1$d सप्ताह</item>
+    </plurals>
 
     <plurals name="repeat_unit_months">
-            <item quantity="one">%1$d month</item>
-            <item quantity="other">%1$d months</item>
-        </plurals>
+        <item quantity="one">%1$d माह</item>
+        <item quantity="other">%1$d महीने</item>
+    </plurals>
 
     <plurals name="repeat_unit_years">
-            <item quantity="one">%1$d year</item>
-            <item quantity="other">%1$d years</item>
-        </plurals>
+        <item quantity="one">%1$d वर्ष</item>
+        <item quantity="other">%1$d वर्ष</item>
+    </plurals>
+
+    <string name="previous_label">पिछला</string>
+
+    <string name="next_label">अगला</string>
+
+    <string name="pdf_page_indicator">पृष्ठ %1$d / %2$d</string>
 </resources>
+
+
 

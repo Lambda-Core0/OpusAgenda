@@ -1,263 +1,338 @@
 ﻿<resources>
-    <string name="search_hint">æœç´¢ä»»åŠ¡...</string>
-    <string name="empty_state_all">è¿˜æ²¡æœ‰ä»»åŠ¡ã€‚ä½¿ç”¨æ–°å»ºæ¥åˆ›å»ºä¸€ä¸ª</string>
-    <string name="empty_state_today">ä»Šå¤©æ²¡æœ‰ç´§æ€¥ä»»åŠ¡</string>
-    <string name="all_label">å…¨éƒ¨</string>
-    <string name="today_label">ä»Šå¤©</string>
-    <string name="new_task_label">æ–°å»º</string>
-    <string name="save_label">ä¿å­˜</string>
-    <string name="cancel_label">å–æ¶ˆ</string>
-    <string name="pick_due_date_label">æˆªæ­¢æ—¥æœŸ</string>
-    <string name="clear_due_date_label">æ¸…é™¤æ—¥æœŸ</string>
-    <string name="completed_label">å·²å®Œæˆ</string>
-    <string name="importance_label">é‡è¦æ€§</string>
-    <string name="task_dialog_title_new">æ–°ä»»åŠ¡</string>
-    <string name="task_dialog_title_edit">ç¼–è¾‘ä»»åŠ¡</string>
-    <string name="task_text_required">è¯·è¾“å…¥ä»»åŠ¡å†…å®¹</string>
-    <string name="default_category_name">ç±»åˆ«</string>
-    <string name="category_move_invalid">è¯¥ç§»åŠ¨ä¼šåˆ›å»ºæ— æ•ˆçš„åµŒå¥—ç±»åˆ«</string>
-    <string name="task_due_label">æˆªæ­¢ï¼š%1$s</string>
-    <string name="no_due_date">æ— æˆªæ­¢æ—¥æœŸ</string>
-    <string name="no_reminder">æ— </string>
-    <string name="due_relative_overdue">é€¾æœŸ %1$d å¤©</string>
-    <string name="due_relative_today">ä»Šå¤©</string>
-    <string name="due_relative_tomorrow">æ˜Žå¤©</string>
-    <string name="due_relative_in">%1$d å¤©åŽ</string>
-    <string name="pick_reminder_label">æé†’æˆ‘</string>
-    <string name="pick_repeat_label">é‡å¤</string>
-    <string name="reminder_dialog_title">é€‰æ‹©æé†’</string>
-    <string name="reminder_option_none">æ— æé†’</string>
-    <string name="reminder_option_hour">æå‰ 1 å°æ—¶</string>
-    <string name="reminder_option_day">æå‰ 1 å¤©</string>
-    <string name="reminder_option_week">æå‰ 1 å‘¨</string>
-    <string name="reminder_option_month">æå‰ 1 ä¸ªæœˆ</string>
-    <string name="reminder_option_custom">è‡ªå®šä¹‰æ—¥æœŸå’Œæ—¶é—´</string>
-    <string name="reminder_requires_due_date">è¯·å…ˆè®¾ç½®æˆªæ­¢æ—¥æœŸä»¥ä½¿ç”¨é¢„è®¾</string>
-    <string name="reminder_time_in_past">æé†’æ—¶é—´å¿…é¡»åœ¨æœªæ¥</string>
-    <string name="notifications_permission_denied">æé†’éœ€è¦é€šçŸ¥æƒé™</string>
-    <string name="repeat_dialog_title">é€‰æ‹©é‡å¤</string>
-    <string name="repeat_option_none">ä¸é‡å¤</string>
-    <string name="repeat_option_hour">æ¯å°æ—¶</string>
-    <string name="repeat_option_day">æ¯å¤©</string>
-    <string name="repeat_option_week">æ¯å‘¨</string>
-    <string name="repeat_option_month">æ¯æœˆ</string>
-    <string name="repeat_option_year">æ¯å¹´</string>
-    <string name="repeat_option_custom">è‡ªå®šä¹‰é—´éš”</string>
-    <string name="task_saved">ä»»åŠ¡å·²ä¿å­˜</string>
-    <string name="task_deleted">ä»»åŠ¡å·²åˆ é™¤</string>
-    <string name="task_completed">ä»»åŠ¡å·²æ›´æ–°</string>
-    <string name="task_failed">æ— æ³•æ›´æ–°ä»»åŠ¡</string>
-    <string name="summary_format">æœªå®Œæˆï¼š%1$d  ä»Šå¤©ï¼š%2$d  æ€»è®¡ï¼š%3$d</string>
-    <string name="task_pin_label">ç½®é¡¶</string>
-    <string name="task_unpin_label">å–æ¶ˆç½®é¡¶</string>
-    <string name="task_edit_label">ç¼–è¾‘</string>
-    <string name="task_delete_label">åˆ é™¤</string>
-    <string name="quick_links_title">å¿«é€Ÿé“¾æŽ¥</string>
-    <string name="new_link_label">æ–°é“¾æŽ¥</string>
-    <string name="widget_tasks_title">ä»»åŠ¡</string>
-    <string name="font_dialog_title">é€‰æ‹©å­—ä½“</string>
-    <string name="new_category_label">æ–°ç±»åˆ«</string>
-    <string name="new_subcategory_label">æ–°å­ç±»</string>
-    <string name="new_child_task_label">æ–°ä»»åŠ¡</string>
-    <string name="task_description_label">æè¿°</string>
-    <string name="task_link_label">å…³è”é“¾æŽ¥</string>
-    <string name="task_attachment_label">é™„ä»¶æ–‡ä»¶</string>
-    <string name="task_attachment_empty">æœªé€‰æ‹©æ–‡ä»¶</string>
-    <string name="play_label">æ’­æ”¾</string>
-    <string name="stop_label">åœæ­¢</string>
-    <string name="previous_label">ä¸Šä¸€é¡µ</string>
-    <string name="next_label">ä¸‹ä¸€é¡µ</string>
-    <string name="pdf_page_indicator">ç¬¬ %1$d / %2$d é¡µ</string>
-    <!-- Fallback entries added to keep this locale 1:1 with the base resources. -->
     <string name="app_name">OpusAgenda</string>
 
-    <string name="app_header_title">â™± OpusAgenda v1.3</string>
+    <string name="app_header_title">♱ OpusAgenda v1.3</string>
 
     <string name="app_font_family">UnifrakturMaguntia</string>
 
-    <string name="run_command_label">RUN</string>
+    <string name="search_hint">搜索任务...</string>
 
-    <string name="task_text_hint">Task text</string>
+    <string name="empty_state_all">还没有任务。使用 NEW 创建一个</string>
 
-    <string name="pinned_label">PINNED</string>
+    <string name="empty_state_today">今天没有紧急任务</string>
 
-    <string name="category_badge_label">CAT</string>
+    <string name="all_label">全部</string>
 
-    <string name="category_edit_label">RENAME</string>
+    <string name="today_label">今天</string>
 
-    <string name="category_due_label">category</string>
+    <string name="new_task_label">新</string>
 
-    <string name="category_meta_format">children: %1$d  imp: %2$d</string>
+    <string name="run_command_label">运行</string>
 
-    <string name="task_reminder_value_label">reminder: %1$s</string>
+    <string name="task_text_hint">任务文本</string>
+
+    <string name="category_text_hint">类别名称</string>
+
+    <string name="save_label">保存</string>
+
+    <string name="cancel_label">取消</string>
+
+    <string name="pick_due_date_label">截止日期</string>
+
+    <string name="clear_due_date_label">清除到期</string>
+
+    <string name="pinned_label">固定</string>
+
+    <string name="completed_label">已完成</string>
+
+    <string name="importance_label">重要性</string>
+
+    <string name="task_dialog_title_new">新任务</string>
+
+    <string name="task_dialog_title_edit">编辑任务</string>
+
+    <string name="category_dialog_title_new">新类别</string>
+
+    <string name="category_dialog_title_edit">编辑类别</string>
+
+    <string name="task_text_required">输入任务文本</string>
+
+    <string name="default_category_name">类别</string>
+
+    <string name="category_badge_label">计算机辅助翻译</string>
+
+    <string name="category_edit_label">重命名</string>
+
+    <string name="category_due_label">类别</string>
+
+    <string name="category_meta_format">子项：%1$d  重要度：%2$d</string>
+
+    <string name="category_move_invalid">该举动将创建无效的嵌套类别</string>
+
+    <string name="task_due_label">由于：%1$s</string>
+
+    <string name="task_reminder_value_label">提醒：%1$s</string>
 
     <string name="task_date_with_relative">%1$s - %2$s</string>
 
-    <string name="clear_reminder_label">CLEAR REMINDER</string>
+    <string name="no_due_date">没有截止日期</string>
+
+    <string name="no_reminder">无</string>
+
+    <string name="due_relative_overdue">逾期%1$dd</string>
+
+    <string name="due_relative_today">今天</string>
+
+    <string name="due_relative_tomorrow">明天</string>
+
+    <string name="due_relative_in">在%1$dd中</string>
+
+    <string name="pick_reminder_label">提醒我</string>
+
+    <string name="pick_repeat_label">重复</string>
+
+    <string name="clear_reminder_label">明确提醒</string>
+
+    <string name="reminder_dialog_title">选择提醒</string>
+
+    <string name="reminder_option_none">无提醒</string>
+
+    <string name="reminder_option_hour">1小时前</string>
+
+    <string name="reminder_option_day">1天前</string>
+
+    <string name="reminder_option_week">1周前</string>
+
+    <string name="reminder_option_month">1个月前</string>
+
+    <string name="reminder_option_custom">自定义日期和时间</string>
 
     <string name="reminder_summary_with_datetime">%1$s (%2$s)</string>
 
-    <string name="reminder_custom_date_title">Reminder date</string>
+    <string name="reminder_requires_due_date">首先设置截止日期以使用预设</string>
 
-    <string name="reminder_custom_time_title">Reminder time</string>
+    <string name="reminder_time_in_past">提醒时间必须是将来的时间</string>
 
-    <string name="reminder_channel_name">Task reminders</string>
+    <string name="reminder_custom_date_title">提醒日期</string>
 
-    <string name="reminder_channel_description">Notifications for scheduled task reminders</string>
+    <string name="reminder_custom_time_title">提醒时间</string>
 
-    <string name="reminder_notification_title">Task reminder</string>
+    <string name="reminder_channel_name">任务提醒</string>
 
-    <string name="task_repeat_value_label">repeat: %1$s</string>
+    <string name="reminder_channel_description">计划任务提醒通知</string>
 
-    <string name="repeat_none">none</string>
+    <string name="reminder_notification_title">任务提醒</string>
 
-    <string name="repeat_requires_reminder">Set a reminder first to use repetition</string>
+    <string name="notifications_permission_denied">提醒需要通知权限</string>
 
-    <string name="repeat_custom_title">Custom repetition</string>
+    <string name="task_repeat_value_label">重复：%1$s</string>
 
-    <string name="repeat_custom_amount_hint">Interval amount</string>
+    <string name="repeat_none">无</string>
 
-    <string name="repeat_custom_amount_invalid">Enter a valid repetition amount</string>
+    <string name="repeat_dialog_title">选择重复</string>
 
-    <string name="repeat_unit_minutes_label">Minutes</string>
+    <string name="repeat_option_none">不重复</string>
 
-    <string name="repeat_unit_days_label">Days</string>
+    <string name="repeat_option_hour">每小时</string>
 
-    <string name="repeat_unit_hours_label">Hours</string>
+    <string name="repeat_option_day">每天</string>
 
-    <string name="repeat_unit_weeks_label">Weeks</string>
+    <string name="repeat_option_week">每周</string>
 
-    <string name="repeat_unit_months_label">Months</string>
+    <string name="repeat_option_month">每个月</string>
 
-    <string name="repeat_unit_years_label">Years</string>
+    <string name="repeat_option_year">每年</string>
 
-    <string name="link_open_label">OPEN</string>
+    <string name="repeat_option_custom">自定义间隔</string>
 
-    <string name="link_missing">No link available to open</string>
+    <string name="repeat_requires_reminder">首先设置提醒以使用重复</string>
 
-    <string name="invalid_command">Invalid command</string>
+    <string name="repeat_custom_title">自定义重复</string>
 
-    <string name="task_meta_format">imp: %1$d  due: %2$s  score: %3$d</string>
+    <string name="repeat_custom_amount_hint">间隔量</string>
 
-    <string name="quick_link_label_hint">Short name</string>
+    <string name="repeat_custom_amount_invalid">输入有效的重复次数</string>
+
+    <string name="repeat_unit_minutes_label">分钟</string>
+
+    <string name="repeat_unit_days_label">天数</string>
+
+    <string name="repeat_unit_hours_label">时间</string>
+
+    <string name="repeat_unit_weeks_label">周数</string>
+
+    <string name="repeat_unit_months_label">几个月</string>
+
+    <string name="repeat_unit_years_label">年</string>
+
+    <string name="link_open_label">开放</string>
+
+    <string name="link_missing">没有可以打开的链接</string>
+
+    <string name="invalid_command">无效命令</string>
+
+    <string name="task_saved">任务已保存</string>
+
+    <string name="task_deleted">任务已删除</string>
+
+    <string name="task_completed">任务已更新</string>
+
+    <string name="task_failed">无法更新任务</string>
+
+    <string name="summary_format">未完成：%1$d  今天：%2$d  总计：%3$d</string>
+
+    <string name="task_meta_format">重要度：%1$d  截止：%2$s  分数：%3$d</string>
+
+    <string name="task_pin_label">密码</string>
+
+    <string name="task_unpin_label">取消密码</string>
+
+    <string name="task_edit_label">编辑</string>
+
+    <string name="task_delete_label">德尔</string>
+
+    <string name="quick_links_title">快速链接</string>
+
+    <string name="new_link_label">新链接</string>
+
+    <string name="quick_link_label_hint">简称</string>
 
     <string name="quick_link_url_hint">https://quick.link</string>
 
-    <string name="quick_link_new_title">New quick link</string>
+    <string name="quick_link_new_title">新的快速链接</string>
 
-    <string name="quick_link_edit_title">Edit quick link</string>
+    <string name="quick_link_edit_title">编辑快速链接</string>
 
-    <string name="quick_link_saved">Quick link saved</string>
+    <string name="quick_link_saved">已保存快速链接</string>
 
-    <string name="quick_link_deleted">Quick link deleted</string>
+    <string name="quick_link_deleted">快速链接已删除</string>
 
-    <string name="quick_link_invalid">Enter a valid name and URL</string>
+    <string name="quick_link_invalid">输入有效的名称和 URL</string>
 
-    <string name="quick_link_delete_label">DELETE</string>
+    <string name="quick_link_delete_label">删除</string>
 
-    <string name="widget_tasks_description">Task list with ALL and TODAY filters. Tap a row to toggle done</string>
+    <string name="widget_tasks_title">任务</string>
 
-    <string name="widget_quick_links_description">Quick links saved in OpusAgenda. Tap to open in the browser</string>
+    <string name="widget_tasks_description">带有“全部”和“今日”过滤器的任务列表。点击一行即可切换完成</string>
 
-    <string name="widget_quick_links_empty">No quick links. Add them in the app</string>
+    <string name="widget_quick_links_description">快速链接保存在 OpusAgenda 中。点击以在浏览器中打开</string>
+
+    <string name="widget_quick_links_empty">没有快速链接。将它们添加到应用程序中</string>
 
     <string name="clock_time_placeholder">00:00:00</string>
 
     <string name="clock_date_placeholder">10 Apr 2026</string>
 
-    <string name="font_applied">Font applied: %1$s</string>
+    <string name="font_dialog_title">选择字体</string>
 
-    <string name="task_description_hint">Add some context for this task</string>
+    <string name="font_applied">应用字体：%1$s</string>
 
-    <string name="task_description_save">SAVE DESC</string>
+    <string name="new_category_label">新猫</string>
 
-    <string name="task_description_clear">CLEAR DESC</string>
+    <string name="new_subcategory_label">新子BC</string>
 
-    <string name="task_description_required">Description cannot be empty</string>
+    <string name="new_child_task_label">新任务</string>
 
-    <string name="task_description_saved">Description staged</string>
+    <string name="task_description_label">描述</string>
 
-    <string name="task_description_title">Task description</string>
+    <string name="task_description_hint">为此任务添加一些上下文</string>
 
-    <string name="task_description_icon_label">Open description</string>
+    <string name="task_description_save">保存描述</string>
+
+    <string name="task_description_clear">清晰的描述</string>
+
+    <string name="task_description_required">描述不能为空</string>
+
+    <string name="task_description_saved">描述上演</string>
+
+    <string name="task_description_title">任务描述</string>
+
+    <string name="task_description_icon_label">打开描述</string>
+
+    <string name="task_link_label">相关链接</string>
 
     <string name="task_link_hint">https://linked.resource</string>
 
-    <string name="task_link_save">SAVE LINK</string>
+    <string name="task_link_save">保存链接</string>
 
-    <string name="task_link_clear">CLEAR LINK</string>
+    <string name="task_link_clear">清晰的链接</string>
 
-    <string name="task_link_required">Enter a valid link first</string>
+    <string name="task_link_required">首先输入有效的链接</string>
 
-    <string name="task_link_saved">Link staged</string>
+    <string name="task_link_saved">链接已上演</string>
 
-    <string name="task_link_title">Task link</string>
+    <string name="task_link_title">任务链接</string>
 
-    <string name="task_link_icon_label">Open link details</string>
+    <string name="task_link_icon_label">打开链接详细信息</string>
 
-    <string name="task_attachment_pick">PICK FILE</string>
+    <string name="task_attachment_label">附件</string>
 
-    <string name="task_attachment_clear">CLEAR FILE</string>
+    <string name="task_attachment_empty">未选择文件</string>
 
-    <string name="task_attachment_saved">File attached</string>
+    <string name="task_attachment_pick">选择文件</string>
 
-    <string name="task_attachment_picker_failed">Could not read the selected file</string>
+    <string name="task_attachment_clear">清除文件</string>
 
-    <string name="task_attachment_open_failed">No app can open that attachment</string>
+    <string name="task_attachment_saved">文件已附</string>
 
-    <string name="task_attachment_title">Task attachment</string>
+    <string name="task_attachment_picker_failed">无法读取所选文件</string>
 
-    <string name="task_attachment_icon_label">Open attachment details</string>
+    <string name="task_attachment_open_failed">没有应用程序可以打开该附件</string>
 
-    <string name="task_attachment_name_label">file: %1$s</string>
+    <string name="task_attachment_title">任务附件</string>
 
-    <string name="task_attachment_type_label">type: %1$s</string>
+    <string name="task_attachment_icon_label">打开附件详细信息</string>
 
-    <string name="task_attachment_no_preview">No preview available</string>
+    <string name="task_attachment_name_label">文件：%1$s</string>
+
+    <string name="task_attachment_type_label">型号：%1$s</string>
+
+    <string name="play_label">玩</string>
+
+    <string name="stop_label">停止</string>
+
+    <string name="task_attachment_no_preview">没有可用的预览</string>
 
     <string-array name="font_option_labels">
-            <item>Inter</item>
-            <item>Geo</item>
-            <item>MedievalSharp</item>
-            <item>Octosquares</item>
-            <item>UnifrakturMaguntia</item>
-        </string-array>
+        <item>Inter</item>
+        <item>Geo</item>
+        <item>MedievalSharp</item>
+        <item>Octosquares</item>
+        <item>UnifrakturMaguntia</item>
+    </string-array>
 
     <string-array name="importance_options">
-            <item>1 LOW</item>
-            <item>2 NORMAL</item>
-            <item>3 HIGH</item>
-            <item>4 CRITICAL</item>
-        </string-array>
+        <item>1 低</item>
+        <item>2 正常</item>
+        <item>3 高</item>
+        <item>4 关键</item>
+    </string-array>
 
     <plurals name="repeat_unit_minutes">
-            <item quantity="one">%1$d minute</item>
-            <item quantity="other">%1$d minutes</item>
-        </plurals>
+        <item quantity="one">%1$d 分钟</item>
+        <item quantity="other">%1$d 分钟</item>
+    </plurals>
 
     <plurals name="repeat_unit_hours">
-            <item quantity="one">%1$d hour</item>
-            <item quantity="other">%1$d hours</item>
-        </plurals>
+        <item quantity="one">%1$d小时</item>
+        <item quantity="other">%1$d小时</item>
+    </plurals>
 
     <plurals name="repeat_unit_days">
-            <item quantity="one">%1$d day</item>
-            <item quantity="other">%1$d days</item>
-        </plurals>
+        <item quantity="one">%1$d 天</item>
+        <item quantity="other">%1$d 天</item>
+    </plurals>
 
     <plurals name="repeat_unit_weeks">
-            <item quantity="one">%1$d week</item>
-            <item quantity="other">%1$d weeks</item>
-        </plurals>
+        <item quantity="one">%1$d周</item>
+        <item quantity="other">%1$d周</item>
+    </plurals>
 
     <plurals name="repeat_unit_months">
-            <item quantity="one">%1$d month</item>
-            <item quantity="other">%1$d months</item>
-        </plurals>
+        <item quantity="one">%1$d月</item>
+        <item quantity="other">%1$d月</item>
+    </plurals>
 
     <plurals name="repeat_unit_years">
-            <item quantity="one">%1$d year</item>
-            <item quantity="other">%1$d years</item>
-        </plurals>
+        <item quantity="one">%1$d 年</item>
+        <item quantity="other">%1$d 年</item>
+    </plurals>
+
+    <string name="previous_label">上一篇</string>
+
+    <string name="next_label">下一个</string>
+
+    <string name="pdf_page_indicator">第 %1$d / %2$d 页</string>
 </resources>
+
 

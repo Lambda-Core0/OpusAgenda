@@ -1,146 +1,287 @@
-<resources>
+﻿<resources>
     <string name="app_name">OpusAgenda</string>
+
     <string name="app_header_title">♱ OpusAgenda v1.3</string>
 
     <string name="app_font_family">UnifrakturMaguntia</string>
 
     <string name="search_hint">buscar tareas...</string>
+
     <string name="empty_state_all">No hay tareas. Usa NUEVA para crear una nueva tarea</string>
+
     <string name="empty_state_today">No hay tareas urgentes para hoy</string>
+
     <string name="all_label">TODAS</string>
+
     <string name="today_label">HOY</string>
+
     <string name="new_task_label">NUEVA</string>
+
     <string name="run_command_label">EJECUTAR</string>
+
     <string name="task_text_hint">Texto de la tarea</string>
+
+    <string name="category_text_hint">Nombre de la categoría</string>
+
     <string name="save_label">GUARDAR</string>
+
     <string name="cancel_label">CANCELAR</string>
+
     <string name="pick_due_date_label">FECHA LÍMITE</string>
+
     <string name="clear_due_date_label">LIMPIAR FECHA</string>
+
     <string name="pinned_label">FIJADA</string>
+
     <string name="completed_label">Completada</string>
+
     <string name="importance_label">Importancia</string>
+
     <string name="task_dialog_title_new">Nueva tarea</string>
+
     <string name="task_dialog_title_edit">Editar tarea</string>
+
+    <string name="category_dialog_title_new">Nueva categoría</string>
+
+    <string name="category_dialog_title_edit">Editar categoría</string>
+
     <string name="task_text_required">Ingresa el texto de la tarea</string>
+
     <string name="default_category_name">Categoría</string>
+
     <string name="category_badge_label">CAT</string>
-    <string name="category_edit_label">RENOM</string>
+
+    <string name="category_edit_label">RENOMBRAR</string>
+
     <string name="category_due_label">categoría</string>
+
     <string name="category_meta_format">hijos: %1$d  imp: %2$d</string>
+
     <string name="category_move_invalid">Ese movimiento crearía una categoría anidada inválida</string>
+
     <string name="task_due_label">vence: %1$s</string>
+
     <string name="task_reminder_value_label">recordatorio: %1$s</string>
+
     <string name="task_date_with_relative">%1$s - %2$s</string>
+
     <string name="no_due_date">sin fecha</string>
+
     <string name="no_reminder">ninguno</string>
+
     <string name="due_relative_overdue">atrasada %1$dd</string>
+
     <string name="due_relative_today">hoy</string>
+
     <string name="due_relative_tomorrow">mañana</string>
+
     <string name="due_relative_in">en %1$dd</string>
+
     <string name="pick_reminder_label">RECORDAR</string>
+
     <string name="pick_repeat_label">REPETIR</string>
+
     <string name="clear_reminder_label">LIMPIAR AVISO</string>
+
     <string name="reminder_dialog_title">Elegir recordatorio</string>
+
     <string name="reminder_option_none">Sin recordatorio</string>
+
     <string name="reminder_option_hour">1 hora antes</string>
+
     <string name="reminder_option_day">1 día antes</string>
+
     <string name="reminder_option_week">1 semana antes</string>
+
     <string name="reminder_option_month">1 mes antes</string>
+
     <string name="reminder_option_custom">Fecha y hora personalizadas</string>
+
     <string name="reminder_summary_with_datetime">%1$s (%2$s)</string>
+
     <string name="reminder_requires_due_date">Primero define una fecha límite para usar opciones predefinidas</string>
+
     <string name="reminder_time_in_past">El recordatorio tiene que quedar en el futuro</string>
+
     <string name="reminder_custom_date_title">Fecha del recordatorio</string>
+
     <string name="reminder_custom_time_title">Hora del recordatorio</string>
+
     <string name="reminder_channel_name">Recordatorios de tareas</string>
+
     <string name="reminder_channel_description">Notificaciones para recordatorios programados</string>
+
     <string name="reminder_notification_title">Recordatorio de tarea</string>
+
     <string name="notifications_permission_denied">Se necesita permiso de notificaciones para los recordatorios</string>
+
     <string name="task_repeat_value_label">repetición: %1$s</string>
+
     <string name="repeat_none">ninguna</string>
+
     <string name="repeat_dialog_title">Elegir repetición</string>
+
     <string name="repeat_option_none">Sin repetición</string>
+
     <string name="repeat_option_hour">Cada hora</string>
+
     <string name="repeat_option_day">Cada día</string>
+
     <string name="repeat_option_week">Cada semana</string>
+
     <string name="repeat_option_month">Cada mes</string>
+
     <string name="repeat_option_year">Cada año</string>
+
     <string name="repeat_option_custom">Intervalo personalizado</string>
+
     <string name="repeat_requires_reminder">Primero define un recordatorio para usar repetición</string>
+
     <string name="repeat_custom_title">Repetición personalizada</string>
+
     <string name="repeat_custom_amount_hint">Cantidad del intervalo</string>
+
     <string name="repeat_custom_amount_invalid">Ingresa una cantidad de repetición válida</string>
+
     <string name="repeat_unit_minutes_label">Minutos</string>
-    <string name="repeat_unit_hours_label">Horas</string>
+
     <string name="repeat_unit_days_label">Días</string>
+
+    <string name="repeat_unit_hours_label">Horas</string>
+
     <string name="repeat_unit_weeks_label">Semanas</string>
+
     <string name="repeat_unit_months_label">Meses</string>
+
     <string name="repeat_unit_years_label">Años</string>
+
     <string name="link_open_label">ABRIR</string>
+
     <string name="link_missing">No hay link para abrir</string>
+
     <string name="invalid_command">Comando no válido</string>
+
     <string name="task_saved">Tarea guardada</string>
+
     <string name="task_deleted">Tarea eliminada</string>
+
     <string name="task_completed">Tarea actualizada</string>
+
     <string name="task_failed">No se pudo actualizar la tarea</string>
+
     <string name="summary_format">abiertas: %1$d  hoy: %2$d  total: %3$d</string>
+
     <string name="task_meta_format">imp: %1$d  vence: %2$s  puntaje: %3$d</string>
+
     <string name="task_pin_label">FIJAR</string>
-    <string name="task_unpin_label">SOLTAR</string>
+
+    <string name="task_unpin_label">DESFIJAR</string>
+
     <string name="task_edit_label">EDITAR</string>
+
     <string name="task_delete_label">BORRAR</string>
+
     <string name="quick_links_title">ACCESOS RÁPIDOS</string>
+
     <string name="new_link_label">NUEVO LINK</string>
+
     <string name="quick_link_label_hint">Nombre corto</string>
+
     <string name="quick_link_url_hint">https://enlace.rapido</string>
+
     <string name="quick_link_new_title">Nuevo acceso rápido</string>
+
     <string name="quick_link_edit_title">Editar acceso rápido</string>
+
     <string name="quick_link_saved">Link rápido guardado</string>
+
     <string name="quick_link_deleted">Link rápido eliminado</string>
+
     <string name="quick_link_invalid">Completa un nombre y una URL válidos</string>
+
     <string name="quick_link_delete_label">BORRAR</string>
+
     <string name="widget_tasks_title">TAREAS</string>
-    <string name="widget_tasks_description">Lista con filtros TODO y HOY. Toca una fila para marcar hecho</string>
-    <string name="widget_quick_links_description">Accesos rápidos guardados en OpusAgenda. Toca para abrir</string>
+
+    <string name="widget_tasks_description">Lista con filtros TODAS y HOY. Toca una fila para marcar como hecha</string>
+
+    <string name="widget_quick_links_description">Accesos rápidos guardados en OpusAgenda. Toca para abrir en el navegador</string>
+
     <string name="widget_quick_links_empty">Sin enlaces. Agrégalos desde la app</string>
+
     <string name="clock_time_placeholder">00:00:00</string>
+
     <string name="clock_date_placeholder">10 Abr 2026</string>
+
     <string name="font_dialog_title">Selecciona fuente</string>
+
     <string name="font_applied">Fuente aplicada: %1$s</string>
 
     <string name="new_category_label">NUEVA CAT</string>
+
     <string name="new_subcategory_label">NUEVA SUBC</string>
+
     <string name="new_child_task_label">NUEVA TAREA</string>
 
     <string name="task_description_label">Descripción</string>
+
     <string name="task_description_hint">Agrega contexto para esta tarea</string>
+
     <string name="task_description_save">GUARDAR DESC</string>
+
     <string name="task_description_clear">LIMPIAR DESC</string>
+
     <string name="task_description_required">La descripción no puede quedar vacía</string>
+
     <string name="task_description_saved">Descripción preparada</string>
+
     <string name="task_description_title">Descripción de la tarea</string>
+
     <string name="task_description_icon_label">Abrir descripción</string>
 
     <string name="task_link_label">Link asociado</string>
+
     <string name="task_link_hint">https://recurso.asociado</string>
+
     <string name="task_link_save">GUARDAR LINK</string>
+
     <string name="task_link_clear">LIMPIAR LINK</string>
+
     <string name="task_link_required">Ingresa un link válido primero</string>
+
     <string name="task_link_saved">Link preparado</string>
+
     <string name="task_link_title">Link de la tarea</string>
+
     <string name="task_link_icon_label">Abrir detalle del link</string>
 
     <string name="task_attachment_label">Archivo adjunto</string>
+
     <string name="task_attachment_empty">No hay archivo seleccionado</string>
+
     <string name="task_attachment_pick">ELEGIR ARCHIVO</string>
+
     <string name="task_attachment_clear">LIMPIAR ARCHIVO</string>
+
     <string name="task_attachment_saved">Archivo adjuntado</string>
+
     <string name="task_attachment_picker_failed">No se pudo leer el archivo elegido</string>
+
     <string name="task_attachment_open_failed">No hay una app para abrir ese adjunto</string>
+
     <string name="task_attachment_title">Adjunto de la tarea</string>
+
     <string name="task_attachment_icon_label">Abrir detalle del adjunto</string>
+
     <string name="task_attachment_name_label">archivo: %1$s</string>
+
     <string name="task_attachment_type_label">tipo: %1$s</string>
+
+    <string name="play_label">REPRODUCIR</string>
+
+    <string name="stop_label">DETENER</string>
+
+    <string name="task_attachment_no_preview">No hay vista previa disponible</string>
 
     <string-array name="font_option_labels">
         <item>Inter</item>
@@ -187,12 +328,11 @@
         <item quantity="other">%1$d años</item>
     </plurals>
 
-    <string name="play_label">REPRODUCIR</string>
-    <string name="stop_label">DETENER</string>
-    <string name="task_attachment_no_preview">No hay vista previa disponible</string>
-
     <string name="previous_label">ANTERIOR</string>
-    <string name="next_label">SIGUIENTE</string>
-    <string name="pdf_page_indicator">Página %1$d / %2$d</string>
 
+    <string name="next_label">SIGUIENTE</string>
+
+    <string name="pdf_page_indicator">Página %1$d / %2$d</string>
 </resources>
+
+
