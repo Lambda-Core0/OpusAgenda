@@ -1,9 +1,9 @@
-﻿<resources>
+<resources>
     <string name="app_name">OpusAgenda</string>
 
     <string name="app_header_title">♱ OpusAgenda v1.3</string>
 
-    <string name="app_font_family">UnifrakturMaguntia</string>
+    <string name="app_font_family">PirateOne</string>
 
     <string name="search_hint">משימות חיפוש...</string>
 
@@ -51,7 +51,7 @@
 
     <string name="category_badge_label">CAT</string>
 
-    <string name="category_edit_label">שנה שם</string>
+    <string name="category_edit_label">ערוך</string>
 
     <string name="category_due_label">קטגוריה</string>
 
@@ -288,7 +288,7 @@
         <item>Geo</item>
         <item>MedievalSharp</item>
         <item>Octosquares</item>
-        <item>UnifrakturMaguntia</item>
+        <item>PirateOne</item>
     </string-array>
 
     <string-array name="importance_options">

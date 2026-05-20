@@ -107,9 +107,38 @@
 
 
     <LinearLayout
+        android:id="@+id/layoutCategoryActions"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_marginTop="12dp"
+        android:gravity="end"
+        android:orientation="horizontal"
+        android:visibility="gone">
+
+        <TextView
+            android:id="@+id/actionNewCategorySecondary"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:padding="6dp"
+            android:text="@string/new_subcategory_label"
+            android:textColor="@color/terminal_green"
+            android:textSize="12sp" />
+
+        <TextView
+            android:id="@+id/actionNewTaskSecondary"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="10dp"
+            android:padding="6dp"
+            android:text="@string/new_child_task_label"
+            android:textColor="@color/terminal_green"
+            android:textSize="12sp" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="6dp"
         android:gravity="end"
         android:orientation="horizontal">
 

@@ -4,7 +4,7 @@
     <selectionStates>
       <SelectionState runConfigName="OpusAgenda">
         <option name="selectionMode" value="DROPDOWN" />
-        <DropdownSelection timestamp="2026-05-09T00:16:39.275601600Z">
+        <DropdownSelection timestamp="2026-05-20T09:59:23.843404100Z">
           <Target type="DEFAULT_BOOT">
             <handle>
               <DeviceId pluginId="LocalEmulator" identifier="path=C:\Users\Pc\.android\avd\Medium_Phone.avd" />

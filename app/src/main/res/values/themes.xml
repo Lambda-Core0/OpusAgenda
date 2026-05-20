@@ -34,9 +34,9 @@
         <item name="fontFamily">@font/app_font_octosquares</item>
     </style>
 
-    <style name="Theme.OpusAgenda.UnifrakturMaguntia" parent="Theme.OpusAgenda">
-        <item name="android:fontFamily">@font/app_font_unifrakturmaguntia</item>
-        <item name="fontFamily">@font/app_font_unifrakturmaguntia</item>
+    <style name="Theme.OpusAgenda.PirateOne" parent="Theme.OpusAgenda">
+        <item name="android:fontFamily">@font/app_font_pirataone</item>
+        <item name="fontFamily">@font/app_font_pirataone</item>
     </style>
 
     <style name="ThemeOverlay.OpusAgenda.MaterialCalendar" parent="ThemeOverlay.MaterialComponents.MaterialCalendar">

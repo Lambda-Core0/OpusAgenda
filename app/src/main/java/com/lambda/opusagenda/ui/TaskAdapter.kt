@@ -152,9 +152,7 @@ class TaskAdapter(
                 )
             }
 
-            binding.layoutContentActions.visibility = if (
-                item.isCategory || (!hasDescription && !hasLink && !hasAttachment)
-            ) {
+            binding.layoutContentActions.visibility = if (!hasDescription && !hasLink && !hasAttachment) {
                 View.GONE
             } else {
                 View.VISIBLE
@@ -165,14 +163,15 @@ class TaskAdapter(
             }
             binding.actionPin.setOnClickListener { actions.onTogglePinned(item) }
             binding.actionEdit.setOnClickListener { actions.onEdit(item) }
-            binding.actionNewCategory.setOnClickListener { actions.onCreateSubcategory(item) }
-            binding.actionNewTask.setOnClickListener { actions.onCreateChildTask(item) }
+            binding.actionNewCategorySecondary.setOnClickListener { actions.onCreateSubcategory(item) }
+            binding.actionNewTaskSecondary.setOnClickListener { actions.onCreateChildTask(item) }
             binding.actionDelete.setOnClickListener { actions.onDelete(item) }
             binding.buttonDescription.setOnClickListener { actions.onShowDescription(item) }
             binding.buttonLink.setOnClickListener { actions.onShowLink(item) }
             binding.buttonAttachment.setOnClickListener { actions.onShowAttachment(item) }
-            binding.actionNewCategory.visibility = if (item.isCategory) View.VISIBLE else View.GONE
-            binding.actionNewTask.visibility = if (item.isCategory) View.VISIBLE else View.GONE
+            binding.actionNewCategory.visibility = View.GONE
+            binding.actionNewTask.visibility = View.GONE
+            binding.layoutCategoryActions.visibility = if (item.isCategory) View.VISIBLE else View.GONE
             binding.root.setOnClickListener {
                 if (item.isCategory) {
                     actions.onToggleExpanded(item)

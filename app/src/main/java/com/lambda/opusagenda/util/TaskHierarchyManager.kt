@@ -60,7 +60,7 @@ object TaskHierarchyManager {
                         depth = depth + 1,
                         forceExpanded = forceExpanded || normalizedQuery.isNotBlank()
                     )
-                    val categoryMatches = normalizedQuery.isBlank() || entity.text.lowercase().contains(normalizedQuery)
+                    val categoryMatches = normalizedQuery.isBlank() || matchesQuery(entity, normalizedQuery)
                     val shouldShowCategory = when {
                         normalizedQuery.isNotBlank() -> categoryMatches || descendants.isNotEmpty()
                         filterMode == TaskFilterMode.TODAY -> descendants.isNotEmpty()
@@ -86,11 +86,11 @@ object TaskHierarchyManager {
                             directChildCount,
                             highestImportance
                         ),
-                        description = null,
-                        link = null,
-                        attachmentUri = null,
-                        attachmentName = null,
-                        attachmentMimeType = null,
+                        description = entity.description,
+                        link = entity.link,
+                        attachmentUri = entity.attachmentUri,
+                        attachmentName = entity.attachmentName,
+                        attachmentMimeType = entity.attachmentMimeType,
                         pinned = false,
                         reminderAt = null,
                         repeatAmount = null,

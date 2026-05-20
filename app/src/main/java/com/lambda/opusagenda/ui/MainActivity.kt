@@ -28,7 +28,6 @@ import android.widget.VideoView
 import android.media.MediaPlayer
 import java.io.BufferedReader
 import java.io.InputStreamReader
-import java.util.regex.Pattern
 import android.graphics.pdf.PdfRenderer
 import android.os.ParcelFileDescriptor
 import android.graphics.Bitmap
@@ -57,7 +56,6 @@ import com.lambda.opusagenda.databinding.ActivityMainBinding
 import com.lambda.opusagenda.databinding.DialogQuickLinkBinding
 import com.lambda.opusagenda.databinding.DialogTaskEditorBinding
 import com.lambda.opusagenda.repository.TaskRepository
-import com.lambda.opusagenda.util.TaskAttachmentKind
 import com.lambda.opusagenda.util.TaskContentSupport
 import com.lambda.opusagenda.util.TaskDateFormatter
 import com.lambda.opusagenda.util.TaskHierarchyManager.DropMode
@@ -105,7 +103,7 @@ class MainActivity : AppCompatActivity(), TaskAdapter.TaskItemActions {
         private const val FONT_GEO = "geo"
         private const val FONT_MEDIEVAL_SHARP = "medieval_sharp"
         private const val FONT_OCTOSQUARES = "octosquares"
-        private const val FONT_UNIFRAKTUR = "unifraktur"
+        private const val FONT_PIRATEONE = "pirateone"
     }
 
     private lateinit var binding: ActivityMainBinding
@@ -208,7 +206,7 @@ class MainActivity : AppCompatActivity(), TaskAdapter.TaskItemActions {
             FONT_GEO,
             FONT_MEDIEVAL_SHARP,
             FONT_OCTOSQUARES,
-            FONT_UNIFRAKTUR
+            FONT_PIRATEONE
         )
         val fontLabels = resources.getStringArray(R.array.font_option_labels)
         val selectedFont = getSharedPreferences(PREFS_NAME, MODE_PRIVATE)
@@ -245,7 +243,7 @@ class MainActivity : AppCompatActivity(), TaskAdapter.TaskItemActions {
             FONT_GEO -> R.style.Theme_OpusAgenda_Geo
             FONT_MEDIEVAL_SHARP -> R.style.Theme_OpusAgenda_MedievalSharp
             FONT_OCTOSQUARES -> R.style.Theme_OpusAgenda_Octosquares
-            FONT_UNIFRAKTUR -> R.style.Theme_OpusAgenda_UnifrakturMaguntia
+            FONT_PIRATEONE -> R.style.Theme_OpusAgenda_PirateOne
             else -> R.style.Theme_OpusAgenda
         }
         setTheme(themeRes)
@@ -259,7 +257,7 @@ class MainActivity : AppCompatActivity(), TaskAdapter.TaskItemActions {
             FONT_GEO -> R.font.app_font_geo
             FONT_MEDIEVAL_SHARP -> R.font.app_font_medievalsharp
             FONT_OCTOSQUARES -> R.font.app_font_octosquares
-            FONT_UNIFRAKTUR -> R.font.app_font_unifrakturmaguntia
+            FONT_PIRATEONE -> R.font.app_font_pirataone
             else -> R.font.app_font_inter
         }
         val typeface = ResourcesCompat.getFont(this, fontRes) ?: Typeface.SANS_SERIF
@@ -334,15 +332,6 @@ class MainActivity : AppCompatActivity(), TaskAdapter.TaskItemActions {
             dialogBinding.textReminder.visibility = View.GONE
             dialogBinding.textRepeat.visibility = View.GONE
             dialogBinding.layoutReminderActions.visibility = View.GONE
-            dialogBinding.textDescriptionLabel.visibility = View.GONE
-            dialogBinding.editDescription.visibility = View.GONE
-            dialogBinding.layoutDescriptionActions.visibility = View.GONE
-            dialogBinding.textLinkLabel.visibility = View.GONE
-            dialogBinding.editLink.visibility = View.GONE
-            dialogBinding.layoutLinkActions.visibility = View.GONE
-            dialogBinding.textAttachmentLabel.visibility = View.GONE
-            dialogBinding.textAttachmentName.visibility = View.GONE
-            dialogBinding.layoutAttachmentActions.visibility = View.GONE
             dialogBinding.checkPinned.visibility = View.GONE
         }
 

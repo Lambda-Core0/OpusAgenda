@@ -1,8 +1,8 @@
-﻿<resources>
+<resources>
     <string name="app_name">OpusAgenda</string>
     <string name="app_header_title">â™± OpusAgenda v1.3</string>
 
-    <string name="app_font_family">UnifrakturMaguntia</string>
+    <string name="app_font_family">PirateOne</string>
 
     <string name="search_hint">search tasks...</string>
     <string name="empty_state_all">No tasks yet. Use NEW to create one</string>
@@ -27,7 +27,7 @@
     <string name="task_text_required">Enter task text</string>
     <string name="default_category_name">Category</string>
     <string name="category_badge_label">CAT</string>
-    <string name="category_edit_label">RENAME</string>
+    <string name="category_edit_label">EDIT</string>
     <string name="category_due_label">category</string>
     <string name="category_meta_format">children: %1$d  imp: %2$d</string>
     <string name="category_move_invalid">That move would create an invalid nested category</string>
@@ -152,7 +152,7 @@
         <item>Geo</item>
         <item>MedievalSharp</item>
         <item>Octosquares</item>
-        <item>UnifrakturMaguntia</item>
+        <item>PirateOne</item>
     </string-array>
 
     <string-array name="importance_options">
