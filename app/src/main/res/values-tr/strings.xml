@@ -1,7 +1,7 @@
 <resources>
     <string name="app_name">OpusAgenda</string>
 
-    <string name="app_header_title">♱ OpusAgenda v1.3</string>
+    <string name="app_header_title">♱ OpusAgenda v1.4</string>
 
     <string name="app_font_family">PirateOne</string>
 
@@ -227,13 +227,9 @@
 
     <string name="task_description_hint">Bu görev için biraz bağlam ekleyin</string>
 
-    <string name="task_description_save">TANIMI KAYDET</string>
 
-    <string name="task_description_clear">TANIMI TEMİZLE</string>
 
-    <string name="task_description_required">Açıklama boş olamaz</string>
 
-    <string name="task_description_saved">Açıklama aşamalı</string>
 
     <string name="task_description_title">Görev açıklaması</string>
 
@@ -243,13 +239,9 @@
 
     <string name="task_link_hint">https://linked.resource</string>
 
-    <string name="task_link_save">BAĞLANTIYI KAYDET</string>
 
-    <string name="task_link_clear">BAĞLANTIYI TEMİZLE</string>
 
-    <string name="task_link_required">Önce geçerli bir bağlantı girin</string>
 
-    <string name="task_link_saved">Bağlantı aşamalı</string>
 
     <string name="task_link_title">Görev bağlantısı</string>
 
@@ -263,6 +255,17 @@
 
     <string name="task_attachment_clear">DOSYAYI TEMİZLE</string>
 
+    <string name="task_attachment_record">RECORD</string>
+
+    <string name="task_attachment_stop_record">STOP</string>
+
+    <string name="task_attachment_recording">Recording…</string>
+
+    <string name="task_attachment_record_failed">Could not record audio</string>
+
+    <string name="task_attachment_record_permission_denied">Microphone permission is required to record audio</string>
+
+    <string name="task_attachment_finish_recording">Stop recording before saving the task</string>
     <string name="task_attachment_saved">Dosya ekli</string>
 
     <string name="task_attachment_picker_failed">Seçilen dosya okunamadı</string>
@@ -333,7 +336,11 @@
     <string name="next_label">SONRAKİ</string>
 
     <string name="pdf_page_indicator">Sayfa %1$d / %2$d</string>
+    <string name="font_button_label">Yazı tipini değiştir</string>
+    <string name="import_button_label">Yedeği içe aktar</string>
+    <string name="export_button_label">Yedeği dışa aktar</string>
 </resources>
+
 
 
 

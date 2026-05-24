@@ -1,7 +1,7 @@
 <resources>
     <string name="app_name">OpusAgenda</string>
 
-    <string name="app_header_title">♱ OpusAgenda v1.3</string>
+    <string name="app_header_title">♱ OpusAgenda v1.4</string>
 
     <string name="app_font_family">PirateOne</string>
 
@@ -227,13 +227,9 @@
 
     <string name="task_description_hint">Добавьте контекст для этой задачи</string>
 
-    <string name="task_description_save">СОХРАНИТЬ ОПИСАНИЕ</string>
 
-    <string name="task_description_clear">УДАЛИТЬ ПУСК</string>
 
-    <string name="task_description_required">Описание не может быть пустым</string>
 
-    <string name="task_description_saved">Описание постановочное</string>
 
     <string name="task_description_title">Описание задачи</string>
 
@@ -243,13 +239,9 @@
 
     <string name="task_link_hint">https://linked.resource</string>
 
-    <string name="task_link_save">СОХРАНИТЬ ССЫЛКУ</string>
 
-    <string name="task_link_clear">ОЧИСТКА ССЫЛКИ</string>
 
-    <string name="task_link_required">Сначала введите действительную ссылку</string>
 
-    <string name="task_link_saved">Ссылка подготовлена</string>
 
     <string name="task_link_title">Ссылка на задачу</string>
 
@@ -263,6 +255,17 @@
 
     <string name="task_attachment_clear">ОЧИСТИТЬ ФАЙЛ</string>
 
+    <string name="task_attachment_record">RECORD</string>
+
+    <string name="task_attachment_stop_record">STOP</string>
+
+    <string name="task_attachment_recording">Recording…</string>
+
+    <string name="task_attachment_record_failed">Could not record audio</string>
+
+    <string name="task_attachment_record_permission_denied">Microphone permission is required to record audio</string>
+
+    <string name="task_attachment_finish_recording">Stop recording before saving the task</string>
     <string name="task_attachment_saved">Файл прикреплён</string>
 
     <string name="task_attachment_picker_failed">Не удалось прочитать выбранный файл</string>
@@ -333,6 +336,10 @@
     <string name="next_label">СЛЕДУЮЩИЙ</string>
 
     <string name="pdf_page_indicator">Страница %1$d / %2$d</string>
+    <string name="font_button_label">Изменить шрифт</string>
+    <string name="import_button_label">Импортировать резервную копию</string>
+    <string name="export_button_label">Экспортировать резервную копию</string>
 </resources>
+
 
 

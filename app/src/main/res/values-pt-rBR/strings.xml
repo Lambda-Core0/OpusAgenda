@@ -1,7 +1,7 @@
 <resources>
     <string name="app_name">OpusAgenda</string>
 
-    <string name="app_header_title">♱ OpusAgenda v1.3</string>
+    <string name="app_header_title">♱ OpusAgenda v1.4</string>
 
     <string name="app_font_family">PirateOne</string>
 
@@ -227,13 +227,9 @@
 
     <string name="task_description_hint">Adicione algum contexto para esta tarefa</string>
 
-    <string name="task_description_save">SALVAR DESC</string>
 
-    <string name="task_description_clear">LIMPAR DESC</string>
 
-    <string name="task_description_required">A descrição não pode ficar vazia</string>
 
-    <string name="task_description_saved">Descrição encenada</string>
 
     <string name="task_description_title">Descrição da tarefa</string>
 
@@ -243,13 +239,9 @@
 
     <string name="task_link_hint">https://linked.resource</string>
 
-    <string name="task_link_save">SALVAR LINK</string>
 
-    <string name="task_link_clear">LIMPAR LINK</string>
 
-    <string name="task_link_required">Insira um link válido primeiro</string>
 
-    <string name="task_link_saved">Link encenado</string>
 
     <string name="task_link_title">Link da tarefa</string>
 
@@ -263,6 +255,12 @@
 
     <string name="task_attachment_clear">LIMPAR ARQUIVO</string>
 
+<string name="task_attachment_record">GRAVAR</string>
+    <string name="task_attachment_stop_record">PARAR</string>
+    <string name="task_attachment_recording">Gravando…</string>
+    <string name="task_attachment_record_failed">Não foi possível gravar o áudio</string>
+    <string name="task_attachment_record_permission_denied">É necessária permissão do microfone para gravar áudio</string>
+    <string name="task_attachment_finish_recording">Pare a gravação antes de salvar a tarefa</string>
     <string name="task_attachment_saved">Arquivo anexado</string>
 
     <string name="task_attachment_picker_failed">Não foi possível ler o arquivo selecionado</string>
@@ -333,7 +331,11 @@
     <string name="next_label">PRÓXIMO</string>
 
     <string name="pdf_page_indicator">Página %1$d / %2$d</string>
+    <string name="font_button_label">Alterar fonte</string>
+    <string name="import_button_label">Importar backup</string>
+    <string name="export_button_label">Exportar backup</string>
 </resources>
+
 
 
 

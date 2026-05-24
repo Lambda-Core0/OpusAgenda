@@ -1,7 +1,7 @@
 <resources>
     <string name="app_name">OpusAgenda</string>
 
-    <string name="app_header_title">♱ OpusAgenda v1.3</string>
+    <string name="app_header_title">♱ OpusAgenda v1.4</string>
 
     <string name="app_font_family">PirateOne</string>
 
@@ -227,13 +227,9 @@
 
     <string name="task_description_hint">Dodaj kontekst do tego zadania</string>
 
-    <string name="task_description_save">ZAPISZ OPIS</string>
 
-    <string name="task_description_clear">WYCZYŚĆ OPIS</string>
 
-    <string name="task_description_required">Opis nie może być pusty</string>
 
-    <string name="task_description_saved">Opis wyreżyserowany</string>
 
     <string name="task_description_title">Opis zadania</string>
 
@@ -243,13 +239,9 @@
 
     <string name="task_link_hint">https://linked.resource</string>
 
-    <string name="task_link_save">ZAPISZ LINK</string>
 
-    <string name="task_link_clear">WYCZYŚĆ LINK</string>
 
-    <string name="task_link_required">Najpierw wprowadź prawidłowy link</string>
 
-    <string name="task_link_saved">Link wystawiony</string>
 
     <string name="task_link_title">Link do zadania</string>
 
@@ -263,6 +255,17 @@
 
     <string name="task_attachment_clear">WYCZYŚĆ PLIK</string>
 
+    <string name="task_attachment_record">RECORD</string>
+
+    <string name="task_attachment_stop_record">STOP</string>
+
+    <string name="task_attachment_recording">Recording…</string>
+
+    <string name="task_attachment_record_failed">Could not record audio</string>
+
+    <string name="task_attachment_record_permission_denied">Microphone permission is required to record audio</string>
+
+    <string name="task_attachment_finish_recording">Stop recording before saving the task</string>
     <string name="task_attachment_saved">Plik w załączeniu</string>
 
     <string name="task_attachment_picker_failed">Nie można odczytać wybranego pliku</string>
@@ -333,7 +336,11 @@
     <string name="next_label">DALEJ</string>
 
     <string name="pdf_page_indicator">Strona %1$d / %2$d</string>
+    <string name="font_button_label">Zmień czcionkę</string>
+    <string name="import_button_label">Importuj kopię zapasową</string>
+    <string name="export_button_label">Eksportuj kopię zapasową</string>
 </resources>
+
 
 
 

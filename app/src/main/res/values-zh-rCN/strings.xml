@@ -1,7 +1,7 @@
 <resources>
     <string name="app_name">OpusAgenda</string>
 
-    <string name="app_header_title">♱ OpusAgenda v1.3</string>
+    <string name="app_header_title">♱ OpusAgenda v1.4</string>
 
     <string name="app_font_family">PirateOne</string>
 
@@ -227,13 +227,9 @@
 
     <string name="task_description_hint">为此任务添加一些上下文</string>
 
-    <string name="task_description_save">保存描述</string>
 
-    <string name="task_description_clear">清晰的描述</string>
 
-    <string name="task_description_required">描述不能为空</string>
 
-    <string name="task_description_saved">描述上演</string>
 
     <string name="task_description_title">任务描述</string>
 
@@ -243,13 +239,9 @@
 
     <string name="task_link_hint">https://linked.resource</string>
 
-    <string name="task_link_save">保存链接</string>
 
-    <string name="task_link_clear">清晰的链接</string>
 
-    <string name="task_link_required">首先输入有效的链接</string>
 
-    <string name="task_link_saved">链接已上演</string>
 
     <string name="task_link_title">任务链接</string>
 
@@ -263,6 +255,17 @@
 
     <string name="task_attachment_clear">清除文件</string>
 
+    <string name="task_attachment_record">RECORD</string>
+
+    <string name="task_attachment_stop_record">STOP</string>
+
+    <string name="task_attachment_recording">Recording…</string>
+
+    <string name="task_attachment_record_failed">Could not record audio</string>
+
+    <string name="task_attachment_record_permission_denied">Microphone permission is required to record audio</string>
+
+    <string name="task_attachment_finish_recording">Stop recording before saving the task</string>
     <string name="task_attachment_saved">文件已附</string>
 
     <string name="task_attachment_picker_failed">无法读取所选文件</string>
@@ -333,6 +336,10 @@
     <string name="next_label">下一个</string>
 
     <string name="pdf_page_indicator">第 %1$d / %2$d 页</string>
+    <string name="font_button_label">更改字体</string>
+    <string name="import_button_label">导入备份</string>
+    <string name="export_button_label">导出备份</string>
 </resources>
+
 
 

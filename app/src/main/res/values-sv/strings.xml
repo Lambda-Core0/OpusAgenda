@@ -1,7 +1,7 @@
 <resources>
     <string name="app_name">OpusAgenda</string>
 
-    <string name="app_header_title">♱ OpusAgenda v1.3</string>
+    <string name="app_header_title">♱ OpusAgenda v1.4</string>
 
     <string name="app_font_family">PirateOne</string>
 
@@ -227,13 +227,9 @@
 
     <string name="task_description_hint">Lägg till lite sammanhang för denna uppgift</string>
 
-    <string name="task_description_save">SPARA DESK</string>
 
-    <string name="task_description_clear">RENSA BESKR</string>
 
-    <string name="task_description_required">Beskrivning får inte vara tom</string>
 
-    <string name="task_description_saved">Beskrivning iscensatt</string>
 
     <string name="task_description_title">Uppgiftsbeskrivning</string>
 
@@ -243,13 +239,9 @@
 
     <string name="task_link_hint">https://linked.resource</string>
 
-    <string name="task_link_save">SPARA LÄNK</string>
 
-    <string name="task_link_clear">RENSA LÄNK</string>
 
-    <string name="task_link_required">Ange en giltig länk först</string>
 
-    <string name="task_link_saved">Länk iscensatt</string>
 
     <string name="task_link_title">Uppgiftslänk</string>
 
@@ -263,6 +255,17 @@
 
     <string name="task_attachment_clear">RENSA FIL</string>
 
+    <string name="task_attachment_record">RECORD</string>
+
+    <string name="task_attachment_stop_record">STOP</string>
+
+    <string name="task_attachment_recording">Recording…</string>
+
+    <string name="task_attachment_record_failed">Could not record audio</string>
+
+    <string name="task_attachment_record_permission_denied">Microphone permission is required to record audio</string>
+
+    <string name="task_attachment_finish_recording">Stop recording before saving the task</string>
     <string name="task_attachment_saved">Fil bifogad</string>
 
     <string name="task_attachment_picker_failed">Det gick inte att läsa den valda filen</string>
@@ -333,7 +336,11 @@
     <string name="next_label">NÄSTA</string>
 
     <string name="pdf_page_indicator">Sida %1$d / %2$d</string>
+    <string name="font_button_label">Byt teckensnitt</string>
+    <string name="import_button_label">Importera säkerhetskopia</string>
+    <string name="export_button_label">Exportera säkerhetskopia</string>
 </resources>
+
 
 
 

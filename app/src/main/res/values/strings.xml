@@ -1,6 +1,6 @@
 <resources>
     <string name="app_name">OpusAgenda</string>
-    <string name="app_header_title">♱ OpusAgenda v1.3</string>
+    <string name="app_header_title">♱ OpusAgenda v1.4</string>
 
     <string name="app_font_family">PirateOne</string>
 
@@ -110,25 +110,31 @@
     <string name="clock_date_placeholder">10 Apr 2026</string>
     <string name="font_dialog_title">Select font</string>
     <string name="font_applied">Font applied: %1$s</string>
+    <string name="font_button_label">Change font</string>
+    <string name="import_button_label">Import backup</string>
+    <string name="export_button_label">Export backup</string>
+    <string name="backup_replace_label">REPLACE</string>
+    <string name="backup_import_warning_title">Import task list</string>
+    <string name="backup_import_warning_message">Importing a backup will delete all current tasks before loading the new list. Continue?</string>
+    <string name="backup_export_success">Backup exported: %1$d items</string>
+    <string name="backup_export_failed">Could not export the backup</string>
+    <string name="backup_import_success">Backup imported: %1$d items</string>
+    <string name="backup_import_failed">Could not import the backup</string>
+    <string name="backup_open_failed">Could not open the selected backup file</string>
+    <string name="backup_invalid_archive">The selected file is not a valid OpusAgenda backup</string>
+    <string name="backup_unsupported_version">This backup format is not supported by the current app version</string>
+    <string name="backup_attachment_export_failed">Could not include attachment in backup: %1$s</string>
     <string name="new_category_label">NEW CAT</string>
     <string name="new_subcategory_label">NEW SUBC</string>
     <string name="new_child_task_label">NEW TASK</string>
 
     <string name="task_description_label">Description</string>
     <string name="task_description_hint">Add some context for this task</string>
-    <string name="task_description_save">SAVE DESC</string>
-    <string name="task_description_clear">CLEAR DESC</string>
-    <string name="task_description_required">Description cannot be empty</string>
-    <string name="task_description_saved">Description staged</string>
     <string name="task_description_title">Task description</string>
     <string name="task_description_icon_label">Open description</string>
 
     <string name="task_link_label">Associated link</string>
     <string name="task_link_hint">https://linked.resource</string>
-    <string name="task_link_save">SAVE LINK</string>
-    <string name="task_link_clear">CLEAR LINK</string>
-    <string name="task_link_required">Enter a valid link first</string>
-    <string name="task_link_saved">Link staged</string>
     <string name="task_link_title">Task link</string>
     <string name="task_link_icon_label">Open link details</string>
 
@@ -136,6 +142,12 @@
     <string name="task_attachment_empty">No file selected</string>
     <string name="task_attachment_pick">PICK FILE</string>
     <string name="task_attachment_clear">CLEAR FILE</string>
+    <string name="task_attachment_record">RECORD</string>
+    <string name="task_attachment_stop_record">STOP</string>
+    <string name="task_attachment_recording">Recording…</string>
+    <string name="task_attachment_record_failed">Could not record audio</string>
+    <string name="task_attachment_record_permission_denied">Microphone permission is required to record audio</string>
+    <string name="task_attachment_finish_recording">Stop recording before saving the task</string>
     <string name="task_attachment_saved">File attached</string>
     <string name="task_attachment_picker_failed">Could not read the selected file</string>
     <string name="task_attachment_open_failed">No app can open that attachment</string>
@@ -197,4 +209,3 @@
     <string name="pdf_page_indicator">Page %1$d / %2$d</string>
 
 </resources>
-

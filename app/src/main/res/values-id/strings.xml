@@ -1,7 +1,7 @@
 <resources>
     <string name="app_name">OpusAgenda</string>
 
-    <string name="app_header_title">♱ OpusAgenda v1.3</string>
+    <string name="app_header_title">♱ OpusAgenda v1.4</string>
 
     <string name="app_font_family">PirateOne</string>
 
@@ -227,13 +227,9 @@
 
     <string name="task_description_hint">Tambahkan beberapa konteks untuk tugas ini</string>
 
-    <string name="task_description_save">SIMPAN DESK</string>
 
-    <string name="task_description_clear">JELASKAN DESK</string>
 
-    <string name="task_description_required">Deskripsi tidak boleh kosong</string>
 
-    <string name="task_description_saved">Deskripsi dipentaskan</string>
 
     <string name="task_description_title">Deskripsi tugas</string>
 
@@ -243,13 +239,9 @@
 
     <string name="task_link_hint">https://linked.resource</string>
 
-    <string name="task_link_save">SIMPAN LINK</string>
 
-    <string name="task_link_clear">HAPUS LINK</string>
 
-    <string name="task_link_required">Masukkan tautan yang valid terlebih dahulu</string>
 
-    <string name="task_link_saved">Tautan dipentaskan</string>
 
     <string name="task_link_title">Tautan tugas</string>
 
@@ -263,6 +255,17 @@
 
     <string name="task_attachment_clear">HAPUS FILE</string>
 
+    <string name="task_attachment_record">RECORD</string>
+
+    <string name="task_attachment_stop_record">STOP</string>
+
+    <string name="task_attachment_recording">Recording…</string>
+
+    <string name="task_attachment_record_failed">Could not record audio</string>
+
+    <string name="task_attachment_record_permission_denied">Microphone permission is required to record audio</string>
+
+    <string name="task_attachment_finish_recording">Stop recording before saving the task</string>
     <string name="task_attachment_saved">File terlampir</string>
 
     <string name="task_attachment_picker_failed">Tidak dapat membaca file yang dipilih</string>
@@ -333,7 +336,11 @@
     <string name="next_label">BERIKUTNYA</string>
 
     <string name="pdf_page_indicator">Halaman %1$d / %2$d</string>
+    <string name="font_button_label">Ubah font</string>
+    <string name="import_button_label">Impor cadangan</string>
+    <string name="export_button_label">Ekspor cadangan</string>
 </resources>
+
 
 
 

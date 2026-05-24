@@ -1,7 +1,7 @@
 <resources>
     <string name="app_name">OpusAgenda</string>
 
-    <string name="app_header_title">♱ OpusAgenda v1.3</string>
+    <string name="app_header_title">♱ OpusAgenda v1.4</string>
 
     <string name="app_font_family">PirateOne</string>
 
@@ -227,13 +227,9 @@
 
     <string name="task_description_hint">Adăugați un context pentru această sarcină</string>
 
-    <string name="task_description_save">SALVARE DESC</string>
 
-    <string name="task_description_clear">ȘTERGE DESC</string>
 
-    <string name="task_description_required">Descrierea nu poate fi goală</string>
 
-    <string name="task_description_saved">Descrierea pusă în scenă</string>
 
     <string name="task_description_title">Descrierea sarcinii</string>
 
@@ -243,13 +239,9 @@
 
     <string name="task_link_hint">https://linked.resource</string>
 
-    <string name="task_link_save">SALVAȚI LINKUL</string>
 
-    <string name="task_link_clear">ȘTERGE LINK</string>
 
-    <string name="task_link_required">Introduceți mai întâi un link valid</string>
 
-    <string name="task_link_saved">Link pus în scenă</string>
 
     <string name="task_link_title">Link de sarcină</string>
 
@@ -263,6 +255,17 @@
 
     <string name="task_attachment_clear">ȘTERGE FIȘIER</string>
 
+    <string name="task_attachment_record">RECORD</string>
+
+    <string name="task_attachment_stop_record">STOP</string>
+
+    <string name="task_attachment_recording">Recording…</string>
+
+    <string name="task_attachment_record_failed">Could not record audio</string>
+
+    <string name="task_attachment_record_permission_denied">Microphone permission is required to record audio</string>
+
+    <string name="task_attachment_finish_recording">Stop recording before saving the task</string>
     <string name="task_attachment_saved">Fișier atașat</string>
 
     <string name="task_attachment_picker_failed">Nu s-a putut citi fișierul selectat</string>
@@ -333,7 +336,11 @@
     <string name="next_label">URMĂTORUL</string>
 
     <string name="pdf_page_indicator">Pagina %1$d / %2$d</string>
+    <string name="font_button_label">Schimbă fontul</string>
+    <string name="import_button_label">Importă copia de rezervă</string>
+    <string name="export_button_label">Exportă copia de rezervă</string>
 </resources>
+
 
 
 

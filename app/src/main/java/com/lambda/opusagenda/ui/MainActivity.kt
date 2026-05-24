@@ -26,8 +26,14 @@ import android.widget.MediaController
 import android.widget.Toast
 import android.widget.VideoView
 import android.media.MediaPlayer
+import androidx.core.content.FileProvider
+import com.lambda.opusagenda.util.TaskAudioRecorder
+import com.lambda.opusagenda.util.TaskBackupManager
 import java.io.BufferedReader
+import java.io.File
 import java.io.InputStreamReader
+import java.text.SimpleDateFormat
+import java.util.Date
 import android.graphics.pdf.PdfRenderer
 import android.os.ParcelFileDescriptor
 import android.graphics.Bitmap
@@ -108,6 +114,7 @@ class MainActivity : AppCompatActivity(), TaskAdapter.TaskItemActions {
 
     private lateinit var binding: ActivityMainBinding
     private lateinit var taskAdapter: TaskAdapter
+    private lateinit var taskBackupManager: TaskBackupManager
     private lateinit var quickLinksStore: QuickLinksStore
     private lateinit var taskTouchHelper: ItemTouchHelper
     private var selectedTypeface: Typeface? = null
@@ -119,6 +126,7 @@ class MainActivity : AppCompatActivity(), TaskAdapter.TaskItemActions {
 
     private var statusToast: Toast? = null
     private var pendingAttachmentSelection: ((Uri?) -> Unit)? = null
+    private var pendingRecordAudioAction: (() -> Unit)? = null
 
     private val notificationPermissionLauncher = registerForActivityResult(
         ActivityResultContracts.RequestPermission()
@@ -133,6 +141,35 @@ class MainActivity : AppCompatActivity(), TaskAdapter.TaskItemActions {
     ) { uri ->
         pendingAttachmentSelection?.invoke(uri)
         pendingAttachmentSelection = null
+    }
+
+    private val exportBackupLauncher = registerForActivityResult(
+        ActivityResultContracts.CreateDocument("application/zip")
+    ) { uri ->
+        uri ?: return@registerForActivityResult
+        exportTasksBackup(uri)
+    }
+
+    private val importBackupLauncher = registerForActivityResult(
+        ActivityResultContracts.OpenDocument()
+    ) { uri ->
+        uri ?: return@registerForActivityResult
+        if (!persistReadPermission(uri)) {
+            showStatus(getString(R.string.backup_open_failed))
+            return@registerForActivityResult
+        }
+        showImportBackupWarning(uri)
+    }
+
+    private val recordAudioPermissionLauncher = registerForActivityResult(
+        ActivityResultContracts.RequestPermission()
+    ) { granted ->
+        if (granted) {
+            pendingRecordAudioAction?.invoke()
+        } else {
+            showStatus(getString(R.string.task_attachment_record_permission_denied))
+        }
+        pendingRecordAudioAction = null
     }
 
     private val viewModel: MainViewModel by viewModels {
@@ -152,6 +189,7 @@ class MainActivity : AppCompatActivity(), TaskAdapter.TaskItemActions {
         setContentView(binding.root)
         applySelectedTypeface()
 
+        taskBackupManager = TaskBackupManager(applicationContext)
         quickLinksStore = QuickLinksStore(applicationContext)
         quickLinks.clear()
         quickLinks.addAll(quickLinksStore.load())
@@ -198,6 +236,14 @@ class MainActivity : AppCompatActivity(), TaskAdapter.TaskItemActions {
         binding.buttonFont.setOnClickListener {
             showFontDialog()
         }
+
+        binding.buttonExport.setOnClickListener {
+            launchBackupExport()
+        }
+
+        binding.buttonImport.setOnClickListener {
+            launchBackupImport()
+        }
     }
 
     private fun showFontDialog() {
@@ -233,6 +279,49 @@ class MainActivity : AppCompatActivity(), TaskAdapter.TaskItemActions {
             }
             .setNegativeButton(R.string.cancel_label, null)
             .show()
+    }
+
+    private fun launchBackupExport() {
+        val timestamp = SimpleDateFormat("yyyyMMdd_HHmmss", Locale.US).format(Date())
+        exportBackupLauncher.launch("opusagenda_tasks_$timestamp.zip")
+    }
+
+    private fun launchBackupImport() {
+        importBackupLauncher.launch(arrayOf("application/zip", "application/octet-stream", "*/*"))
+    }
+
+    private fun showImportBackupWarning(sourceUri: Uri) {
+        MaterialAlertDialogBuilder(this)
+            .setTitle(R.string.backup_import_warning_title)
+            .setMessage(R.string.backup_import_warning_message)
+            .setNegativeButton(R.string.cancel_label, null)
+            .setPositiveButton(R.string.backup_replace_label) { _, _ ->
+                importTasksBackup(sourceUri)
+            }
+            .show()
+            .also(::applyDialogPanelBackgrounds)
+    }
+
+    private fun exportTasksBackup(destinationUri: Uri) {
+        lifecycleScope.launch {
+            try {
+                val itemCount = taskBackupManager.exportBackup(destinationUri)
+                showStatus(getString(R.string.backup_export_success, itemCount))
+            } catch (exception: Exception) {
+                showStatus(exception.message ?: getString(R.string.backup_export_failed))
+            }
+        }
+    }
+
+    private fun importTasksBackup(sourceUri: Uri) {
+        lifecycleScope.launch {
+            try {
+                val itemCount = taskBackupManager.importBackup(sourceUri)
+                showStatus(getString(R.string.backup_import_success, itemCount))
+            } catch (exception: Exception) {
+                showStatus(exception.message ?: getString(R.string.backup_import_failed))
+            }
+        }
     }
 
     private fun applySelectedFontTheme() {
@@ -340,11 +429,10 @@ class MainActivity : AppCompatActivity(), TaskAdapter.TaskItemActions {
         var selectedReminderPreset: ReminderPreset? = null
         var selectedRepeatAmount = task?.repeatAmount
         var selectedRepeatUnit = task?.repeatUnit
-        var selectedDescription = task?.description
-        var selectedLink = task?.link
         var selectedAttachmentUri = task?.attachmentUri
         var selectedAttachmentName = task?.attachmentName
         var selectedAttachmentMimeType = task?.attachmentMimeType
+        val audioRecorder = TaskAudioRecorder(this)
 
         fun updateDueLabel() {
             dialogBinding.textDueDate.text = getString(
@@ -378,6 +466,15 @@ class MainActivity : AppCompatActivity(), TaskAdapter.TaskItemActions {
         fun updateAttachmentLabel() {
             dialogBinding.textAttachmentName.text = selectedAttachmentName
                 ?: getString(R.string.task_attachment_empty)
+        }
+
+        fun resetRecordAttachmentUi() {
+            dialogBinding.buttonRecordAttachment.setImageResource(R.drawable.mic_btn)
+            dialogBinding.buttonRecordAttachment.contentDescription =
+                getString(R.string.task_attachment_record)
+            dialogBinding.buttonPickAttachment.isEnabled = true
+            dialogBinding.buttonClearAttachment.isEnabled = true
+            updateAttachmentLabel()
         }
 
         fun refreshPresetReminder() {
@@ -455,38 +552,11 @@ class MainActivity : AppCompatActivity(), TaskAdapter.TaskItemActions {
             }
         }
 
-        dialogBinding.buttonSaveDescription.setOnClickListener {
-            val description = dialogBinding.editDescription.text?.toString()?.trim().orEmpty()
-            if (description.isBlank()) {
-                showStatus(getString(R.string.task_description_required))
-                return@setOnClickListener
-            }
-            selectedDescription = description
-            showStatus(getString(R.string.task_description_saved))
-        }
-
-        dialogBinding.buttonClearDescription.setOnClickListener {
-            selectedDescription = null
-            dialogBinding.editDescription.setText("")
-        }
-
-        dialogBinding.buttonSaveLink.setOnClickListener {
-            val rawLink = dialogBinding.editLink.text?.toString()?.trim().orEmpty()
-            if (rawLink.isBlank()) {
-                showStatus(getString(R.string.task_link_required))
-                return@setOnClickListener
-            }
-            selectedLink = normalizeUrl(rawLink)
-            dialogBinding.editLink.setText(selectedLink)
-            showStatus(getString(R.string.task_link_saved))
-        }
-
-        dialogBinding.buttonClearLink.setOnClickListener {
-            selectedLink = null
-            dialogBinding.editLink.setText("")
-        }
-
         dialogBinding.buttonPickAttachment.setOnClickListener {
+            if (audioRecorder.isRecording) {
+                audioRecorder.cancel()
+                resetRecordAttachmentUi()
+            }
             launchAttachmentPicker { uri ->
                 if (uri == null) return@launchAttachmentPicker
                 if (!persistReadPermission(uri)) {
@@ -504,10 +574,46 @@ class MainActivity : AppCompatActivity(), TaskAdapter.TaskItemActions {
         }
 
         dialogBinding.buttonClearAttachment.setOnClickListener {
+            if (audioRecorder.isRecording) {
+                audioRecorder.cancel()
+                resetRecordAttachmentUi()
+            }
             selectedAttachmentUri = null
             selectedAttachmentName = null
             selectedAttachmentMimeType = null
             updateAttachmentLabel()
+        }
+
+        dialogBinding.buttonRecordAttachment.setOnClickListener {
+            if (audioRecorder.isRecording) {
+                stopRecordingAttachment(
+                    audioRecorder = audioRecorder,
+                    dialogBinding = dialogBinding,
+                    onRecorded = { uri, name, mimeType ->
+                        selectedAttachmentUri = uri
+                        selectedAttachmentName = name
+                        selectedAttachmentMimeType = mimeType
+                        updateAttachmentLabel()
+                        showStatus(getString(R.string.task_attachment_saved))
+                    },
+                    onResetUi = ::resetRecordAttachmentUi
+                )
+                return@setOnClickListener
+            }
+            runWithRecordAudioPermission {
+                startRecordingAttachment(
+                    audioRecorder = audioRecorder,
+                    dialogBinding = dialogBinding,
+                    onStarted = {
+                        dialogBinding.buttonPickAttachment.isEnabled = false
+                        dialogBinding.buttonClearAttachment.isEnabled = false
+                        dialogBinding.textAttachmentName.text = getString(R.string.task_attachment_recording)
+                    },
+                    onFailed = {
+                        showStatus(getString(R.string.task_attachment_record_failed))
+                    }
+                )
+            }
         }
 
         val titleRes = when {
@@ -526,14 +632,24 @@ class MainActivity : AppCompatActivity(), TaskAdapter.TaskItemActions {
 
         applyDialogPanelBackgrounds(dialog)
 
+        dialog.setOnDismissListener {
+            if (audioRecorder.isRecording) {
+                audioRecorder.cancel()
+            }
+        }
+
         dialog.getButton(AlertDialog.BUTTON_POSITIVE).setOnClickListener {
+            if (audioRecorder.isRecording) {
+                showStatus(getString(R.string.task_attachment_finish_recording))
+                return@setOnClickListener
+            }
             val text = dialogBinding.editTaskText.text?.toString().orEmpty()
             val importance = dialogBinding.spinnerImportance.selectedItemPosition + 1
             val pinned = dialogBinding.checkPinned.isChecked
             val descriptionDraft = dialogBinding.editDescription.text?.toString()?.trim().orEmpty()
             val linkDraft = dialogBinding.editLink.text?.toString()?.trim().orEmpty()
-            val finalDescription = if (descriptionDraft.isNotBlank()) descriptionDraft else selectedDescription
-            val finalLink = if (linkDraft.isNotBlank()) normalizeUrl(linkDraft) else selectedLink
+            val finalDescription = descriptionDraft.takeIf { it.isNotBlank() }
+            val finalLink = linkDraft.takeIf { it.isNotBlank() }?.let(::normalizeUrl)
 
             if (text.isBlank()) {
                 showStatus(getString(R.string.task_text_required))
@@ -1068,6 +1184,67 @@ class MainActivity : AppCompatActivity(), TaskAdapter.TaskItemActions {
     private fun launchAttachmentPicker(onPicked: (Uri?) -> Unit) {
         pendingAttachmentSelection = onPicked
         attachmentPickerLauncher.launch(arrayOf("*/*"))
+    }
+
+    private fun runWithRecordAudioPermission(onGranted: () -> Unit) {
+        if (ContextCompat.checkSelfPermission(this, Manifest.permission.RECORD_AUDIO) ==
+            PackageManager.PERMISSION_GRANTED
+        ) {
+            onGranted()
+            return
+        }
+        pendingRecordAudioAction = onGranted
+        recordAudioPermissionLauncher.launch(Manifest.permission.RECORD_AUDIO)
+    }
+
+    private fun startRecordingAttachment(
+        audioRecorder: TaskAudioRecorder,
+        dialogBinding: DialogTaskEditorBinding,
+        onStarted: () -> Unit,
+        onFailed: () -> Unit
+    ) {
+        val outputFile = createRecordingOutputFile()
+        if (!audioRecorder.start(outputFile)) {
+            onFailed()
+            return
+        }
+        dialogBinding.buttonRecordAttachment.setImageResource(R.drawable.stop_rec_btn)
+        dialogBinding.buttonRecordAttachment.contentDescription =
+            getString(R.string.task_attachment_stop_record)
+        onStarted()
+    }
+
+    private fun stopRecordingAttachment(
+        audioRecorder: TaskAudioRecorder,
+        dialogBinding: DialogTaskEditorBinding,
+        onRecorded: (uri: String, name: String, mimeType: String) -> Unit,
+        onResetUi: () -> Unit
+    ) {
+        val recordedFile = audioRecorder.stop()
+        onResetUi()
+        if (recordedFile == null) {
+            showStatus(getString(R.string.task_attachment_record_failed))
+            return
+        }
+        val uri = attachmentUriForRecordingFile(recordedFile)
+        val name = recordedFile.name
+        val mimeType = contentResolver.getType(uri)
+            ?: TaskContentSupport.normalizeMimeType("audio/mp4", name)
+        onRecorded(uri.toString(), name, mimeType)
+    }
+
+    private fun createRecordingOutputFile(): File {
+        val directory = File(filesDir, "task_attachments").apply { mkdirs() }
+        val timestamp = SimpleDateFormat("yyyyMMdd_HHmmss", Locale.US).format(Date())
+        return File(directory, "recording_$timestamp.m4a")
+    }
+
+    private fun attachmentUriForRecordingFile(file: File): Uri {
+        return FileProvider.getUriForFile(
+            this,
+            "${packageName}.fileprovider",
+            file
+        )
     }
 
     private fun persistReadPermission(uri: Uri): Boolean {

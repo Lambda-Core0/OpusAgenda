@@ -1,7 +1,7 @@
 <resources>
     <string name="app_name">OpusAgenda</string>
 
-    <string name="app_header_title">♱ OpusAgenda v1.3</string>
+    <string name="app_header_title">♱ OpusAgenda v1.4</string>
 
     <string name="app_font_family">PirateOne</string>
 
@@ -227,13 +227,9 @@
 
     <string name="task_description_hint">เพิ่มบริบทสำหรับงานนี้</string>
 
-    <string name="task_description_save">บันทึกคำอธิบาย</string>
 
-    <string name="task_description_clear">คำอธิบายที่ชัดเจน</string>
 
-    <string name="task_description_required">คำอธิบายต้องไม่เว้นว่าง</string>
 
-    <string name="task_description_saved">คำอธิบายจัดฉาก</string>
 
     <string name="task_description_title">คำอธิบายงาน</string>
 
@@ -243,13 +239,9 @@
 
     <string name="task_link_hint">https://linked.resource</string>
 
-    <string name="task_link_save">บันทึกลิงก์</string>
 
-    <string name="task_link_clear">ล้างลิงค์</string>
 
-    <string name="task_link_required">ป้อนลิงก์ที่ถูกต้องก่อน</string>
 
-    <string name="task_link_saved">ลิงค์จัดฉาก</string>
 
     <string name="task_link_title">ลิงค์งาน</string>
 
@@ -263,6 +255,17 @@
 
     <string name="task_attachment_clear">ล้างไฟล์</string>
 
+    <string name="task_attachment_record">RECORD</string>
+
+    <string name="task_attachment_stop_record">STOP</string>
+
+    <string name="task_attachment_recording">Recording…</string>
+
+    <string name="task_attachment_record_failed">Could not record audio</string>
+
+    <string name="task_attachment_record_permission_denied">Microphone permission is required to record audio</string>
+
+    <string name="task_attachment_finish_recording">Stop recording before saving the task</string>
     <string name="task_attachment_saved">แนบไฟล์</string>
 
     <string name="task_attachment_picker_failed">ไม่สามารถอ่านไฟล์ที่เลือกได้</string>
@@ -333,6 +336,10 @@
     <string name="next_label">ถัดไป</string>
 
     <string name="pdf_page_indicator">หน้า %1$d / %2$d</string>
+    <string name="font_button_label">เปลี่ยนแบบอักษร</string>
+    <string name="import_button_label">นำเข้าข้อมูลสำรอง</string>
+    <string name="export_button_label">ส่งออกข้อมูลสำรอง</string>
 </resources>
+
 
 

@@ -1,7 +1,7 @@
 <resources>
     <string name="app_name">OpusAgenda</string>
 
-    <string name="app_header_title">♱ OpusAgenda v1.3</string>
+    <string name="app_header_title">♱ OpusAgenda v1.4</string>
 
     <string name="app_font_family">PirateOne</string>
 
@@ -227,13 +227,9 @@
 
     <string name="task_description_hint">このタスクにコンテキストを追加します</string>
 
-    <string name="task_description_save">説明を保存</string>
 
-    <string name="task_description_clear">クリアディスク</string>
 
-    <string name="task_description_required">説明を空にすることはできません</string>
 
-    <string name="task_description_saved">ステージングされた説明</string>
 
     <string name="task_description_title">タスクの説明</string>
 
@@ -243,13 +239,9 @@
 
     <string name="task_link_hint">https://linked.resource</string>
 
-    <string name="task_link_save">リンクを保存</string>
 
-    <string name="task_link_clear">クリアリンク</string>
 
-    <string name="task_link_required">最初に有効なリンクを入力してください</string>
 
-    <string name="task_link_saved">ステージングされたリンク</string>
 
     <string name="task_link_title">タスクリンク</string>
 
@@ -263,6 +255,17 @@
 
     <string name="task_attachment_clear">クリアファイル</string>
 
+    <string name="task_attachment_record">RECORD</string>
+
+    <string name="task_attachment_stop_record">STOP</string>
+
+    <string name="task_attachment_recording">Recording…</string>
+
+    <string name="task_attachment_record_failed">Could not record audio</string>
+
+    <string name="task_attachment_record_permission_denied">Microphone permission is required to record audio</string>
+
+    <string name="task_attachment_finish_recording">Stop recording before saving the task</string>
     <string name="task_attachment_saved">添付ファイル</string>
 
     <string name="task_attachment_picker_failed">選択したファイルを読み取れませんでした</string>
@@ -333,6 +336,10 @@
     <string name="next_label">次へ</string>
 
     <string name="pdf_page_indicator">%1$d / %2$d ページ</string>
+    <string name="font_button_label">フォントを変更</string>
+    <string name="import_button_label">バックアップをインポート</string>
+    <string name="export_button_label">バックアップをエクスポート</string>
 </resources>
+
 
 

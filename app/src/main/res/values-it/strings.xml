@@ -1,7 +1,7 @@
 <resources>
     <string name="app_name">OpusAgenda</string>
 
-    <string name="app_header_title">♱ OpusAgenda v1.3</string>
+    <string name="app_header_title">♱ OpusAgenda v1.4</string>
 
     <string name="app_font_family">PirateOne</string>
 
@@ -227,13 +227,9 @@
 
     <string name="task_description_hint">Aggiungi un po\' di contesto per questa attività</string>
 
-    <string name="task_description_save">SALVA DESC</string>
 
-    <string name="task_description_clear">PULISCI DESC</string>
 
-    <string name="task_description_required">La descrizione non può essere vuota</string>
 
-    <string name="task_description_saved">Descrizione messa in scena</string>
 
     <string name="task_description_title">Descrizione del compito</string>
 
@@ -243,13 +239,9 @@
 
     <string name="task_link_hint">https://linked.resource</string>
 
-    <string name="task_link_save">SALVA COLLEGAMENTO</string>
 
-    <string name="task_link_clear">COLLEGAMENTO CHIARO</string>
 
-    <string name="task_link_required">Inserisci prima un collegamento valido</string>
 
-    <string name="task_link_saved">Collegamento messo in scena</string>
 
     <string name="task_link_title">Collegamento attività</string>
 
@@ -263,6 +255,17 @@
 
     <string name="task_attachment_clear">CANCELLARE FILE</string>
 
+    <string name="task_attachment_record">REGISTRA</string>
+
+    <string name="task_attachment_stop_record">FERMA</string>
+
+    <string name="task_attachment_recording">Registrazione…</string>
+
+    <string name="task_attachment_record_failed">Impossibile registrare l\'audio</string>
+
+    <string name="task_attachment_record_permission_denied">È richiesta l\'autorizzazione al microfono per registrare l\'audio</string>
+
+    <string name="task_attachment_finish_recording">Interrompi la registrazione prima di salvare l\'attività</string>
     <string name="task_attachment_saved">File allegato</string>
 
     <string name="task_attachment_picker_failed">Impossibile leggere il file selezionato</string>
@@ -333,7 +336,11 @@
     <string name="next_label">AVANTI</string>
 
     <string name="pdf_page_indicator">Pagina %1$d / %2$d</string>
+    <string name="font_button_label">Cambia carattere</string>
+    <string name="import_button_label">Importa backup</string>
+    <string name="export_button_label">Esporta backup</string>
 </resources>
+
 
 
 

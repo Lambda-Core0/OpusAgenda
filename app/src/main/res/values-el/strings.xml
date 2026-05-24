@@ -1,7 +1,7 @@
 <resources>
     <string name="app_name">OpusAgenda</string>
 
-    <string name="app_header_title">♱ OpusAgenda v1.3</string>
+    <string name="app_header_title">♱ OpusAgenda v1.4</string>
 
     <string name="app_font_family">PirateOne</string>
 
@@ -227,13 +227,9 @@
 
     <string name="task_description_hint">Προσθέστε κάποιο πλαίσιο για αυτήν την εργασία</string>
 
-    <string name="task_description_save">ΑΠΟΘΗΚΕΥΣΗ ΠΕΡΙΓΡΑΦΗΣ</string>
 
-    <string name="task_description_clear">ΔΙΑΓΡΑΦΗ ΠΕΡΙΓΡΑΦΗ</string>
 
-    <string name="task_description_required">Η περιγραφή δεν μπορεί να είναι κενή</string>
 
-    <string name="task_description_saved">Περιγραφή σκηνοθετημένη</string>
 
     <string name="task_description_title">Περιγραφή εργασίας</string>
 
@@ -243,13 +239,9 @@
 
     <string name="task_link_hint">https://linked.resource</string>
 
-    <string name="task_link_save">ΑΠΟΘΗΚΕΥΣΗ ΣΥΝΔΕΣΟΥ</string>
 
-    <string name="task_link_clear">ΚΑΘΑΡΙΣΜΟΣ ΣΥΝΔΕΣΗΣ</string>
 
-    <string name="task_link_required">Εισαγάγετε πρώτα έναν έγκυρο σύνδεσμο</string>
 
-    <string name="task_link_saved">Ο σύνδεσμος σκηνοθετήθηκε</string>
 
     <string name="task_link_title">Σύνδεσμος εργασιών</string>
 
@@ -263,6 +255,17 @@
 
     <string name="task_attachment_clear">ΕΚΚΑΘΑΡΙΣΗ ΑΡΧΕΙΟΥ</string>
 
+    <string name="task_attachment_record">RECORD</string>
+
+    <string name="task_attachment_stop_record">STOP</string>
+
+    <string name="task_attachment_recording">Recording…</string>
+
+    <string name="task_attachment_record_failed">Could not record audio</string>
+
+    <string name="task_attachment_record_permission_denied">Microphone permission is required to record audio</string>
+
+    <string name="task_attachment_finish_recording">Stop recording before saving the task</string>
     <string name="task_attachment_saved">Επισυνάπτεται αρχείο</string>
 
     <string name="task_attachment_picker_failed">Δεν ήταν δυνατή η ανάγνωση του επιλεγμένου αρχείου</string>
@@ -333,7 +336,11 @@
     <string name="next_label">ΕΠΟΜΕΝΟ</string>
 
     <string name="pdf_page_indicator">Σελίδα %1$d / %2$d</string>
+    <string name="font_button_label">Αλλαγή γραμματοσειράς</string>
+    <string name="import_button_label">Εισαγωγή αντιγράφου ασφαλείας</string>
+    <string name="export_button_label">Εξαγωγή αντιγράφου ασφαλείας</string>
 </resources>
+
 
 
 

@@ -1,7 +1,7 @@
 <resources>
     <string name="app_name">OpusAgenda</string>
 
-    <string name="app_header_title">♱ OpusAgenda v1.3</string>
+    <string name="app_header_title">♱ OpusAgenda v1.4</string>
 
     <string name="app_font_family">PirateOne</string>
 
@@ -227,13 +227,9 @@
 
     <string name="task_description_hint">Adjon hozzá némi kontextust ehhez a feladathoz</string>
 
-    <string name="task_description_save">LEÍRÁS MENTÉSE</string>
 
-    <string name="task_description_clear">LEÍRÁS TÖRLÉSE</string>
 
-    <string name="task_description_required">A leírás nem lehet üres</string>
 
-    <string name="task_description_saved">Leírás színpadra</string>
 
     <string name="task_description_title">Feladat leírása</string>
 
@@ -243,13 +239,9 @@
 
     <string name="task_link_hint">https://linked.resource</string>
 
-    <string name="task_link_save">LINK MENTÉSE</string>
 
-    <string name="task_link_clear">LINK TÖRLÉSE</string>
 
-    <string name="task_link_required">Először írjon be egy érvényes linket</string>
 
-    <string name="task_link_saved">Link rendezve</string>
 
     <string name="task_link_title">Feladat link</string>
 
@@ -263,6 +255,17 @@
 
     <string name="task_attachment_clear">FÁJL TÖRLÉSE</string>
 
+    <string name="task_attachment_record">RECORD</string>
+
+    <string name="task_attachment_stop_record">STOP</string>
+
+    <string name="task_attachment_recording">Recording…</string>
+
+    <string name="task_attachment_record_failed">Could not record audio</string>
+
+    <string name="task_attachment_record_permission_denied">Microphone permission is required to record audio</string>
+
+    <string name="task_attachment_finish_recording">Stop recording before saving the task</string>
     <string name="task_attachment_saved">Fájl csatolva</string>
 
     <string name="task_attachment_picker_failed">Nem sikerült beolvasni a kiválasztott fájlt</string>
@@ -333,7 +336,11 @@
     <string name="next_label">KÖVETKEZŐ</string>
 
     <string name="pdf_page_indicator">%1$d / %2$d oldal</string>
+    <string name="font_button_label">Betűtípus módosítása</string>
+    <string name="import_button_label">Biztonsági mentés importálása</string>
+    <string name="export_button_label">Biztonsági mentés exportálása</string>
 </resources>
+
 
 
 

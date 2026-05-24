@@ -146,37 +146,6 @@
             android:textColor="@color/terminal_text"
             android:textColorHint="@color/terminal_text_muted" />
 
-        <LinearLayout
-            android:id="@+id/layoutDescriptionActions"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_marginTop="10dp"
-            android:orientation="horizontal">
-
-            <Button
-                android:id="@+id/buttonSaveDescription"
-                android:layout_width="0dp"
-                android:layout_height="wrap_content"
-                android:layout_weight="1"
-                android:background="@drawable/bg_terminal_action"
-                android:backgroundTint="@null"
-                android:text="@string/task_description_save"
-                android:textAllCaps="false"
-                android:textColor="@color/terminal_black" />
-
-            <Button
-                android:id="@+id/buttonClearDescription"
-                android:layout_width="0dp"
-                android:layout_height="wrap_content"
-                android:layout_marginStart="8dp"
-                android:layout_weight="1"
-                android:background="@drawable/bg_terminal_action"
-                android:backgroundTint="@null"
-                android:text="@string/task_description_clear"
-                android:textAllCaps="false"
-                android:textColor="@color/terminal_black" />
-        </LinearLayout>
-
         <TextView
             android:id="@+id/textLinkLabel"
             android:layout_width="wrap_content"
@@ -197,37 +166,6 @@
             android:padding="12dp"
             android:textColor="@color/terminal_text"
             android:textColorHint="@color/terminal_text_muted" />
-
-        <LinearLayout
-            android:id="@+id/layoutLinkActions"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_marginTop="10dp"
-            android:orientation="horizontal">
-
-            <Button
-                android:id="@+id/buttonSaveLink"
-                android:layout_width="0dp"
-                android:layout_height="wrap_content"
-                android:layout_weight="1"
-                android:background="@drawable/bg_terminal_action"
-                android:backgroundTint="@null"
-                android:text="@string/task_link_save"
-                android:textAllCaps="false"
-                android:textColor="@color/terminal_black" />
-
-            <Button
-                android:id="@+id/buttonClearLink"
-                android:layout_width="0dp"
-                android:layout_height="wrap_content"
-                android:layout_marginStart="8dp"
-                android:layout_weight="1"
-                android:background="@drawable/bg_terminal_action"
-                android:backgroundTint="@null"
-                android:text="@string/task_link_clear"
-                android:textAllCaps="false"
-                android:textColor="@color/terminal_black" />
-        </LinearLayout>
 
         <TextView
             android:id="@+id/textAttachmentLabel"
@@ -251,7 +189,7 @@
         <LinearLayout
             android:id="@+id/layoutAttachmentActions"
             android:layout_width="match_parent"
-            android:layout_height="wrap_content"
+            android:layout_height="48dp"
             android:layout_marginTop="10dp"
             android:orientation="horizontal">
 
@@ -259,24 +197,33 @@
                 android:id="@+id/buttonPickAttachment"
                 android:layout_width="0dp"
                 android:layout_height="wrap_content"
-                android:layout_weight="1"
+                android:layout_weight="6"
                 android:background="@drawable/bg_terminal_action"
                 android:backgroundTint="@null"
                 android:text="@string/task_attachment_pick"
                 android:textAllCaps="false"
                 android:textColor="@color/terminal_black" />
 
-            <Button
-                android:id="@+id/buttonClearAttachment"
-                android:layout_width="0dp"
-                android:layout_height="wrap_content"
+            <ImageButton
+                android:id="@+id/buttonRecordAttachment"
+                android:layout_width="48dp"
+                android:layout_height="48dp"
                 android:layout_marginStart="8dp"
-                android:layout_weight="1"
                 android:background="@drawable/bg_terminal_action"
                 android:backgroundTint="@null"
-                android:text="@string/task_attachment_clear"
-                android:textAllCaps="false"
-                android:textColor="@color/terminal_black" />
+                android:contentDescription="@string/task_attachment_record"
+                android:src="@drawable/mic_btn" />
+
+            <ImageButton
+                android:id="@+id/buttonClearAttachment"
+                android:layout_width="48dp"
+                android:layout_height="48dp"
+                android:layout_marginStart="8dp"
+                android:background="@drawable/bg_terminal_action"
+                android:backgroundTint="@null"
+                android:contentDescription="@string/task_attachment_clear"
+                android:src="@drawable/del_btn" />
+
         </LinearLayout>
 
         <CheckBox

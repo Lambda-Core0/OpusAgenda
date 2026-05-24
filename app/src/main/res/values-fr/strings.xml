@@ -1,7 +1,7 @@
 <resources>
     <string name="app_name">OpusAgenda</string>
 
-    <string name="app_header_title">♱ OpusAgenda v1.3</string>
+    <string name="app_header_title">♱ OpusAgenda v1.4</string>
 
     <string name="app_font_family">PirateOne</string>
 
@@ -227,13 +227,9 @@
 
     <string name="task_description_hint">Ajouter du contexte pour cette tâche</string>
 
-    <string name="task_description_save">SAUVEGARDER DESC</string>
 
-    <string name="task_description_clear">EFFACER DESC</string>
 
-    <string name="task_description_required">La description ne peut pas être vide</string>
 
-    <string name="task_description_saved">Description mise en scène</string>
 
     <string name="task_description_title">Description de la tâche</string>
 
@@ -243,13 +239,9 @@
 
     <string name="task_link_hint">https://linked.resource</string>
 
-    <string name="task_link_save">ENREGISTRER LE LIEN</string>
 
-    <string name="task_link_clear">LIEN CLAIR</string>
 
-    <string name="task_link_required">Entrez d\'abord un lien valide</string>
 
-    <string name="task_link_saved">Lien mis en scène</string>
 
     <string name="task_link_title">Lien de tâche</string>
 
@@ -263,6 +255,17 @@
 
     <string name="task_attachment_clear">EFFACER LE FICHIER</string>
 
+    <string name="task_attachment_record">ENREGISTRER</string>
+
+    <string name="task_attachment_stop_record">ARRÊTER</string>
+
+    <string name="task_attachment_recording">Enregistrement…</string>
+
+    <string name="task_attachment_record_failed">Impossible d\'enregistrer l\'audio</string>
+
+    <string name="task_attachment_record_permission_denied">L\'autorisation du micro est requise pour enregistrer l\'audio</string>
+
+    <string name="task_attachment_finish_recording">Arrêtez l\'enregistrement avant d\'enregistrer la tâche</string>
     <string name="task_attachment_saved">Fichier joint</string>
 
     <string name="task_attachment_picker_failed">Impossible de lire le fichier sélectionné</string>
@@ -333,7 +336,11 @@
     <string name="next_label">SUIVANT</string>
 
     <string name="pdf_page_indicator">Page %1$d / %2$d</string>
+    <string name="font_button_label">Changer la police</string>
+    <string name="import_button_label">Importer la sauvegarde</string>
+    <string name="export_button_label">Exporter la sauvegarde</string>
 </resources>
+
 
 
 

@@ -1,7 +1,7 @@
-<resources>
+﻿<resources>
     <string name="app_name">OpusAgenda</string>
 
-    <string name="app_header_title">♱ OpusAgenda v1.3</string>
+    <string name="app_header_title">♱ OpusAgenda v1.4</string>
 
     <string name="app_font_family">PirateOne</string>
 
@@ -217,6 +217,34 @@
 
     <string name="font_applied">Fuente aplicada: %1$s</string>
 
+    <string name="font_button_label">Cambiar fuente</string>
+
+    <string name="import_button_label">Importar respaldo</string>
+
+    <string name="export_button_label">Exportar respaldo</string>
+
+    <string name="backup_replace_label">REEMPLAZAR</string>
+
+    <string name="backup_import_warning_title">Importar lista de tareas</string>
+
+    <string name="backup_import_warning_message">Importar un respaldo eliminará todas las tareas actuales antes de cargar la nueva lista. ¿Quieres continuar?</string>
+
+    <string name="backup_export_success">Respaldo exportado: %1$d elementos</string>
+
+    <string name="backup_export_failed">No se pudo exportar el respaldo</string>
+
+    <string name="backup_import_success">Respaldo importado: %1$d elementos</string>
+
+    <string name="backup_import_failed">No se pudo importar el respaldo</string>
+
+    <string name="backup_open_failed">No se pudo abrir el archivo de respaldo seleccionado</string>
+
+    <string name="backup_invalid_archive">El archivo seleccionado no es un respaldo válido de OpusAgenda</string>
+
+    <string name="backup_unsupported_version">Este formato de respaldo no es compatible con la versión actual de la app</string>
+
+    <string name="backup_attachment_export_failed">No se pudo incluir este adjunto en el respaldo: %1$s</string>
+
     <string name="new_category_label">NUEVA CAT</string>
 
     <string name="new_subcategory_label">NUEVA SUBC</string>
@@ -227,13 +255,9 @@
 
     <string name="task_description_hint">Agrega contexto para esta tarea</string>
 
-    <string name="task_description_save">GUARDAR DESC</string>
 
-    <string name="task_description_clear">LIMPIAR DESC</string>
 
-    <string name="task_description_required">La descripción no puede quedar vacía</string>
 
-    <string name="task_description_saved">Descripción preparada</string>
 
     <string name="task_description_title">Descripción de la tarea</string>
 
@@ -243,13 +267,9 @@
 
     <string name="task_link_hint">https://recurso.asociado</string>
 
-    <string name="task_link_save">GUARDAR LINK</string>
 
-    <string name="task_link_clear">LIMPIAR LINK</string>
 
-    <string name="task_link_required">Ingresa un link válido primero</string>
 
-    <string name="task_link_saved">Link preparado</string>
 
     <string name="task_link_title">Link de la tarea</string>
 
@@ -262,6 +282,18 @@
     <string name="task_attachment_pick">ELEGIR ARCHIVO</string>
 
     <string name="task_attachment_clear">LIMPIAR ARCHIVO</string>
+
+    <string name="task_attachment_record">GRABAR</string>
+
+    <string name="task_attachment_stop_record">PARAR</string>
+
+    <string name="task_attachment_recording">Grabando…</string>
+
+    <string name="task_attachment_record_failed">No se pudo grabar el audio</string>
+
+    <string name="task_attachment_record_permission_denied">Se necesita permiso de micrófono para grabar audio</string>
+
+    <string name="task_attachment_finish_recording">Detén la grabación antes de guardar la tarea</string>
 
     <string name="task_attachment_saved">Archivo adjuntado</string>
 
@@ -334,5 +366,4 @@
 
     <string name="pdf_page_indicator">Página %1$d / %2$d</string>
 </resources>
-
 

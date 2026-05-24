@@ -14,56 +14,92 @@
         android:orientation="vertical"
         android:padding="16dp">
 
-        <LinearLayout
+        <FrameLayout
             android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:gravity="center_vertical"
-            android:orientation="horizontal">
+            android:layout_height="wrap_content">
 
-            <TextView
-                android:layout_width="0dp"
+            <LinearLayout
+                android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:layout_weight="1"
-                android:text="@string/app_header_title"
-                android:textColor="@color/terminal_green"
-                android:textSize="24sp"
-                android:textStyle="bold" />
+                android:orientation="vertical"
+                android:paddingEnd="56dp">
 
-            <ImageButton
-                android:id="@+id/buttonFont"
-                android:layout_width="40dp"
-                android:layout_height="40dp"
-                android:background="@null"
-                android:backgroundTint="@null"
-                android:src="@drawable/font_btn" />
-        </LinearLayout>
+                <TextView
+                    android:id="@+id/textHeaderTitle"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/app_header_title"
+                    android:textColor="@color/terminal_green"
+                    android:textSize="24sp"
+                    android:textStyle="bold" />
 
-        <TextView
-            android:id="@+id/textSummary"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_marginTop="6dp"
-            android:textColor="@color/terminal_text_muted"
-            android:textSize="12sp" />
+                <TextView
+                    android:id="@+id/textSummary"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="6dp"
+                    android:textColor="@color/terminal_text_muted"
+                    android:textSize="12sp" />
 
-        <TextView
-            android:id="@+id/textClock"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_marginTop="14dp"
-            android:text="@string/clock_time_placeholder"
-            android:textColor="@color/terminal_yellow"
-            android:textSize="28sp"
-            android:textStyle="bold" />
+                <TextView
+                    android:id="@+id/textClock"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="14dp"
+                    android:text="@string/clock_time_placeholder"
+                    android:textColor="@color/terminal_yellow"
+                    android:textSize="28sp"
+                    android:textStyle="bold" />
 
-        <TextView
-            android:id="@+id/textDate"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_marginTop="4dp"
-            android:text="@string/clock_date_placeholder"
-            android:textColor="@color/terminal_text"
-            android:textSize="14sp" />
+                <TextView
+                    android:id="@+id/textDate"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="4dp"
+                    android:text="@string/clock_date_placeholder"
+                    android:textColor="@color/terminal_text"
+                    android:textSize="14sp" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/layoutHeaderActions"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="top|end"
+                android:gravity="end"
+                android:orientation="vertical">
+
+                <ImageButton
+                    android:id="@+id/buttonFont"
+                    android:layout_width="40dp"
+                    android:layout_height="40dp"
+                    android:layout_gravity="end"
+                    android:background="@null"
+                    android:backgroundTint="@null"
+                    android:contentDescription="@string/font_button_label"
+                    android:src="@drawable/font_btn" />
+
+                <ImageButton
+                    android:id="@+id/buttonImport"
+                    android:layout_width="40dp"
+                    android:layout_height="40dp"
+                    android:layout_marginTop="8dp"
+                    android:layout_gravity="end"
+                    android:background="@null"
+                    android:contentDescription="@string/import_button_label"
+                    android:src="@drawable/import_btn" />
+
+                <ImageButton
+                    android:id="@+id/buttonExport"
+                    android:layout_width="40dp"
+                    android:layout_height="40dp"
+                    android:layout_marginTop="8dp"
+                    android:layout_gravity="end"
+                    android:background="@null"
+                    android:contentDescription="@string/export_button_label"
+                    android:src="@drawable/export_btn" />
+            </LinearLayout>
+        </FrameLayout>
     </LinearLayout>
 
     <!-- Bloque 2: accesos rapidos independientes de las tareas. -->

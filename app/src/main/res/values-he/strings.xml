@@ -1,7 +1,7 @@
 <resources>
     <string name="app_name">OpusAgenda</string>
 
-    <string name="app_header_title">♱ OpusAgenda v1.3</string>
+    <string name="app_header_title">♱ OpusAgenda v1.4</string>
 
     <string name="app_font_family">PirateOne</string>
 
@@ -227,13 +227,9 @@
 
     <string name="task_description_hint">הוסף קצת הקשר למשימה זו</string>
 
-    <string name="task_description_save">שמור תיאור</string>
 
-    <string name="task_description_clear">נקה DESC</string>
 
-    <string name="task_description_required">התיאור לא יכול להיות ריק</string>
 
-    <string name="task_description_saved">תיאור מבוים</string>
 
     <string name="task_description_title">תיאור המשימה</string>
 
@@ -243,13 +239,9 @@
 
     <string name="task_link_hint">https://linked.resource</string>
 
-    <string name="task_link_save">שמור קישור</string>
 
-    <string name="task_link_clear">נקה קישור</string>
 
-    <string name="task_link_required">הזן קודם קישור חוקי</string>
 
-    <string name="task_link_saved">קישור מבוים</string>
 
     <string name="task_link_title">קישור למשימה</string>
 
@@ -263,6 +255,17 @@
 
     <string name="task_attachment_clear">נקה קובץ</string>
 
+    <string name="task_attachment_record">RECORD</string>
+
+    <string name="task_attachment_stop_record">STOP</string>
+
+    <string name="task_attachment_recording">Recording…</string>
+
+    <string name="task_attachment_record_failed">Could not record audio</string>
+
+    <string name="task_attachment_record_permission_denied">Microphone permission is required to record audio</string>
+
+    <string name="task_attachment_finish_recording">Stop recording before saving the task</string>
     <string name="task_attachment_saved">מצורף קובץ</string>
 
     <string name="task_attachment_picker_failed">לא ניתן היה לקרוא את הקובץ שנבחר</string>
@@ -333,7 +336,11 @@
     <string name="next_label">הבא</string>
 
     <string name="pdf_page_indicator">עמוד %1$d / %2$d</string>
+    <string name="font_button_label">שינוי גופן</string>
+    <string name="import_button_label">ייבוא גיבוי</string>
+    <string name="export_button_label">ייצוא גיבוי</string>
 </resources>
+
 
 
 

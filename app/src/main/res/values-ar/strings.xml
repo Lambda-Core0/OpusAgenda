@@ -1,7 +1,7 @@
 <resources>
     <string name="app_name">OpusAgenda</string>
 
-    <string name="app_header_title">♱ OpusAgenda v1.3</string>
+    <string name="app_header_title">♱ OpusAgenda v1.4</string>
 
     <string name="app_font_family">PirateOne</string>
 
@@ -227,13 +227,9 @@
 
     <string name="task_description_hint">أضف بعض السياق لهذه المهمة</string>
 
-    <string name="task_description_save">حفظ الوصف</string>
 
-    <string name="task_description_clear">وصف واضح</string>
 
-    <string name="task_description_required">لا يمكن أن يكون الوصف فارغًا</string>
 
-    <string name="task_description_saved">وصف نظموا</string>
 
     <string name="task_description_title">وصف المهمة</string>
 
@@ -243,13 +239,9 @@
 
     <string name="task_link_hint">https://linked.resource</string>
 
-    <string name="task_link_save">حفظ الرابط</string>
 
-    <string name="task_link_clear">رابط واضح</string>
 
-    <string name="task_link_required">أدخل رابطًا صالحًا أولاً</string>
 
-    <string name="task_link_saved">نظموا الارتباط</string>
 
     <string name="task_link_title">رابط المهمة</string>
 
@@ -263,6 +255,17 @@
 
     <string name="task_attachment_clear">ملف واضح</string>
 
+    <string name="task_attachment_record">RECORD</string>
+
+    <string name="task_attachment_stop_record">STOP</string>
+
+    <string name="task_attachment_recording">Recording…</string>
+
+    <string name="task_attachment_record_failed">Could not record audio</string>
+
+    <string name="task_attachment_record_permission_denied">Microphone permission is required to record audio</string>
+
+    <string name="task_attachment_finish_recording">Stop recording before saving the task</string>
     <string name="task_attachment_saved">الملف مرفق</string>
 
     <string name="task_attachment_picker_failed">لا يمكن قراءة الملف المحدد</string>
@@ -333,7 +336,11 @@
     <string name="next_label">التالي</string>
 
     <string name="pdf_page_indicator">الصفحة %1$d / %2$d</string>
+    <string name="font_button_label">تغيير الخط</string>
+    <string name="import_button_label">استيراد النسخة الاحتياطية</string>
+    <string name="export_button_label">تصدير النسخة الاحتياطية</string>
 </resources>
+
 
 
 

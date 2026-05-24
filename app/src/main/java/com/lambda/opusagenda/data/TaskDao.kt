@@ -55,6 +55,10 @@ interface TaskDao {
     @Query("DELETE FROM tasks WHERE id IN (:ids)")
     suspend fun deleteByIds(ids: List<Int>)
 
+    /** Borra todas las tareas, usado por importaciones completas. */
+    @Query("DELETE FROM tasks")
+    suspend fun clearAll()
+
     /** Recupera tareas con recordatorios futuros para reprogramarlas al reiniciar. */
     @Query("SELECT * FROM tasks WHERE isCategory = 0 AND reminderAt IS NOT NULL AND completed = 0 AND reminderAt > :now")
     suspend fun getTasksWithFutureReminders(now: Long): List<TaskEntity>

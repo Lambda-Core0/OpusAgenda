@@ -1,7 +1,7 @@
 <resources>
     <string name="app_name">OpusAgenda</string>
 
-    <string name="app_header_title">♱ OpusAgenda v1.3</string>
+    <string name="app_header_title">♱ OpusAgenda v1.4</string>
 
     <string name="app_font_family">PirateOne</string>
 
@@ -227,13 +227,9 @@
 
     <string name="task_description_hint">이 작업에 대한 컨텍스트를 추가하세요.</string>
 
-    <string name="task_description_save">설명 저장</string>
 
-    <string name="task_description_clear">설명 지우기</string>
 
-    <string name="task_description_required">설명은 비워둘 수 없습니다.</string>
 
-    <string name="task_description_saved">설명 단계</string>
 
     <string name="task_description_title">작업 설명</string>
 
@@ -243,13 +239,9 @@
 
     <string name="task_link_hint">https://linked.resource</string>
 
-    <string name="task_link_save">링크 저장</string>
 
-    <string name="task_link_clear">링크 지우기</string>
 
-    <string name="task_link_required">먼저 유효한 링크를 입력하세요.</string>
 
-    <string name="task_link_saved">링크 준비됨</string>
 
     <string name="task_link_title">작업 링크</string>
 
@@ -263,6 +255,17 @@
 
     <string name="task_attachment_clear">파일 지우기</string>
 
+    <string name="task_attachment_record">RECORD</string>
+
+    <string name="task_attachment_stop_record">STOP</string>
+
+    <string name="task_attachment_recording">Recording…</string>
+
+    <string name="task_attachment_record_failed">Could not record audio</string>
+
+    <string name="task_attachment_record_permission_denied">Microphone permission is required to record audio</string>
+
+    <string name="task_attachment_finish_recording">Stop recording before saving the task</string>
     <string name="task_attachment_saved">파일첨부</string>
 
     <string name="task_attachment_picker_failed">선택한 파일을 읽을 수 없습니다.</string>
@@ -333,6 +336,10 @@
     <string name="next_label">다음</string>
 
     <string name="pdf_page_indicator">%1$d / %2$d 페이지</string>
+    <string name="font_button_label">글꼴 변경</string>
+    <string name="import_button_label">백업 가져오기</string>
+    <string name="export_button_label">백업 내보내기</string>
 </resources>
+
 
 
