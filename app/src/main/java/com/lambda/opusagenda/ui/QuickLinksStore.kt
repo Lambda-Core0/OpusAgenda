@@ -49,7 +49,7 @@ class QuickLinksStore(
         return listOf(
             QuickLink("MAIL", "https://mail.google.com"),
             QuickLink("DRIVE", "https://drive.google.com"),
-            QuickLink("CAL", "https://calendar.google.com")
+            QuickLink("CALENDAR", "https://calendar.google.com")
         )
     }
 

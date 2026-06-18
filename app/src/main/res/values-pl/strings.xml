@@ -1,291 +1,156 @@
+<?xml version="1.0" encoding="utf-8"?>
 <resources>
     <string name="app_name">OpusAgenda</string>
-
-    <string name="app_header_title">♱ OpusAgenda v1.4</string>
-
+    <string name="app_header_title">♱ OpusAgenda v1.5</string>
     <string name="app_font_family">PirateOne</string>
-
-    <string name="search_hint">szukaj zadań...</string>
-
+    <string name="search_hint">szukaj zadań lub tagów...</string>
     <string name="empty_state_all">Nie ma jeszcze żadnych zadań. Użyj NOWEGO, aby go utworzyć</string>
-
     <string name="empty_state_today">Brak pilnych zadań na dzisiaj</string>
-
     <string name="all_label">WSZYSTKIE</string>
-
     <string name="today_label">DZIŚ</string>
-
     <string name="new_task_label">NOWOŚĆ</string>
-
     <string name="run_command_label">BIEGAJ</string>
-
     <string name="task_text_hint">Tekst zadania</string>
-
     <string name="category_text_hint">Nazwa kategorii</string>
-
     <string name="save_label">ZAPISZ</string>
-
     <string name="cancel_label">ANULUJ</string>
-
     <string name="pick_due_date_label">TERMIN</string>
-
     <string name="clear_due_date_label">WYCZYŚĆ NALEŻNE</string>
-
     <string name="pinned_label">PRZYPIĘTE</string>
-
     <string name="completed_label">Ukończono</string>
-
     <string name="importance_label">Znaczenie</string>
-
     <string name="task_dialog_title_new">Nowe zadanie</string>
-
     <string name="task_dialog_title_edit">Edytuj zadanie</string>
-
     <string name="category_dialog_title_new">Nowa kategoria</string>
-
     <string name="category_dialog_title_edit">Edytuj kategorię</string>
-
     <string name="task_text_required">Wpisz tekst zadania</string>
-
     <string name="default_category_name">Kategoria</string>
-
     <string name="category_badge_label">KOT</string>
-
     <string name="category_edit_label">EDYCJA</string>
-
     <string name="category_due_label">kategoria</string>
-
     <string name="category_meta_format">elementy podrzędne: %1$d  ważn.: %2$d</string>
-
     <string name="category_move_invalid">To posunięcie spowodowałoby utworzenie nieprawidłowej kategorii zagnieżdżonej</string>
-
     <string name="task_due_label">termin: %1$s</string>
-
     <string name="task_reminder_value_label">przypomnienie: %1$s</string>
-
     <string name="task_date_with_relative">%1$s - %2$s</string>
-
     <string name="no_due_date">brak terminu</string>
-
     <string name="no_reminder">żaden</string>
-
     <string name="due_relative_overdue">zaległy %1$dd</string>
-
     <string name="due_relative_today">dzisiaj</string>
-
     <string name="due_relative_tomorrow">jutro</string>
-
     <string name="due_relative_in">w %1$dd</string>
-
     <string name="pick_reminder_label">PRZYPOMNIJ MI</string>
-
     <string name="pick_repeat_label">POWTÓRZ</string>
-
     <string name="clear_reminder_label">WYCZYŚĆ PRZYPOMNIENIE</string>
-
     <string name="reminder_dialog_title">Wybierz przypomnienie</string>
-
     <string name="reminder_option_none">Brak przypomnienia</string>
-
     <string name="reminder_option_hour">1 godzinę wcześniej</string>
-
     <string name="reminder_option_day">1 dzień wcześniej</string>
-
     <string name="reminder_option_week">1 tydzień wcześniej</string>
-
     <string name="reminder_option_month">1 miesiąc wcześniej</string>
-
     <string name="reminder_option_custom">Niestandardowa data i godzina</string>
-
     <string name="reminder_summary_with_datetime">%1$s (%2$s)</string>
-
     <string name="reminder_requires_due_date">Aby skorzystać z gotowych ustawień, najpierw ustaw termin</string>
-
     <string name="reminder_time_in_past">Czas przypomnienia musi przypadać w przyszłości</string>
-
     <string name="reminder_custom_date_title">Data przypomnienia</string>
-
     <string name="reminder_custom_time_title">Czas przypomnienia</string>
-
     <string name="reminder_channel_name">Przypomnienia o zadaniach</string>
-
     <string name="reminder_channel_description">Powiadomienia o przypomnieniach o zaplanowanych zadaniach</string>
-
     <string name="reminder_notification_title">Przypomnienie o zadaniu</string>
-
     <string name="notifications_permission_denied">W przypadku przypomnień wymagana jest zgoda na powiadomienia</string>
-
     <string name="task_repeat_value_label">powtórz: %1$s</string>
-
     <string name="repeat_none">żaden</string>
-
     <string name="repeat_dialog_title">Wybierz powtórzenie</string>
-
     <string name="repeat_option_none">Żadnego powtórzenia</string>
-
     <string name="repeat_option_hour">Co godzinę</string>
-
     <string name="repeat_option_day">Każdego dnia</string>
-
     <string name="repeat_option_week">Co tydzień</string>
-
     <string name="repeat_option_month">Co miesiąc</string>
-
     <string name="repeat_option_year">Co roku</string>
-
     <string name="repeat_option_custom">Niestandardowy interwał</string>
-
     <string name="repeat_requires_reminder">Aby skorzystać z powtórzeń, najpierw ustaw przypomnienie</string>
-
     <string name="repeat_custom_title">Niestandardowe powtórzenie</string>
-
     <string name="repeat_custom_amount_hint">Kwota interwału</string>
-
     <string name="repeat_custom_amount_invalid">Wprowadź prawidłową kwotę powtórzenia</string>
-
     <string name="repeat_unit_minutes_label">Minuty</string>
-
     <string name="repeat_unit_days_label">Dni</string>
-
     <string name="repeat_unit_hours_label">Godziny</string>
-
     <string name="repeat_unit_weeks_label">Tygodnie</string>
-
     <string name="repeat_unit_months_label">Miesiące</string>
-
     <string name="repeat_unit_years_label">Lata</string>
-
     <string name="link_open_label">OTWARTE</string>
-
     <string name="link_missing">Brak linku do otwarcia</string>
-
     <string name="invalid_command">Nieprawidłowe polecenie</string>
-
     <string name="task_saved">Zadanie zapisane</string>
-
     <string name="task_deleted">Zadanie usunięte</string>
-
     <string name="task_completed">Zadanie zaktualizowane</string>
-
     <string name="task_failed">Nie udało się zaktualizować zadania</string>
-
     <string name="summary_format">otwarte: %1$d  dziś: %2$d  razem: %3$d</string>
-
     <string name="task_meta_format">ważn.: %1$d  termin: %2$s  wynik: %3$d</string>
-
     <string name="task_pin_label">PRZYPNIJ</string>
-
     <string name="task_unpin_label">ODPINJ</string>
-
     <string name="task_edit_label">EDYCJA</string>
-
     <string name="task_delete_label">USUŃ</string>
-
     <string name="quick_links_title">SZYBKIE LINKI</string>
-
     <string name="new_link_label">NOWY LINK</string>
-
     <string name="quick_link_label_hint">Krótkie imię</string>
-
     <string name="quick_link_url_hint">https://quick.link</string>
-
     <string name="quick_link_new_title">Nowy szybki link</string>
-
     <string name="quick_link_edit_title">Edytuj szybki link</string>
-
     <string name="quick_link_saved">Szybki link został zapisany</string>
-
     <string name="quick_link_deleted">Szybki link usunięty</string>
-
     <string name="quick_link_invalid">Wprowadź prawidłową nazwę i adres URL</string>
-
     <string name="quick_link_delete_label">USUŃ</string>
-
     <string name="widget_tasks_title">ZADANIA</string>
-
     <string name="widget_tasks_description">Lista zadań z filtrami WSZYSTKO i DZIŚ. Kliknij wiersz, aby przełączyć gotowe</string>
-
     <string name="widget_quick_links_description">Szybkie linki zapisane w OpusAgendzie. Kliknij, aby otworzyć w przeglądarce</string>
-
     <string name="widget_quick_links_empty">Brak szybkich linków. Dodaj je w aplikacji</string>
-
     <string name="clock_time_placeholder">00:00:00</string>
-
     <string name="clock_date_placeholder">10 Apr 2026</string>
-
     <string name="font_dialog_title">Wybierz czcionkę</string>
-
     <string name="font_applied">Zastosowano czcionkę: %1$s</string>
-
+    <string name="backup_replace_label">ZASTĄP</string>
+    <string name="backup_import_warning_title">Importuj listę zadań</string>
+    <string name="backup_import_warning_message">Import kopii zapasowej usunie wszystkie bieżące zadania przed wczytaniem nowej listy. Kontynuować?</string>
+    <string name="backup_export_success">Kopia zapasowa wyeksportowana: %1$d elementów</string>
+    <string name="backup_export_failed">Nie udało się wyeksportować kopii zapasowej</string>
+    <string name="backup_import_success">Kopia zapasowa zaimportowana: %1$d elementów</string>
+    <string name="backup_import_failed">Nie udało się zaimportować kopii zapasowej</string>
+    <string name="backup_open_failed">Nie udało się otworzyć wybranego pliku kopii zapasowej</string>
+    <string name="backup_invalid_archive">Wybrany plik nie jest prawidłową kopią zapasową OpusAgenda</string>
+    <string name="backup_unsupported_version">Ten format kopii zapasowej nie jest obsługiwany przez bieżącą wersję aplikacji</string>
+    <string name="backup_attachment_export_failed">Nie udało się dołączyć załącznika do kopii zapasowej: %1$s</string>
     <string name="new_category_label">NOWY KOT</string>
-
     <string name="new_subcategory_label">NOWY POD</string>
-
     <string name="new_child_task_label">NOWE ZADANIE</string>
-
     <string name="task_description_label">Opis</string>
-
     <string name="task_description_hint">Dodaj kontekst do tego zadania</string>
-
-
-
-
-
     <string name="task_description_title">Opis zadania</string>
-
     <string name="task_description_icon_label">Otwórz opis</string>
-
     <string name="task_link_label">Powiązany link</string>
-
     <string name="task_link_hint">https://linked.resource</string>
-
-
-
-
-
     <string name="task_link_title">Link do zadania</string>
-
     <string name="task_link_icon_label">Otwórz szczegóły linku</string>
-
     <string name="task_attachment_label">Załączony plik</string>
-
     <string name="task_attachment_empty">Nie wybrano pliku</string>
-
     <string name="task_attachment_pick">WYBIERZ PLIK</string>
-
     <string name="task_attachment_clear">WYCZYŚĆ PLIK</string>
-
-    <string name="task_attachment_record">RECORD</string>
-
-    <string name="task_attachment_stop_record">STOP</string>
-
-    <string name="task_attachment_recording">Recording…</string>
-
-    <string name="task_attachment_record_failed">Could not record audio</string>
-
-    <string name="task_attachment_record_permission_denied">Microphone permission is required to record audio</string>
-
-    <string name="task_attachment_finish_recording">Stop recording before saving the task</string>
+    <string name="task_attachment_record">NAGRYWAĆ</string>
+    <string name="task_attachment_stop_record">ZATRZYMYWAĆ SIĘ</string>
+    <string name="task_attachment_recording">Nagranie…</string>
+    <string name="task_attachment_record_failed">Nie można nagrać dźwięku</string>
+    <string name="task_attachment_record_permission_denied">Do nagrywania dźwięku wymagane jest zezwolenie na korzystanie z mikrofonu</string>
+    <string name="task_attachment_finish_recording">Zatrzymaj nagrywanie przed zapisaniem zadania</string>
     <string name="task_attachment_saved">Plik w załączeniu</string>
-
     <string name="task_attachment_picker_failed">Nie można odczytać wybranego pliku</string>
-
     <string name="task_attachment_open_failed">Żadna aplikacja nie może otworzyć tego załącznika</string>
-
     <string name="task_attachment_title">Załącznik z zadaniem</string>
-
     <string name="task_attachment_icon_label">Otwórz szczegóły załącznika</string>
-
     <string name="task_attachment_name_label">plik: %1$s</string>
-
     <string name="task_attachment_type_label">typ: %1$s</string>
-
     <string name="play_label">GRAJ</string>
-
     <string name="stop_label">ZATRZYMAJ SIĘ</string>
-
     <string name="task_attachment_no_preview">Brak podglądu</string>
-
     <string-array name="font_option_labels">
         <item>Inter</item>
         <item>Geo</item>
@@ -293,55 +158,113 @@
         <item>Octosquares</item>
         <item>PirateOne</item>
     </string-array>
-
     <string-array name="importance_options">
         <item>1 NISKI</item>
         <item>2 NORMALNE</item>
         <item>3 WYSOKI</item>
         <item>4 KRYTYCZNE</item>
     </string-array>
-
     <plurals name="repeat_unit_minutes">
         <item quantity="one">%1$d minuta</item>
         <item quantity="other">%1$d minut</item>
     </plurals>
-
     <plurals name="repeat_unit_hours">
         <item quantity="one">%1$d godzina</item>
         <item quantity="other">%1$d godz</item>
     </plurals>
-
     <plurals name="repeat_unit_days">
         <item quantity="one">Dzień %1$d</item>
         <item quantity="other">%1$d dni</item>
     </plurals>
-
     <plurals name="repeat_unit_weeks">
         <item quantity="one">Tydzień %1$d</item>
         <item quantity="other">%1$d tygodni</item>
     </plurals>
-
     <plurals name="repeat_unit_months">
         <item quantity="one">%1$d miesiąc</item>
         <item quantity="other">%1$d miesięcy</item>
     </plurals>
-
     <plurals name="repeat_unit_years">
         <item quantity="one">Rok %1$d</item>
         <item quantity="other">%1$d lat</item>
     </plurals>
-
     <string name="previous_label">POPRZED</string>
-
     <string name="next_label">DALEJ</string>
-
     <string name="pdf_page_indicator">Strona %1$d / %2$d</string>
     <string name="font_button_label">Zmień czcionkę</string>
     <string name="import_button_label">Importuj kopię zapasową</string>
     <string name="export_button_label">Eksportuj kopię zapasową</string>
+    <string name="tutorial_step_categories_tips">Dodaj kontekst do kategorii</string>
+    <string name="tutorial_step_categories_tips_body">Użyj opisu, linków i załączników, aby nadać każdej kategorii więcej kontekstu.</string>
+    <string name="settings_button_label">URUCHOM PONOWNIE SAMOUCZEK</string>
+    <string name="tags_label">TAGI</string>
+    <string name="tags_hint">Praca ważna, osobista</string>
+    <string name="tag_colors_button_label">RGB</string>
+    <string name="tag_colors_edit_label">REDAGOWAĆ</string>
+    <string name="tag_colors_dialog_title">Kolory tagów</string>
+    <string name="tag_colors_dialog_help">Kliknij tag, aby edytować jego kolor.</string>
+    <string name="tag_colors_empty_state">Najpierw dodaj tagi, aby dostosować kolory.</string>
+    <string name="tag_color_picker_title">Kolor dla %1$s</string>
+    <string name="tag_color_saved">Zapisano kolor dla %1$s</string>
+    <string name="tag_color_cleared">Przywrócono automatyczny kolor dla %1$s</string>
+    <string name="tag_color_auto_label">AUTO</string>
+    <string name="tag_colors_tab_rgb">RGB</string>
+    <string name="tag_colors_tab_hex">HEX</string>
+    <string name="tag_colors_tab_selector">SELEKTOR</string>
+    <string name="tag_color_hex_hint">#RRGGBB</string>
+    <string name="tag_color_hex_help">Wpisz kolor szesnastkowy, a zostanie on zaktualizowany na żywo.</string>
+    <string name="tag_color_selector_help">Przeciągnij po mapie: poziomo zmienia nasycenie, a pionowo zmienia jasność. Dostosuj odcień poniżej.</string>
+    <string name="tag_color_hue_label">ODCIEŃ</string>
+    <string name="persistent_reminder_label">Stałe przypomnienie</string>
+    <string name="notification_action_complete">ZROBIONE</string>
+    <string name="notification_action_snooze">DRZEMKA 15M</string>
+    <string name="settings_dialog_title">SEMINARIUM</string>
+    <string name="settings_tutorial_relaunch_message">Czy chcesz ponownie uruchomić samouczek?</string>
+    <string name="settings_tutorial_relaunch_label">URUCHOM PONOWNIE SAMOUCZEK</string>
+    <string name="tutorial_restart_hint">Lewy pasek otwiera potwierdzenie samouczka.</string>
+    <string name="tutorial_dialog_title">PREMIERA</string>
+    <string name="tutorial_step_welcome_title">WITAJ W OPUSAGENDZIE</string>
+    <string name="tutorial_step_welcome_body">Menedżer zadań działający przede wszystkim lokalnie, z zaawansowanymi funkcjami i konstrukcją inspirowaną terminalem.</string>
+    <string name="tutorial_step_interface_title">INTERFEJS</string>
+    <string name="tutorial_step_interface_body">Na ekranie głównym widoczne są Twoje zadania i podsumowanie.</string>
+    <string name="tutorial_step_font_title">OPCJE CZCIONKI</string>
+    <string name="tutorial_step_font_body">Wybierz jedną z 5 unikalnych czcionek, aby dostosować wygląd i działanie aplikacji. Twój wybór zostanie zastosowany w całym interfejsie, łącznie z widżetami.</string>
+    <string name="tutorial_step_import_title">IMPORTUJ DANE</string>
+    <string name="tutorial_step_import_body">Z łatwością importuj zadania z różnych źródeł, aby szybko rozpocząć pracę. Przydatne do zadań związanych z pracą i nie mieszania ich z codziennymi zadaniami (PRZECZYTAJ OSTRZEŻENIA)</string>
+    <string name="tutorial_step_export_title">EKSPORT DANYCH</string>
+    <string name="tutorial_step_export_body">Eksportuj swoje zadania do pliku w celu utworzenia kopii zapasowej lub udostępnienia. Wyeksportowany plik zawiera wszystkie szczegóły zadania, załączniki i kategorie.</string>
+    <string name="tutorial_step_quick_links_title">SZYBKIE LINKI</string>
+    <string name="tutorial_step_quick_links_body">Zapisz i uporządkuj ważne linki w aplikacji. Uzyskaj do nich szybki dostęp z ekranu głównego i widżetów. Dodaj nowy szybki link za pomocą przycisku + w prawym górnym rogu.</string>
+    <string name="tutorial_step_filters_title">FILTRY</string>
+    <string name="tutorial_step_filters_body">Użyj filtrów WSZYSTKO i DZIŚ, aby skupić się na tym, co ważne.</string>
+    <string name="tutorial_step_all_title">WSZYSTKIE FILTRY</string>
+    <string name="tutorial_step_all_body">Pokazuje wszystkie zadania na liście, posortowane według terminu i ważności.</string>
+    <string name="tutorial_step_today_title">DZIŚ FILTR</string>
+    <string name="tutorial_step_today_body">Skoncentruj się na zadaniach, które są terminowe dzisiaj lub zaległe. Idealny do codziennego planowania.</string>
+    <string name="tutorial_step_create_title">UTWÓRZ ZADANIE</string>
+    <string name="tutorial_step_create_body">Za pomocą tego przycisku możesz szybko dodawać nowe zadania. Wpisy powinny być krótkie, aby zachować szybkość.</string>
+    <string name="tutorial_step_create_tips">DODAJ KONTEKST</string>
+    <string name="tutorial_step_create_tips_body">Użyj opisu, linków i załączników, aby zachować wszystkie szczegóły zadania w jednym miejscu.</string>
+    <string name="tutorial_step_importance_title">ZNACZENIE</string>
+    <string name="tutorial_step_importance_body">Ustaw poziomy ważności, aby sortować i filtrować zadania według priorytetu.</string>
+    <string name="tutorial_step_reminders_title">PRZYPOMNIENIA</string>
+    <string name="tutorial_step_reminders_body">Dzisiaj filtry i edytor pomagają lokalnie zarządzać wymaganą pracą, przypomnieniami i powtórzeniami.</string>
+    <string name="tutorial_step_persistence_title">STAŁE PRZYPOMNIENIA</string>
+    <string name="tutorial_step_persistence_body">Ustaw stałe przypomnienia, aby być na bieżąco z ważnymi zadaniami. Nie zostanie odrzucony, dopóki nie oznaczysz go jako ukończonego.</string>
+    <string name="tutorial_step_categories_title">KATEGORIE</string>
+    <string name="tutorial_step_categories_body">Grupuj powiązane zadania w kategorie, aby uporządkować listę.</string>
+    <string name="tutorial_step_search_title">SZUKAJ</string>
+    <string name="tutorial_step_search_body">Wyszukuj według tekstu zadania, notatek, łączy, załączników i tagów.</string>
+    <string name="tutorial_step_tags_title">TAGI</string>
+    <string name="tutorial_step_tags_body">Dodawaj tagi do zadań i kategorii, aby tworzyć własne filtry i organizować swoją pracę.</string>
+    <string name="tutorial_step_summary_title">STRESZCZENIE</string>
+    <string name="tutorial_step_summary_body">Podsumowanie u góry umożliwia szybki przegląd otwartych i pilnych zadań.</string>
+    <string name="tutorial_step_widgets_title">WIDŻETY</string>
+    <string name="tutorial_step_widgets_body">Widżety korzystają z tych samych danych lokalnych, dzięki czemu pozostają zsynchronizowane bez Internetu.</string>
+    <string name="tutorial_step_end_title">KONIEC?</string>
+    <string name="tutorial_step_end_body">To wszystko w ramach samouczka. Miłego korzystania z OpusAgenda!</string>
+    <string name="tutorial_counter_format">%1$d/%2$d</string>
+    <string name="tutorial_prev_label">POPRZEDNI</string>
+    <string name="tutorial_next_label">NASTĘPNY</string>
+    <string name="tutorial_finish_label">ZAKOŃCZ SAMOUCZEK</string>
 </resources>
-
-
-
-
-

@@ -1,291 +1,156 @@
+<?xml version="1.0" encoding="utf-8"?>
 <resources>
     <string name="app_name">OpusAgenda</string>
-
-    <string name="app_header_title">♱ OpusAgenda v1.4</string>
-
+    <string name="app_header_title">♱ OpusAgenda v1.5</string>
     <string name="app_font_family">PirateOne</string>
-
-    <string name="search_hint">ค้นหางาน...</string>
-
+    <string name="search_hint">ค้นหางานหรือแท็ก...</string>
     <string name="empty_state_all">ยังไม่มีงาน ใช้ NEW เพื่อสร้าง</string>
-
     <string name="empty_state_today">ไม่มีงานด่วนสำหรับวันนี้</string>
-
     <string name="all_label">ทั้งหมด</string>
-
     <string name="today_label">วันนี้</string>
-
     <string name="new_task_label">ใหม่</string>
-
     <string name="run_command_label">วิ่ง</string>
-
     <string name="task_text_hint">ข้อความงาน</string>
-
     <string name="category_text_hint">ชื่อหมวดหมู่</string>
-
     <string name="save_label">บันทึก</string>
-
     <string name="cancel_label">ยกเลิก</string>
-
     <string name="pick_due_date_label">วันครบกำหนด</string>
-
     <string name="clear_due_date_label">ครบกำหนดชำระ</string>
-
     <string name="pinned_label">ปักหมุดแล้ว</string>
-
     <string name="completed_label">เสร็จสิ้น</string>
-
     <string name="importance_label">ความสำคัญ</string>
-
     <string name="task_dialog_title_new">งานใหม่</string>
-
     <string name="task_dialog_title_edit">แก้ไขงาน</string>
-
     <string name="category_dialog_title_new">หมวดหมู่ใหม่</string>
-
     <string name="category_dialog_title_edit">แก้ไขหมวดหมู่</string>
-
     <string name="task_text_required">ป้อนข้อความงาน</string>
-
     <string name="default_category_name">หมวดหมู่</string>
-
     <string name="category_badge_label">กสท</string>
-
     <string name="category_edit_label">แก้ไข</string>
-
     <string name="category_due_label">หมวดหมู่</string>
-
     <string name="category_meta_format">รายการย่อย: %1$d  ความสำคัญ: %2$d</string>
-
     <string name="category_move_invalid">การย้ายนั้นจะสร้างหมวดหมู่ที่ซ้อนกันที่ไม่ถูกต้อง</string>
-
     <string name="task_due_label">ครบกำหนด: %1$s</string>
-
     <string name="task_reminder_value_label">คำเตือน: %1$s</string>
-
     <string name="task_date_with_relative">%1$s - %2$s</string>
-
     <string name="no_due_date">ไม่มีวันครบกำหนด</string>
-
     <string name="no_reminder">ไม่มี</string>
-
     <string name="due_relative_overdue">ค้างชำระ %1$dd</string>
-
     <string name="due_relative_today">วันนี้</string>
-
     <string name="due_relative_tomorrow">พรุ่งนี้</string>
-
     <string name="due_relative_in">ใน %1$dd</string>
-
     <string name="pick_reminder_label">เตือนฉัน</string>
-
     <string name="pick_repeat_label">ทำซ้ำ</string>
-
     <string name="clear_reminder_label">การแจ้งเตือนที่ชัดเจน</string>
-
     <string name="reminder_dialog_title">เลือกการช่วยเตือน</string>
-
     <string name="reminder_option_none">ไม่มีการช่วยเตือน</string>
-
     <string name="reminder_option_hour">1 ชั่วโมงก่อน</string>
-
     <string name="reminder_option_day">1 วันก่อน</string>
-
     <string name="reminder_option_week">1 สัปดาห์ก่อน</string>
-
     <string name="reminder_option_month">1 เดือนก่อน</string>
-
     <string name="reminder_option_custom">วันที่และเวลาที่กำหนดเอง</string>
-
     <string name="reminder_summary_with_datetime">%1$s (%2$s)</string>
-
     <string name="reminder_requires_due_date">ตั้งวันครบกำหนดก่อนเพื่อใช้ค่าที่ตั้งล่วงหน้า</string>
-
     <string name="reminder_time_in_past">เวลาเตือนจะต้องเป็นเวลาในอนาคต</string>
-
     <string name="reminder_custom_date_title">วันที่เตือนความจำ</string>
-
     <string name="reminder_custom_time_title">เวลาเตือนความจำ</string>
-
     <string name="reminder_channel_name">การแจ้งเตือนงาน</string>
-
     <string name="reminder_channel_description">การแจ้งเตือนสำหรับการแจ้งเตือนงานที่กำหนดเวลาไว้</string>
-
     <string name="reminder_notification_title">การแจ้งเตือนงาน</string>
-
     <string name="notifications_permission_denied">จำเป็นต้องได้รับอนุญาตการแจ้งเตือนสำหรับการแจ้งเตือน</string>
-
     <string name="task_repeat_value_label">ทำซ้ำ: %1$s</string>
-
     <string name="repeat_none">ไม่มี</string>
-
     <string name="repeat_dialog_title">เลือกการทำซ้ำ</string>
-
     <string name="repeat_option_none">ไม่มีการทำซ้ำ</string>
-
     <string name="repeat_option_hour">ทุกชั่วโมง</string>
-
     <string name="repeat_option_day">ทุกวัน</string>
-
     <string name="repeat_option_week">ทุกสัปดาห์</string>
-
     <string name="repeat_option_month">ทุกเดือน</string>
-
     <string name="repeat_option_year">ทุกปี</string>
-
     <string name="repeat_option_custom">ช่วงเวลาที่กำหนดเอง</string>
-
     <string name="repeat_requires_reminder">ตั้งการเตือนก่อนเพื่อใช้การทำซ้ำ</string>
-
     <string name="repeat_custom_title">การทำซ้ำแบบกำหนดเอง</string>
-
     <string name="repeat_custom_amount_hint">จำนวนเงินช่วง</string>
-
     <string name="repeat_custom_amount_invalid">ป้อนจำนวนการทำซ้ำที่ถูกต้อง</string>
-
     <string name="repeat_unit_minutes_label">รายงานการประชุม</string>
-
     <string name="repeat_unit_days_label">วัน</string>
-
     <string name="repeat_unit_hours_label">ชั่วโมง</string>
-
     <string name="repeat_unit_weeks_label">สัปดาห์</string>
-
     <string name="repeat_unit_months_label">เดือน</string>
-
     <string name="repeat_unit_years_label">ปี</string>
-
     <string name="link_open_label">เปิด</string>
-
     <string name="link_missing">ไม่มีลิงก์ให้เปิด</string>
-
     <string name="invalid_command">คำสั่งไม่ถูกต้อง</string>
-
     <string name="task_saved">บันทึกงานแล้ว</string>
-
     <string name="task_deleted">ลบงานแล้ว</string>
-
     <string name="task_completed">อัปเดตงานแล้ว</string>
-
     <string name="task_failed">ไม่สามารถอัปเดตงานได้</string>
-
     <string name="summary_format">เปิดอยู่: %1$d  วันนี้: %2$d  รวม: %3$d</string>
-
     <string name="task_meta_format">ความสำคัญ: %1$d  ครบกำหนด: %2$s  คะแนน: %3$d</string>
-
     <string name="task_pin_label">รหัส PIN</string>
-
     <string name="task_unpin_label">เลิกพิน</string>
-
     <string name="task_edit_label">แก้ไข</string>
-
     <string name="task_delete_label">เดล</string>
-
     <string name="quick_links_title">ลิงค์ด่วน</string>
-
     <string name="new_link_label">ลิงค์ใหม่</string>
-
     <string name="quick_link_label_hint">ชื่อสั้น</string>
-
     <string name="quick_link_url_hint">https://quick.link</string>
-
     <string name="quick_link_new_title">ลิงค์ใหม่ด่วน</string>
-
     <string name="quick_link_edit_title">แก้ไขลิงค์ด่วน</string>
-
     <string name="quick_link_saved">บันทึกลิงก์ด่วนแล้ว</string>
-
     <string name="quick_link_deleted">ลบลิงค์ด่วนแล้ว</string>
-
     <string name="quick_link_invalid">ป้อนชื่อและ URL ที่ถูกต้อง</string>
-
     <string name="quick_link_delete_label">ลบ</string>
-
     <string name="widget_tasks_title">งาน</string>
-
     <string name="widget_tasks_description">รายการงานพร้อมตัวกรองทั้งหมดและวันนี้ แตะแถวเพื่อสลับเสร็จสิ้น</string>
-
     <string name="widget_quick_links_description">ลิงก์ด่วนที่บันทึกไว้ใน OpusAgenda แตะเพื่อเปิดในเบราว์เซอร์</string>
-
     <string name="widget_quick_links_empty">ไม่มีลิงค์ด่วน เพิ่มพวกเขาในแอป</string>
-
     <string name="clock_time_placeholder">00:00:00</string>
-
     <string name="clock_date_placeholder">10 Apr 2026</string>
-
     <string name="font_dialog_title">เลือกแบบอักษร</string>
-
     <string name="font_applied">ใช้แบบอักษร: %1$s</string>
-
+    <string name="backup_replace_label">แทนที่</string>
+    <string name="backup_import_warning_title">นำเข้ารายการงาน</string>
+    <string name="backup_import_warning_message">การนำเข้าข้อมูลสำรองจะลบงานปัจจุบันทั้งหมดก่อนโหลดรายการใหม่ ดำเนินการต่อหรือไม่?</string>
+    <string name="backup_export_success">ส่งออกข้อมูลสำรองแล้ว: %1$d รายการ</string>
+    <string name="backup_export_failed">ไม่สามารถส่งออกข้อมูลสำรองได้</string>
+    <string name="backup_import_success">นำเข้าข้อมูลสำรองแล้ว: %1$d รายการ</string>
+    <string name="backup_import_failed">ไม่สามารถนำเข้าข้อมูลสำรองได้</string>
+    <string name="backup_open_failed">ไม่สามารถเปิดไฟล์ข้อมูลสำรองที่เลือกได้</string>
+    <string name="backup_invalid_archive">ไฟล์ที่เลือกไม่ใช่ข้อมูลสำรอง OpusAgenda ที่ถูกต้อง</string>
+    <string name="backup_unsupported_version">รูปแบบข้อมูลสำรองนี้ไม่รองรับโดยแอปเวอร์ชันปัจจุบัน</string>
+    <string name="backup_attachment_export_failed">ไม่สามารถรวมไฟล์แนบในข้อมูลสำรองได้: %1$s</string>
     <string name="new_category_label">แมวตัวใหม่</string>
-
     <string name="new_subcategory_label">ใหม่</string>
-
     <string name="new_child_task_label">งานใหม่</string>
-
     <string name="task_description_label">คำอธิบาย</string>
-
     <string name="task_description_hint">เพิ่มบริบทสำหรับงานนี้</string>
-
-
-
-
-
     <string name="task_description_title">คำอธิบายงาน</string>
-
     <string name="task_description_icon_label">เปิดคำอธิบาย</string>
-
     <string name="task_link_label">ลิงค์ที่เกี่ยวข้อง</string>
-
     <string name="task_link_hint">https://linked.resource</string>
-
-
-
-
-
     <string name="task_link_title">ลิงค์งาน</string>
-
     <string name="task_link_icon_label">เปิดรายละเอียดลิงค์</string>
-
     <string name="task_attachment_label">ไฟล์แนบ</string>
-
     <string name="task_attachment_empty">ไม่ได้เลือกไฟล์</string>
-
     <string name="task_attachment_pick">เลือกไฟล์</string>
-
     <string name="task_attachment_clear">ล้างไฟล์</string>
-
-    <string name="task_attachment_record">RECORD</string>
-
-    <string name="task_attachment_stop_record">STOP</string>
-
-    <string name="task_attachment_recording">Recording…</string>
-
-    <string name="task_attachment_record_failed">Could not record audio</string>
-
-    <string name="task_attachment_record_permission_denied">Microphone permission is required to record audio</string>
-
-    <string name="task_attachment_finish_recording">Stop recording before saving the task</string>
+    <string name="task_attachment_record">บันทึก</string>
+    <string name="task_attachment_stop_record">หยุด</string>
+    <string name="task_attachment_recording">กำลังบันทึก...</string>
+    <string name="task_attachment_record_failed">ไม่สามารถบันทึกเสียงได้</string>
+    <string name="task_attachment_record_permission_denied">ต้องได้รับอนุญาตจากไมโครโฟนจึงจะบันทึกเสียงได้</string>
+    <string name="task_attachment_finish_recording">หยุดการบันทึกก่อนที่จะบันทึกงาน</string>
     <string name="task_attachment_saved">แนบไฟล์</string>
-
     <string name="task_attachment_picker_failed">ไม่สามารถอ่านไฟล์ที่เลือกได้</string>
-
     <string name="task_attachment_open_failed">ไม่มีแอปใดที่สามารถเปิดไฟล์แนบนั้นได้</string>
-
     <string name="task_attachment_title">สิ่งที่แนบมากับงาน</string>
-
     <string name="task_attachment_icon_label">เปิดรายละเอียดไฟล์แนบ</string>
-
     <string name="task_attachment_name_label">ไฟล์: %1$s</string>
-
     <string name="task_attachment_type_label">ประเภท: %1$s</string>
-
     <string name="play_label">เล่น</string>
-
     <string name="stop_label">หยุด</string>
-
     <string name="task_attachment_no_preview">ไม่มีการแสดงตัวอย่าง</string>
-
     <string-array name="font_option_labels">
         <item>Inter</item>
         <item>Geo</item>
@@ -293,53 +158,113 @@
         <item>Octosquares</item>
         <item>PirateOne</item>
     </string-array>
-
     <string-array name="importance_options">
         <item>1 ต่ำ</item>
         <item>2 ปกติ</item>
         <item>3 สูง</item>
         <item>4 สำคัญ</item>
     </string-array>
-
     <plurals name="repeat_unit_minutes">
         <item quantity="one">%1$d นาที</item>
         <item quantity="other">%1$d นาที</item>
     </plurals>
-
     <plurals name="repeat_unit_hours">
         <item quantity="one">%1$d ชั่วโมง</item>
         <item quantity="other">%1$d ชั่วโมง</item>
     </plurals>
-
     <plurals name="repeat_unit_days">
         <item quantity="one">%1$d วัน</item>
         <item quantity="other">%1$d วัน</item>
     </plurals>
-
     <plurals name="repeat_unit_weeks">
         <item quantity="one">%1$d สัปดาห์</item>
         <item quantity="other">%1$d สัปดาห์</item>
     </plurals>
-
     <plurals name="repeat_unit_months">
         <item quantity="one">%1$d เดือน</item>
         <item quantity="other">%1$d เดือน</item>
     </plurals>
-
     <plurals name="repeat_unit_years">
         <item quantity="one">%1$d ปี</item>
         <item quantity="other">%1$d ปี</item>
     </plurals>
-
     <string name="previous_label">ก่อนหน้า</string>
-
     <string name="next_label">ถัดไป</string>
-
     <string name="pdf_page_indicator">หน้า %1$d / %2$d</string>
     <string name="font_button_label">เปลี่ยนแบบอักษร</string>
     <string name="import_button_label">นำเข้าข้อมูลสำรอง</string>
     <string name="export_button_label">ส่งออกข้อมูลสำรอง</string>
+    <string name="tutorial_step_categories_tips">เพิ่มบริบทให้หมวดหมู่</string>
+    <string name="tutorial_step_categories_tips_body">ใช้คำอธิบาย ลิงก์ และไฟล์แนบเพื่อเพิ่มบริบทให้แต่ละหมวดหมู่</string>
+    <string name="settings_button_label">รีสตาร์ทบทช่วยสอน</string>
+    <string name="tags_label">แท็ก</string>
+    <string name="tags_hint">งานสำคัญส่วนบุคคล</string>
+    <string name="tag_colors_button_label">RGB</string>
+    <string name="tag_colors_edit_label">แก้ไข</string>
+    <string name="tag_colors_dialog_title">แท็กสี</string>
+    <string name="tag_colors_dialog_help">แตะแท็กเพื่อแก้ไขสี</string>
+    <string name="tag_colors_empty_state">เพิ่มแท็กก่อนเพื่อปรับแต่งสี</string>
+    <string name="tag_color_picker_title">สีสำหรับ %1$s</string>
+    <string name="tag_color_saved">บันทึกสีสำหรับ %1$s แล้ว</string>
+    <string name="tag_color_cleared">กู้คืนสีอัตโนมัติสำหรับ %1$s แล้ว</string>
+    <string name="tag_color_auto_label">AUTO</string>
+    <string name="tag_colors_tab_rgb">RGB</string>
+    <string name="tag_colors_tab_hex">HEX</string>
+    <string name="tag_colors_tab_selector">ตัวเลือก</string>
+    <string name="tag_color_hex_hint">#RRGGBB</string>
+    <string name="tag_color_hex_help">พิมพ์สีเลขฐานสิบหกและอัปเดตแบบสด</string>
+    <string name="tag_color_selector_help">ลากแผนที่: แนวนอนเปลี่ยนความอิ่มตัว และแนวตั้งเปลี่ยนความสว่าง ปรับเฉดสีด้านล่าง</string>
+    <string name="tag_color_hue_label">เว้</string>
+    <string name="persistent_reminder_label">การแจ้งเตือนแบบถาวร</string>
+    <string name="notification_action_complete">เสร็จแล้ว</string>
+    <string name="notification_action_snooze">เลื่อน 15M</string>
+    <string name="settings_dialog_title">บทช่วยสอน</string>
+    <string name="settings_tutorial_relaunch_message">คุณต้องการเริ่มบทช่วยสอนใหม่หรือไม่?</string>
+    <string name="settings_tutorial_relaunch_label">รีสตาร์ทบทช่วยสอน</string>
+    <string name="tutorial_restart_hint">แถบด้านซ้ายเปิดการยืนยันบทช่วยสอน</string>
+    <string name="tutorial_dialog_title">วิ่งครั้งแรก</string>
+    <string name="tutorial_step_welcome_title">ยินดีต้อนรับสู่ Opusagenda</string>
+    <string name="tutorial_step_welcome_body">ตัวจัดการงานรายแรกในท้องถิ่นที่มีคุณสมบัติอันทรงพลังและการออกแบบที่ได้รับแรงบันดาลใจจากเทอร์มินัล</string>
+    <string name="tutorial_step_interface_title">อินเตอร์เฟซ</string>
+    <string name="tutorial_step_interface_body">หน้าจอหลักจะแสดงงานและสรุปของคุณ</string>
+    <string name="tutorial_step_font_title">ตัวเลือกแบบอักษร</string>
+    <string name="tutorial_step_font_body">เลือกจากแบบอักษรที่ไม่ซ้ำใคร 5 แบบเพื่อปรับแต่งรูปลักษณ์ของแอป การเลือกของคุณจะถูกนำไปใช้กับอินเทอร์เฟซทั้งหมด รวมถึงวิดเจ็ตด้วย</string>
+    <string name="tutorial_step_import_title">นำเข้าข้อมูล</string>
+    <string name="tutorial_step_import_body">นำเข้างานจากแหล่งต่างๆ ได้อย่างง่ายดายเพื่อเริ่มต้นอย่างรวดเร็ว มีประโยชน์สำหรับงานเฉพาะงานและไม่ปะปนกับงานประจำวันของคุณ (อ่านคำเตือน)</string>
+    <string name="tutorial_step_export_title">ส่งออกข้อมูล</string>
+    <string name="tutorial_step_export_body">ส่งออกงานของคุณเป็นไฟล์เพื่อสำรองหรือแชร์ ไฟล์ที่ส่งออกประกอบด้วยรายละเอียดงาน เอกสารแนบ และหมวดหมู่ทั้งหมด</string>
+    <string name="tutorial_step_quick_links_title">ลิงค์ด่วน</string>
+    <string name="tutorial_step_quick_links_body">บันทึกและจัดระเบียบลิงก์สำคัญของคุณในแอป เข้าถึงได้อย่างรวดเร็วจากหน้าจอหลักและวิดเจ็ต เพิ่มลิงก์ด่วนใหม่โดยใช้ปุ่ม + ที่มุมขวาบน</string>
+    <string name="tutorial_step_filters_title">ตัวกรอง</string>
+    <string name="tutorial_step_filters_body">ใช้ตัวกรองทั้งหมดและวันนี้เพื่อเน้นไปที่สิ่งที่สำคัญ</string>
+    <string name="tutorial_step_all_title">ตัวกรองทั้งหมด</string>
+    <string name="tutorial_step_all_body">แสดงงานทั้งหมดในรายการ จัดเรียงตามวันครบกำหนดและความสำคัญ</string>
+    <string name="tutorial_step_today_title">ตัวกรองวันนี้</string>
+    <string name="tutorial_step_today_body">มุ่งเน้นไปที่งานที่ครบกำหนดวันนี้หรือที่เลยกำหนด เหมาะสำหรับการวางแผนรายวันของคุณ</string>
+    <string name="tutorial_step_create_title">สร้างงาน</string>
+    <string name="tutorial_step_create_body">เพิ่มงานใหม่ได้อย่างรวดเร็วจากปุ่มนี้ เก็บรายการให้สั้นเพื่อให้อยู่ได้รวดเร็ว</string>
+    <string name="tutorial_step_create_tips">เพิ่มบริบท</string>
+    <string name="tutorial_step_create_tips_body">ใช้คำอธิบาย ลิงก์ และไฟล์แนบเพื่อเก็บรายละเอียดงานทั้งหมดไว้ในที่เดียว</string>
+    <string name="tutorial_step_importance_title">ความสำคัญ</string>
+    <string name="tutorial_step_importance_body">กำหนดระดับความสำคัญเพื่อจัดเรียงและกรองงานตามลำดับความสำคัญ</string>
+    <string name="tutorial_step_reminders_title">การแจ้งเตือน</string>
+    <string name="tutorial_step_reminders_body">ตัวกรองและตัวแก้ไขวันนี้ช่วยให้คุณจัดการงานที่ครบกำหนด การแจ้งเตือน และการทำซ้ำในพื้นที่</string>
+    <string name="tutorial_step_persistence_title">การแจ้งเตือนอย่างต่อเนื่อง</string>
+    <string name="tutorial_step_persistence_body">ตั้งการเตือนแบบถาวรเพื่อติดตามงานสำคัญๆ มันจะไม่ถูกไล่ออกจนกว่าคุณจะทำเครื่องหมายว่าเสร็จสมบูรณ์</string>
+    <string name="tutorial_step_categories_title">หมวดหมู่</string>
+    <string name="tutorial_step_categories_body">จัดกลุ่มงานที่เกี่ยวข้องออกเป็นหมวดหมู่เพื่อจัดระเบียบรายการ</string>
+    <string name="tutorial_step_search_title">ค้นหา</string>
+    <string name="tutorial_step_search_body">ค้นหาตามข้อความงาน บันทึกย่อ ลิงก์ ไฟล์แนบ และแท็ก</string>
+    <string name="tutorial_step_tags_title">แท็ก</string>
+    <string name="tutorial_step_tags_body">เพิ่มแท็กให้กับงานและหมวดหมู่เพื่อสร้างตัวกรองที่กำหนดเองและจัดระเบียบงานของคุณ</string>
+    <string name="tutorial_step_summary_title">สรุป</string>
+    <string name="tutorial_step_summary_body">ข้อมูลสรุปที่ด้านบนช่วยให้คุณเห็นภาพรวมโดยย่อของงานที่เปิดอยู่และงานเร่งด่วนของคุณ</string>
+    <string name="tutorial_step_widgets_title">วิดเจ็ต</string>
+    <string name="tutorial_step_widgets_body">วิดเจ็ตใช้ข้อมูลในเครื่องเดียวกัน ดังนั้นจึงซิงค์กันโดยไม่ใช้อินเทอร์เน็ต</string>
+    <string name="tutorial_step_end_title">ตอนจบ?</string>
+    <string name="tutorial_step_end_body">นั่นคือทั้งหมดสำหรับบทช่วยสอน สนุกกับการใช้ OpusAgenda!</string>
+    <string name="tutorial_counter_format">%1$d/%2$d</string>
+    <string name="tutorial_prev_label">ก่อนหน้า</string>
+    <string name="tutorial_next_label">ต่อไป</string>
+    <string name="tutorial_finish_label">จบการสอน</string>
 </resources>
-
-
-

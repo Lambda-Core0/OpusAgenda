@@ -18,6 +18,7 @@ import com.lambda.opusagenda.util.TaskDateFormatter
 import com.lambda.opusagenda.util.TaskHierarchyManager
 import com.lambda.opusagenda.util.TaskHierarchyManager.DropMode
 import com.lambda.opusagenda.util.TaskRepeatCalculator
+import com.lambda.opusagenda.util.TaskTagUtils
 import com.lambda.opusagenda.widget.WidgetRefresh
 import kotlinx.coroutines.Dispatchers
 import kotlinx.coroutines.launch
@@ -135,10 +136,12 @@ class MainViewModel(
         dueDate: Long?,
         description: String?,
         link: String?,
+        tags: List<String>,
         attachmentUri: String?,
         attachmentName: String?,
         attachmentMimeType: String?,
         pinned: Boolean,
+        persistentReminder: Boolean,
         reminderAt: Long?,
         repeatAmount: Int?,
         repeatUnit: String?,
@@ -159,10 +162,12 @@ class MainViewModel(
                 dueDate = if (isCategory) null else dueDate,
                 description = description?.trim()?.ifBlank { null },
                 link = link?.trim()?.ifBlank { null },
+                tags = TaskTagUtils.serializeTags(tags),
                 attachmentUri = attachmentUri?.trim()?.ifBlank { null },
                 attachmentName = attachmentName?.trim()?.ifBlank { null },
                 attachmentMimeType = attachmentMimeType?.trim()?.ifBlank { null },
                 pinned = if (isCategory) false else pinned,
+                persistentReminder = if (isCategory) false else persistentReminder,
                 reminderAt = if (isCategory) null else reminderAt,
                 repeatAmount = if (isCategory) null else repeatAmount,
                 repeatUnit = if (isCategory) null else repeatUnit,
@@ -181,10 +186,13 @@ class MainViewModel(
         dueDate: Long?,
         description: String?,
         link: String?,
+        tags: List<String>,
         attachmentUri: String?,
         attachmentName: String?,
         attachmentMimeType: String?,
         pinned: Boolean,
+        persistentReminder: Boolean,
+        wasPersistentReminder: Boolean = false,
         completed: Boolean,
         reminderAt: Long?,
         repeatAmount: Int?,
@@ -211,16 +219,21 @@ class MainViewModel(
                 dueDate = if (isCategory) null else dueDate,
                 description = description?.trim()?.ifBlank { null },
                 link = link?.trim()?.ifBlank { null },
+                tags = TaskTagUtils.serializeTags(tags),
                 attachmentUri = attachmentUri?.trim()?.ifBlank { null },
                 attachmentName = attachmentName?.trim()?.ifBlank { null },
                 attachmentMimeType = attachmentMimeType?.trim()?.ifBlank { null },
                 pinned = if (isCategory) false else pinned,
+                persistentReminder = if (isCategory) false else persistentReminder,
                 reminderAt = if (isCategory) null else reminderAt,
                 repeatAmount = if (isCategory) null else repeatAmount,
                 repeatUnit = if (isCategory) null else repeatUnit,
                 createdAt = createdAt
             )
             repository.update(entity)
+            if (!isCategory && (persistentReminder || wasPersistentReminder)) {
+                reminderScheduler.cancel(id)
+            }
             reminderScheduler.sync(entity)
         }
     }
@@ -231,6 +244,9 @@ class MainViewModel(
         launchDatabaseAction(successMessage = appContext.getString(R.string.task_completed)) {
             val updated = TaskRepeatCalculator.applyCompletion(item.toEntity(), completed)
             repository.update(updated)
+            if (completed) {
+                reminderScheduler.cancel(updated.id)
+            }
             reminderScheduler.sync(updated)
         }
     }
@@ -239,7 +255,9 @@ class MainViewModel(
     fun togglePinned(item: TaskListItem) {
         if (item.isCategory) return
         launchDatabaseAction {
-            repository.update(item.toEntity().copy(pinned = !item.pinned))
+            val updated = item.toEntity().copy(pinned = !item.pinned)
+            repository.update(updated)
+            reminderScheduler.sync(updated)
         }
     }
 
@@ -334,10 +352,12 @@ class MainViewModel(
             dueDate = dueDate,
             description = description,
             link = link,
+            tags = TaskTagUtils.serializeTags(tags),
             attachmentUri = attachmentUri,
             attachmentName = attachmentName,
             attachmentMimeType = attachmentMimeType,
             pinned = pinned,
+            persistentReminder = persistentReminder,
             reminderAt = reminderAt,
             repeatAmount = repeatAmount,
             repeatUnit = repeatUnit,
@@ -449,6 +469,7 @@ class MainViewModel(
             attachmentName = null,
             attachmentMimeType = null,
             pinned = false,
+            persistentReminder = false,
             reminderAt = null,
             repeatAmount = null,
             repeatUnit = null,

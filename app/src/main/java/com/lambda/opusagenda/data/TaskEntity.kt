@@ -33,6 +33,8 @@ data class TaskEntity(
     val description: String? = null,
     /** Campo opcional heredado del modelo base. */
     val link: String?,
+    /** Tags asociados a la tarea, serializados como JSON local. */
+    val tags: String? = null,
     /** URI persistida del adjunto local asociado a la tarea. */
     val attachmentUri: String? = null,
     /** Nombre visible del adjunto, usado para preview y UI. */
@@ -41,6 +43,8 @@ data class TaskEntity(
     val attachmentMimeType: String? = null,
     /** Marca si la tarea debe subir visualmente en la lista. */
     val pinned: Boolean = false,
+    /** Si la notificacion debe quedarse visible hasta resolverla. */
+    val persistentReminder: Boolean = false,
     /** Momento exacto del recordatorio local en epoch millis o `null` si no existe. */
     val reminderAt: Long? = null,
     /** Cantidad positiva del intervalo de repeticion o `null` si no aplica. */

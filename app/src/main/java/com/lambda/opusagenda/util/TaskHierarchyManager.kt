@@ -88,10 +88,12 @@ object TaskHierarchyManager {
                         ),
                         description = entity.description,
                         link = entity.link,
+                        tags = TaskTagUtils.parseTags(entity.tags),
                         attachmentUri = entity.attachmentUri,
                         attachmentName = entity.attachmentName,
                         attachmentMimeType = entity.attachmentMimeType,
                         pinned = false,
+                        persistentReminder = false,
                         reminderAt = null,
                         repeatAmount = null,
                         repeatUnit = null,
@@ -126,10 +128,12 @@ object TaskHierarchyManager {
                         ),
                         description = entity.description,
                         link = entity.link,
+                        tags = TaskTagUtils.parseTags(entity.tags),
                         attachmentUri = entity.attachmentUri,
                         attachmentName = entity.attachmentName,
                         attachmentMimeType = entity.attachmentMimeType,
                         pinned = entity.pinned,
+                        persistentReminder = entity.persistentReminder,
                         reminderAt = entity.reminderAt,
                         repeatAmount = entity.repeatAmount,
                         repeatUnit = entity.repeatUnit,
@@ -207,6 +211,7 @@ object TaskHierarchyManager {
         return task.text.lowercase().contains(normalizedQuery) ||
             task.description.orEmpty().lowercase().contains(normalizedQuery) ||
             task.link.orEmpty().lowercase().contains(normalizedQuery) ||
-            task.attachmentName.orEmpty().lowercase().contains(normalizedQuery)
+            task.attachmentName.orEmpty().lowercase().contains(normalizedQuery) ||
+            TaskTagUtils.matchesQuery(task.tags, normalizedQuery)
     }
 }

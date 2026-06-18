@@ -10,4 +10,6 @@
     <color name="terminal_text">#D7FFE2</color>
     <color name="terminal_text_muted">#82A18A</color>
     <color name="terminal_selected">#25A05A</color>
+    <color name="terminal_scrollbar_thumb">#805CFF8D</color>
+    <color name="terminal_scrollbar_track">#331C2A24</color>
 </resources>

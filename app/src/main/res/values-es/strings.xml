@@ -1,320 +1,175 @@
-﻿<resources>
+﻿<?xml version="1.0" encoding="utf-8"?>
+<resources>
     <string name="app_name">OpusAgenda</string>
-
-    <string name="app_header_title">♱ OpusAgenda v1.4</string>
-
+    <string name="app_header_title">♱ OpusAgenda v1.5</string>
     <string name="app_font_family">PirateOne</string>
-
-    <string name="search_hint">buscar tareas...</string>
-
+    <string name="search_hint">buscar tareas o etiquetas...</string>
     <string name="empty_state_all">No hay tareas. Usa NUEVA para crear una nueva tarea</string>
-
     <string name="empty_state_today">No hay tareas urgentes para hoy</string>
-
     <string name="all_label">TODAS</string>
-
     <string name="today_label">HOY</string>
-
     <string name="new_task_label">NUEVA</string>
-
     <string name="run_command_label">EJECUTAR</string>
-
     <string name="task_text_hint">Texto de la tarea</string>
-
     <string name="category_text_hint">Nombre de la categoría</string>
-
+    <string name="tag_colors_button_label">RGB</string>
+    <string name="tag_colors_edit_label">EDITAR</string>
+    <string name="tag_colors_dialog_title">Colores de tags</string>
+    <string name="tag_colors_dialog_help">Toca un tag para editar su color.</string>
+    <string name="tag_colors_empty_state">Añade tags primero para personalizar colores.</string>
+    <string name="tag_color_picker_title">Color para %1$s</string>
+    <string name="tag_color_saved">Color guardado para %1$s</string>
+    <string name="tag_color_cleared">Color automático restaurado para %1$s</string>
+    <string name="tag_color_auto_label">AUTO</string>
+    <string name="tag_colors_tab_rgb">RGB</string>
+    <string name="tag_colors_tab_hex">HEX</string>
+    <string name="tag_colors_tab_selector">SELECTOR</string>
+    <string name="tag_color_hex_hint">#RRGGBB</string>
+    <string name="tag_color_hex_help">Escribe un color HEX y se actualiza al instante.</string>
+    <string name="tag_color_selector_help">Arrastra en el mapa: horizontal cambia la saturación y vertical cambia el brillo. Ajusta el matiz abajo.</string>
+    <string name="tag_color_hue_label">MATIZ</string>
     <string name="save_label">GUARDAR</string>
-
     <string name="cancel_label">CANCELAR</string>
-
     <string name="pick_due_date_label">FECHA LÍMITE</string>
-
     <string name="clear_due_date_label">LIMPIAR FECHA</string>
-
     <string name="pinned_label">FIJADA</string>
-
     <string name="completed_label">Completada</string>
-
     <string name="importance_label">Importancia</string>
-
     <string name="task_dialog_title_new">Nueva tarea</string>
-
     <string name="task_dialog_title_edit">Editar tarea</string>
-
     <string name="category_dialog_title_new">Nueva categoría</string>
-
     <string name="category_dialog_title_edit">Editar categoría</string>
-
     <string name="task_text_required">Ingresa el texto de la tarea</string>
-
     <string name="default_category_name">Categoría</string>
-
-    <string name="category_badge_label">CAT</string>
-
+    <string name="category_badge_label">GATO</string>
     <string name="category_edit_label">EDITAR</string>
-
     <string name="category_due_label">categoría</string>
-
     <string name="category_meta_format">hijos: %1$d  imp: %2$d</string>
-
     <string name="category_move_invalid">Ese movimiento crearía una categoría anidada inválida</string>
-
     <string name="task_due_label">vence: %1$s</string>
-
     <string name="task_reminder_value_label">recordatorio: %1$s</string>
-
     <string name="task_date_with_relative">%1$s - %2$s</string>
-
     <string name="no_due_date">sin fecha</string>
-
     <string name="no_reminder">ninguno</string>
-
     <string name="due_relative_overdue">atrasada %1$dd</string>
-
     <string name="due_relative_today">hoy</string>
-
     <string name="due_relative_tomorrow">mañana</string>
-
     <string name="due_relative_in">en %1$dd</string>
-
     <string name="pick_reminder_label">RECORDAR</string>
-
     <string name="pick_repeat_label">REPETIR</string>
-
     <string name="clear_reminder_label">LIMPIAR AVISO</string>
-
     <string name="reminder_dialog_title">Elegir recordatorio</string>
-
     <string name="reminder_option_none">Sin recordatorio</string>
-
     <string name="reminder_option_hour">1 hora antes</string>
-
     <string name="reminder_option_day">1 día antes</string>
-
     <string name="reminder_option_week">1 semana antes</string>
-
     <string name="reminder_option_month">1 mes antes</string>
-
     <string name="reminder_option_custom">Fecha y hora personalizadas</string>
-
     <string name="reminder_summary_with_datetime">%1$s (%2$s)</string>
-
     <string name="reminder_requires_due_date">Primero define una fecha límite para usar opciones predefinidas</string>
-
     <string name="reminder_time_in_past">El recordatorio tiene que quedar en el futuro</string>
-
     <string name="reminder_custom_date_title">Fecha del recordatorio</string>
-
     <string name="reminder_custom_time_title">Hora del recordatorio</string>
-
     <string name="reminder_channel_name">Recordatorios de tareas</string>
-
     <string name="reminder_channel_description">Notificaciones para recordatorios programados</string>
-
     <string name="reminder_notification_title">Recordatorio de tarea</string>
-
     <string name="notifications_permission_denied">Se necesita permiso de notificaciones para los recordatorios</string>
-
     <string name="task_repeat_value_label">repetición: %1$s</string>
-
     <string name="repeat_none">ninguna</string>
-
     <string name="repeat_dialog_title">Elegir repetición</string>
-
     <string name="repeat_option_none">Sin repetición</string>
-
     <string name="repeat_option_hour">Cada hora</string>
-
     <string name="repeat_option_day">Cada día</string>
-
     <string name="repeat_option_week">Cada semana</string>
-
     <string name="repeat_option_month">Cada mes</string>
-
     <string name="repeat_option_year">Cada año</string>
-
     <string name="repeat_option_custom">Intervalo personalizado</string>
-
     <string name="repeat_requires_reminder">Primero define un recordatorio para usar repetición</string>
-
     <string name="repeat_custom_title">Repetición personalizada</string>
-
     <string name="repeat_custom_amount_hint">Cantidad del intervalo</string>
-
     <string name="repeat_custom_amount_invalid">Ingresa una cantidad de repetición válida</string>
-
     <string name="repeat_unit_minutes_label">Minutos</string>
-
     <string name="repeat_unit_days_label">Días</string>
-
     <string name="repeat_unit_hours_label">Horas</string>
-
     <string name="repeat_unit_weeks_label">Semanas</string>
-
     <string name="repeat_unit_months_label">Meses</string>
-
     <string name="repeat_unit_years_label">Años</string>
-
     <string name="link_open_label">ABRIR</string>
-
     <string name="link_missing">No hay link para abrir</string>
-
     <string name="invalid_command">Comando no válido</string>
-
     <string name="task_saved">Tarea guardada</string>
-
     <string name="task_deleted">Tarea eliminada</string>
-
     <string name="task_completed">Tarea actualizada</string>
-
     <string name="task_failed">No se pudo actualizar la tarea</string>
-
     <string name="summary_format">abiertas: %1$d  hoy: %2$d  total: %3$d</string>
-
     <string name="task_meta_format">imp: %1$d  vence: %2$s  puntaje: %3$d</string>
-
     <string name="task_pin_label">FIJAR</string>
-
     <string name="task_unpin_label">DESFIJAR</string>
-
     <string name="task_edit_label">EDITAR</string>
-
     <string name="task_delete_label">BORRAR</string>
-
     <string name="quick_links_title">ACCESOS RÁPIDOS</string>
-
     <string name="new_link_label">NUEVO LINK</string>
-
     <string name="quick_link_label_hint">Nombre corto</string>
-
     <string name="quick_link_url_hint">https://enlace.rapido</string>
-
     <string name="quick_link_new_title">Nuevo acceso rápido</string>
-
     <string name="quick_link_edit_title">Editar acceso rápido</string>
-
     <string name="quick_link_saved">Link rápido guardado</string>
-
     <string name="quick_link_deleted">Link rápido eliminado</string>
-
     <string name="quick_link_invalid">Completa un nombre y una URL válidos</string>
-
     <string name="quick_link_delete_label">BORRAR</string>
-
     <string name="widget_tasks_title">TAREAS</string>
-
     <string name="widget_tasks_description">Lista con filtros TODAS y HOY. Toca una fila para marcar como hecha</string>
-
     <string name="widget_quick_links_description">Accesos rápidos guardados en OpusAgenda. Toca para abrir en el navegador</string>
-
     <string name="widget_quick_links_empty">Sin enlaces. Agrégalos desde la app</string>
-
     <string name="clock_time_placeholder">00:00:00</string>
-
     <string name="clock_date_placeholder">10 Abr 2026</string>
-
     <string name="font_dialog_title">Selecciona fuente</string>
-
     <string name="font_applied">Fuente aplicada: %1$s</string>
-
     <string name="font_button_label">Cambiar fuente</string>
-
     <string name="import_button_label">Importar respaldo</string>
-
     <string name="export_button_label">Exportar respaldo</string>
-
     <string name="backup_replace_label">REEMPLAZAR</string>
-
     <string name="backup_import_warning_title">Importar lista de tareas</string>
-
     <string name="backup_import_warning_message">Importar un respaldo eliminará todas las tareas actuales antes de cargar la nueva lista. ¿Quieres continuar?</string>
-
     <string name="backup_export_success">Respaldo exportado: %1$d elementos</string>
-
     <string name="backup_export_failed">No se pudo exportar el respaldo</string>
-
     <string name="backup_import_success">Respaldo importado: %1$d elementos</string>
-
     <string name="backup_import_failed">No se pudo importar el respaldo</string>
-
     <string name="backup_open_failed">No se pudo abrir el archivo de respaldo seleccionado</string>
-
     <string name="backup_invalid_archive">El archivo seleccionado no es un respaldo válido de OpusAgenda</string>
-
     <string name="backup_unsupported_version">Este formato de respaldo no es compatible con la versión actual de la app</string>
-
     <string name="backup_attachment_export_failed">No se pudo incluir este adjunto en el respaldo: %1$s</string>
-
     <string name="new_category_label">NUEVA CAT</string>
-
     <string name="new_subcategory_label">NUEVA SUBC</string>
-
     <string name="new_child_task_label">NUEVA TAREA</string>
-
     <string name="task_description_label">Descripción</string>
-
     <string name="task_description_hint">Agrega contexto para esta tarea</string>
-
-
-
-
-
     <string name="task_description_title">Descripción de la tarea</string>
-
     <string name="task_description_icon_label">Abrir descripción</string>
-
     <string name="task_link_label">Link asociado</string>
-
     <string name="task_link_hint">https://recurso.asociado</string>
-
-
-
-
-
     <string name="task_link_title">Link de la tarea</string>
-
     <string name="task_link_icon_label">Abrir detalle del link</string>
-
     <string name="task_attachment_label">Archivo adjunto</string>
-
     <string name="task_attachment_empty">No hay archivo seleccionado</string>
-
     <string name="task_attachment_pick">ELEGIR ARCHIVO</string>
-
     <string name="task_attachment_clear">LIMPIAR ARCHIVO</string>
-
     <string name="task_attachment_record">GRABAR</string>
-
     <string name="task_attachment_stop_record">PARAR</string>
-
     <string name="task_attachment_recording">Grabando…</string>
-
     <string name="task_attachment_record_failed">No se pudo grabar el audio</string>
-
     <string name="task_attachment_record_permission_denied">Se necesita permiso de micrófono para grabar audio</string>
-
     <string name="task_attachment_finish_recording">Detén la grabación antes de guardar la tarea</string>
-
     <string name="task_attachment_saved">Archivo adjuntado</string>
-
     <string name="task_attachment_picker_failed">No se pudo leer el archivo elegido</string>
-
     <string name="task_attachment_open_failed">No hay una app para abrir ese adjunto</string>
-
     <string name="task_attachment_title">Adjunto de la tarea</string>
-
     <string name="task_attachment_icon_label">Abrir detalle del adjunto</string>
-
     <string name="task_attachment_name_label">archivo: %1$s</string>
-
     <string name="task_attachment_type_label">tipo: %1$s</string>
-
     <string name="play_label">REPRODUCIR</string>
-
     <string name="stop_label">DETENER</string>
-
     <string name="task_attachment_no_preview">No hay vista previa disponible</string>
-
     <string-array name="font_option_labels">
         <item>Inter</item>
         <item>Geo</item>
@@ -322,48 +177,94 @@
         <item>Octosquares</item>
         <item>PirateOne</item>
     </string-array>
-
     <string-array name="importance_options">
         <item>1 BAJA</item>
         <item>2 NORMAL</item>
         <item>3 ALTA</item>
         <item>4 CRÍTICA</item>
     </string-array>
-
     <plurals name="repeat_unit_minutes">
         <item quantity="one">%1$d minuto</item>
         <item quantity="other">%1$d minutos</item>
     </plurals>
-
     <plurals name="repeat_unit_hours">
         <item quantity="one">%1$d hora</item>
         <item quantity="other">%1$d horas</item>
     </plurals>
-
     <plurals name="repeat_unit_days">
         <item quantity="one">%1$d día</item>
         <item quantity="other">%1$d días</item>
     </plurals>
-
     <plurals name="repeat_unit_weeks">
         <item quantity="one">%1$d semana</item>
         <item quantity="other">%1$d semanas</item>
     </plurals>
-
     <plurals name="repeat_unit_months">
         <item quantity="one">%1$d mes</item>
         <item quantity="other">%1$d meses</item>
     </plurals>
-
     <plurals name="repeat_unit_years">
         <item quantity="one">%1$d año</item>
         <item quantity="other">%1$d años</item>
     </plurals>
-
     <string name="previous_label">ANTERIOR</string>
-
     <string name="next_label">SIGUIENTE</string>
-
     <string name="pdf_page_indicator">Página %1$d / %2$d</string>
+    <string name="settings_button_label">REINICIAR TUTORIAL</string>
+    <string name="tags_label">ETIQUETAS</string>
+    <string name="tags_hint">Trabajo importante, Personal</string>
+    <string name="persistent_reminder_label">Recordatorio persistente</string>
+    <string name="notification_action_complete">HECHO</string>
+    <string name="notification_action_snooze">POSPONER 15M</string>
+    <string name="settings_dialog_title">TUTORIAL</string>
+    <string name="settings_tutorial_relaunch_message">¿Quieres reiniciar el tutorial?</string>
+    <string name="settings_tutorial_relaunch_label">REINICIAR TUTORIAL</string>
+    <string name="tutorial_restart_hint">La tira izquierda abre la confirmación del tutorial.</string>
+    <string name="tutorial_dialog_title">PRIMER INICIO</string>
+    <string name="tutorial_step_welcome_title">BIENVENIDO A OPUSAGENDA</string>
+    <string name="tutorial_step_welcome_body">Un gestor de tareas centrado en lo local, rápido y con diseño inspirado en terminal.</string>
+    <string name="tutorial_step_interface_title">INTERFAZ</string>
+    <string name="tutorial_step_interface_body">La pantalla principal muestra tus tareas y el resumen.</string>
+    <string name="tutorial_step_font_title">OPCIONES DE FUENTE</string>
+    <string name="tutorial_step_font_body">Elige entre 5 fuentes únicas para personalizar el aspecto de la app. Tu selección se aplicará a toda la interfaz, incluidos los widgets.</string>
+    <string name="tutorial_step_import_title">IMPORTAR DATOS</string>
+    <string name="tutorial_step_import_body">Importa tareas fácilmente desde varias fuentes para empezar rápido. Útil para tareas de trabajo y para no mezclarlas con tus tareas diarias (LEE LAS ADVERTENCIAS)</string>
+    <string name="tutorial_step_export_title">EXPORTAR DATOS</string>
+    <string name="tutorial_step_export_body">Exporta tus tareas a un archivo para copia de seguridad o para compartirlas. El archivo exportado incluye todos los detalles, adjuntos y categorías.</string>
+    <string name="tutorial_step_quick_links_title">ENLACES RÁPIDOS</string>
+    <string name="tutorial_step_quick_links_body">Guarda y organiza tus enlaces importantes en la app. Accede a ellos rápido desde la pantalla principal y los widgets. Crea uno nuevo con el botón +.</string>
+    <string name="tutorial_step_filters_title">FILTROS</string>
+    <string name="tutorial_step_filters_body">Usa los filtros TODO y HOY para centrarte en lo importante.</string>
+    <string name="tutorial_step_all_title">FILTRO TODO</string>
+    <string name="tutorial_step_all_body">Muestra todas las tareas en la lista, ordenadas por fecha límite e importancia.</string>
+    <string name="tutorial_step_today_title">FILTRO HOY</string>
+    <string name="tutorial_step_today_body">Enfócate en las tareas que vencen hoy o están atrasadas. Perfecto para planificar el día.</string>
+    <string name="tutorial_step_create_title">CREAR TAREA</string>
+    <string name="tutorial_step_create_body">Añade nuevas tareas rápido desde este botón. Mantén las entradas cortas para ir más rápido.</string>
+    <string name="tutorial_step_create_tips">AÑADIR CONTEXTO</string>
+    <string name="tutorial_step_create_tips_body">Usa descripción, enlaces y adjuntos para guardar todos los detalles en un solo lugar.</string>
+    <string name="tutorial_step_importance_title">IMPORTANCIA</string>
+    <string name="tutorial_step_importance_body">Ajusta niveles de importancia para ordenar y filtrar tareas por prioridad.</string>
+    <string name="tutorial_step_reminders_title">RECORDATORIOS</string>
+    <string name="tutorial_step_reminders_body">Los filtros de HOY y el editor te ayudan a gestionar vencimientos, recordatorios y repeticiones localmente.</string>
+    <string name="tutorial_step_persistence_title">RECORDATORIOS PERSISTENTES</string>
+    <string name="tutorial_step_persistence_body">Configura recordatorios persistentes para no perder de vista las tareas importantes. No se cerrarán hasta que marques la tarea como completada.</string>
+    <string name="tutorial_step_categories_title">CATEGORÍAS</string>
+    <string name="tutorial_step_categories_body">Agrupa tareas relacionadas en categorías para mantener la lista organizada.</string>
+    <string name="tutorial_step_categories_tips">AÑADIR CONTEXTO A LAS CATEGORÍAS</string>
+    <string name="tutorial_step_categories_tips_body">Usa descripción, enlaces y adjuntos para dar más contexto a cada categoría.</string>
+    <string name="tutorial_step_search_title">BÚSQUEDA</string>
+    <string name="tutorial_step_search_body">Busca por texto de la tarea, notas, enlaces, adjuntos y etiquetas.</string>
+    <string name="tutorial_step_tags_title">ETIQUETAS</string>
+    <string name="tutorial_step_tags_body">Puedes asociar varias etiquetas a una tarea y filtrarlas desde la búsqueda.</string>
+    <string name="tutorial_step_summary_title">RESUMEN</string>
+    <string name="tutorial_step_summary_body">El resumen superior muestra el estado general de tus tareas en tiempo real.</string>
+    <string name="tutorial_step_widgets_title">APARATOS</string>
+    <string name="tutorial_step_widgets_body">Los widgets usan los mismos datos locales, así que se mantienen sincronizados sin Internet.</string>
+    <string name="tutorial_step_end_title">LISTO</string>
+    <string name="tutorial_step_end_body">Ya puedes empezar a usar OpusAgenda.</string>
+    <string name="tutorial_counter_format">%1$d/%2$d</string>
+    <string name="tutorial_prev_label">ANTERIOR</string>
+    <string name="tutorial_next_label">SIGUIENTE</string>
+    <string name="tutorial_finish_label">FINALIZAR TUTORIAL</string>
 </resources>
-

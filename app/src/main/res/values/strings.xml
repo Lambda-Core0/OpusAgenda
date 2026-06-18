@@ -1,18 +1,37 @@
 <resources>
     <string name="app_name">OpusAgenda</string>
-    <string name="app_header_title">♱ OpusAgenda v1.4</string>
+    <string name="app_header_title">♱ OpusAgenda v1.5</string>
 
     <string name="app_font_family">PirateOne</string>
 
-    <string name="search_hint">search tasks...</string>
+    <string name="search_hint">search tasks or tags...</string>
     <string name="empty_state_all">No tasks yet. Use NEW to create one</string>
     <string name="empty_state_today">No urgent tasks for today</string>
     <string name="all_label">ALL</string>
     <string name="today_label">TODAY</string>
     <string name="new_task_label">NEW</string>
+    <string name="settings_button_label">RESTART TUTORIAL</string>
     <string name="run_command_label">RUN</string>
     <string name="task_text_hint">Task text</string>
     <string name="category_text_hint">Category name</string>
+    <string name="tags_label">TAGS</string>
+    <string name="tags_hint">Work important, Personal</string>
+    <string name="tag_colors_button_label">RGB</string>
+    <string name="tag_colors_edit_label">EDIT</string>
+    <string name="tag_colors_dialog_title">Tag colors</string>
+    <string name="tag_colors_dialog_help">Tap a tag to edit its color.</string>
+    <string name="tag_colors_empty_state">Add tags first to customize colors.</string>
+    <string name="tag_color_picker_title">Color for %1$s</string>
+    <string name="tag_color_saved">Color saved for %1$s</string>
+    <string name="tag_color_cleared">Automatic color restored for %1$s</string>
+    <string name="tag_color_auto_label">AUTO</string>
+    <string name="tag_colors_tab_rgb">RGB</string>
+    <string name="tag_colors_tab_hex">HEX</string>
+    <string name="tag_colors_tab_selector">SELECTOR</string>
+    <string name="tag_color_hex_hint">#RRGGBB</string>
+    <string name="tag_color_hex_help">Type a hex color and it updates live.</string>
+    <string name="tag_color_selector_help">Drag in the map: horizontal changes saturation and vertical changes brightness. Adjust hue below.</string>
+    <string name="tag_color_hue_label">HUE</string>
     <string name="save_label">SAVE</string>
     <string name="cancel_label">CANCEL</string>
     <string name="pick_due_date_label">DUE DATE</string>
@@ -55,10 +74,13 @@
     <string name="reminder_time_in_past">Reminder time must be in the future</string>
     <string name="reminder_custom_date_title">Reminder date</string>
     <string name="reminder_custom_time_title">Reminder time</string>
+    <string name="persistent_reminder_label">Persistent reminder</string>
     <string name="reminder_channel_name">Task reminders</string>
     <string name="reminder_channel_description">Notifications for scheduled task reminders</string>
     <string name="reminder_notification_title">Task reminder</string>
     <string name="notifications_permission_denied">Notification permission is required for reminders</string>
+    <string name="notification_action_complete">DONE</string>
+    <string name="notification_action_snooze">SNOOZE 15M</string>
     <string name="task_repeat_value_label">repeat: %1$s</string>
     <string name="repeat_none">none</string>
     <string name="repeat_dialog_title">Choose repetition</string>
@@ -86,6 +108,7 @@
     <string name="task_deleted">Task deleted</string>
     <string name="task_completed">Task updated</string>
     <string name="task_failed">Could not update task</string>
+    <!-- main screen and widgets -->
     <string name="summary_format">open: %1$d  today: %2$d  total: %3$d</string>
     <string name="task_meta_format">imp: %1$d  due: %2$s  score: %3$d</string>
     <string name="task_pin_label">PIN</string>
@@ -111,8 +134,15 @@
     <string name="font_dialog_title">Select font</string>
     <string name="font_applied">Font applied: %1$s</string>
     <string name="font_button_label">Change font</string>
+    <!-- backup and restore -->
     <string name="import_button_label">Import backup</string>
     <string name="export_button_label">Export backup</string>
+    <!-- tutorial restart confirmation -->
+    <string name="settings_dialog_title">TUTORIAL</string>
+    <string name="settings_tutorial_relaunch_message">Do you want to restart the tutorial?</string>
+    <string name="settings_tutorial_relaunch_label">RESTART TUTORIAL</string>
+    <string name="tutorial_restart_hint">Left strip opens tutorial confirmation.</string>
+    <!-- backup -->
     <string name="backup_replace_label">REPLACE</string>
     <string name="backup_import_warning_title">Import task list</string>
     <string name="backup_import_warning_message">Importing a backup will delete all current tasks before loading the new list. Continue?</string>
@@ -124,20 +154,21 @@
     <string name="backup_invalid_archive">The selected file is not a valid OpusAgenda backup</string>
     <string name="backup_unsupported_version">This backup format is not supported by the current app version</string>
     <string name="backup_attachment_export_failed">Could not include attachment in backup: %1$s</string>
+    <!-- categories and subcategories (task groups) -->
     <string name="new_category_label">NEW CAT</string>
     <string name="new_subcategory_label">NEW SUBC</string>
     <string name="new_child_task_label">NEW TASK</string>
-
+    <!-- description -->
     <string name="task_description_label">Description</string>
     <string name="task_description_hint">Add some context for this task</string>
     <string name="task_description_title">Task description</string>
     <string name="task_description_icon_label">Open description</string>
-
+    <!-- quick links -->
     <string name="task_link_label">Associated link</string>
     <string name="task_link_hint">https://linked.resource</string>
     <string name="task_link_title">Task link</string>
     <string name="task_link_icon_label">Open link details</string>
-
+    <!-- attachments + recordings -->
     <string name="task_attachment_label">Attached file</string>
     <string name="task_attachment_empty">No file selected</string>
     <string name="task_attachment_pick">PICK FILE</string>
@@ -158,7 +189,7 @@
     <string name="play_label">PLAY</string>
     <string name="stop_label">STOP</string>
     <string name="task_attachment_no_preview">No preview available</string>
-
+    <!-- font options -->
     <string-array name="font_option_labels">
         <item>Inter</item>
         <item>Geo</item>
@@ -166,14 +197,14 @@
         <item>Octosquares</item>
         <item>PirateOne</item>
     </string-array>
-
+    <!-- importance levels -->
     <string-array name="importance_options">
         <item>1 LOW</item>
         <item>2 NORMAL</item>
         <item>3 HIGH</item>
         <item>4 CRITICAL</item>
     </string-array>
-
+    <!-- repetition units -->
     <plurals name="repeat_unit_minutes">
         <item quantity="one">%1$d minute</item>
         <item quantity="other">%1$d minutes</item>
@@ -203,9 +234,57 @@
         <item quantity="one">%1$d year</item>
         <item quantity="other">%1$d years</item>
     </plurals>
-
+    <!-- pdf viewer -->
     <string name="previous_label">PREV</string>
     <string name="next_label">NEXT</string>
     <string name="pdf_page_indicator">Page %1$d / %2$d</string>
+    <!-- tutorial -->
+    <string name="tutorial_dialog_title">FIRST RUN</string>
+    <string name="tutorial_step_welcome_title">WELCOME TO OPUSAGENDA</string>
+    <string name="tutorial_step_welcome_body">A local-first task manager with powerful features and a terminal-inspired design.</string>
+    <string name="tutorial_step_interface_title">INTERFACE</string>
+    <string name="tutorial_step_interface_body">The main screen shows your tasks and summary.</string>
+    <string name="tutorial_step_font_title">FONT OPTIONS</string>
+    <string name="tutorial_step_font_body">Choose from 5 unique fonts to customize the look and feel of the app. Your selection will be applied across the entire interface, including widgets.</string>
+    <string name="tutorial_step_import_title">IMPORT DATA</string>
+    <string name="tutorial_step_import_body">Easily import tasks from various sources to get started quickly. Useful for work specific tasks and to not mix them with your daily tasks (READ WARNINGS)</string>
+    <string name="tutorial_step_export_title">EXPORT DATA</string>
+    <string name="tutorial_step_export_body">Export your tasks to a file for backup or sharing. The exported file includes all task details, attachments, and categories.</string>
+    <string name="tutorial_step_quick_links_title">QUICK LINKS</string>
+    <string name="tutorial_step_quick_links_body">Save and organize your important links in the app. Access them quickly from the main screen and widgets. Add a new quick link using the + button in the top right corner.</string>
+    <string name="tutorial_step_filters_title">FILTERS</string>
+    <string name="tutorial_step_filters_body">Use ALL and TODAY filters to focus on what is important.</string>
+    <string name="tutorial_step_all_title">ALL FILTER</string>
+    <string name="tutorial_step_all_body">Shows all tasks in the list, sorted by due date and importance.</string>
+    <string name="tutorial_step_today_title">TODAY FILTER</string>
+    <string name="tutorial_step_today_body">Focus on tasks that are due today or overdue. Perfect for your daily planning.</string>
+    <string name="tutorial_step_create_title">CREATE TASK</string>
+    <string name="tutorial_step_create_body">Add new tasks quickly from this button. Keep entries short to stay fast.</string>
+    <string name="tutorial_step_create_tips">ADD CONTEXT</string>
+    <string name="tutorial_step_create_tips_body">Use description, links, and attachments to keep all task details in one place.</string>
+    <string name="tutorial_step_importance_title">IMPORTANCE</string>
+    <string name="tutorial_step_importance_body">Set importance levels to sort and filter tasks by priority.</string>
+    <string name="tutorial_step_reminders_title">REMINDERS</string>
+    <string name="tutorial_step_reminders_body">Today filters and the editor help you manage due work, reminders, and repeats locally.</string>
+    <string name="tutorial_step_persistence_title">PERSISTENT REMINDERS</string>
+    <string name="tutorial_step_persistence_body">Set persistent reminders to stay on top of important tasks. It will not be dismissed until you mark it as completed.</string>
+    <string name="tutorial_step_categories_title">CATEGORIES</string>
+    <string name="tutorial_step_categories_body">Group related tasks into categories to keep the list organized.</string>
+    <string name="tutorial_step_categories_tips">ADD CONTEXT TO CATEGORIES</string>
+    <string name="tutorial_step_categories_tips_body">Use description, links, and attachments to give each category more context.</string>
+    <string name="tutorial_step_search_title">SEARCH</string>
+    <string name="tutorial_step_search_body">Search by task text, notes, links, attachments, and tags.</string>
+    <string name="tutorial_step_tags_title">TAGS</string>
+    <string name="tutorial_step_tags_body">Add tags to tasks and categories to create custom filters and organize your work.</string>
+    <string name="tutorial_step_summary_title">SUMMARY</string>
+    <string name="tutorial_step_summary_body">The summary at the top gives you a quick overview of your open and urgent tasks.</string>
+    <string name="tutorial_step_widgets_title">WIDGETS</string>
+    <string name="tutorial_step_widgets_body">Widgets use the same local data, so they stay in sync without Internet.</string>
+    <string name="tutorial_step_end_title">THE END?</string>
+    <string name="tutorial_step_end_body">That\'s all for the tutorial. Enjoy using OpusAgenda!</string>
+    <string name="tutorial_counter_format">%1$d/%2$d</string>
+    <string name="tutorial_prev_label">PREVIOUS</string>
+    <string name="tutorial_next_label">NEXT</string>
+    <string name="tutorial_finish_label">FINISH TUTORIAL</string>
 
 </resources>

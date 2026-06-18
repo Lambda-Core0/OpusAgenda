@@ -1,0 +1,302 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/bg_terminal_screen"
+    android:orientation="horizontal"
+    android:padding="16dp">
+
+    <ScrollView
+        android:layout_width="0dp"
+        android:layout_height="match_parent"
+        android:layout_weight="0.38"
+        android:layout_marginEnd="16dp"
+        android:fillViewport="true"
+        android:scrollbars="vertical"
+        style="@style/Widget_OpusAgenda_ScrollIndicator">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <!-- Bloque 1: cabecera terminal con branding, resumen y reloj. -->
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@drawable/bg_terminal_panel"
+                android:orientation="vertical"
+                android:padding="16dp">
+
+                <FrameLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal">
+
+                        <Button
+                            android:id="@+id/buttonSettings"
+                            android:layout_width="6dp"
+                            android:layout_height="match_parent"
+                            android:layout_marginEnd="12dp"
+                            android:background="@drawable/bg_terminal_action"
+                            android:contentDescription="@string/settings_tutorial_relaunch_label"
+                            android:gravity="center"
+                            android:includeFontPadding="false"
+                            android:minWidth="0dp"
+                            android:minHeight="0dp"
+                            android:padding="0dp"
+                            android:text="?"
+                            android:textColor="@color/terminal_green"
+                            android:textSize="14sp"
+                            android:textStyle="bold" />
+
+                        <LinearLayout
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:orientation="vertical"
+                            android:paddingEnd="56dp">
+
+                            <TextView
+                                android:id="@+id/textHeaderTitle"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="@string/app_header_title"
+                                android:textColor="@color/terminal_green"
+                                android:textSize="24sp"
+                                android:textStyle="bold" />
+
+                            <TextView
+                                android:id="@+id/textSummary"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_marginTop="6dp"
+                                android:textColor="@color/terminal_text_muted"
+                                android:textSize="12sp" />
+
+                            <TextView
+                                android:id="@+id/textClock"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_marginTop="14dp"
+                                android:text="@string/clock_time_placeholder"
+                                android:textColor="@color/terminal_yellow"
+                                android:textSize="28sp"
+                                android:textStyle="bold" />
+
+                            <TextView
+                                android:id="@+id/textDate"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_marginTop="4dp"
+                                android:text="@string/clock_date_placeholder"
+                                android:textColor="@color/terminal_text"
+                                android:textSize="14sp" />
+                        </LinearLayout>
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:id="@+id/layoutHeaderActions"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="top|end"
+                        android:gravity="end"
+                        android:orientation="vertical">
+
+                        <ImageButton
+                            android:id="@+id/buttonFont"
+                            android:layout_width="40dp"
+                            android:layout_height="40dp"
+                            android:layout_gravity="end"
+                            android:background="@null"
+                            android:backgroundTint="@null"
+                            android:contentDescription="@string/font_button_label"
+                            android:src="@drawable/font_btn" />
+
+                        <ImageButton
+                            android:id="@+id/buttonImport"
+                            android:layout_width="40dp"
+                            android:layout_height="40dp"
+                            android:layout_marginTop="8dp"
+                            android:layout_gravity="end"
+                            android:background="@null"
+                            android:contentDescription="@string/import_button_label"
+                            android:src="@drawable/import_btn" />
+
+                        <ImageButton
+                            android:id="@+id/buttonExport"
+                            android:layout_width="40dp"
+                            android:layout_height="40dp"
+                            android:layout_marginTop="8dp"
+                            android:layout_gravity="end"
+                            android:background="@null"
+                            android:contentDescription="@string/export_button_label"
+                            android:src="@drawable/export_btn" />
+
+                    </LinearLayout>
+                </FrameLayout>
+            </LinearLayout>
+
+            <!-- Bloque 2: accesos rapidos independientes de las tareas. -->
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="16dp"
+                android:background="@drawable/bg_terminal_panel"
+                android:orientation="vertical"
+                android:padding="16dp">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:gravity="center_vertical"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:text="@string/quick_links_title"
+                        android:textColor="@color/terminal_text_muted"
+                        android:textSize="12sp" />
+
+                    <ImageButton
+                        android:id="@+id/buttonNewLink"
+                        android:layout_width="20dp"
+                        android:layout_height="20dp"
+                        android:background="@null"
+                        android:backgroundTint="@null"
+                        android:src="@drawable/plus_btn" />
+                </LinearLayout>
+
+                <HorizontalScrollView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="10dp">
+
+                    <LinearLayout
+                        android:id="@+id/layoutQuickLinks"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal" />
+                </HorizontalScrollView>
+            </LinearLayout>
+
+            <!-- Bloque 3: busqueda, filtros y alta de tareas. -->
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="16dp"
+                android:background="@drawable/bg_terminal_panel"
+                android:orientation="vertical"
+                android:padding="16dp">
+
+                <EditText
+                    android:id="@+id/editSearch"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@drawable/bg_terminal_input"
+                    android:hint="@string/search_hint"
+                    android:imeOptions="actionDone"
+                    android:inputType="text"
+                    android:minHeight="48dp"
+                    android:padding="12dp"
+                    android:textColor="@color/terminal_text"
+                    android:textColorHint="@color/terminal_text_muted" />
+
+                <!-- Acciones rapidas sobre la lista visible. -->
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="12dp"
+                    android:gravity="center"
+                    android:orientation="horizontal">
+
+                    <ImageButton
+                        android:id="@+id/buttonAll"
+                        android:layout_width="30dp"
+                        android:layout_height="30dp"
+                        android:layout_marginStart="21dp"
+                        android:layout_marginEnd="21dp"
+                        android:background="@color/terminal_panel"
+                        android:contentDescription="@string/all_label"
+                        android:padding="0dp"
+                        android:scaleType="centerInside"
+                        android:src="@drawable/filter_off" />
+
+                    <ImageButton
+                        android:id="@+id/buttonToday"
+                        android:layout_width="30dp"
+                        android:layout_height="30dp"
+                        android:layout_marginStart="21dp"
+                        android:layout_marginEnd="21dp"
+                        android:background="@color/terminal_panel"
+                        android:contentDescription="@string/today_label"
+                        android:padding="0dp"
+                        android:scaleType="centerInside"
+                        android:src="@drawable/filter" />
+
+                    <ImageButton
+                        android:id="@+id/buttonNew"
+                        android:layout_width="30dp"
+                        android:layout_height="30dp"
+                        android:layout_marginStart="21dp"
+                        android:layout_marginEnd="21dp"
+                        android:background="@color/terminal_panel"
+                        android:contentDescription="@string/new_task_label"
+                        android:padding="0dp"
+                        android:scaleType="centerInside"
+                        android:src="@drawable/new_task" />
+
+                    <ImageButton
+                        android:id="@+id/buttonNewCategory"
+                        android:layout_width="30dp"
+                        android:layout_height="30dp"
+                        android:layout_marginStart="21dp"
+                        android:layout_marginEnd="21dp"
+                        android:background="@color/terminal_panel"
+                        android:contentDescription="@string/new_category_label"
+                        android:padding="0dp"
+                        android:scaleType="centerInside"
+                        android:src="@drawable/new_folder" />
+                </LinearLayout>
+            </LinearLayout>
+        </LinearLayout>
+    </ScrollView>
+
+    <LinearLayout
+        android:layout_width="0dp"
+        android:layout_height="match_parent"
+        android:layout_weight="0.62"
+        android:orientation="vertical">
+
+        <!-- Mensaje mostrado cuando la lista visible queda vacia. -->
+        <TextView
+            android:id="@+id/textEmpty"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="16dp"
+            android:background="@drawable/bg_terminal_panel"
+            android:gravity="center"
+            android:padding="24dp"
+            android:text="@string/empty_state_all"
+            android:textColor="@color/terminal_text_muted"
+            android:textSize="15sp"
+            android:visibility="gone" />
+
+        <!-- Lista principal de tareas ordenadas por prioridad. -->
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/recyclerTasks"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="1"
+            android:clipToPadding="false"
+            android:scrollbars="vertical"
+            style="@style/Widget_OpusAgenda_ScrollIndicator"
+            android:paddingBottom="12dp" />
+    </LinearLayout>
+</LinearLayout>

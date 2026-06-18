@@ -1,11 +1,28 @@
 <resources>
     <string name="app_name">OpusAgenda</string>
 
-    <string name="app_header_title">♱ OpusAgenda v1.4</string>
+    <string name="app_header_title">♱ OpusAgenda v1.5</string>
 
     <string name="app_font_family">PirateOne</string>
 
-    <string name="search_hint">compiti di ricerca...</string>
+    <string name="search_hint">cerca attività o etichette...</string>
+
+    <string name="tag_colors_button_label">RGB</string>
+    <string name="tag_colors_edit_label">MODIFICA</string>
+    <string name="tag_colors_dialog_title">Colori delle etichette</string>
+    <string name="tag_colors_dialog_help">Tocca un\'etichetta per modificarne il colore.</string>
+    <string name="tag_colors_empty_state">Aggiungi prima delle etichette per personalizzare i colori.</string>
+    <string name="tag_color_picker_title">Colore per %1$s</string>
+    <string name="tag_color_saved">Colore salvato per %1$s</string>
+    <string name="tag_color_cleared">Colore automatico ripristinato per %1$s</string>
+    <string name="tag_color_auto_label">AUTO</string>
+    <string name="tag_colors_tab_rgb">RGB</string>
+    <string name="tag_colors_tab_hex">HEX</string>
+    <string name="tag_colors_tab_selector">SELETTORE</string>
+    <string name="tag_color_hex_hint">#RRGGBB</string>
+    <string name="tag_color_hex_help">Digita un colore esadecimale e si aggiorna in tempo reale.</string>
+    <string name="tag_color_selector_help">Trascina nella mappa: l\'asse orizzontale cambia la saturazione e l\'asse verticale la luminosità. Regola la tonalità in basso.</string>
+    <string name="tag_color_hue_label">TONALITÀ</string>
 
     <string name="empty_state_all">Nessuna attività ancora. Usa NUOVO per crearne uno</string>
 
@@ -217,6 +234,17 @@
 
     <string name="font_applied">Carattere applicato: %1$s</string>
 
+    <string name="backup_replace_label">SOSTITUISCI</string>
+    <string name="backup_import_warning_title">Importa elenco attività</string>
+    <string name="backup_import_warning_message">L\'importazione di un backup eliminerà tutte le attività attuali prima di caricare il nuovo elenco. Continuare?</string>
+    <string name="backup_export_success">Backup esportato: %1$d elementi</string>
+    <string name="backup_export_failed">Impossibile esportare il backup</string>
+    <string name="backup_import_success">Backup importato: %1$d elementi</string>
+    <string name="backup_import_failed">Impossibile importare il backup</string>
+    <string name="backup_open_failed">Impossibile aprire il file di backup selezionato</string>
+    <string name="backup_invalid_archive">Il file selezionato non è un backup valido di OpusAgenda</string>
+    <string name="backup_unsupported_version">Questo formato di backup non è supportato dalla versione attuale dell\'app</string>
+    <string name="backup_attachment_export_failed">Impossibile includere l\'allegato nel backup: %1$s</string>
     <string name="new_category_label">NUOVO GATTO</string>
 
     <string name="new_subcategory_label">NUOVA SOTTOSC</string>
@@ -339,10 +367,61 @@
     <string name="font_button_label">Cambia carattere</string>
     <string name="import_button_label">Importa backup</string>
     <string name="export_button_label">Esporta backup</string>
+    <string name="settings_button_label">RIAVVIA TUTORIAL</string>
+    <string name="tags_label">ETICHETTE</string>
+    <string name="tags_hint">Lavoro importante, Personale</string>
+    <string name="persistent_reminder_label">Promemoria persistente</string>
+    <string name="notification_action_complete">FATTO</string>
+    <string name="notification_action_snooze">RIMANDA 15 MIN</string>
+    <string name="settings_dialog_title">TUTORIAL</string>
+    <string name="settings_tutorial_relaunch_message">Vuoi riavviare il tutorial?</string>
+    <string name="settings_tutorial_relaunch_label">RIAVVIA TUTORIAL</string>
+    <string name="tutorial_restart_hint">La barra sinistra apre la conferma del tutorial.</string>
+    <string name="tutorial_dialog_title">PRIMO AVVIO</string>
+    <string name="tutorial_step_welcome_title">BENVENUTO IN OPUSAGENDA</string>
+    <string name="tutorial_step_welcome_body">Un gestore di attività locale, veloce e con design ispirato al terminale.</string>
+    <string name="tutorial_step_interface_title">INTERFACCIA</string>
+    <string name="tutorial_step_interface_body">La schermata principale mostra le attività e il riepilogo.</string>
+    <string name="tutorial_step_font_title">OPZIONI DI CARATTERE</string>
+    <string name="tutorial_step_font_body">Scegli tra 5 caratteri unici per personalizzare l\'aspetto dell\'app. La tua scelta si applicherà a tutta l\'interfaccia, inclusi i widget.</string>
+    <string name="tutorial_step_import_title">IMPORTA DATI</string>
+    <string name="tutorial_step_import_body">Importa facilmente attività da varie fonti per iniziare in fretta. Utile per attività di lavoro e per non mescolarle con quelle quotidiane (LEGGI GLI AVVISI)</string>
+    <string name="tutorial_step_export_title">ESPORTA DATI</string>
+    <string name="tutorial_step_export_body">Esporta le attività in un file per backup o condivisione. Il file esportato include tutti i dettagli, gli allegati e le categorie.</string>
+    <string name="tutorial_step_quick_links_title">LINK RAPIDI</string>
+    <string name="tutorial_step_quick_links_body">Salva e organizza i tuoi link importanti nell\'app. Accedi rapidamente dalla schermata principale e dai widget. Creane uno nuovo con il pulsante +.</string>
+    <string name="tutorial_step_filters_title">FILTRI</string>
+    <string name="tutorial_step_filters_body">Usa i filtri TUTTO e OGGI per concentrarti su ciò che conta.</string>
+    <string name="tutorial_step_all_title">FILTRO TUTTO</string>
+    <string name="tutorial_step_all_body">Mostra tutte le attività nell\'elenco, ordinate per data di scadenza e importanza.</string>
+    <string name="tutorial_step_today_title">FILTRO OGGI</string>
+    <string name="tutorial_step_today_body">Concentrati sulle attività in scadenza oggi o in ritardo. Perfetto per pianificare la giornata.</string>
+    <string name="tutorial_step_create_title">CREA ATTIVITÀ</string>
+    <string name="tutorial_step_create_body">Aggiungi nuove attività rapidamente da questo pulsante. Mantieni le voci brevi per restare veloce.</string>
+    <string name="tutorial_step_create_tips">AGGIUNGI CONTESTO</string>
+    <string name="tutorial_step_create_tips_body">Usa descrizione, link e allegati per tenere tutti i dettagli in un unico posto.</string>
+    <string name="tutorial_step_importance_title">IMPORTANZA</string>
+    <string name="tutorial_step_importance_body">Imposta livelli di importanza per ordinare e filtrare le attività per priorità.</string>
+    <string name="tutorial_step_reminders_title">PROMEMORIA</string>
+    <string name="tutorial_step_reminders_body">I filtri OGGI e l\'editor ti aiutano a gestire localmente scadenze, promemoria e ripetizioni.</string>
+    <string name="tutorial_step_persistence_title">PROMEMORIA PERSISTENTI</string>
+    <string name="tutorial_step_persistence_body">Imposta promemoria persistenti per tenere d\'occhio le attività importanti. Non verranno chiusi finché l\'attività non viene segnata come completata.</string>
+    <string name="tutorial_step_categories_title">CATEGORIE</string>
+    <string name="tutorial_step_categories_body">Raggruppa le attività correlate in categorie per mantenere ordinato l\'elenco.</string>
+    <string name="tutorial_step_categories_tips">SOTTOCATEGORIE</string>
+    <string name="tutorial_step_categories_tips_body">Crea sottocategorie per dividere meglio il lavoro senza perdere velocità.</string>
+    <string name="tutorial_step_search_title">RICERCA</string>
+    <string name="tutorial_step_search_body">Cerca per testo dell\'attività, note, link, allegati ed etichette.</string>
+    <string name="tutorial_step_tags_title">ETICHETTE</string>
+    <string name="tutorial_step_tags_body">Puoi associare più etichette a un\'attività e filtrare dalla ricerca.</string>
+    <string name="tutorial_step_summary_title">RIEPILOGO</string>
+    <string name="tutorial_step_summary_body">Il riepilogo in alto mostra lo stato generale delle attività in tempo reale.</string>
+    <string name="tutorial_step_widgets_title">WIDGET</string>
+    <string name="tutorial_step_widgets_body">I widget usano gli stessi dati locali, quindi restano sincronizzati senza Internet.</string>
+    <string name="tutorial_step_end_title">PRONTO</string>
+    <string name="tutorial_step_end_body">Ora puoi iniziare a usare OpusAgenda.</string>
+    <string name="tutorial_counter_format">%1$d/%2$d</string>
+    <string name="tutorial_prev_label">PRECEDENTE</string>
+    <string name="tutorial_next_label">SUCCESSIVO</string>
+    <string name="tutorial_finish_label">TERMINA TUTORIAL</string>
 </resources>
-
-
-
-
-
-

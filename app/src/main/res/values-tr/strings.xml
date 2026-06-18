@@ -1,291 +1,156 @@
+<?xml version="1.0" encoding="utf-8"?>
 <resources>
     <string name="app_name">OpusAgenda</string>
-
-    <string name="app_header_title">♱ OpusAgenda v1.4</string>
-
+    <string name="app_header_title">♱ OpusAgenda v1.5</string>
     <string name="app_font_family">PirateOne</string>
-
-    <string name="search_hint">arama görevleri...</string>
-
+    <string name="search_hint">görevleri veya etiketleri ara...</string>
     <string name="empty_state_all">Henüz görev yok. Bir tane oluşturmak için YENİ\'yi kullanın</string>
-
     <string name="empty_state_today">Bugün için acil görev yok</string>
-
     <string name="all_label">TÜMÜ</string>
-
     <string name="today_label">BUGÜN</string>
-
     <string name="new_task_label">YENİ</string>
-
     <string name="run_command_label">KOŞ</string>
-
     <string name="task_text_hint">Görev metni</string>
-
     <string name="category_text_hint">Kategori adı</string>
-
     <string name="save_label">KAYDET</string>
-
     <string name="cancel_label">İPTAL</string>
-
     <string name="pick_due_date_label">SON TARİH</string>
-
     <string name="clear_due_date_label">DURUMU TEMİZLEYİN</string>
-
     <string name="pinned_label">SABITLENDI</string>
-
     <string name="completed_label">Tamamlandı</string>
-
     <string name="importance_label">Önem</string>
-
     <string name="task_dialog_title_new">Yeni görev</string>
-
     <string name="task_dialog_title_edit">Görevi düzenle</string>
-
     <string name="category_dialog_title_new">Yeni kategori</string>
-
     <string name="category_dialog_title_edit">Kategoriyi düzenle</string>
-
     <string name="task_text_required">Görev metnini girin</string>
-
     <string name="default_category_name">Kategori</string>
-
     <string name="category_badge_label">KEDİ</string>
-
     <string name="category_edit_label">DÜZENLE</string>
-
     <string name="category_due_label">kategori</string>
-
     <string name="category_meta_format">alt öğeler: %1$d  önem: %2$d</string>
-
     <string name="category_move_invalid">Bu hareket, geçersiz bir iç içe geçmiş kategori oluşturur</string>
-
     <string name="task_due_label">son tarih: %1$s</string>
-
     <string name="task_reminder_value_label">hatırlatma: %1$s</string>
-
     <string name="task_date_with_relative">%1$s - %2$s</string>
-
     <string name="no_due_date">son tarih yok</string>
-
     <string name="no_reminder">hiçbiri</string>
-
     <string name="due_relative_overdue">vadesi geçmiş %1$dd</string>
-
     <string name="due_relative_today">bugün</string>
-
     <string name="due_relative_tomorrow">yarın</string>
-
     <string name="due_relative_in">%1$dd\'de</string>
-
     <string name="pick_reminder_label">BANA HATIRLAT</string>
-
     <string name="pick_repeat_label">TEKRAR</string>
-
     <string name="clear_reminder_label">HATIRLATICIYI TEMİZLE</string>
-
     <string name="reminder_dialog_title">Hatırlatıcı seç</string>
-
     <string name="reminder_option_none">Hatırlatma yok</string>
-
     <string name="reminder_option_hour">1 saat önce</string>
-
     <string name="reminder_option_day">1 gün önce</string>
-
     <string name="reminder_option_week">1 hafta önce</string>
-
     <string name="reminder_option_month">1 ay önce</string>
-
     <string name="reminder_option_custom">Özel tarih ve saat</string>
-
     <string name="reminder_summary_with_datetime">%1$s (%2$s)</string>
-
     <string name="reminder_requires_due_date">Ön ayarları kullanmak için önce bir son tarih belirleyin</string>
-
     <string name="reminder_time_in_past">Hatırlatma zamanı gelecekte olmalıdır</string>
-
     <string name="reminder_custom_date_title">Hatırlatma tarihi</string>
-
     <string name="reminder_custom_time_title">Hatırlatma zamanı</string>
-
     <string name="reminder_channel_name">Görev hatırlatıcıları</string>
-
     <string name="reminder_channel_description">Zamanlanmış görev hatırlatıcıları için bildirimler</string>
-
     <string name="reminder_notification_title">Görev hatırlatıcısı</string>
-
     <string name="notifications_permission_denied">Hatırlatıcılar için bildirim izni gereklidir</string>
-
     <string name="task_repeat_value_label">tekrarla: %1$s</string>
-
     <string name="repeat_none">hiçbiri</string>
-
     <string name="repeat_dialog_title">Tekrarı seçin</string>
-
     <string name="repeat_option_none">Tekrar yok</string>
-
     <string name="repeat_option_hour">Her saat</string>
-
     <string name="repeat_option_day">Her gün</string>
-
     <string name="repeat_option_week">Her hafta</string>
-
     <string name="repeat_option_month">Her ay</string>
-
     <string name="repeat_option_year">Her yıl</string>
-
     <string name="repeat_option_custom">Özel aralık</string>
-
     <string name="repeat_requires_reminder">Tekrarlamayı kullanmak için önce bir hatırlatıcı ayarlayın</string>
-
     <string name="repeat_custom_title">Özel tekrar</string>
-
     <string name="repeat_custom_amount_hint">Aralık tutarı</string>
-
     <string name="repeat_custom_amount_invalid">Geçerli bir tekrar miktarı girin</string>
-
     <string name="repeat_unit_minutes_label">dakika</string>
-
     <string name="repeat_unit_days_label">Günler</string>
-
     <string name="repeat_unit_hours_label">Saatler</string>
-
     <string name="repeat_unit_weeks_label">Haftalar</string>
-
     <string name="repeat_unit_months_label">Aylar</string>
-
     <string name="repeat_unit_years_label">Yıllar</string>
-
     <string name="link_open_label">AÇIK</string>
-
     <string name="link_missing">Açılacak bağlantı yok</string>
-
     <string name="invalid_command">Geçersiz komut</string>
-
     <string name="task_saved">Görev kaydedildi</string>
-
     <string name="task_deleted">Görev silindi</string>
-
     <string name="task_completed">Görev güncellendi</string>
-
     <string name="task_failed">Görev güncellenemedi</string>
-
     <string name="summary_format">açık: %1$d  bugün: %2$d  toplam: %3$d</string>
-
     <string name="task_meta_format">önem: %1$d  bitiş: %2$s  puan: %3$d</string>
-
     <string name="task_pin_label">SABİTLE</string>
-
     <string name="task_unpin_label">PIN\'İ KALDIR</string>
-
     <string name="task_edit_label">DÜZENLE</string>
-
     <string name="task_delete_label">SİL</string>
-
     <string name="quick_links_title">HIZLI BAĞLANTILAR</string>
-
     <string name="new_link_label">YENİ BAĞLANTI</string>
-
     <string name="quick_link_label_hint">Kısa ad</string>
-
     <string name="quick_link_url_hint">https://quick.link</string>
-
     <string name="quick_link_new_title">Yeni hızlı bağlantı</string>
-
     <string name="quick_link_edit_title">Hızlı bağlantıyı düzenle</string>
-
     <string name="quick_link_saved">Hızlı bağlantı kaydedildi</string>
-
     <string name="quick_link_deleted">Hızlı bağlantı silindi</string>
-
     <string name="quick_link_invalid">Geçerli bir ad ve URL girin</string>
-
     <string name="quick_link_delete_label">SİL</string>
-
     <string name="widget_tasks_title">GÖREVLER</string>
-
     <string name="widget_tasks_description">TÜMÜ ve BUGÜN filtrelerini içeren görev listesi. Bitti\'ye geçiş yapmak için bir satıra dokunun</string>
-
     <string name="widget_quick_links_description">Hızlı bağlantılar OpusAgenda\'ya kaydedildi. Tarayıcıda açmak için dokunun</string>
-
     <string name="widget_quick_links_empty">Hızlı bağlantı yok. Bunları uygulamaya ekleyin</string>
-
     <string name="clock_time_placeholder">00:00:00</string>
-
     <string name="clock_date_placeholder">10 Apr 2026</string>
-
     <string name="font_dialog_title">Yazı tipini seçin</string>
-
     <string name="font_applied">Yazı tipi uygulandı: %1$s</string>
-
+    <string name="backup_replace_label">DEĞİŞTİR</string>
+    <string name="backup_import_warning_title">Görev listesini içe aktar</string>
+    <string name="backup_import_warning_message">Bir yedeği içe aktarmak, yeni liste yüklenmeden önce mevcut tüm görevleri silecektir. Devam edilsin mi?</string>
+    <string name="backup_export_success">Yedek dışa aktarıldı: %1$d öğe</string>
+    <string name="backup_export_failed">Yedek dışa aktarılamadı</string>
+    <string name="backup_import_success">Yedek içe aktarıldı: %1$d öğe</string>
+    <string name="backup_import_failed">Yedek içe aktarılamadı</string>
+    <string name="backup_open_failed">Seçilen yedek dosyası açılamadı</string>
+    <string name="backup_invalid_archive">Seçilen dosya geçerli bir OpusAgenda yedeği değil</string>
+    <string name="backup_unsupported_version">Bu yedek biçimi uygulamanın mevcut sürümü tarafından desteklenmiyor</string>
+    <string name="backup_attachment_export_failed">Ek, yedeğe dahil edilemedi: %1$s</string>
     <string name="new_category_label">YENİ KEDİ</string>
-
     <string name="new_subcategory_label">YENİ ALT</string>
-
     <string name="new_child_task_label">YENİ GÖREV</string>
-
     <string name="task_description_label">Açıklama</string>
-
     <string name="task_description_hint">Bu görev için biraz bağlam ekleyin</string>
-
-
-
-
-
     <string name="task_description_title">Görev açıklaması</string>
-
     <string name="task_description_icon_label">Açıklamayı aç</string>
-
     <string name="task_link_label">İlgili bağlantı</string>
-
     <string name="task_link_hint">https://linked.resource</string>
-
-
-
-
-
     <string name="task_link_title">Görev bağlantısı</string>
-
     <string name="task_link_icon_label">Bağlantı ayrıntılarını aç</string>
-
     <string name="task_attachment_label">Ekli dosya</string>
-
     <string name="task_attachment_empty">Hiçbir dosya seçilmedi</string>
-
     <string name="task_attachment_pick">DOSYA SEÇ</string>
-
     <string name="task_attachment_clear">DOSYAYI TEMİZLE</string>
-
-    <string name="task_attachment_record">RECORD</string>
-
-    <string name="task_attachment_stop_record">STOP</string>
-
-    <string name="task_attachment_recording">Recording…</string>
-
-    <string name="task_attachment_record_failed">Could not record audio</string>
-
-    <string name="task_attachment_record_permission_denied">Microphone permission is required to record audio</string>
-
-    <string name="task_attachment_finish_recording">Stop recording before saving the task</string>
+    <string name="task_attachment_record">KAYIT</string>
+    <string name="task_attachment_stop_record">DURMAK</string>
+    <string name="task_attachment_recording">Kayıt…</string>
+    <string name="task_attachment_record_failed">Ses kaydedilemedi</string>
+    <string name="task_attachment_record_permission_denied">Ses kaydetmek için mikrofon izni gerekiyor</string>
+    <string name="task_attachment_finish_recording">Görevi kaydetmeden önce kaydı durdurun</string>
     <string name="task_attachment_saved">Dosya ekli</string>
-
     <string name="task_attachment_picker_failed">Seçilen dosya okunamadı</string>
-
     <string name="task_attachment_open_failed">Hiçbir uygulama bu eki açamaz</string>
-
     <string name="task_attachment_title">Görev eki</string>
-
     <string name="task_attachment_icon_label">Ek ayrıntılarını aç</string>
-
     <string name="task_attachment_name_label">dosya: %1$s</string>
-
     <string name="task_attachment_type_label">tür: %1$s</string>
-
     <string name="play_label">OYNA</string>
-
     <string name="stop_label">DUR</string>
-
     <string name="task_attachment_no_preview">Önizleme mevcut değil</string>
-
     <string-array name="font_option_labels">
         <item>Inter</item>
         <item>Geo</item>
@@ -293,55 +158,113 @@
         <item>Octosquares</item>
         <item>PirateOne</item>
     </string-array>
-
     <string-array name="importance_options">
         <item>1 DÜŞÜK</item>
         <item>2 NORMAL</item>
         <item>3 YÜKSEK</item>
         <item>4 KRİTİK</item>
     </string-array>
-
     <plurals name="repeat_unit_minutes">
         <item quantity="one">%1$d dakika</item>
         <item quantity="other">%1$d dakika</item>
     </plurals>
-
     <plurals name="repeat_unit_hours">
         <item quantity="one">%1$d saat</item>
         <item quantity="other">%1$d saat</item>
     </plurals>
-
     <plurals name="repeat_unit_days">
         <item quantity="one">%1$d gün</item>
         <item quantity="other">%1$d gün</item>
     </plurals>
-
     <plurals name="repeat_unit_weeks">
         <item quantity="one">%1$d hafta</item>
         <item quantity="other">%1$d hafta</item>
     </plurals>
-
     <plurals name="repeat_unit_months">
         <item quantity="one">%1$d ay</item>
         <item quantity="other">%1$d ay</item>
     </plurals>
-
     <plurals name="repeat_unit_years">
         <item quantity="one">%1$d yıl</item>
         <item quantity="other">%1$d yıl</item>
     </plurals>
-
     <string name="previous_label">ÖNCEKİ</string>
-
     <string name="next_label">SONRAKİ</string>
-
     <string name="pdf_page_indicator">Sayfa %1$d / %2$d</string>
     <string name="font_button_label">Yazı tipini değiştir</string>
     <string name="import_button_label">Yedeği içe aktar</string>
     <string name="export_button_label">Yedeği dışa aktar</string>
+    <string name="tutorial_step_categories_tips">Kategorilere bağlam ekle</string>
+    <string name="tutorial_step_categories_tips_body">Her kategoriye daha fazla bağlam vermek için açıklama, bağlantılar ve ekleri kullanın.</string>
+    <string name="settings_button_label">ÖĞRETİCİYİ YENİDEN BAŞLATIN</string>
+    <string name="tags_label">ETİKETLER</string>
+    <string name="tags_hint">Önemli iş, Kişisel</string>
+    <string name="tag_colors_button_label">RGB</string>
+    <string name="tag_colors_edit_label">DÜZENLEMEK</string>
+    <string name="tag_colors_dialog_title">Renkleri etiketleyin</string>
+    <string name="tag_colors_dialog_help">Rengini düzenlemek için bir etikete dokunun.</string>
+    <string name="tag_colors_empty_state">Renkleri özelleştirmek için önce etiketleri ekleyin.</string>
+    <string name="tag_color_picker_title">%1$s için renk</string>
+    <string name="tag_color_saved">%1$s için renk kaydedildi</string>
+    <string name="tag_color_cleared">%1$s için otomatik renk geri yüklendi</string>
+    <string name="tag_color_auto_label">AUTO</string>
+    <string name="tag_colors_tab_rgb">RGB</string>
+    <string name="tag_colors_tab_hex">HEX</string>
+    <string name="tag_colors_tab_selector">SEÇİCİ</string>
+    <string name="tag_color_hex_hint">#RRGGBB</string>
+    <string name="tag_color_hex_help">Onaltılık bir renk yazın ve canlı olarak güncellenir.</string>
+    <string name="tag_color_selector_help">Haritada sürükleyin: yatay, doygunluğu değiştirir ve dikey, parlaklığı değiştirir. Aşağıdan renk tonunu ayarlayın.</string>
+    <string name="tag_color_hue_label">TON</string>
+    <string name="persistent_reminder_label">Kalıcı hatırlatma</string>
+    <string name="notification_action_complete">TAMAMLAMAK</string>
+    <string name="notification_action_snooze">ERTELEME 15M</string>
+    <string name="settings_dialog_title">ÖĞRETİCİ</string>
+    <string name="settings_tutorial_relaunch_message">Öğreticiyi yeniden başlatmak istiyor musunuz?</string>
+    <string name="settings_tutorial_relaunch_label">ÖĞRETİCİYİ YENİDEN BAŞLATIN</string>
+    <string name="tutorial_restart_hint">Sol şerit eğitim onayını açar.</string>
+    <string name="tutorial_dialog_title">İLK ÇALIŞMA</string>
+    <string name="tutorial_step_welcome_title">OPUSAGENDA\'YA HOŞGELDİNİZ</string>
+    <string name="tutorial_step_welcome_body">Güçlü özelliklere ve terminalden ilham alan bir tasarıma sahip, öncelikli olarak yerel bir görev yöneticisi.</string>
+    <string name="tutorial_step_interface_title">ARAYÜZ</string>
+    <string name="tutorial_step_interface_body">Ana ekran görevlerinizi ve özetinizi gösterir.</string>
+    <string name="tutorial_step_font_title">YAZI TİPİ SEÇENEKLERİ</string>
+    <string name="tutorial_step_font_body">Uygulamanın görünümünü ve tarzını özelleştirmek için 5 benzersiz yazı tipi arasından seçim yapın. Seçiminiz, widget\'lar da dahil olmak üzere arayüzün tamamına uygulanacaktır.</string>
+    <string name="tutorial_step_import_title">VERİLERİ İÇE AKTARIN</string>
+    <string name="tutorial_step_import_body">Hızlı bir şekilde başlamak için çeşitli kaynaklardan görevleri kolayca içe aktarın. İşe özel görevler için ve bunları günlük görevlerinizle karıştırmamak için kullanışlıdır (UYARILARI OKUYUN)</string>
+    <string name="tutorial_step_export_title">VERİLERİ DIŞA AKTAR</string>
+    <string name="tutorial_step_export_body">Yedekleme veya paylaşım için görevlerinizi bir dosyaya aktarın. Dışa aktarılan dosya tüm görev ayrıntılarını, ekleri ve kategorileri içerir.</string>
+    <string name="tutorial_step_quick_links_title">HIZLI BAĞLANTILAR</string>
+    <string name="tutorial_step_quick_links_body">Önemli bağlantılarınızı uygulamada kaydedin ve düzenleyin. Bunlara ana ekrandan ve widget\'lardan hızlı bir şekilde erişin. Sağ üst köşedeki + düğmesini kullanarak yeni bir hızlı bağlantı ekleyin.</string>
+    <string name="tutorial_step_filters_title">FİLTRELER</string>
+    <string name="tutorial_step_filters_body">Önemli olana odaklanmak için TÜMÜ ve BUGÜN filtrelerini kullanın.</string>
+    <string name="tutorial_step_all_title">TÜM FİLTRE</string>
+    <string name="tutorial_step_all_body">Listedeki tüm görevleri son tarihe ve önem derecesine göre sıralanmış olarak gösterir.</string>
+    <string name="tutorial_step_today_title">BUGÜN FİLTRESİ</string>
+    <string name="tutorial_step_today_body">Bugün teslim edilmesi gereken veya gecikmiş görevlere odaklanın. Günlük planlamanız için mükemmeldir.</string>
+    <string name="tutorial_step_create_title">GÖREV OLUŞTUR</string>
+    <string name="tutorial_step_create_body">Bu düğmeyi kullanarak hızlı bir şekilde yeni görevler ekleyin. Hızlı kalmak için girişleri kısa tutun.</string>
+    <string name="tutorial_step_create_tips">BAĞLAM EKLE</string>
+    <string name="tutorial_step_create_tips_body">Tüm görev ayrıntılarını tek bir yerde tutmak için açıklamayı, bağlantıları ve ekleri kullanın.</string>
+    <string name="tutorial_step_importance_title">ÖNEM</string>
+    <string name="tutorial_step_importance_body">Görevleri önceliğe göre sıralamak ve filtrelemek için önem düzeylerini ayarlayın.</string>
+    <string name="tutorial_step_reminders_title">HATIRLATMALAR</string>
+    <string name="tutorial_step_reminders_body">Today filtreleri ve düzenleyici, gereken çalışmaları, hatırlatıcıları ve tekrarları yerel olarak yönetmenize yardımcı olur.</string>
+    <string name="tutorial_step_persistence_title">KALICI HATIRLATMALAR</string>
+    <string name="tutorial_step_persistence_body">Önemli görevlerden haberdar olmak için kalıcı hatırlatıcılar ayarlayın. Siz tamamlandı olarak işaretleyene kadar reddedilmeyecektir.</string>
+    <string name="tutorial_step_categories_title">KATEGORİLER</string>
+    <string name="tutorial_step_categories_body">Listeyi düzenli tutmak için ilgili görevleri kategoriler halinde gruplayın.</string>
+    <string name="tutorial_step_search_title">ARAMAK</string>
+    <string name="tutorial_step_search_body">Görev metnine, notlara, bağlantılara, eklere ve etiketlere göre arama yapın.</string>
+    <string name="tutorial_step_tags_title">ETİKETLER</string>
+    <string name="tutorial_step_tags_body">Özel filtreler oluşturmak ve çalışmanızı düzenlemek için görevlere ve kategorilere etiketler ekleyin.</string>
+    <string name="tutorial_step_summary_title">ÖZET</string>
+    <string name="tutorial_step_summary_body">Üst kısımdaki özet size açık ve acil görevleriniz hakkında hızlı bir genel bakış sunar.</string>
+    <string name="tutorial_step_widgets_title">WIDGET\'LAR</string>
+    <string name="tutorial_step_widgets_body">Widget\'lar aynı yerel verileri kullanır, böylece İnternet olmadan da senkronize kalırlar.</string>
+    <string name="tutorial_step_end_title">SON?</string>
+    <string name="tutorial_step_end_body">Eğitim için hepsi bu. OpusAgenda\'yı kullanmanın tadını çıkarın!</string>
+    <string name="tutorial_counter_format">%1$d/%2$d</string>
+    <string name="tutorial_prev_label">ÖNCESİ</string>
+    <string name="tutorial_next_label">SONRAKİ</string>
+    <string name="tutorial_finish_label">ÖĞRETMENİ SONLANDIR</string>
 </resources>
-
-
-
-
-

@@ -4,24 +4,30 @@ import android.Manifest
 import android.content.ActivityNotFoundException
 import android.content.Intent
 import android.content.pm.PackageManager
+import android.graphics.Color
+import android.graphics.drawable.GradientDrawable
 import android.graphics.Typeface
 import android.net.Uri
 import android.os.Build
 import android.os.Bundle
 import android.provider.OpenableColumns
+import android.text.InputFilter
 import android.text.InputType
 import android.view.Gravity
 import android.view.View
 import android.view.ViewGroup
+import android.view.WindowManager
 import android.widget.ArrayAdapter
 import android.widget.Button
 import android.widget.EditText
 import android.widget.ImageButton
 import android.widget.ImageView
 import android.widget.LinearLayout
+import android.widget.FrameLayout
 import android.widget.Spinner
 import android.widget.TextView
 import android.widget.ScrollView
+import android.widget.SeekBar
 import android.widget.MediaController
 import android.widget.Toast
 import android.widget.VideoView
@@ -47,6 +53,7 @@ import androidx.core.content.res.ResourcesCompat
 import androidx.core.view.setPadding
 import android.util.Log
 import androidx.core.widget.doAfterTextChanged
+import androidx.core.widget.NestedScrollView
 import androidx.lifecycle.lifecycleScope
 import androidx.lifecycle.repeatOnLifecycle
 import androidx.recyclerview.widget.ItemTouchHelper
@@ -54,6 +61,7 @@ import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.RecyclerView
 import com.google.android.material.datepicker.MaterialDatePicker
 import com.google.android.material.dialog.MaterialAlertDialogBuilder
+import com.google.android.material.tabs.TabLayout
 import com.google.android.material.timepicker.MaterialTimePicker
 import com.google.android.material.timepicker.TimeFormat
 import com.lambda.opusagenda.R
@@ -66,6 +74,8 @@ import com.lambda.opusagenda.util.TaskContentSupport
 import com.lambda.opusagenda.util.TaskDateFormatter
 import com.lambda.opusagenda.util.TaskHierarchyManager.DropMode
 import com.lambda.opusagenda.util.TaskRepeatCalculator
+import com.lambda.opusagenda.util.TaskTagUtils
+import com.lambda.opusagenda.util.TagColorStore
 import com.lambda.opusagenda.util.TaskRepeatCalculator.RepeatUnit
 import com.lambda.opusagenda.viewmodel.MainViewModel
 import com.lambda.opusagenda.viewmodel.TaskFilterMode
@@ -80,6 +90,7 @@ import java.time.ZoneId
 import java.time.ZoneOffset
 import java.time.format.DateTimeFormatter
 import java.util.Locale
+import kotlin.math.roundToInt
 
 class MainActivity : AppCompatActivity(), TaskAdapter.TaskItemActions {
 
@@ -105,6 +116,7 @@ class MainActivity : AppCompatActivity(), TaskAdapter.TaskItemActions {
     private companion object {
         private const val PREFS_NAME = "opusagenda_prefs"
         private const val PREF_FONT_KEY = "selected_font"
+        private const val PREF_TUTORIAL_KEY = "tutorial_completed"
         private const val FONT_INTER = "inter"
         private const val FONT_GEO = "geo"
         private const val FONT_MEDIEVAL_SHARP = "medieval_sharp"
@@ -117,6 +129,7 @@ class MainActivity : AppCompatActivity(), TaskAdapter.TaskItemActions {
     private lateinit var taskBackupManager: TaskBackupManager
     private lateinit var quickLinksStore: QuickLinksStore
     private lateinit var taskTouchHelper: ItemTouchHelper
+    private lateinit var tutorialController: TutorialController
     private var selectedTypeface: Typeface? = null
 
     private val quickLinks = mutableListOf<QuickLink>()
@@ -188,6 +201,9 @@ class MainActivity : AppCompatActivity(), TaskAdapter.TaskItemActions {
         binding = ActivityMainBinding.inflate(layoutInflater)
         setContentView(binding.root)
         applySelectedTypeface()
+        tutorialController = TutorialController(this) {
+            markTutorialSeen()
+        }
 
         taskBackupManager = TaskBackupManager(applicationContext)
         quickLinksStore = QuickLinksStore(applicationContext)
@@ -199,6 +215,7 @@ class MainActivity : AppCompatActivity(), TaskAdapter.TaskItemActions {
         binding.recyclerTasks.apply {
             layoutManager = LinearLayoutManager(this@MainActivity)
             adapter = taskAdapter
+            applyScrollIndicator(vertical = true)
         }
         taskTouchHelper.attachToRecyclerView(binding.recyclerTasks)
 
@@ -206,6 +223,10 @@ class MainActivity : AppCompatActivity(), TaskAdapter.TaskItemActions {
         observeViewModel()
         renderQuickLinks()
         startClock()
+        maybeShowTutorial()
+        if (savedInstanceState == null) {
+            binding.root.post { showTutorialRestartHint() }
+        }
     }
 
     private fun bindUi() {
@@ -244,6 +265,10 @@ class MainActivity : AppCompatActivity(), TaskAdapter.TaskItemActions {
         binding.buttonImport.setOnClickListener {
             launchBackupImport()
         }
+
+        binding.buttonSettings.setOnClickListener {
+            showSettingsDialog()
+        }
     }
 
     private fun showFontDialog() {
@@ -279,6 +304,48 @@ class MainActivity : AppCompatActivity(), TaskAdapter.TaskItemActions {
             }
             .setNegativeButton(R.string.cancel_label, null)
             .show()
+    }
+
+    private fun showSettingsDialog() {
+        MaterialAlertDialogBuilder(this)
+            .setTitle(R.string.settings_dialog_title)
+            .setMessage(R.string.settings_tutorial_relaunch_message)
+            .setNegativeButton(R.string.cancel_label, null)
+            .setPositiveButton(R.string.settings_tutorial_relaunch_label) { _, _ ->
+                tutorialController.show(force = true)
+            }
+            .show()
+            .also(::applyDialogPanelBackgrounds)
+    }
+
+    private fun maybeShowTutorial() {
+        if (getSharedPreferences(PREFS_NAME, MODE_PRIVATE).getBoolean(PREF_TUTORIAL_KEY, false)) {
+            return
+        }
+        binding.root.post {
+            if (!tutorialController.isShowing) {
+                tutorialController.show()
+            }
+        }
+    }
+
+    private fun showTutorialRestartHint() {
+        val message = getString(R.string.tutorial_restart_hint)
+        lifecycleScope.launch {
+            repeat(3) { index ->
+                if (!isActive) return@launch
+                showStatus(message)
+                if (index < 2) {
+                    delay(800L)
+                }
+            }
+        }
+    }
+
+    private fun markTutorialSeen() {
+        getSharedPreferences(PREFS_NAME, MODE_PRIVATE).edit()
+            .putBoolean(PREF_TUTORIAL_KEY, true)
+            .apply()
     }
 
     private fun launchBackupExport() {
@@ -317,6 +384,7 @@ class MainActivity : AppCompatActivity(), TaskAdapter.TaskItemActions {
         lifecycleScope.launch {
             try {
                 val itemCount = taskBackupManager.importBackup(sourceUri)
+                refreshTaskTagAppearance()
                 showStatus(getString(R.string.backup_import_success, itemCount))
             } catch (exception: Exception) {
                 showStatus(exception.message ?: getString(R.string.backup_import_failed))
@@ -407,10 +475,36 @@ class MainActivity : AppCompatActivity(), TaskAdapter.TaskItemActions {
         spinnerAdapter.setDropDownViewResource(R.layout.item_spinner_terminal_dropdown)
         dialogBinding.spinnerImportance.adapter = spinnerAdapter
         dialogBinding.editTaskText.setText(task?.text.orEmpty())
+        dialogBinding.editTags.setText(task?.tags?.joinToString(", ").orEmpty())
         dialogBinding.spinnerImportance.setSelection((task?.importance ?: 2) - 1)
         dialogBinding.checkPinned.isChecked = task?.pinned == true
+        dialogBinding.checkPersistentReminder.isChecked = task?.persistentReminder == true
         dialogBinding.editDescription.setText(task?.description.orEmpty())
         dialogBinding.editLink.setText(task?.link.orEmpty())
+
+        fun currentTags(): List<String> {
+            return TaskTagUtils.parseTagInput(dialogBinding.editTags.text?.toString().orEmpty())
+        }
+
+        fun updateTagColorsButtonState() {
+            val hasTags = currentTags().isNotEmpty()
+            dialogBinding.buttonTagColors.isEnabled = hasTags
+            dialogBinding.buttonTagColors.alpha = if (hasTags) 1f else 0.45f
+        }
+
+        dialogBinding.buttonTagColors.setOnClickListener {
+            val tags = currentTags()
+            if (tags.isEmpty()) {
+                showStatus(getString(R.string.tag_colors_empty_state))
+                return@setOnClickListener
+            }
+            showTagColorManagerDialog(tags)
+        }
+
+        dialogBinding.editTags.doAfterTextChanged {
+            updateTagColorsButtonState()
+        }
+        updateTagColorsButtonState()
 
         if (isCategory) {
             dialogBinding.editTaskText.setHint(R.string.category_text_hint)
@@ -422,6 +516,7 @@ class MainActivity : AppCompatActivity(), TaskAdapter.TaskItemActions {
             dialogBinding.textRepeat.visibility = View.GONE
             dialogBinding.layoutReminderActions.visibility = View.GONE
             dialogBinding.checkPinned.visibility = View.GONE
+            dialogBinding.checkPersistentReminder.visibility = View.GONE
         }
 
         var selectedDueDate = task?.dueDate
@@ -644,8 +739,10 @@ class MainActivity : AppCompatActivity(), TaskAdapter.TaskItemActions {
                 return@setOnClickListener
             }
             val text = dialogBinding.editTaskText.text?.toString().orEmpty()
+            val tags = TaskTagUtils.parseTagInput(dialogBinding.editTags.text?.toString().orEmpty())
             val importance = dialogBinding.spinnerImportance.selectedItemPosition + 1
             val pinned = dialogBinding.checkPinned.isChecked
+            val persistentReminder = dialogBinding.checkPersistentReminder.isChecked && selectedReminderAt != null
             val descriptionDraft = dialogBinding.editDescription.text?.toString()?.trim().orEmpty()
             val linkDraft = dialogBinding.editLink.text?.toString()?.trim().orEmpty()
             val finalDescription = descriptionDraft.takeIf { it.isNotBlank() }
@@ -675,10 +772,12 @@ class MainActivity : AppCompatActivity(), TaskAdapter.TaskItemActions {
                     dueDate = selectedDueDate,
                     description = finalDescription,
                     link = finalLink,
+                    tags = tags,
                     attachmentUri = selectedAttachmentUri,
                     attachmentName = selectedAttachmentName,
                     attachmentMimeType = selectedAttachmentMimeType,
                     pinned = pinned,
+                    persistentReminder = persistentReminder,
                     reminderAt = selectedReminderAt,
                     repeatAmount = selectedRepeatAmount,
                     repeatUnit = selectedRepeatUnit,
@@ -693,10 +792,13 @@ class MainActivity : AppCompatActivity(), TaskAdapter.TaskItemActions {
                     dueDate = selectedDueDate,
                     description = finalDescription,
                     link = finalLink,
+                    tags = tags,
                     attachmentUri = selectedAttachmentUri,
                     attachmentName = selectedAttachmentName,
                     attachmentMimeType = selectedAttachmentMimeType,
                     pinned = pinned,
+                    persistentReminder = persistentReminder,
+                    wasPersistentReminder = task.persistentReminder,
                     completed = task.completed,
                     reminderAt = selectedReminderAt,
                     repeatAmount = selectedRepeatAmount,
@@ -710,6 +812,617 @@ class MainActivity : AppCompatActivity(), TaskAdapter.TaskItemActions {
             }
             dialog.dismiss()
         }
+    }
+
+    private fun refreshTaskTagAppearance() {
+        taskAdapter.notifyDataSetChanged()
+    }
+
+    private fun showTagColorManagerDialog(tags: List<String>) {
+        val normalizedTags = tags
+            .mapNotNull(TaskTagUtils::normalizeTag)
+            .distinctBy { it.lowercase() }
+
+        if (normalizedTags.isEmpty()) {
+            showStatus(getString(R.string.tag_colors_empty_state))
+            return
+        }
+
+        val container = LinearLayout(this).apply {
+            orientation = LinearLayout.VERTICAL
+            setPadding(20.dp)
+        }
+        val swatchesByTag = mutableMapOf<String, View>()
+
+        container.addView(TextView(this).apply {
+            text = getString(R.string.tag_colors_dialog_help)
+            setTextColor(getColor(R.color.terminal_text_muted))
+            textSize = 13f
+        })
+
+        normalizedTags.forEach { tag ->
+            val row = LinearLayout(this).apply {
+                orientation = LinearLayout.HORIZONTAL
+                gravity = Gravity.CENTER_VERTICAL
+                background = ContextCompat.getDrawable(
+                    this@MainActivity,
+                    R.drawable.bg_terminal_input
+                )
+                setPadding(12.dp, 12.dp, 12.dp, 12.dp)
+                layoutParams = LinearLayout.LayoutParams(
+                    ViewGroup.LayoutParams.MATCH_PARENT,
+                    ViewGroup.LayoutParams.WRAP_CONTENT
+                ).apply {
+                    topMargin = 8.dp
+                }
+                isClickable = true
+                isFocusable = true
+            }
+
+            val labelView = TextView(this).apply {
+                layoutParams = LinearLayout.LayoutParams(0, ViewGroup.LayoutParams.WRAP_CONTENT, 1f)
+                text = tag
+                setTextColor(getColor(R.color.terminal_text))
+                textSize = 14f
+            }
+
+            val swatch = View(this).apply {
+                layoutParams = LinearLayout.LayoutParams(48.dp, 24.dp).apply {
+                    marginEnd = 12.dp
+                }
+                background = createTagColorSwatchDrawable(tag)
+            }
+            swatchesByTag[tag.lowercase()] = swatch
+
+            val editButton = Button(this).apply {
+                layoutParams = LinearLayout.LayoutParams(
+                    ViewGroup.LayoutParams.WRAP_CONTENT,
+                    48.dp
+                ).apply {
+                    minWidth = 72.dp
+                }
+                background = ContextCompat.getDrawable(
+                    this@MainActivity,
+                    R.drawable.bg_terminal_action
+                )
+                backgroundTintList = null
+                text = getString(R.string.tag_colors_edit_label)
+                isAllCaps = false
+                setTextColor(getColor(R.color.terminal_black))
+            }
+
+            val openEditor = {
+                showTagColorEditorDialog(tag) { committedColor ->
+                    val color = committedColor ?: resolveTagColor(tag)
+                    swatchesByTag[tag.lowercase()]?.background = createColorPreviewDrawable(color)
+                }
+            }
+
+            row.setOnClickListener { openEditor() }
+            editButton.setOnClickListener { openEditor() }
+
+            row.addView(labelView)
+            row.addView(swatch)
+            row.addView(editButton)
+            container.addView(row)
+        }
+
+        val scroll = ScrollView(this).apply {
+            applyScrollIndicator(vertical = true)
+            addView(
+                container,
+                ViewGroup.LayoutParams(
+                    ViewGroup.LayoutParams.MATCH_PARENT,
+                    ViewGroup.LayoutParams.WRAP_CONTENT
+                )
+            )
+        }
+
+        MaterialAlertDialogBuilder(this)
+            .setTitle(R.string.tag_colors_dialog_title)
+            .setView(scroll)
+            .setNegativeButton(R.string.cancel_label, null)
+            .show()
+            .also(::applyDialogPanelBackgrounds)
+    }
+
+    private fun showTagColorEditorDialog(
+        tag: String,
+        onColorCommitted: ((Int?) -> Unit)? = null
+    ) {
+        val normalizedTag = TaskTagUtils.normalizeTag(tag) ?: return
+        val initialColor = TagColorStore.getColor(this, normalizedTag)
+            ?: TaskTagUtils.colorForTag(this, normalizedTag)
+
+        var currentColor = initialColor
+        var isUiSyncing = false
+        val hsvScratch = FloatArray(3)
+
+        val isLandscape = resources.displayMetrics.widthPixels > resources.displayMetrics.heightPixels
+        val panelHeight = minOf(
+            (resources.displayMetrics.heightPixels * if (isLandscape) 0.50f else 0.58f).toInt(),
+            420.dp
+        )
+
+        val root = LinearLayout(this).apply {
+            orientation = LinearLayout.VERTICAL
+            setPadding(20.dp)
+        }
+
+        val summaryRow = LinearLayout(this).apply {
+            orientation = LinearLayout.HORIZONTAL
+            gravity = Gravity.CENTER_VERTICAL
+            layoutParams = LinearLayout.LayoutParams(
+                ViewGroup.LayoutParams.MATCH_PARENT,
+                ViewGroup.LayoutParams.WRAP_CONTENT
+            ).apply {
+                topMargin = 12.dp
+            }
+            background = ContextCompat.getDrawable(
+                this@MainActivity,
+                R.drawable.bg_terminal_input
+            )
+            setPadding(12.dp, 12.dp, 12.dp, 12.dp)
+        }
+
+        val previewSwatch = View(this).apply {
+            layoutParams = LinearLayout.LayoutParams(48.dp, 28.dp).apply {
+                marginEnd = 12.dp
+            }
+            background = createColorPreviewDrawable(initialColor)
+        }
+
+        val previewColumn = LinearLayout(this).apply {
+            orientation = LinearLayout.VERTICAL
+            layoutParams = LinearLayout.LayoutParams(0, ViewGroup.LayoutParams.WRAP_CONTENT, 1f)
+        }
+
+        val previewHex = TextView(this).apply {
+            text = colorToHex(initialColor)
+            setTextColor(getColor(R.color.terminal_text))
+            textSize = 14f
+        }
+
+        val previewTag = TextView(this).apply {
+            text = normalizedTag
+            setTextColor(getColor(R.color.terminal_text_muted))
+            textSize = 12f
+        }
+
+        previewColumn.addView(previewHex)
+        previewColumn.addView(previewTag)
+        summaryRow.addView(previewSwatch)
+        summaryRow.addView(previewColumn)
+
+        val tabLayout = TabLayout(this).apply {
+            layoutParams = LinearLayout.LayoutParams(
+                ViewGroup.LayoutParams.MATCH_PARENT,
+                ViewGroup.LayoutParams.WRAP_CONTENT
+            ).apply {
+                topMargin = 12.dp
+            }
+            tabMode = TabLayout.MODE_FIXED
+            tabGravity = TabLayout.GRAVITY_FILL
+            addTab(newTab().setText(R.string.tag_colors_tab_rgb))
+            addTab(newTab().setText(R.string.tag_colors_tab_hex))
+            addTab(newTab().setText(R.string.tag_colors_tab_selector))
+        }
+
+        val contentHost = FrameLayout(this).apply {
+            layoutParams = LinearLayout.LayoutParams(
+                ViewGroup.LayoutParams.MATCH_PARENT,
+                panelHeight
+            ).apply {
+                topMargin = 12.dp
+            }
+        }
+
+        val rgbPanelBody = LinearLayout(this).apply {
+            orientation = LinearLayout.VERTICAL
+            setPadding(4.dp, 4.dp, 4.dp, 12.dp)
+        }
+
+        fun createRgbChannelRow(label: String, initialValue: Int): Pair<SeekBar, TextView> {
+            val valueView = TextView(this).apply {
+                text = initialValue.toString()
+                setTextColor(getColor(R.color.terminal_text_muted))
+                textSize = 12f
+            }
+
+            val header = LinearLayout(this).apply {
+                orientation = LinearLayout.HORIZONTAL
+                gravity = Gravity.CENTER_VERTICAL
+                layoutParams = LinearLayout.LayoutParams(
+                    ViewGroup.LayoutParams.MATCH_PARENT,
+                    ViewGroup.LayoutParams.WRAP_CONTENT
+                )
+
+                addView(TextView(this@MainActivity).apply {
+                    layoutParams = LinearLayout.LayoutParams(
+                        0,
+                        ViewGroup.LayoutParams.WRAP_CONTENT,
+                        1f
+                    )
+                    text = label
+                    setTextColor(getColor(R.color.terminal_text))
+                    textSize = 13f
+                })
+                addView(valueView)
+            }
+
+            val seekBar = SeekBar(this).apply {
+                max = 255
+                progress = initialValue
+                layoutParams = LinearLayout.LayoutParams(
+                    ViewGroup.LayoutParams.MATCH_PARENT,
+                    ViewGroup.LayoutParams.WRAP_CONTENT
+                )
+            }
+
+            val row = LinearLayout(this).apply {
+                orientation = LinearLayout.VERTICAL
+                layoutParams = LinearLayout.LayoutParams(
+                    ViewGroup.LayoutParams.MATCH_PARENT,
+                    ViewGroup.LayoutParams.WRAP_CONTENT
+                ).apply {
+                    topMargin = 12.dp
+                }
+                addView(header)
+                addView(seekBar)
+            }
+
+            rgbPanelBody.addView(row)
+            return seekBar to valueView
+        }
+
+        val redControls = createRgbChannelRow("R", Color.red(initialColor))
+        val greenControls = createRgbChannelRow("G", Color.green(initialColor))
+        val blueControls = createRgbChannelRow("B", Color.blue(initialColor))
+
+        val rgbPanel = NestedScrollView(this).apply {
+            isFillViewport = true
+            applyScrollIndicator(vertical = true)
+            addView(
+                rgbPanelBody,
+                ViewGroup.LayoutParams(
+                    ViewGroup.LayoutParams.MATCH_PARENT,
+                    ViewGroup.LayoutParams.WRAP_CONTENT
+                )
+            )
+        }
+
+        val hexPanelBody = LinearLayout(this).apply {
+            orientation = LinearLayout.VERTICAL
+            setPadding(4.dp, 4.dp, 4.dp, 12.dp)
+        }
+
+        val hexHelp = TextView(this).apply {
+            text = getString(R.string.tag_color_hex_help)
+            setTextColor(getColor(R.color.terminal_text_muted))
+            textSize = 13f
+        }
+
+        val hexInput = EditText(this).apply {
+            layoutParams = LinearLayout.LayoutParams(
+                ViewGroup.LayoutParams.MATCH_PARENT,
+                ViewGroup.LayoutParams.WRAP_CONTENT
+            ).apply {
+                topMargin = 12.dp
+            }
+            background = ContextCompat.getDrawable(this@MainActivity, R.drawable.bg_terminal_input)
+            hint = getString(R.string.tag_color_hex_hint)
+            inputType = InputType.TYPE_CLASS_TEXT or
+                InputType.TYPE_TEXT_FLAG_NO_SUGGESTIONS or
+                InputType.TYPE_TEXT_FLAG_CAP_CHARACTERS
+            filters = arrayOf(InputFilter.LengthFilter(7))
+            minHeight = 48.dp
+            setPadding(12.dp)
+            setTextColor(getColor(R.color.terminal_text))
+            setHintTextColor(getColor(R.color.terminal_text_muted))
+            isSingleLine = true
+        }
+
+        hexPanelBody.addView(hexHelp)
+        hexPanelBody.addView(hexInput)
+
+        val hexPanel = NestedScrollView(this).apply {
+            isFillViewport = true
+            applyScrollIndicator(vertical = true)
+            addView(
+                hexPanelBody,
+                ViewGroup.LayoutParams(
+                    ViewGroup.LayoutParams.MATCH_PARENT,
+                    ViewGroup.LayoutParams.WRAP_CONTENT
+                )
+            )
+        }
+
+        val selectorPanelBody = LinearLayout(this).apply {
+            orientation = LinearLayout.VERTICAL
+            setPadding(4.dp, 4.dp, 4.dp, 12.dp)
+        }
+
+        val selectorHelp = TextView(this).apply {
+            text = getString(R.string.tag_color_selector_help)
+            setTextColor(getColor(R.color.terminal_text_muted))
+            textSize = 13f
+        }
+
+        val selectorMapView = TagColorMapView(this).apply {
+            layoutParams = LinearLayout.LayoutParams(
+                ViewGroup.LayoutParams.MATCH_PARENT,
+                220.dp
+            ).apply {
+                topMargin = 12.dp
+            }
+            background = ContextCompat.getDrawable(this@MainActivity, R.drawable.bg_terminal_input)
+        }
+
+        val hueHeader = LinearLayout(this).apply {
+            orientation = LinearLayout.HORIZONTAL
+            gravity = Gravity.CENTER_VERTICAL
+            layoutParams = LinearLayout.LayoutParams(
+                ViewGroup.LayoutParams.MATCH_PARENT,
+                ViewGroup.LayoutParams.WRAP_CONTENT
+            ).apply {
+                topMargin = 12.dp
+            }
+        }
+
+        val hueLabel = TextView(this).apply {
+            layoutParams = LinearLayout.LayoutParams(
+                0,
+                ViewGroup.LayoutParams.WRAP_CONTENT,
+                1f
+            )
+            text = getString(R.string.tag_color_hue_label)
+            setTextColor(getColor(R.color.terminal_text))
+            textSize = 13f
+        }
+
+        val hueValueView = TextView(this).apply {
+            setTextColor(getColor(R.color.terminal_text_muted))
+            textSize = 12f
+        }
+
+        hueHeader.addView(hueLabel)
+        hueHeader.addView(hueValueView)
+
+        val hueSeekBar = SeekBar(this).apply {
+            max = 360
+            layoutParams = LinearLayout.LayoutParams(
+                ViewGroup.LayoutParams.MATCH_PARENT,
+                ViewGroup.LayoutParams.WRAP_CONTENT
+            ).apply {
+                topMargin = 8.dp
+            }
+        }
+
+        val selectorPanel = NestedScrollView(this).apply {
+            isFillViewport = true
+            applyScrollIndicator(vertical = true)
+            addView(
+                selectorPanelBody,
+                ViewGroup.LayoutParams(
+                    ViewGroup.LayoutParams.MATCH_PARENT,
+                    ViewGroup.LayoutParams.WRAP_CONTENT
+                )
+            )
+        }
+
+        selectorPanelBody.addView(selectorHelp)
+        selectorPanelBody.addView(selectorMapView)
+        selectorPanelBody.addView(hueHeader)
+        selectorPanelBody.addView(hueSeekBar)
+
+        contentHost.addView(
+            rgbPanel,
+            FrameLayout.LayoutParams(
+                ViewGroup.LayoutParams.MATCH_PARENT,
+                ViewGroup.LayoutParams.MATCH_PARENT
+            )
+        )
+        contentHost.addView(
+            hexPanel,
+            FrameLayout.LayoutParams(
+                ViewGroup.LayoutParams.MATCH_PARENT,
+                ViewGroup.LayoutParams.MATCH_PARENT
+            )
+        )
+        contentHost.addView(
+            selectorPanel,
+            FrameLayout.LayoutParams(
+                ViewGroup.LayoutParams.MATCH_PARENT,
+                ViewGroup.LayoutParams.MATCH_PARENT
+            )
+        )
+
+        fun showPanel(index: Int) {
+            val panels = listOf(rgbPanel, hexPanel, selectorPanel)
+            panels.forEachIndexed { panelIndex, panel ->
+                panel.visibility = if (panelIndex == index) View.VISIBLE else View.GONE
+            }
+        }
+
+        fun syncViewsFromCurrentColor() {
+            if (isUiSyncing) return
+            isUiSyncing = true
+            try {
+                val red = Color.red(currentColor)
+                val green = Color.green(currentColor)
+                val blue = Color.blue(currentColor)
+
+                redControls.first.progress = red
+                redControls.second.text = red.toString()
+                greenControls.first.progress = green
+                greenControls.second.text = green.toString()
+                blueControls.first.progress = blue
+                blueControls.second.text = blue.toString()
+
+                val hex = colorToHex(currentColor)
+                hexInput.setText(hex)
+                hexInput.setSelection(hex.length)
+
+                Color.colorToHSV(currentColor, hsvScratch)
+                val hue = hsvScratch[0].roundToInt().coerceIn(0, 360)
+                hueSeekBar.progress = hue
+                hueValueView.text = hue.toString()
+
+                previewSwatch.background = createColorPreviewDrawable(currentColor)
+                previewHex.text = hex
+                selectorMapView.setColor(currentColor)
+                selectorMapView.contentDescription = hex
+            } finally {
+                isUiSyncing = false
+            }
+        }
+
+        fun applyColorFromUser(color: Int) {
+            currentColor = color
+            syncViewsFromCurrentColor()
+        }
+
+        redControls.first.setOnSeekBarChangeListener(object : SeekBar.OnSeekBarChangeListener {
+            override fun onProgressChanged(seekBar: SeekBar?, progress: Int, fromUser: Boolean) {
+                redControls.second.text = progress.toString()
+                if (isUiSyncing) return
+                applyColorFromUser(Color.rgb(progress, Color.green(currentColor), Color.blue(currentColor)))
+            }
+
+            override fun onStartTrackingTouch(seekBar: SeekBar?) = Unit
+            override fun onStopTrackingTouch(seekBar: SeekBar?) = Unit
+        })
+
+        greenControls.first.setOnSeekBarChangeListener(object : SeekBar.OnSeekBarChangeListener {
+            override fun onProgressChanged(seekBar: SeekBar?, progress: Int, fromUser: Boolean) {
+                greenControls.second.text = progress.toString()
+                if (isUiSyncing) return
+                applyColorFromUser(Color.rgb(Color.red(currentColor), progress, Color.blue(currentColor)))
+            }
+
+            override fun onStartTrackingTouch(seekBar: SeekBar?) = Unit
+            override fun onStopTrackingTouch(seekBar: SeekBar?) = Unit
+        })
+
+        blueControls.first.setOnSeekBarChangeListener(object : SeekBar.OnSeekBarChangeListener {
+            override fun onProgressChanged(seekBar: SeekBar?, progress: Int, fromUser: Boolean) {
+                blueControls.second.text = progress.toString()
+                if (isUiSyncing) return
+                applyColorFromUser(Color.rgb(Color.red(currentColor), Color.green(currentColor), progress))
+            }
+
+            override fun onStartTrackingTouch(seekBar: SeekBar?) = Unit
+            override fun onStopTrackingTouch(seekBar: SeekBar?) = Unit
+        })
+
+        hexInput.doAfterTextChanged { editable ->
+            if (isUiSyncing) return@doAfterTextChanged
+            val parsedColor = parseHexColorInput(editable?.toString().orEmpty()) ?: return@doAfterTextChanged
+            applyColorFromUser(parsedColor)
+        }
+
+        hueSeekBar.setOnSeekBarChangeListener(object : SeekBar.OnSeekBarChangeListener {
+            override fun onProgressChanged(seekBar: SeekBar?, progress: Int, fromUser: Boolean) {
+                hueValueView.text = progress.toString()
+                if (isUiSyncing) return
+                Color.colorToHSV(currentColor, hsvScratch)
+                hsvScratch[0] = progress.toFloat()
+                applyColorFromUser(Color.HSVToColor(hsvScratch))
+            }
+
+            override fun onStartTrackingTouch(seekBar: SeekBar?) = Unit
+            override fun onStopTrackingTouch(seekBar: SeekBar?) = Unit
+        })
+
+        selectorMapView.setOnColorChangedListener { color ->
+            if (!isUiSyncing) {
+                applyColorFromUser(color)
+            }
+        }
+
+        tabLayout.addOnTabSelectedListener(object : TabLayout.OnTabSelectedListener {
+            override fun onTabSelected(tab: TabLayout.Tab) {
+                showPanel(tab.position)
+            }
+
+            override fun onTabUnselected(tab: TabLayout.Tab) = Unit
+            override fun onTabReselected(tab: TabLayout.Tab) = Unit
+        })
+
+        root.addView(summaryRow)
+        root.addView(tabLayout)
+        root.addView(contentHost)
+
+        tabLayout.getTabAt(0)?.select()
+        syncViewsFromCurrentColor()
+
+        val dialog = MaterialAlertDialogBuilder(this)
+            .setTitle(getString(R.string.tag_color_picker_title, normalizedTag))
+            .setView(root)
+            .setNegativeButton(R.string.cancel_label, null)
+            .setNeutralButton(R.string.tag_color_auto_label) { _, _ ->
+                TagColorStore.clearColor(this, normalizedTag)
+                refreshTaskTagAppearance()
+                onColorCommitted?.invoke(null)
+                showStatus(getString(R.string.tag_color_cleared, normalizedTag))
+            }
+            .setPositiveButton(R.string.save_label) { _, _ ->
+                TagColorStore.setColor(this, normalizedTag, currentColor)
+                refreshTaskTagAppearance()
+                onColorCommitted?.invoke(currentColor)
+                showStatus(getString(R.string.tag_color_saved, normalizedTag))
+            }
+            .show()
+
+        dialog.window?.setLayout(
+            (resources.displayMetrics.widthPixels * 0.94f).toInt(),
+            ViewGroup.LayoutParams.WRAP_CONTENT
+        )
+        dialog.window?.setGravity(Gravity.CENTER)
+        dialog.window?.setSoftInputMode(WindowManager.LayoutParams.SOFT_INPUT_ADJUST_RESIZE)
+
+        applyDialogPanelBackgrounds(dialog)
+    }
+
+    private fun createTagColorSwatchDrawable(tag: String): GradientDrawable {
+        return createColorPreviewDrawable(resolveTagColor(tag))
+    }
+
+    private fun createColorPreviewDrawable(color: Int): GradientDrawable {
+        return GradientDrawable().apply {
+            shape = GradientDrawable.RECTANGLE
+            cornerRadius = 999f
+            setColor(color)
+            setStroke(1.dp, getColor(R.color.terminal_line))
+        }
+    }
+
+    private fun resolveTagColor(tag: String): Int {
+        return TagColorStore.getColor(this, tag) ?: TaskTagUtils.colorForTag(this, tag)
+    }
+
+    private fun colorToHex(color: Int): String {
+        return String.format(Locale.US, "#%02X%02X%02X", Color.red(color), Color.green(color), Color.blue(color))
+    }
+
+    private fun parseHexColorInput(raw: String): Int? {
+        val trimmed = raw.trim()
+        if (trimmed.isBlank()) return null
+
+        val body = trimmed.removePrefix("#")
+        val normalized = when (body.length) {
+            3 -> buildString(7) {
+                append('#')
+                body.forEach { channel ->
+                    append(channel)
+                    append(channel)
+                }
+            }
+            6 -> "#$body"
+            else -> return null
+        }
+
+        return runCatching { Color.parseColor(normalized) }.getOrNull()
     }
 
     private fun showDueDatePicker(currentDueDate: Long?, onPicked: (Long) -> Unit) {
@@ -962,6 +1675,11 @@ class MainActivity : AppCompatActivity(), TaskAdapter.TaskItemActions {
             attachmentName = item.attachmentName,
             attachmentMimeType = item.attachmentMimeType
         )
+    }
+
+    override fun onShowTags(item: TaskListItem) {
+        if (item.tags.isEmpty()) return
+        showStatus(item.tags.joinToString(" · "))
     }
 
     private inner class TaskDragCallback : ItemTouchHelper.SimpleCallback(
@@ -1561,6 +2279,7 @@ class MainActivity : AppCompatActivity(), TaskAdapter.TaskItemActions {
         }
 
         val scroll = ScrollView(this).apply {
+            applyScrollIndicator(vertical = true)
             addView(textView)
             layoutParams = LinearLayout.LayoutParams(
                 ViewGroup.LayoutParams.MATCH_PARENT,
@@ -1799,7 +2518,7 @@ class MainActivity : AppCompatActivity(), TaskAdapter.TaskItemActions {
         return localDate.atStartOfDay(ZoneId.systemDefault()).toInstant().toEpochMilli()
     }
 
-    private fun showStatus(message: String) {
+    private fun showStatus(message: String, duration: Int = Toast.LENGTH_LONG) {
         statusToast?.cancel()
 
         val toastView = TextView(this).apply {
@@ -1815,7 +2534,7 @@ class MainActivity : AppCompatActivity(), TaskAdapter.TaskItemActions {
         }
 
         statusToast = Toast(this).apply {
-            duration = Toast.LENGTH_LONG
+            this.duration = duration
             view = toastView
             setGravity(Gravity.BOTTOM or Gravity.CENTER_HORIZONTAL, 0, 96.dp)
             show()
@@ -1824,5 +2543,22 @@ class MainActivity : AppCompatActivity(), TaskAdapter.TaskItemActions {
 
     private val Int.dp: Int
         get() = (this * resources.displayMetrics.density).toInt()
+
+    private fun View.applyScrollIndicator(
+        vertical: Boolean = false,
+    ) {
+        setScrollBarStyle(View.SCROLLBARS_INSIDE_OVERLAY)
+        setScrollbarFadingEnabled(false)
+        setVerticalScrollBarEnabled(vertical)
+
+        if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.Q) {
+            val thumb = ContextCompat.getDrawable(this@MainActivity, R.drawable.scrollbar_thumb)
+            val track = ContextCompat.getDrawable(this@MainActivity, R.drawable.scrollbar_track)
+            if (vertical) {
+                thumb?.let { setVerticalScrollbarThumbDrawable(it) }
+                track?.let { setVerticalScrollbarTrackDrawable(it) }
+            }
+        }
+    }
 
 }

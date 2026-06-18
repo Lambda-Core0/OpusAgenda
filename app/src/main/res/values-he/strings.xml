@@ -1,291 +1,156 @@
+<?xml version="1.0" encoding="utf-8"?>
 <resources>
     <string name="app_name">OpusAgenda</string>
-
-    <string name="app_header_title">♱ OpusAgenda v1.4</string>
-
+    <string name="app_header_title">♱ OpusAgenda v1.5</string>
     <string name="app_font_family">PirateOne</string>
-
-    <string name="search_hint">משימות חיפוש...</string>
-
+    <string name="search_hint">חפש משימות או תגיות...</string>
     <string name="empty_state_all">עדיין אין משימות. השתמש ב-NEW כדי ליצור אחד</string>
-
     <string name="empty_state_today">אין משימות דחופות להיום</string>
-
     <string name="all_label">הכל</string>
-
     <string name="today_label">היום</string>
-
     <string name="new_task_label">חדש</string>
-
     <string name="run_command_label">הפעל</string>
-
     <string name="task_text_hint">טקסט משימה</string>
-
     <string name="category_text_hint">שם הקטגוריה</string>
-
     <string name="save_label">שמור</string>
-
     <string name="cancel_label">ביטול</string>
-
     <string name="pick_due_date_label">תאריך יעד</string>
-
     <string name="clear_due_date_label">נקה בשל</string>
-
     <string name="pinned_label">מוצמד</string>
-
     <string name="completed_label">הושלם</string>
-
     <string name="importance_label">חשיבות</string>
-
     <string name="task_dialog_title_new">משימה חדשה</string>
-
     <string name="task_dialog_title_edit">ערוך משימה</string>
-
     <string name="category_dialog_title_new">קטגוריה חדשה</string>
-
     <string name="category_dialog_title_edit">ערוך קטגוריה</string>
-
     <string name="task_text_required">הזן טקסט משימה</string>
-
     <string name="default_category_name">קטגוריה</string>
-
-    <string name="category_badge_label">CAT</string>
-
+    <string name="category_badge_label">חָתוּל</string>
     <string name="category_edit_label">ערוך</string>
-
     <string name="category_due_label">קטגוריה</string>
-
     <string name="category_meta_format">פריטי משנה: %1$d  חשיבות: %2$d</string>
-
     <string name="category_move_invalid">מהלך זה ייצור קטגוריה מקוננת לא חוקית</string>
-
     <string name="task_due_label">בשל: %1$s</string>
-
     <string name="task_reminder_value_label">תזכורת: %1$s</string>
-
     <string name="task_date_with_relative">%1$s - %2$s</string>
-
     <string name="no_due_date">ללא תאריך יעד</string>
-
     <string name="no_reminder">אף אחד</string>
-
     <string name="due_relative_overdue">%1$dd באיחור</string>
-
     <string name="due_relative_today">היום</string>
-
     <string name="due_relative_tomorrow">מחר</string>
-
     <string name="due_relative_in">ב-%1$dd</string>
-
     <string name="pick_reminder_label">תזכיר לי</string>
-
     <string name="pick_repeat_label">חזור</string>
-
     <string name="clear_reminder_label">תזכורת ברורה</string>
-
     <string name="reminder_dialog_title">בחר תזכורת</string>
-
     <string name="reminder_option_none">אין תזכורת</string>
-
     <string name="reminder_option_hour">שעה אחת לפני</string>
-
     <string name="reminder_option_day">יום אחד לפני</string>
-
     <string name="reminder_option_week">שבוע אחד לפני</string>
-
     <string name="reminder_option_month">1 חודש לפני</string>
-
     <string name="reminder_option_custom">תאריך ושעה מותאמים אישית</string>
-
     <string name="reminder_summary_with_datetime">%1$s (%2$s)</string>
-
     <string name="reminder_requires_due_date">הגדר תחילה תאריך יעד לשימוש בהגדרות קבועות מראש</string>
-
     <string name="reminder_time_in_past">זמן התזכורת חייב להיות בעתיד</string>
-
     <string name="reminder_custom_date_title">תאריך תזכורת</string>
-
     <string name="reminder_custom_time_title">זמן תזכורת</string>
-
     <string name="reminder_channel_name">תזכורות למשימות</string>
-
     <string name="reminder_channel_description">התראות עבור תזכורות משימות מתוזמנות</string>
-
     <string name="reminder_notification_title">תזכורת למשימה</string>
-
     <string name="notifications_permission_denied">נדרשת אישור הודעה לתזכורות</string>
-
     <string name="task_repeat_value_label">חזרה: %1$s</string>
-
     <string name="repeat_none">אף אחד</string>
-
     <string name="repeat_dialog_title">בחר חזרה</string>
-
     <string name="repeat_option_none">אין חזרה</string>
-
     <string name="repeat_option_hour">כל שעה</string>
-
     <string name="repeat_option_day">כל יום</string>
-
     <string name="repeat_option_week">כל שבוע</string>
-
     <string name="repeat_option_month">כל חודש</string>
-
     <string name="repeat_option_year">כל שנה</string>
-
     <string name="repeat_option_custom">מרווח מותאם אישית</string>
-
     <string name="repeat_requires_reminder">הגדר תזכורת תחילה להשתמש בחזרה</string>
-
     <string name="repeat_custom_title">חזרה מותאמת אישית</string>
-
     <string name="repeat_custom_amount_hint">כמות מרווחים</string>
-
     <string name="repeat_custom_amount_invalid">הזן סכום חוזר חוקי</string>
-
     <string name="repeat_unit_minutes_label">דקות</string>
-
     <string name="repeat_unit_days_label">ימים</string>
-
     <string name="repeat_unit_hours_label">שעות</string>
-
     <string name="repeat_unit_weeks_label">שבועות</string>
-
     <string name="repeat_unit_months_label">חודשים</string>
-
     <string name="repeat_unit_years_label">שנים</string>
-
     <string name="link_open_label">פתוח</string>
-
     <string name="link_missing">אין קישור זמין לפתיחה</string>
-
     <string name="invalid_command">פקודה לא חוקית</string>
-
     <string name="task_saved">המשימה נשמרה</string>
-
     <string name="task_deleted">המשימה נמחקה</string>
-
     <string name="task_completed">המשימה עודכנה</string>
-
     <string name="task_failed">לא ניתן היה לעדכן את המשימה</string>
-
     <string name="summary_format">פתוחות: %1$d  היום: %2$d  סהכ: %3$d</string>
-
     <string name="task_meta_format">חשיבות: %1$d  יעד: %2$s  ציון: %3$d</string>
-
     <string name="task_pin_label">הצמד</string>
-
     <string name="task_unpin_label">בטל PIN</string>
-
     <string name="task_edit_label">ערוך</string>
-
     <string name="task_delete_label">מחק</string>
-
     <string name="quick_links_title">קישורים מהירים</string>
-
     <string name="new_link_label">קישור חדש</string>
-
     <string name="quick_link_label_hint">שם קצר</string>
-
     <string name="quick_link_url_hint">https://quick.link</string>
-
     <string name="quick_link_new_title">קישור מהיר חדש</string>
-
     <string name="quick_link_edit_title">ערוך קישור מהיר</string>
-
     <string name="quick_link_saved">קישור מהיר נשמר</string>
-
     <string name="quick_link_deleted">קישור מהיר נמחק</string>
-
     <string name="quick_link_invalid">הזן שם וכתובת אתר חוקיים</string>
-
     <string name="quick_link_delete_label">מחק</string>
-
     <string name="widget_tasks_title">משימות</string>
-
     <string name="widget_tasks_description">רשימת משימות עם מסנני הכל והיום. הקש על שורה כדי לעבור למצב \'סיום\'</string>
-
     <string name="widget_quick_links_description">קישורים מהירים נשמרים ב-OpusAgenda. הקש כדי לפתוח בדפדפן</string>
-
     <string name="widget_quick_links_empty">אין קישורים מהירים. הוסף אותם באפליקציה</string>
-
     <string name="clock_time_placeholder">00:00:00</string>
-
     <string name="clock_date_placeholder">10 Apr 2026</string>
-
     <string name="font_dialog_title">בחר גופן</string>
-
     <string name="font_applied">הגופן הוחל: %1$s</string>
-
+    <string name="backup_replace_label">החלף</string>
+    <string name="backup_import_warning_title">ייבוא רשימת משימות</string>
+    <string name="backup_import_warning_message">ייבוא גיבוי ימחק את כל המשימות הקיימות לפני טעינת הרשימה החדשה. להמשיך?</string>
+    <string name="backup_export_success">בוצע ייצוא של %1$d פריטים</string>
+    <string name="backup_export_failed">לא ניתן לייצא את הגיבוי</string>
+    <string name="backup_import_success">בוצע ייבוא של %1$d פריטים</string>
+    <string name="backup_import_failed">לא ניתן לייבא את הגיבוי</string>
+    <string name="backup_open_failed">לא ניתן לפתוח את קובץ הגיבוי שנבחר</string>
+    <string name="backup_invalid_archive">הקובץ שנבחר אינו גיבוי תקין של OpusAgenda</string>
+    <string name="backup_unsupported_version">תבנית הגיבוי הזו אינה נתמכת על ידי גרסת האפליקציה הנוכחית</string>
+    <string name="backup_attachment_export_failed">לא ניתן לכלול את הקובץ המצורף בגיבוי: %1$s</string>
     <string name="new_category_label">חתול חדש</string>
-
     <string name="new_subcategory_label">SUBC חדש</string>
-
     <string name="new_child_task_label">משימה חדשה</string>
-
     <string name="task_description_label">תיאור</string>
-
     <string name="task_description_hint">הוסף קצת הקשר למשימה זו</string>
-
-
-
-
-
     <string name="task_description_title">תיאור המשימה</string>
-
     <string name="task_description_icon_label">פתח את התיאור</string>
-
     <string name="task_link_label">קישור משויך</string>
-
     <string name="task_link_hint">https://linked.resource</string>
-
-
-
-
-
     <string name="task_link_title">קישור למשימה</string>
-
     <string name="task_link_icon_label">פתח את פרטי הקישור</string>
-
     <string name="task_attachment_label">קובץ מצורף</string>
-
     <string name="task_attachment_empty">לא נבחר קובץ</string>
-
     <string name="task_attachment_pick">בחר קובץ</string>
-
     <string name="task_attachment_clear">נקה קובץ</string>
-
-    <string name="task_attachment_record">RECORD</string>
-
-    <string name="task_attachment_stop_record">STOP</string>
-
-    <string name="task_attachment_recording">Recording…</string>
-
-    <string name="task_attachment_record_failed">Could not record audio</string>
-
-    <string name="task_attachment_record_permission_denied">Microphone permission is required to record audio</string>
-
-    <string name="task_attachment_finish_recording">Stop recording before saving the task</string>
+    <string name="task_attachment_record">רְשׁוּמָה</string>
+    <string name="task_attachment_stop_record">לְהַפְסִיק</string>
+    <string name="task_attachment_recording">הַקלָטָה…</string>
+    <string name="task_attachment_record_failed">לא ניתן היה להקליט אודיו</string>
+    <string name="task_attachment_record_permission_denied">נדרשת הרשאת מיקרופון כדי להקליט אודיו</string>
+    <string name="task_attachment_finish_recording">הפסק את ההקלטה לפני שמירת המשימה</string>
     <string name="task_attachment_saved">מצורף קובץ</string>
-
     <string name="task_attachment_picker_failed">לא ניתן היה לקרוא את הקובץ שנבחר</string>
-
     <string name="task_attachment_open_failed">אף אפליקציה לא יכולה לפתוח את הקובץ המצורף הזה</string>
-
     <string name="task_attachment_title">מצורף משימה</string>
-
     <string name="task_attachment_icon_label">פתח את פרטי הקובץ המצורפים</string>
-
     <string name="task_attachment_name_label">קובץ: %1$s</string>
-
     <string name="task_attachment_type_label">סוג: %1$s</string>
-
     <string name="play_label">נגן</string>
-
     <string name="stop_label">עצור</string>
-
     <string name="task_attachment_no_preview">אין תצוגה מקדימה זמינה</string>
-
     <string-array name="font_option_labels">
         <item>Inter</item>
         <item>Geo</item>
@@ -293,57 +158,113 @@
         <item>Octosquares</item>
         <item>PirateOne</item>
     </string-array>
-
     <string-array name="importance_options">
         <item>1 נמוך</item>
         <item>2 רגיל</item>
         <item>3 גבוה</item>
         <item>4 קריטי</item>
     </string-array>
-
     <plurals name="repeat_unit_minutes">
         <item quantity="one">דקה %1$d</item>
         <item quantity="other">%1$d דקות</item>
     </plurals>
-
     <plurals name="repeat_unit_hours">
         <item quantity="one">%1$d שעה</item>
         <item quantity="other">%1$d שעות</item>
     </plurals>
-
     <plurals name="repeat_unit_days">
         <item quantity="one">%1$d יום</item>
         <item quantity="other">%1$d ימים</item>
     </plurals>
-
     <plurals name="repeat_unit_weeks">
         <item quantity="one">%1$d שבוע</item>
         <item quantity="other">%1$d שבועות</item>
     </plurals>
-
     <plurals name="repeat_unit_months">
         <item quantity="one">חודש %1$d</item>
         <item quantity="other">%1$d חודשים</item>
     </plurals>
-
     <plurals name="repeat_unit_years">
         <item quantity="one">שנה %1$d</item>
         <item quantity="other">%1$d שנים</item>
     </plurals>
-
     <string name="previous_label">הקודם</string>
-
     <string name="next_label">הבא</string>
-
     <string name="pdf_page_indicator">עמוד %1$d / %2$d</string>
     <string name="font_button_label">שינוי גופן</string>
     <string name="import_button_label">ייבוא גיבוי</string>
     <string name="export_button_label">ייצוא גיבוי</string>
+    <string name="tutorial_step_categories_tips">הוספת הקשר לקטגוריות</string>
+    <string name="tutorial_step_categories_tips_body">השתמש בתיאור, בקישורים ובקבצים מצורפים כדי לתת לכל קטגוריה יותר הקשר.</string>
+    <string name="settings_button_label">הפעל מחדש את הדרכה</string>
+    <string name="tags_label">תגים</string>
+    <string name="tags_hint">עבודה חשובה, אישית</string>
+    <string name="tag_colors_button_label">RGB</string>
+    <string name="tag_colors_edit_label">לַעֲרוֹך</string>
+    <string name="tag_colors_dialog_title">תג צבעים</string>
+    <string name="tag_colors_dialog_help">הקש על תג כדי לערוך את הצבע שלו.</string>
+    <string name="tag_colors_empty_state">הוסף תגים תחילה כדי להתאים אישית צבעים.</string>
+    <string name="tag_color_picker_title">צבע עבור %1$s</string>
+    <string name="tag_color_saved">הצבע נשמר עבור %1$s</string>
+    <string name="tag_color_cleared">הצבע האוטומטי שוחזר עבור %1$s</string>
+    <string name="tag_color_auto_label">AUTO</string>
+    <string name="tag_colors_tab_rgb">RGB</string>
+    <string name="tag_colors_tab_hex">HEX</string>
+    <string name="tag_colors_tab_selector">בורר</string>
+    <string name="tag_color_hex_hint">#RRGGBB</string>
+    <string name="tag_color_hex_help">הקלד צבע משושה והוא מתעדכן בשידור חי.</string>
+    <string name="tag_color_selector_help">גרור במפה: אופקי משנה את הרוויה ואנכי משנה בהירות. התאם את הגוון למטה.</string>
+    <string name="tag_color_hue_label">צֶבַע</string>
+    <string name="persistent_reminder_label">תזכורת מתמשכת</string>
+    <string name="notification_action_complete">נַעֲשָׂה</string>
+    <string name="notification_action_snooze">SNOOZE 15M</string>
+    <string name="settings_dialog_title">שֶׁל מוֹרֶה</string>
+    <string name="settings_tutorial_relaunch_message">האם אתה רוצה להפעיל מחדש את המדריך?</string>
+    <string name="settings_tutorial_relaunch_label">הפעל מחדש את הדרכה</string>
+    <string name="tutorial_restart_hint">רצועה שמאל פותחת את אישור ההדרכה.</string>
+    <string name="tutorial_dialog_title">ריצה ראשונה</string>
+    <string name="tutorial_step_welcome_title">ברוכים הבאים לאפוסאגנדה</string>
+    <string name="tutorial_step_welcome_body">מנהל משימות מקומי ראשון עם תכונות עוצמתיות ועיצוב בהשראת מסוף.</string>
+    <string name="tutorial_step_interface_title">מִמְשָׁק</string>
+    <string name="tutorial_step_interface_body">המסך הראשי מציג את המשימות ואת הסיכום שלך.</string>
+    <string name="tutorial_step_font_title">אפשרויות גופנים</string>
+    <string name="tutorial_step_font_body">בחר מתוך 5 גופנים ייחודיים כדי להתאים אישית את המראה והתחושה של האפליקציה. הבחירה שלך תיושם על פני כל הממשק, כולל ווידג\'טים.</string>
+    <string name="tutorial_step_import_title">יבוא נתונים</string>
+    <string name="tutorial_step_import_body">ייבא בקלות משימות ממקורות שונים כדי להתחיל במהירות. שימושי למשימות ספציפיות לעבודה וכדי לא לערבב אותן עם המשימות היומיומיות שלך (קרא אזהרות)</string>
+    <string name="tutorial_step_export_title">ייצוא נתונים</string>
+    <string name="tutorial_step_export_body">ייצא את המשימות שלך לקובץ לגיבוי או שיתוף. הקובץ המיוצא כולל את כל פרטי המשימה, הקבצים המצורפים והקטגוריות.</string>
+    <string name="tutorial_step_quick_links_title">קישורים מהירים</string>
+    <string name="tutorial_step_quick_links_body">שמור וארגן את הקישורים החשובים שלך באפליקציה. גש אליהם במהירות מהמסך הראשי ומהווידג\'טים. הוסף קישור מהיר חדש באמצעות הלחצן + בפינה השמאלית העליונה.</string>
+    <string name="tutorial_step_filters_title">מסננים</string>
+    <string name="tutorial_step_filters_body">השתמש במסננים ALL ו- TODAY כדי להתמקד במה שחשוב.</string>
+    <string name="tutorial_step_all_title">הכל מסנן</string>
+    <string name="tutorial_step_all_body">מציג את כל המשימות ברשימה, ממוינות לפי תאריך יעד וחשיבות.</string>
+    <string name="tutorial_step_today_title">היום מסנן</string>
+    <string name="tutorial_step_today_body">התמקד במשימות שאמורות להיום או באיחור. מושלם עבור התכנון היומי שלך.</string>
+    <string name="tutorial_step_create_title">צור משימה</string>
+    <string name="tutorial_step_create_body">הוסף משימות חדשות במהירות מהלחצן הזה. שמור על ערכים קצרים כדי להישאר מהירים.</string>
+    <string name="tutorial_step_create_tips">הוסף הקשר</string>
+    <string name="tutorial_step_create_tips_body">השתמש בתיאור, בקישורים ובקבצים מצורפים כדי לשמור את כל פרטי המשימה במקום אחד.</string>
+    <string name="tutorial_step_importance_title">חֲשִׁיבוּת</string>
+    <string name="tutorial_step_importance_body">הגדר רמות חשיבות כדי למיין ולסנן משימות לפי עדיפות.</string>
+    <string name="tutorial_step_reminders_title">תזכורות</string>
+    <string name="tutorial_step_reminders_body">היום מסננים והעורך עוזרים לך לנהל את העבודה הראויה, תזכורות וחזרות מקומיות.</string>
+    <string name="tutorial_step_persistence_title">תזכורות מתמשכות</string>
+    <string name="tutorial_step_persistence_body">הגדר תזכורות מתמשכות כדי להישאר מעודכן במשימות חשובות. זה לא ייסגר עד שתסמן אותו כמושלם.</string>
+    <string name="tutorial_step_categories_title">קטגוריות</string>
+    <string name="tutorial_step_categories_body">קבץ משימות קשורות לקטגוריות כדי לשמור על הרשימה מאורגנת.</string>
+    <string name="tutorial_step_search_title">לְחַפֵּשׂ</string>
+    <string name="tutorial_step_search_body">חפש לפי טקסט משימה, הערות, קישורים, קבצים מצורפים ותגים.</string>
+    <string name="tutorial_step_tags_title">תגים</string>
+    <string name="tutorial_step_tags_body">הוסף תגים למשימות ולקטגוריות כדי ליצור מסננים מותאמים אישית ולארגן את העבודה שלך.</string>
+    <string name="tutorial_step_summary_title">תַקצִיר</string>
+    <string name="tutorial_step_summary_body">הסיכום למעלה נותן לך סקירה מהירה של המשימות הפתוחות והדחופות שלך.</string>
+    <string name="tutorial_step_widgets_title">ווידג\'טים</string>
+    <string name="tutorial_step_widgets_body">ווידג\'טים משתמשים באותם נתונים מקומיים, כך שהם נשארים מסונכרנים ללא אינטרנט.</string>
+    <string name="tutorial_step_end_title">הסוף?</string>
+    <string name="tutorial_step_end_body">זה הכל בשביל ההדרכה. תהנה מהשימוש ב-OpusAgenda!</string>
+    <string name="tutorial_counter_format">%1$d/%2$d</string>
+    <string name="tutorial_prev_label">קוֹדֵם</string>
+    <string name="tutorial_next_label">הַבָּא</string>
+    <string name="tutorial_finish_label">סיום הדרכה</string>
 </resources>
-
-
-
-
-
-
-

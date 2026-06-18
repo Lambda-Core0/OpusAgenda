@@ -1,291 +1,156 @@
+<?xml version="1.0" encoding="utf-8"?>
 <resources>
     <string name="app_name">OpusAgenda</string>
-
-    <string name="app_header_title">♱ OpusAgenda v1.4</string>
-
+    <string name="app_header_title">♱ OpusAgenda v1.5</string>
     <string name="app_font_family">PirateOne</string>
-
-    <string name="search_hint">εργασίες αναζήτησης...</string>
-
+    <string name="search_hint">αναζήτηση εργασιών ή ετικετών...</string>
     <string name="empty_state_all">Δεν υπάρχουν ακόμη εργασίες. Χρησιμοποιήστε το NEW για να δημιουργήσετε ένα</string>
-
     <string name="empty_state_today">Δεν υπάρχουν επείγουσες εργασίες για σήμερα</string>
-
     <string name="all_label">ΟΛΟΙ</string>
-
     <string name="today_label">ΣΗΜΕΡΑ</string>
-
     <string name="new_task_label">ΝΕΟ</string>
-
     <string name="run_command_label">ΤΡΕΞΕ</string>
-
     <string name="task_text_hint">Κείμενο εργασίας</string>
-
     <string name="category_text_hint">Όνομα κατηγορίας</string>
-
     <string name="save_label">ΑΠΟΘΗΚΕΥΣΗ</string>
-
     <string name="cancel_label">ΑΚΥΡΩΣΗ</string>
-
     <string name="pick_due_date_label">ΗΜΕΡΟΜΗΝΙΑ ΛΗΞΗΣ</string>
-
     <string name="clear_due_date_label">ΚΑΘΑΡΑ ΟΦΕΙΛ</string>
-
     <string name="pinned_label">ΚΑΦΑΡΤΙΣΜΕΝΟ</string>
-
     <string name="completed_label">Ολοκληρώθηκε</string>
-
     <string name="importance_label">Σημασία</string>
-
     <string name="task_dialog_title_new">Νέα εργασία</string>
-
     <string name="task_dialog_title_edit">Επεξεργασία εργασίας</string>
-
     <string name="category_dialog_title_new">Νέα κατηγορία</string>
-
     <string name="category_dialog_title_edit">Επεξεργασία κατηγορίας</string>
-
     <string name="task_text_required">Εισαγάγετε κείμενο εργασίας</string>
-
     <string name="default_category_name">Κατηγορία</string>
-
     <string name="category_badge_label">ΚΑΤ</string>
-
     <string name="category_edit_label">ΕΠΕΞΕΡΓΑΣΙΑ</string>
-
     <string name="category_due_label">κατηγορία</string>
-
     <string name="category_meta_format">θυγατρικά: %1$d  σημαντ.: %2$d</string>
-
     <string name="category_move_invalid">Αυτή η κίνηση θα δημιουργούσε μια μη έγκυρη ένθετη κατηγορία</string>
-
     <string name="task_due_label">λόγω: %1$s</string>
-
     <string name="task_reminder_value_label">υπενθύμιση: %1$s</string>
-
     <string name="task_date_with_relative">%1$s - %2$s</string>
-
     <string name="no_due_date">χωρίς ημερομηνία λήξης</string>
-
     <string name="no_reminder">κανένα</string>
-
     <string name="due_relative_overdue">ληξιπρόθεσμη %1$dd</string>
-
     <string name="due_relative_today">σήμερα</string>
-
     <string name="due_relative_tomorrow">αύριο</string>
-
     <string name="due_relative_in">σε %1$dd</string>
-
     <string name="pick_reminder_label">ΘΥΜΙΣΤΕ ΜΟΥ</string>
-
     <string name="pick_repeat_label">ΕΠΑΝΑΛΗΨΗ</string>
-
     <string name="clear_reminder_label">ΚΑΘΑΡΗ ΥΠΕΝΘΥΜΙΣΗ</string>
-
     <string name="reminder_dialog_title">Επιλέξτε υπενθύμιση</string>
-
     <string name="reminder_option_none">Καμία υπενθύμιση</string>
-
     <string name="reminder_option_hour">1 ώρα πριν</string>
-
     <string name="reminder_option_day">1 μέρα πριν</string>
-
     <string name="reminder_option_week">1 εβδομάδα πριν</string>
-
     <string name="reminder_option_month">1 μήνα πριν</string>
-
     <string name="reminder_option_custom">Προσαρμοσμένη ημερομηνία και ώρα</string>
-
     <string name="reminder_summary_with_datetime">%1$s (%2$s)</string>
-
     <string name="reminder_requires_due_date">Ορίστε πρώτα μια ημερομηνία λήξης για να χρησιμοποιήσετε προεπιλογές</string>
-
     <string name="reminder_time_in_past">Ο χρόνος υπενθύμισης πρέπει να είναι στο μέλλον</string>
-
     <string name="reminder_custom_date_title">Ημερομηνία υπενθύμισης</string>
-
     <string name="reminder_custom_time_title">Ώρα υπενθύμισης</string>
-
     <string name="reminder_channel_name">Υπενθυμίσεις εργασιών</string>
-
     <string name="reminder_channel_description">Ειδοποιήσεις για προγραμματισμένες υπενθυμίσεις εργασιών</string>
-
     <string name="reminder_notification_title">Υπενθύμιση εργασιών</string>
-
     <string name="notifications_permission_denied">Απαιτείται άδεια ειδοποίησης για υπενθυμίσεις</string>
-
     <string name="task_repeat_value_label">επανάληψη: %1$s</string>
-
     <string name="repeat_none">κανένα</string>
-
     <string name="repeat_dialog_title">Επιλέξτε επανάληψη</string>
-
     <string name="repeat_option_none">Καμία επανάληψη</string>
-
     <string name="repeat_option_hour">Κάθε ώρα</string>
-
     <string name="repeat_option_day">Κάθε μέρα</string>
-
     <string name="repeat_option_week">Κάθε εβδομάδα</string>
-
     <string name="repeat_option_month">Κάθε μήνα</string>
-
     <string name="repeat_option_year">Κάθε χρόνο</string>
-
     <string name="repeat_option_custom">Προσαρμοσμένο διάστημα</string>
-
     <string name="repeat_requires_reminder">Ορίστε πρώτα μια υπενθύμιση για να χρησιμοποιήσετε την επανάληψη</string>
-
     <string name="repeat_custom_title">Προσαρμοσμένη επανάληψη</string>
-
     <string name="repeat_custom_amount_hint">Ποσό διαστήματος</string>
-
     <string name="repeat_custom_amount_invalid">Εισαγάγετε ένα έγκυρο ποσό επανάληψης</string>
-
     <string name="repeat_unit_minutes_label">Λεπτά</string>
-
     <string name="repeat_unit_days_label">Μέρες</string>
-
     <string name="repeat_unit_hours_label">Ώρες</string>
-
     <string name="repeat_unit_weeks_label">Εβδομάδες</string>
-
     <string name="repeat_unit_months_label">Μήνες</string>
-
     <string name="repeat_unit_years_label">Χρόνια</string>
-
     <string name="link_open_label">ΑΝΟΙΧΤΟ</string>
-
     <string name="link_missing">Δεν υπάρχει διαθέσιμος σύνδεσμος για άνοιγμα</string>
-
     <string name="invalid_command">Μη έγκυρη εντολή</string>
-
     <string name="task_saved">Η εργασία αποθηκεύτηκε</string>
-
     <string name="task_deleted">Η εργασία διαγράφηκε</string>
-
     <string name="task_completed">Η εργασία ενημερώθηκε</string>
-
     <string name="task_failed">Δεν ήταν δυνατή η ενημέρωση της εργασίας</string>
-
     <string name="summary_format">ανοιχτές: %1$d  σήμερα: %2$d  σύνολο: %3$d</string>
-
     <string name="task_meta_format">σημαντ.: %1$d  λήξη: %2$s  σκορ: %3$d</string>
-
     <string name="task_pin_label">ΚΑΡΦΙΤΣΩΜΑ</string>
-
     <string name="task_unpin_label">ΞΕΚΑΡΦΙΖΩ</string>
-
     <string name="task_edit_label">ΕΠΕΞΕΡΓΑΣΙΑ</string>
-
     <string name="task_delete_label">ΔΕΛ</string>
-
     <string name="quick_links_title">ΓΡΗΓΟΡΟΙ ΣΥΝΔΕΣΜΟΙ</string>
-
     <string name="new_link_label">ΝΕΟΣ ΣΥΝΔΕΣΜΟΣ</string>
-
     <string name="quick_link_label_hint">Σύντομο όνομα</string>
-
     <string name="quick_link_url_hint">https://quick.link</string>
-
     <string name="quick_link_new_title">Νέος γρήγορος σύνδεσμος</string>
-
     <string name="quick_link_edit_title">Επεξεργασία γρήγορης σύνδεσης</string>
-
     <string name="quick_link_saved">Ο γρήγορος σύνδεσμος αποθηκεύτηκε</string>
-
     <string name="quick_link_deleted">Ο γρήγορος σύνδεσμος διαγράφηκε</string>
-
     <string name="quick_link_invalid">Εισαγάγετε ένα έγκυρο όνομα και διεύθυνση URL</string>
-
     <string name="quick_link_delete_label">ΔΙΑΓΡΑΦΗ</string>
-
     <string name="widget_tasks_title">ΚΑΘΗΚΟΝΤΑ</string>
-
     <string name="widget_tasks_description">Λίστα εργασιών με φίλτρα ALL και TODAY. Αγγίξτε μια σειρά για εναλλαγή ολοκληρώθηκε</string>
-
     <string name="widget_quick_links_description">Οι γρήγοροι σύνδεσμοι αποθηκεύτηκαν στο OpusAgenda. Πατήστε για άνοιγμα στο πρόγραμμα περιήγησης</string>
-
     <string name="widget_quick_links_empty">Χωρίς γρήγορους συνδέσμους. Προσθέστε τα στην εφαρμογή</string>
-
     <string name="clock_time_placeholder">00:00:00</string>
-
     <string name="clock_date_placeholder">10 Apr 2026</string>
-
     <string name="font_dialog_title">Επιλέξτε γραμματοσειρά</string>
-
     <string name="font_applied">Εφαρμοσμένη γραμματοσειρά: %1$s</string>
-
+    <string name="backup_replace_label">ΑΝΤΙΚΑΤΑΣΤΑΣΗ</string>
+    <string name="backup_import_warning_title">Εισαγωγή λίστας εργασιών</string>
+    <string name="backup_import_warning_message">Η εισαγωγή αντιγράφου ασφαλείας θα διαγράψει όλες τις τρέχουσες εργασίες πριν φορτωθεί η νέα λίστα. Συνέχεια;</string>
+    <string name="backup_export_success">Το αντίγραφο ασφαλείας εξήχθη: %1$d στοιχεία</string>
+    <string name="backup_export_failed">Δεν ήταν δυνατή η εξαγωγή του αντιγράφου ασφαλείας</string>
+    <string name="backup_import_success">Το αντίγραφο ασφαλείας εισήχθη: %1$d στοιχεία</string>
+    <string name="backup_import_failed">Δεν ήταν δυνατή η εισαγωγή του αντιγράφου ασφαλείας</string>
+    <string name="backup_open_failed">Δεν ήταν δυνατό το άνοιγμα του επιλεγμένου αρχείου αντιγράφου ασφαλείας</string>
+    <string name="backup_invalid_archive">Το επιλεγμένο αρχείο δεν είναι έγκυρο αντίγραφο ασφαλείας του OpusAgenda</string>
+    <string name="backup_unsupported_version">Αυτός ο τύπος αντιγράφου ασφαλείας δεν υποστηρίζεται από την τρέχουσα έκδοση της εφαρμογής</string>
+    <string name="backup_attachment_export_failed">Δεν ήταν δυνατή η συμπερίληψη του συνημμένου στο αντίγραφο ασφαλείας: %1$s</string>
     <string name="new_category_label">ΝΕΑ ΓΑΤ</string>
-
     <string name="new_subcategory_label">ΝΕΟ ΥΠΟΒΚ</string>
-
     <string name="new_child_task_label">ΝΕΑ ΕΡΓΑΣΙΑ</string>
-
     <string name="task_description_label">Περιγραφή</string>
-
     <string name="task_description_hint">Προσθέστε κάποιο πλαίσιο για αυτήν την εργασία</string>
-
-
-
-
-
     <string name="task_description_title">Περιγραφή εργασίας</string>
-
     <string name="task_description_icon_label">Ανοίξτε την περιγραφή</string>
-
     <string name="task_link_label">Σχετικός σύνδεσμος</string>
-
     <string name="task_link_hint">https://linked.resource</string>
-
-
-
-
-
     <string name="task_link_title">Σύνδεσμος εργασιών</string>
-
     <string name="task_link_icon_label">Άνοιγμα λεπτομερειών συνδέσμου</string>
-
     <string name="task_attachment_label">Συνημμένο αρχείο</string>
-
     <string name="task_attachment_empty">Δεν έχει επιλεγεί αρχείο</string>
-
     <string name="task_attachment_pick">ΕΠΙΛΕΞΤΕ ΑΡΧΕΙΟ</string>
-
     <string name="task_attachment_clear">ΕΚΚΑΘΑΡΙΣΗ ΑΡΧΕΙΟΥ</string>
-
-    <string name="task_attachment_record">RECORD</string>
-
-    <string name="task_attachment_stop_record">STOP</string>
-
-    <string name="task_attachment_recording">Recording…</string>
-
-    <string name="task_attachment_record_failed">Could not record audio</string>
-
-    <string name="task_attachment_record_permission_denied">Microphone permission is required to record audio</string>
-
-    <string name="task_attachment_finish_recording">Stop recording before saving the task</string>
+    <string name="task_attachment_record">ΡΕΚΟΡ</string>
+    <string name="task_attachment_stop_record">ΣΤΑΣΗ</string>
+    <string name="task_attachment_recording">Εγγραφή…</string>
+    <string name="task_attachment_record_failed">Δεν ήταν δυνατή η εγγραφή ήχου</string>
+    <string name="task_attachment_record_permission_denied">Απαιτείται άδεια μικροφώνου για την εγγραφή ήχου</string>
+    <string name="task_attachment_finish_recording">Σταματήστε την εγγραφή πριν αποθηκεύσετε την εργασία</string>
     <string name="task_attachment_saved">Επισυνάπτεται αρχείο</string>
-
     <string name="task_attachment_picker_failed">Δεν ήταν δυνατή η ανάγνωση του επιλεγμένου αρχείου</string>
-
     <string name="task_attachment_open_failed">Καμία εφαρμογή δεν μπορεί να ανοίξει αυτό το συνημμένο</string>
-
     <string name="task_attachment_title">Επισύναψη εργασίας</string>
-
     <string name="task_attachment_icon_label">Ανοίξτε τα στοιχεία συνημμένου</string>
-
     <string name="task_attachment_name_label">αρχείο: %1$s</string>
-
     <string name="task_attachment_type_label">τύπος: %1$s</string>
-
     <string name="play_label">ΠΑΙΞΤΕ</string>
-
     <string name="stop_label">ΣΤΑΜΑΤΗΣΤΕ</string>
-
     <string name="task_attachment_no_preview">Δεν υπάρχει διαθέσιμη προεπισκόπηση</string>
-
     <string-array name="font_option_labels">
         <item>Inter</item>
         <item>Geo</item>
@@ -293,54 +158,113 @@
         <item>Octosquares</item>
         <item>PirateOne</item>
     </string-array>
-
     <string-array name="importance_options">
         <item>1 ΧΑΜΗΛΟ</item>
         <item>2 ΚΑΝΟΝΙΚΟ</item>
         <item>3 ΥΨΗΛΟ</item>
         <item>4 ΚΡΙΣΙΜΟ</item>
     </string-array>
-
     <plurals name="repeat_unit_minutes">
         <item quantity="one">%1$d λεπτό</item>
         <item quantity="other">%1$d λεπτά</item>
     </plurals>
-
     <plurals name="repeat_unit_hours">
         <item quantity="one">%1$d ώρα</item>
         <item quantity="other">%1$d ώρες</item>
     </plurals>
-
     <plurals name="repeat_unit_days">
         <item quantity="one">%1$d ημέρα</item>
         <item quantity="other">%1$d ημέρες</item>
     </plurals>
-
     <plurals name="repeat_unit_weeks">
         <item quantity="one">%1$d εβδομάδα</item>
         <item quantity="other">%1$d εβδομάδες</item>
     </plurals>
-
     <plurals name="repeat_unit_months">
         <item quantity="one">%1$d μήνας</item>
         <item quantity="other">%1$d μήνες</item>
     </plurals>
-
     <plurals name="repeat_unit_years">
         <item quantity="one">%1$d έτος</item>
         <item quantity="other">%1$d χρόνια</item>
     </plurals>
-
     <string name="previous_label">ΠΡΟΗΓ</string>
-
     <string name="next_label">ΕΠΟΜΕΝΟ</string>
-
     <string name="pdf_page_indicator">Σελίδα %1$d / %2$d</string>
     <string name="font_button_label">Αλλαγή γραμματοσειράς</string>
     <string name="import_button_label">Εισαγωγή αντιγράφου ασφαλείας</string>
     <string name="export_button_label">Εξαγωγή αντιγράφου ασφαλείας</string>
+    <string name="tutorial_step_categories_tips">Προσθήκη πλαισίου στις κατηγορίες</string>
+    <string name="tutorial_step_categories_tips_body">Χρησιμοποίησε περιγραφή, συνδέσμους και συνημμένα για να δώσεις σε κάθε κατηγορία περισσότερο πλαίσιο.</string>
+    <string name="settings_button_label">ΕΠΑΝΕΚΚΙΝΗΣΗ ΕΚΠΑΙΔΕΥΤΙΚΟΥ</string>
+    <string name="tags_label">ΕΤΙΚΕΤΕΣ</string>
+    <string name="tags_hint">Εργασία σημαντική, Προσωπική</string>
+    <string name="tag_colors_button_label">RGB</string>
+    <string name="tag_colors_edit_label">ΕΚΔΙΔΩ</string>
+    <string name="tag_colors_dialog_title">Χρώματα ετικέτας</string>
+    <string name="tag_colors_dialog_help">Πατήστε μια ετικέτα για να επεξεργαστείτε το χρώμα της.</string>
+    <string name="tag_colors_empty_state">Προσθέστε πρώτα ετικέτες για να προσαρμόσετε τα χρώματα.</string>
+    <string name="tag_color_picker_title">Χρώμα για %1$s</string>
+    <string name="tag_color_saved">Το χρώμα αποθηκεύτηκε για %1$s</string>
+    <string name="tag_color_cleared">Αποκαταστάθηκε το αυτόματο χρώμα για %1$s</string>
+    <string name="tag_color_auto_label">AUTO</string>
+    <string name="tag_colors_tab_rgb">RGB</string>
+    <string name="tag_colors_tab_hex">HEX</string>
+    <string name="tag_colors_tab_selector">ΕΚΛΕΚΤΟΡΑΣ</string>
+    <string name="tag_color_hex_hint">#RRGGBB</string>
+    <string name="tag_color_hex_help">Πληκτρολογήστε ένα εξάγωνο χρώμα και ενημερώνεται ζωντανά.</string>
+    <string name="tag_color_selector_help">Σύρετε στον χάρτη: οριζόντια αλλάζει τον κορεσμό και κατακόρυφα αλλάζει τη φωτεινότητα. Προσαρμόστε την απόχρωση παρακάτω.</string>
+    <string name="tag_color_hue_label">ΑΠΟΧΡΩΣΗ</string>
+    <string name="persistent_reminder_label">Επίμονη υπενθύμιση</string>
+    <string name="notification_action_complete">ΓΙΝΩΜΕΝΟΣ</string>
+    <string name="notification_action_snooze">ΑΝΑΒΟΛΗ 15Μ</string>
+    <string name="settings_dialog_title">ΦΡΟΝΤΙΣΤΗΡΙΟ</string>
+    <string name="settings_tutorial_relaunch_message">Θέλετε να επανεκκινήσετε το σεμινάριο;</string>
+    <string name="settings_tutorial_relaunch_label">ΕΠΑΝΕΚΚΙΝΗΣΗ ΕΚΠΑΙΔΕΥΤΙΚΟΥ</string>
+    <string name="tutorial_restart_hint">Η αριστερή λωρίδα ανοίγει την επιβεβαίωση εκμάθησης.</string>
+    <string name="tutorial_dialog_title">ΠΡΩΤΟ ΤΡΕΞΙΜΟ</string>
+    <string name="tutorial_step_welcome_title">ΚΑΛΩΣ ΟΡΙΣΑΤΕ ΣΤΟ OPUSAGENDA</string>
+    <string name="tutorial_step_welcome_body">Ένας τοπικός διαχειριστής εργασιών με ισχυρά χαρακτηριστικά και σχεδιασμό εμπνευσμένο από τερματικό.</string>
+    <string name="tutorial_step_interface_title">INTERFACE</string>
+    <string name="tutorial_step_interface_body">Η κύρια οθόνη εμφανίζει τις εργασίες και τη σύνοψή σας.</string>
+    <string name="tutorial_step_font_title">ΕΠΙΛΟΓΕΣ ΓΡΑΜΜΑΤΙΣΜΩΝ</string>
+    <string name="tutorial_step_font_body">Επιλέξτε από 5 μοναδικές γραμματοσειρές για να προσαρμόσετε την εμφάνιση και την αίσθηση της εφαρμογής. Η επιλογή σας θα εφαρμοστεί σε ολόκληρη τη διεπαφή, συμπεριλαμβανομένων των γραφικών στοιχείων.</string>
+    <string name="tutorial_step_import_title">ΕΙΣΑΓΩΓΗ ΣΤΟΙΧΕΙΩΝ</string>
+    <string name="tutorial_step_import_body">Εισαγάγετε εύκολα εργασίες από διάφορες πηγές για να ξεκινήσετε γρήγορα. Χρήσιμο για συγκεκριμένες εργασίες και για να μην τις αναμειγνύετε με τις καθημερινές σας εργασίες (ΔΙΑΒΑΣΤΕ ΠΡΟΕΙΔΟΠΟΙΗΣΕΙΣ)</string>
+    <string name="tutorial_step_export_title">ΕΞΑΓΩΓΗ ΣΤΟΙΧΕΙΩΝ</string>
+    <string name="tutorial_step_export_body">Εξάγετε τις εργασίες σας σε ένα αρχείο για δημιουργία αντιγράφων ασφαλείας ή κοινή χρήση. Το εξαγόμενο αρχείο περιλαμβάνει όλες τις λεπτομέρειες εργασίας, τα συνημμένα και τις κατηγορίες.</string>
+    <string name="tutorial_step_quick_links_title">ΓΡΗΓΟΡΟΙ ΣΥΝΔΕΣΜΟΙ</string>
+    <string name="tutorial_step_quick_links_body">Αποθηκεύστε και οργανώστε τους σημαντικούς συνδέσμους σας στην εφαρμογή. Πρόσβαση σε αυτά γρήγορα από την κύρια οθόνη και τα γραφικά στοιχεία. Προσθέστε έναν νέο γρήγορο σύνδεσμο χρησιμοποιώντας το κουμπί + στην επάνω δεξιά γωνία.</string>
+    <string name="tutorial_step_filters_title">ΦΙΛΤΡΑ</string>
+    <string name="tutorial_step_filters_body">Χρησιμοποιήστε τα φίλτρα ALL και TODAY για να εστιάσετε σε ό,τι είναι σημαντικό.</string>
+    <string name="tutorial_step_all_title">ΟΛΑ ΤΑ ΦΙΛΤΡΑ</string>
+    <string name="tutorial_step_all_body">Εμφανίζει όλες τις εργασίες στη λίστα, ταξινομημένες κατά ημερομηνία λήξης και σημασία.</string>
+    <string name="tutorial_step_today_title">ΣΗΜΕΡΑ ΦΙΛΤΡΟ</string>
+    <string name="tutorial_step_today_body">Επικεντρωθείτε σε εργασίες που είναι ληξιπρόθεσμες ή καθυστερημένες. Ιδανικό για τον καθημερινό σας προγραμματισμό.</string>
+    <string name="tutorial_step_create_title">ΔΗΜΙΟΥΡΓΙΑ ΕΡΓΑΣΙΑΣ</string>
+    <string name="tutorial_step_create_body">Προσθέστε νέες εργασίες γρήγορα από αυτό το κουμπί. Κρατήστε τις καταχωρήσεις σύντομες για να παραμείνετε γρήγοροι.</string>
+    <string name="tutorial_step_create_tips">ΠΡΟΣΘΗΚΗ ΠΕΡΙΕΧΟΜΕΝΟΥ</string>
+    <string name="tutorial_step_create_tips_body">Χρησιμοποιήστε περιγραφή, συνδέσμους και συνημμένα για να διατηρήσετε όλες τις λεπτομέρειες της εργασίας σε ένα μέρος.</string>
+    <string name="tutorial_step_importance_title">ΣΠΟΥΔΑΙΟΤΗΤΑ</string>
+    <string name="tutorial_step_importance_body">Ορίστε επίπεδα σπουδαιότητας για να ταξινομήσετε και να φιλτράρετε εργασίες κατά προτεραιότητα.</string>
+    <string name="tutorial_step_reminders_title">ΥΠΕΝΘΥΜΙΣΕΙΣ</string>
+    <string name="tutorial_step_reminders_body">Τα σημερινά φίλτρα και το πρόγραμμα επεξεργασίας σάς βοηθούν να διαχειριστείτε την οφειλόμενη εργασία, τις υπενθυμίσεις και τις επαναλήψεις τοπικά.</string>
+    <string name="tutorial_step_persistence_title">ΕΠΙΜΕΝΕΣ ΥΠΕΝΘΥΜΙΣΕΙΣ</string>
+    <string name="tutorial_step_persistence_body">Ορίστε επίμονες υπενθυμίσεις για να παρακολουθείτε σημαντικές εργασίες. Δεν θα απορριφθεί μέχρι να το επισημάνετε ως ολοκληρωμένο.</string>
+    <string name="tutorial_step_categories_title">ΚΑΤΗΓΟΡΙΕΣ</string>
+    <string name="tutorial_step_categories_body">Ομαδοποιήστε τις σχετικές εργασίες σε κατηγορίες για να διατηρήσετε τη λίστα οργανωμένη.</string>
+    <string name="tutorial_step_search_title">ΕΡΕΥΝΑ</string>
+    <string name="tutorial_step_search_body">Αναζήτηση κατά κείμενο εργασίας, σημειώσεις, συνδέσμους, συνημμένα και ετικέτες.</string>
+    <string name="tutorial_step_tags_title">ΕΤΙΚΕΤΕΣ</string>
+    <string name="tutorial_step_tags_body">Προσθέστε ετικέτες σε εργασίες και κατηγορίες για να δημιουργήσετε προσαρμοσμένα φίλτρα και να οργανώσετε την εργασία σας.</string>
+    <string name="tutorial_step_summary_title">ΠΕΡΙΛΗΨΗ</string>
+    <string name="tutorial_step_summary_body">Η περίληψη στην κορυφή σάς παρέχει μια γρήγορη επισκόπηση των ανοιχτών και επειγουσών εργασιών σας.</string>
+    <string name="tutorial_step_widgets_title">WIDGETS</string>
+    <string name="tutorial_step_widgets_body">Τα γραφικά στοιχεία χρησιμοποιούν τα ίδια τοπικά δεδομένα, έτσι ώστε να παραμένουν συγχρονισμένα χωρίς Διαδίκτυο.</string>
+    <string name="tutorial_step_end_title">ΤΟ ΤΕΛΟΣ;</string>
+    <string name="tutorial_step_end_body">Αυτό είναι όλο για το σεμινάριο. Απολαύστε τη χρήση του OpusAgenda!</string>
+    <string name="tutorial_counter_format">%1$d/%2$d</string>
+    <string name="tutorial_prev_label">ΠΡΟΗΓΟΥΜΕΝΟΣ</string>
+    <string name="tutorial_next_label">ΕΠΟΜΕΝΟΣ</string>
+    <string name="tutorial_finish_label">ΤΕΛΟΣ ΦΡΟΝΤΙΔΑ</string>
 </resources>
-
-
-
-

@@ -1,291 +1,156 @@
+<?xml version="1.0" encoding="utf-8"?>
 <resources>
     <string name="app_name">OpusAgenda</string>
-
-    <string name="app_header_title">♱ OpusAgenda v1.4</string>
-
+    <string name="app_header_title">♱ OpusAgenda v1.5</string>
     <string name="app_font_family">PirateOne</string>
-
-    <string name="search_hint">sarcini de căutare...</string>
-
+    <string name="search_hint">caută sarcini sau etichete...</string>
     <string name="empty_state_all">Nicio sarcină încă. Folosiți NEW pentru a crea unul</string>
-
     <string name="empty_state_today">Nicio sarcină urgentă pentru azi</string>
-
     <string name="all_label">TOATE</string>
-
     <string name="today_label">AZI</string>
-
     <string name="new_task_label">NOU</string>
-
     <string name="run_command_label">RULEAZĂ</string>
-
     <string name="task_text_hint">Textul sarcinii</string>
-
     <string name="category_text_hint">Numele categoriei</string>
-
     <string name="save_label">SALVAȚI</string>
-
     <string name="cancel_label">ANULAREA</string>
-
     <string name="pick_due_date_label">DATA SCADĂ</string>
-
     <string name="clear_due_date_label">LIMITĂ DATORITĂ</string>
-
     <string name="pinned_label">PINITĂ</string>
-
     <string name="completed_label">Terminat</string>
-
     <string name="importance_label">importanță</string>
-
     <string name="task_dialog_title_new">Sarcină nouă</string>
-
     <string name="task_dialog_title_edit">Editați sarcina</string>
-
     <string name="category_dialog_title_new">Noua categorie</string>
-
     <string name="category_dialog_title_edit">Editați categoria</string>
-
     <string name="task_text_required">Introduceți textul sarcinii</string>
-
     <string name="default_category_name">categorie</string>
-
-    <string name="category_badge_label">CAT</string>
-
+    <string name="category_badge_label">PISICĂ</string>
     <string name="category_edit_label">EDITARE</string>
-
     <string name="category_due_label">categorie</string>
-
     <string name="category_meta_format">subelemente: %1$d  imp: %2$d</string>
-
     <string name="category_move_invalid">Această mutare ar crea o categorie imbricată nevalidă</string>
-
     <string name="task_due_label">datorat: %1$s</string>
-
     <string name="task_reminder_value_label">memento: %1$s</string>
-
     <string name="task_date_with_relative">%1$s - %2$s</string>
-
     <string name="no_due_date">nici o data scadenta</string>
-
     <string name="no_reminder">nici unul</string>
-
     <string name="due_relative_overdue">întârziat %1$dd</string>
-
     <string name="due_relative_today">azi</string>
-
     <string name="due_relative_tomorrow">mâine</string>
-
     <string name="due_relative_in">în %1$dd</string>
-
     <string name="pick_reminder_label">AMINTEȘTE-MI</string>
-
     <string name="pick_repeat_label">REPEȚI</string>
-
     <string name="clear_reminder_label">ȘTERGE METOARE</string>
-
     <string name="reminder_dialog_title">Alegeți memento</string>
-
     <string name="reminder_option_none">Nici un memento</string>
-
     <string name="reminder_option_hour">cu 1 oră înainte</string>
-
     <string name="reminder_option_day">cu 1 zi inainte</string>
-
     <string name="reminder_option_week">cu 1 saptamana inainte</string>
-
     <string name="reminder_option_month">cu 1 luna inainte</string>
-
     <string name="reminder_option_custom">Data și ora personalizate</string>
-
     <string name="reminder_summary_with_datetime">%1$s (%2$s)</string>
-
     <string name="reminder_requires_due_date">Setați mai întâi o dată limită pentru a utiliza presetări</string>
-
     <string name="reminder_time_in_past">Ora de memento trebuie să fie în viitor</string>
-
     <string name="reminder_custom_date_title">Data reamintirii</string>
-
     <string name="reminder_custom_time_title">Ora de memento</string>
-
     <string name="reminder_channel_name">Memento-uri de sarcini</string>
-
     <string name="reminder_channel_description">Notificări pentru mementourile de sarcini programate</string>
-
     <string name="reminder_notification_title">Memento de sarcină</string>
-
     <string name="notifications_permission_denied">Este necesară permisiunea de notificare pentru mementouri</string>
-
     <string name="task_repeat_value_label">repetați: %1$s</string>
-
     <string name="repeat_none">nici unul</string>
-
     <string name="repeat_dialog_title">Alege repetiția</string>
-
     <string name="repeat_option_none">Fără repetare</string>
-
     <string name="repeat_option_hour">În fiecare oră</string>
-
     <string name="repeat_option_day">În fiecare zi</string>
-
     <string name="repeat_option_week">În fiecare săptămână</string>
-
     <string name="repeat_option_month">În fiecare lună</string>
-
     <string name="repeat_option_year">În fiecare an</string>
-
     <string name="repeat_option_custom">Interval personalizat</string>
-
     <string name="repeat_requires_reminder">Setați mai întâi un memento pentru a utiliza repetiția</string>
-
     <string name="repeat_custom_title">Repetare personalizată</string>
-
     <string name="repeat_custom_amount_hint">Valoarea intervalului</string>
-
     <string name="repeat_custom_amount_invalid">Introduceți o sumă validă de repetare</string>
-
     <string name="repeat_unit_minutes_label">Minute</string>
-
     <string name="repeat_unit_days_label">Zile</string>
-
     <string name="repeat_unit_hours_label">Ore</string>
-
     <string name="repeat_unit_weeks_label">Săptămâni</string>
-
     <string name="repeat_unit_months_label">Luni</string>
-
     <string name="repeat_unit_years_label">ani</string>
-
     <string name="link_open_label">DESCHIS</string>
-
     <string name="link_missing">Niciun link disponibil pentru deschidere</string>
-
     <string name="invalid_command">Comanda nevalidă</string>
-
     <string name="task_saved">Sarcina salvată</string>
-
     <string name="task_deleted">Sarcina ștearsă</string>
-
     <string name="task_completed">Sarcina actualizată</string>
-
     <string name="task_failed">Sarcina nu a putut fi actualizată</string>
-
     <string name="summary_format">deschise: %1$d  azi: %2$d  total: %3$d</string>
-
     <string name="task_meta_format">imp: %1$d  scadență: %2$s  scor: %3$d</string>
-
     <string name="task_pin_label">FIXEAZĂ</string>
-
     <string name="task_unpin_label">ANULEAZĂ FIX</string>
-
     <string name="task_edit_label">EDITARE</string>
-
     <string name="task_delete_label">ȘTERGE</string>
-
     <string name="quick_links_title">LINK-URI RAPIDE</string>
-
     <string name="new_link_label">LINK NOU</string>
-
     <string name="quick_link_label_hint">Nume scurt</string>
-
     <string name="quick_link_url_hint">https://quick.link</string>
-
     <string name="quick_link_new_title">Link rapid nou</string>
-
     <string name="quick_link_edit_title">Editați linkul rapid</string>
-
     <string name="quick_link_saved">Link rapid salvat</string>
-
     <string name="quick_link_deleted">Link rapid șters</string>
-
     <string name="quick_link_invalid">Introduceți un nume și o adresă URL valide</string>
-
     <string name="quick_link_delete_label">ȘTERGE</string>
-
     <string name="widget_tasks_title">SARCINI</string>
-
     <string name="widget_tasks_description">Lista de activități cu filtrele ALL și TODAY. Atingeți un rând pentru a comuta gata</string>
-
     <string name="widget_quick_links_description">Link-uri rapide salvate în OpusAgenda. Atingeți pentru a deschide în browser</string>
-
     <string name="widget_quick_links_empty">Fără link-uri rapide. Adăugați-le în aplicație</string>
-
     <string name="clock_time_placeholder">00:00:00</string>
-
     <string name="clock_date_placeholder">10 Apr 2026</string>
-
     <string name="font_dialog_title">Selectați fontul</string>
-
     <string name="font_applied">Font aplicat: %1$s</string>
-
+    <string name="backup_replace_label">ÎNLOCUIEȘTE</string>
+    <string name="backup_import_warning_title">Importă lista de sarcini</string>
+    <string name="backup_import_warning_message">Importul unei copii de rezervă va șterge toate sarcinile curente înainte de încărcarea noii liste. Continui?</string>
+    <string name="backup_export_success">Copie de rezervă exportată: %1$d elemente</string>
+    <string name="backup_export_failed">Nu s-a putut exporta copia de rezervă</string>
+    <string name="backup_import_success">Copie de rezervă importată: %1$d elemente</string>
+    <string name="backup_import_failed">Nu s-a putut importa copia de rezervă</string>
+    <string name="backup_open_failed">Fișierul de rezervă selectat nu a putut fi deschis</string>
+    <string name="backup_invalid_archive">Fișierul selectat nu este o copie de rezervă validă OpusAgenda</string>
+    <string name="backup_unsupported_version">Acest format de copie de rezervă nu este acceptat de versiunea curentă a aplicației</string>
+    <string name="backup_attachment_export_failed">Nu s-a putut include atașamentul în copia de rezervă: %1$s</string>
     <string name="new_category_label">CAT NOU</string>
-
     <string name="new_subcategory_label">NOU SUBC</string>
-
     <string name="new_child_task_label">SARCINA NOUĂ</string>
-
     <string name="task_description_label">Descriere</string>
-
     <string name="task_description_hint">Adăugați un context pentru această sarcină</string>
-
-
-
-
-
     <string name="task_description_title">Descrierea sarcinii</string>
-
     <string name="task_description_icon_label">Deschideți descrierea</string>
-
     <string name="task_link_label">Link asociat</string>
-
     <string name="task_link_hint">https://linked.resource</string>
-
-
-
-
-
     <string name="task_link_title">Link de sarcină</string>
-
     <string name="task_link_icon_label">Deschideți detaliile linkului</string>
-
     <string name="task_attachment_label">Fișier atașat</string>
-
     <string name="task_attachment_empty">Niciun fișier selectat</string>
-
     <string name="task_attachment_pick">ALEGE FIȘIER</string>
-
     <string name="task_attachment_clear">ȘTERGE FIȘIER</string>
-
-    <string name="task_attachment_record">RECORD</string>
-
+    <string name="task_attachment_record">ÎNREGISTRA</string>
     <string name="task_attachment_stop_record">STOP</string>
-
-    <string name="task_attachment_recording">Recording…</string>
-
-    <string name="task_attachment_record_failed">Could not record audio</string>
-
-    <string name="task_attachment_record_permission_denied">Microphone permission is required to record audio</string>
-
-    <string name="task_attachment_finish_recording">Stop recording before saving the task</string>
+    <string name="task_attachment_recording">Înregistrare…</string>
+    <string name="task_attachment_record_failed">Nu s-a putut înregistra audio</string>
+    <string name="task_attachment_record_permission_denied">Este necesară permisiunea microfonului pentru înregistrarea audio</string>
+    <string name="task_attachment_finish_recording">Opriți înregistrarea înainte de a salva sarcina</string>
     <string name="task_attachment_saved">Fișier atașat</string>
-
     <string name="task_attachment_picker_failed">Nu s-a putut citi fișierul selectat</string>
-
     <string name="task_attachment_open_failed">Nicio aplicație nu poate deschide atașamentul respectiv</string>
-
     <string name="task_attachment_title">Atașament de sarcină</string>
-
     <string name="task_attachment_icon_label">Deschideți detaliile atașamentului</string>
-
     <string name="task_attachment_name_label">fișier: %1$s</string>
-
     <string name="task_attachment_type_label">tip: %1$s</string>
-
     <string name="play_label">JOACĂ</string>
-
     <string name="stop_label">OPREȘTE</string>
-
     <string name="task_attachment_no_preview">Nicio previzualizare disponibilă</string>
-
     <string-array name="font_option_labels">
         <item>Inter</item>
         <item>Geo</item>
@@ -293,61 +158,113 @@
         <item>Octosquares</item>
         <item>PirateOne</item>
     </string-array>
-
     <string-array name="importance_options">
         <item>1 SCĂZUT</item>
         <item>2 NORMAL</item>
         <item>3 ÎNALTĂ</item>
         <item>4 CRITICE</item>
     </string-array>
-
     <plurals name="repeat_unit_minutes">
         <item quantity="one">%1$d minut</item>
         <item quantity="other">%1$d minute</item>
     </plurals>
-
     <plurals name="repeat_unit_hours">
         <item quantity="one">%1$d oră</item>
         <item quantity="other">%1$d ore</item>
     </plurals>
-
     <plurals name="repeat_unit_days">
         <item quantity="one">%1$d zi</item>
         <item quantity="other">%1$d zile</item>
     </plurals>
-
     <plurals name="repeat_unit_weeks">
         <item quantity="one">%1$d săptămână</item>
         <item quantity="other">%1$d săptămâni</item>
     </plurals>
-
     <plurals name="repeat_unit_months">
         <item quantity="one">%1$d lună</item>
         <item quantity="other">%1$d luni</item>
     </plurals>
-
     <plurals name="repeat_unit_years">
         <item quantity="one">%1$d an</item>
         <item quantity="other">%1$d ani</item>
     </plurals>
-
     <string name="previous_label">ANTERIOR</string>
-
     <string name="next_label">URMĂTORUL</string>
-
     <string name="pdf_page_indicator">Pagina %1$d / %2$d</string>
     <string name="font_button_label">Schimbă fontul</string>
     <string name="import_button_label">Importă copia de rezervă</string>
     <string name="export_button_label">Exportă copia de rezervă</string>
+    <string name="tutorial_step_categories_tips">Adaugă context categoriilor</string>
+    <string name="tutorial_step_categories_tips_body">Folosește descrieri, linkuri și atașamente pentru a oferi fiecărei categorii mai mult context.</string>
+    <string name="settings_button_label">RESTART TUTORIAL</string>
+    <string name="tags_label">Etichete</string>
+    <string name="tags_hint">Munca importantă, personală</string>
+    <string name="tag_colors_button_label">RGB</string>
+    <string name="tag_colors_edit_label">EDITA</string>
+    <string name="tag_colors_dialog_title">Etichetați culorile</string>
+    <string name="tag_colors_dialog_help">Atingeți o etichetă pentru a-i edita culoarea.</string>
+    <string name="tag_colors_empty_state">Adăugați mai întâi etichete pentru a personaliza culorile.</string>
+    <string name="tag_color_picker_title">Culoare pentru %1$s</string>
+    <string name="tag_color_saved">Culoarea salvată pentru %1$s</string>
+    <string name="tag_color_cleared">Culoarea automată restabilită pentru %1$s</string>
+    <string name="tag_color_auto_label">AUTO</string>
+    <string name="tag_colors_tab_rgb">RGB</string>
+    <string name="tag_colors_tab_hex">HEX</string>
+    <string name="tag_colors_tab_selector">SELECTOR</string>
+    <string name="tag_color_hex_hint">#RRGGBB</string>
+    <string name="tag_color_hex_help">Introdu o culoare hexagonală și se actualizează live.</string>
+    <string name="tag_color_selector_help">Trageți în hartă: orizontală modifică saturația și verticală modifică luminozitatea. Ajustați nuanța de mai jos.</string>
+    <string name="tag_color_hue_label">NUANŢĂ</string>
+    <string name="persistent_reminder_label">Memento persistent</string>
+    <string name="notification_action_complete">FĂCUT</string>
+    <string name="notification_action_snooze">SNOOZE 15M</string>
+    <string name="settings_dialog_title">TUTORIAL</string>
+    <string name="settings_tutorial_relaunch_message">Doriți să reporniți tutorialul?</string>
+    <string name="settings_tutorial_relaunch_label">RESTART TUTORIAL</string>
+    <string name="tutorial_restart_hint">Banda din stânga deschide confirmarea tutorialului.</string>
+    <string name="tutorial_dialog_title">PRIMA RELARE</string>
+    <string name="tutorial_step_welcome_title">Bine ați venit la OPUSAGENDA</string>
+    <string name="tutorial_step_welcome_body">Un manager de sarcini local, cu funcții puternice și un design inspirat de terminal.</string>
+    <string name="tutorial_step_interface_title">INTERFATA</string>
+    <string name="tutorial_step_interface_body">Ecranul principal vă arată sarcinile și rezumatul.</string>
+    <string name="tutorial_step_font_title">OPȚIUNI DE FONT</string>
+    <string name="tutorial_step_font_body">Alegeți dintre cele 5 fonturi unice pentru a personaliza aspectul aplicației. Selecția dvs. va fi aplicată pe întreaga interfață, inclusiv pe widget-uri.</string>
+    <string name="tutorial_step_import_title">IMPORT DATE</string>
+    <string name="tutorial_step_import_body">Importați cu ușurință sarcini din diverse surse pentru a începe rapid. Util pentru sarcini specifice de lucru și pentru a nu le amesteca cu sarcinile tale zilnice (CITIȚI AVERTIZĂRI)</string>
+    <string name="tutorial_step_export_title">EXPORT DE DATE</string>
+    <string name="tutorial_step_export_body">Exportați sarcinile într-un fișier pentru backup sau partajare. Fișierul exportat include toate detaliile sarcinii, atașamentele și categoriile.</string>
+    <string name="tutorial_step_quick_links_title">LINK-URI RAPIDE</string>
+    <string name="tutorial_step_quick_links_body">Salvați și organizați-vă linkurile importante în aplicație. Accesați-le rapid din ecranul principal și widget-uri. Adăugați o nouă legătură rapidă folosind butonul + din colțul din dreapta sus.</string>
+    <string name="tutorial_step_filters_title">FILTRE</string>
+    <string name="tutorial_step_filters_body">Folosiți filtrele ALL și TODAY pentru a vă concentra pe ceea ce este important.</string>
+    <string name="tutorial_step_all_title">TOATE FILTRE</string>
+    <string name="tutorial_step_all_body">Afișează toate sarcinile din listă, sortate după data scadenței și importanță.</string>
+    <string name="tutorial_step_today_title">FILTRU DE AZI</string>
+    <string name="tutorial_step_today_body">Concentrați-vă pe sarcinile care sunt datorate astăzi sau întârziate. Perfect pentru planificarea ta zilnică.</string>
+    <string name="tutorial_step_create_title">CREAȚI SARCINA</string>
+    <string name="tutorial_step_create_body">Adăugați rapid sarcini noi de pe acest buton. Păstrați intrările scurte pentru a rămâne rapid.</string>
+    <string name="tutorial_step_create_tips">ADAUGĂ CONTEXT</string>
+    <string name="tutorial_step_create_tips_body">Utilizați descrierea, linkurile și atașamentele pentru a păstra toate detaliile sarcinii într-un singur loc.</string>
+    <string name="tutorial_step_importance_title">IMPORTANŢĂ</string>
+    <string name="tutorial_step_importance_body">Setați niveluri de importanță pentru a sorta și filtra sarcinile după prioritate.</string>
+    <string name="tutorial_step_reminders_title">METOARE</string>
+    <string name="tutorial_step_reminders_body">Filtrele de astăzi și editorul vă ajută să gestionați munca corespunzătoare, mementourile și repetările la nivel local.</string>
+    <string name="tutorial_step_persistence_title">METOARE PERSISTENTE</string>
+    <string name="tutorial_step_persistence_body">Setați mementouri persistente pentru a rămâne la curent cu sarcinile importante. Nu va fi respins până când nu îl marcați ca finalizat.</string>
+    <string name="tutorial_step_categories_title">CATEGORII</string>
+    <string name="tutorial_step_categories_body">Grupați sarcinile conexe în categorii pentru a menține lista organizată.</string>
+    <string name="tutorial_step_search_title">CĂUTARE</string>
+    <string name="tutorial_step_search_body">Căutați după textul sarcinii, note, linkuri, atașamente și etichete.</string>
+    <string name="tutorial_step_tags_title">Etichete</string>
+    <string name="tutorial_step_tags_body">Adăugați etichete la sarcini și categorii pentru a crea filtre personalizate și pentru a vă organiza munca.</string>
+    <string name="tutorial_step_summary_title">REZUMAT</string>
+    <string name="tutorial_step_summary_body">Rezumatul din partea de sus vă oferă o privire de ansamblu rapidă asupra sarcinilor dvs. deschise și urgente.</string>
+    <string name="tutorial_step_widgets_title">WIDGET-uri</string>
+    <string name="tutorial_step_widgets_body">Widgeturile folosesc aceleași date locale, astfel încât rămân sincronizate fără internet.</string>
+    <string name="tutorial_step_end_title">SFÂRȘITUL?</string>
+    <string name="tutorial_step_end_body">Asta e tot pentru tutorial. Bucură-te de folosirea OpusAgenda!</string>
+    <string name="tutorial_counter_format">%1$d/%2$d</string>
+    <string name="tutorial_prev_label">ANTERIOR</string>
+    <string name="tutorial_next_label">URMĂTORUL</string>
+    <string name="tutorial_finish_label">TERMINAT TUTORIAL</string>
 </resources>
-
-
-
-
-
-
-
-
-
-
-

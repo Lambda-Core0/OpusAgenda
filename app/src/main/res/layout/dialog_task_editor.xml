@@ -2,7 +2,9 @@
 <ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
     android:layout_height="wrap_content"
-    android:background="@color/terminal_panel">
+    android:background="@color/terminal_panel"
+    android:scrollbars="vertical"
+    style="@style/Widget_OpusAgenda_ScrollIndicator">
 
     <LinearLayout
         android:layout_width="match_parent"
@@ -21,6 +23,48 @@
             android:padding="12dp"
             android:textColor="@color/terminal_text"
             android:textColorHint="@color/terminal_text_muted" />
+
+        <TextView
+            android:id="@+id/textTagsLabel"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="16dp"
+            android:text="@string/tags_label"
+            android:textColor="@color/terminal_text_muted" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="8dp"
+            android:orientation="horizontal">
+
+            <EditText
+                android:id="@+id/editTags"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:background="@drawable/bg_terminal_input"
+                android:hint="@string/tags_hint"
+                android:imeOptions="actionDone"
+                android:inputType="textCapWords|textNoSuggestions"
+                android:minHeight="48dp"
+                android:padding="12dp"
+                android:singleLine="true"
+                android:textColor="@color/terminal_text"
+                android:textColorHint="@color/terminal_text_muted" />
+
+            <Button
+                android:id="@+id/buttonTagColors"
+                android:layout_width="wrap_content"
+                android:layout_height="48dp"
+                android:layout_marginStart="8dp"
+                android:minWidth="72dp"
+                android:background="@drawable/bg_terminal_action"
+                android:backgroundTint="@null"
+                android:text="@string/tag_colors_edit_label"
+                android:textAllCaps="false"
+                android:textColor="@color/terminal_black" />
+        </LinearLayout>
 
         <TextView
             android:id="@+id/textImportanceLabel"
@@ -123,6 +167,15 @@
                 android:textAllCaps="false"
                 android:textColor="@color/terminal_black" />
         </LinearLayout>
+
+        <CheckBox
+            android:id="@+id/checkPersistentReminder"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="16dp"
+            android:buttonTint="@color/terminal_yellow"
+            android:text="@string/persistent_reminder_label"
+            android:textColor="@color/terminal_text" />
 
         <TextView
             android:id="@+id/textDescriptionLabel"

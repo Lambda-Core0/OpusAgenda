@@ -1,291 +1,156 @@
+<?xml version="1.0" encoding="utf-8"?>
 <resources>
     <string name="app_name">OpusAgenda</string>
-
-    <string name="app_header_title">♱ OpusAgenda v1.4</string>
-
+    <string name="app_header_title">♱ OpusAgenda v1.5</string>
     <string name="app_font_family">PirateOne</string>
-
-    <string name="search_hint">खोज कार्य...</string>
-
+    <string name="search_hint">कार्य या टैग खोजें...</string>
     <string name="empty_state_all">अभी तक कोई कार्य नहीं. एक बनाने के लिए NEW का उपयोग करें</string>
-
     <string name="empty_state_today">आज कोई जरूरी काम नहीं</string>
-
     <string name="all_label">सब</string>
-
     <string name="today_label">आज</string>
-
     <string name="new_task_label">नया</string>
-
     <string name="run_command_label">भागो</string>
-
     <string name="task_text_hint">कार्य पाठ</string>
-
     <string name="category_text_hint">श्रेणी का नाम</string>
-
     <string name="save_label">सहेजें</string>
-
     <string name="cancel_label">रद्द करें</string>
-
     <string name="pick_due_date_label">नियत तिथि</string>
-
     <string name="clear_due_date_label">बकाया साफ़ करें</string>
-
     <string name="pinned_label">पिन किया गया</string>
-
     <string name="completed_label">पूरा हुआ</string>
-
     <string name="importance_label">महत्व</string>
-
     <string name="task_dialog_title_new">नया कार्य</string>
-
     <string name="task_dialog_title_edit">कार्य संपादित करें</string>
-
     <string name="category_dialog_title_new">नई श्रेणी</string>
-
     <string name="category_dialog_title_edit">श्रेणी संपादित करें</string>
-
     <string name="task_text_required">कार्य पाठ दर्ज करें</string>
-
     <string name="default_category_name">श्रेणी</string>
-
     <string name="category_badge_label">बिल्ली</string>
-
     <string name="category_edit_label">संपादित करें</string>
-
     <string name="category_due_label">श्रेणी</string>
-
     <string name="category_meta_format">उप-आइटम: %1$d  महत्व: %2$d</string>
-
     <string name="category_move_invalid">उस कदम से एक अमान्य नेस्टेड श्रेणी बन जाएगी</string>
-
     <string name="task_due_label">देय: %1$s</string>
-
     <string name="task_reminder_value_label">अनुस्मारक: %1$s</string>
-
     <string name="task_date_with_relative">%1$s - %2$s</string>
-
     <string name="no_due_date">कोई नियत तारीख नहीं</string>
-
     <string name="no_reminder">कोई नहीं</string>
-
     <string name="due_relative_overdue">अतिदेय %1$dd</string>
-
     <string name="due_relative_today">आज</string>
-
     <string name="due_relative_tomorrow">कल</string>
-
     <string name="due_relative_in">%1$dd में</string>
-
     <string name="pick_reminder_label">मुझे याद दिलाओ</string>
-
     <string name="pick_repeat_label">दोहराएँ</string>
-
     <string name="clear_reminder_label">स्पष्ट अनुस्मारक</string>
-
     <string name="reminder_dialog_title">अनुस्मारक चुनें</string>
-
     <string name="reminder_option_none">कोई अनुस्मारक नहीं</string>
-
     <string name="reminder_option_hour">1 घंटा पहले</string>
-
     <string name="reminder_option_day">1 दिन पहले</string>
-
     <string name="reminder_option_week">1 सप्ताह पहले</string>
-
     <string name="reminder_option_month">1 महीने पहले</string>
-
     <string name="reminder_option_custom">कस्टम दिनांक और समय</string>
-
     <string name="reminder_summary_with_datetime">%1$s (%2$s)</string>
-
     <string name="reminder_requires_due_date">प्रीसेट का उपयोग करने के लिए पहले एक नियत तिथि निर्धारित करें</string>
-
     <string name="reminder_time_in_past">अनुस्मारक समय भविष्य में होना चाहिए</string>
-
     <string name="reminder_custom_date_title">अनुस्मारक दिनांक</string>
-
     <string name="reminder_custom_time_title">अनुस्मारक समय</string>
-
     <string name="reminder_channel_name">कार्य अनुस्मारक</string>
-
     <string name="reminder_channel_description">निर्धारित कार्य अनुस्मारक के लिए अधिसूचनाएँ</string>
-
     <string name="reminder_notification_title">कार्य अनुस्मारक</string>
-
     <string name="notifications_permission_denied">अनुस्मारक के लिए अधिसूचना अनुमति आवश्यक है</string>
-
     <string name="task_repeat_value_label">दोहराएँ: %1$s</string>
-
     <string name="repeat_none">कोई नहीं</string>
-
     <string name="repeat_dialog_title">दोहराव चुनें</string>
-
     <string name="repeat_option_none">कोई दोहराना नहीं</string>
-
     <string name="repeat_option_hour">हर घंटे</string>
-
     <string name="repeat_option_day">हर दिन</string>
-
     <string name="repeat_option_week">हर सप्ताह</string>
-
     <string name="repeat_option_month">हर महीने</string>
-
     <string name="repeat_option_year">हर साल</string>
-
     <string name="repeat_option_custom">कस्टम अंतराल</string>
-
     <string name="repeat_requires_reminder">दोहराव का उपयोग करने के लिए पहले एक अनुस्मारक सेट करें</string>
-
     <string name="repeat_custom_title">कस्टम पुनरावृत्ति</string>
-
     <string name="repeat_custom_amount_hint">अंतराल राशि</string>
-
     <string name="repeat_custom_amount_invalid">एक वैध पुनरावृत्ति राशि दर्ज करें</string>
-
     <string name="repeat_unit_minutes_label">मिनट</string>
-
     <string name="repeat_unit_days_label">दिन</string>
-
     <string name="repeat_unit_hours_label">घंटे</string>
-
     <string name="repeat_unit_weeks_label">सप्ताह</string>
-
     <string name="repeat_unit_months_label">महीने</string>
-
     <string name="repeat_unit_years_label">साल</string>
-
     <string name="link_open_label">खुला</string>
-
     <string name="link_missing">खोलने के लिए कोई लिंक उपलब्ध नहीं है</string>
-
     <string name="invalid_command">अमान्य आदेश</string>
-
     <string name="task_saved">कार्य सहेजा गया</string>
-
     <string name="task_deleted">कार्य हटा दिया गया</string>
-
     <string name="task_completed">कार्य अद्यतन किया गया</string>
-
     <string name="task_failed">कार्य अद्यतन नहीं किया जा सका</string>
-
     <string name="summary_format">खुले: %1$d  आज: %2$d  कुल: %3$d</string>
-
     <string name="task_meta_format">महत्व: %1$d  देय: %2$s  स्कोर: %3$d</string>
-
     <string name="task_pin_label">पिन</string>
-
     <string name="task_unpin_label">अनपिन</string>
-
     <string name="task_edit_label">संपादित करें</string>
-
     <string name="task_delete_label">हटाएं</string>
-
     <string name="quick_links_title">त्वरित लिंक</string>
-
     <string name="new_link_label">नया लिंक</string>
-
     <string name="quick_link_label_hint">संक्षिप्त नाम</string>
-
     <string name="quick_link_url_hint">https://quick.link</string>
-
     <string name="quick_link_new_title">नया त्वरित लिंक</string>
-
     <string name="quick_link_edit_title">त्वरित लिंक संपादित करें</string>
-
     <string name="quick_link_saved">त्वरित लिंक सहेजा गया</string>
-
     <string name="quick_link_deleted">त्वरित लिंक हटा दिया गया</string>
-
     <string name="quick_link_invalid">एक मान्य नाम और URL दर्ज करें</string>
-
     <string name="quick_link_delete_label">हटाएँ</string>
-
     <string name="widget_tasks_title">कार्य</string>
-
     <string name="widget_tasks_description">सभी और आज के फ़िल्टर के साथ कार्य सूची। पूर्ण टॉगल करने के लिए किसी पंक्ति पर टैप करें</string>
-
     <string name="widget_quick_links_description">त्वरित लिंक OpusAgenda में सहेजे गए। ब्राउज़र में खोलने के लिए टैप करें</string>
-
     <string name="widget_quick_links_empty">कोई त्वरित लिंक नहीं. उन्हें ऐप में जोड़ें</string>
-
     <string name="clock_time_placeholder">00:00:00</string>
-
     <string name="clock_date_placeholder">10 Apr 2026</string>
-
     <string name="font_dialog_title">फ़ॉन्ट चुनें</string>
-
     <string name="font_applied">फ़ॉन्ट लागू: %1$s</string>
-
+    <string name="backup_replace_label">बदलें</string>
+    <string name="backup_import_warning_title">कार्य सूची आयात करें</string>
+    <string name="backup_import_warning_message">बैकअप आयात करने पर नई सूची लोड होने से पहले सभी मौजूदा कार्य हट जाएंगे। जारी रखें?</string>
+    <string name="backup_export_success">बैकअप निर्यात किया गया: %1$d आइटम</string>
+    <string name="backup_export_failed">बैकअप निर्यात नहीं किया जा सका</string>
+    <string name="backup_import_success">बैकअप आयात किया गया: %1$d आइटम</string>
+    <string name="backup_import_failed">बैकअप आयात नहीं किया जा सका</string>
+    <string name="backup_open_failed">चयनित बैकअप फ़ाइल नहीं खोली जा सकी</string>
+    <string name="backup_invalid_archive">चयनित फ़ाइल मान्य OpusAgenda बैकअप नहीं है</string>
+    <string name="backup_unsupported_version">यह बैकअप प्रारूप ऐप के वर्तमान संस्करण द्वारा समर्थित नहीं है</string>
+    <string name="backup_attachment_export_failed">बैकअप में अनुलग्नक शामिल नहीं किया जा सका: %1$s</string>
     <string name="new_category_label">नई बिल्ली</string>
-
     <string name="new_subcategory_label">नया विषय</string>
-
     <string name="new_child_task_label">नया कार्य</string>
-
     <string name="task_description_label">विवरण</string>
-
     <string name="task_description_hint">इस कार्य के लिए कुछ संदर्भ जोड़ें</string>
-
-
-
-
-
     <string name="task_description_title">कार्य विवरण</string>
-
     <string name="task_description_icon_label">विवरण खोलें</string>
-
     <string name="task_link_label">संबद्ध लिंक</string>
-
     <string name="task_link_hint">https://linked.resource</string>
-
-
-
-
-
     <string name="task_link_title">कार्य लिंक</string>
-
     <string name="task_link_icon_label">लिंक विवरण खोलें</string>
-
     <string name="task_attachment_label">संलग्न फ़ाइल</string>
-
     <string name="task_attachment_empty">कोई फ़ाइल चयनित नहीं</string>
-
     <string name="task_attachment_pick">फ़ाइल चुनें</string>
-
     <string name="task_attachment_clear">फ़ाइल साफ़ करें</string>
-
-    <string name="task_attachment_record">RECORD</string>
-
-    <string name="task_attachment_stop_record">STOP</string>
-
-    <string name="task_attachment_recording">Recording…</string>
-
-    <string name="task_attachment_record_failed">Could not record audio</string>
-
-    <string name="task_attachment_record_permission_denied">Microphone permission is required to record audio</string>
-
-    <string name="task_attachment_finish_recording">Stop recording before saving the task</string>
+    <string name="task_attachment_record">अभिलेख</string>
+    <string name="task_attachment_stop_record">रुकना</string>
+    <string name="task_attachment_recording">रिकॉर्डिंग...</string>
+    <string name="task_attachment_record_failed">ऑडियो रिकॉर्ड नहीं किया जा सका</string>
+    <string name="task_attachment_record_permission_denied">ऑडियो रिकॉर्ड करने के लिए माइक्रोफ़ोन की अनुमति आवश्यक है</string>
+    <string name="task_attachment_finish_recording">कार्य सहेजने से पहले रिकॉर्डिंग बंद करें</string>
     <string name="task_attachment_saved">फ़ाइल संलग्न है</string>
-
     <string name="task_attachment_picker_failed">चयनित फ़ाइल को पढ़ा नहीं जा सका</string>
-
     <string name="task_attachment_open_failed">कोई भी ऐप उस अटैचमेंट को नहीं खोल सकता</string>
-
     <string name="task_attachment_title">कार्य अनुलग्नक</string>
-
     <string name="task_attachment_icon_label">अनुलग्नक विवरण खोलें</string>
-
     <string name="task_attachment_name_label">फ़ाइल: %1$s</string>
-
     <string name="task_attachment_type_label">प्रकार: %1$s</string>
-
     <string name="play_label">खेलें</string>
-
     <string name="stop_label">रुकें</string>
-
     <string name="task_attachment_no_preview">कोई पूर्वावलोकन उपलब्ध नहीं है</string>
-
     <string-array name="font_option_labels">
         <item>Inter</item>
         <item>Geo</item>
@@ -293,54 +158,113 @@
         <item>Octosquares</item>
         <item>PirateOne</item>
     </string-array>
-
     <string-array name="importance_options">
         <item>1 कम</item>
         <item>2 सामान्य</item>
         <item>3 उच्च</item>
         <item>4 गंभीर</item>
     </string-array>
-
     <plurals name="repeat_unit_minutes">
         <item quantity="one">%1$d मिनट</item>
         <item quantity="other">%1$d मिनट</item>
     </plurals>
-
     <plurals name="repeat_unit_hours">
         <item quantity="one">%1$d घंटा</item>
         <item quantity="other">%1$d घंटे</item>
     </plurals>
-
     <plurals name="repeat_unit_days">
         <item quantity="one">%1$d दिन</item>
         <item quantity="other">%1$d दिन</item>
     </plurals>
-
     <plurals name="repeat_unit_weeks">
         <item quantity="one">%1$d सप्ताह</item>
         <item quantity="other">%1$d सप्ताह</item>
     </plurals>
-
     <plurals name="repeat_unit_months">
         <item quantity="one">%1$d माह</item>
         <item quantity="other">%1$d महीने</item>
     </plurals>
-
     <plurals name="repeat_unit_years">
         <item quantity="one">%1$d वर्ष</item>
         <item quantity="other">%1$d वर्ष</item>
     </plurals>
-
     <string name="previous_label">पिछला</string>
-
     <string name="next_label">अगला</string>
-
     <string name="pdf_page_indicator">पृष्ठ %1$d / %2$d</string>
     <string name="font_button_label">फ़ॉन्ट बदलें</string>
     <string name="import_button_label">बैकअप आयात करें</string>
     <string name="export_button_label">बैकअप निर्यात करें</string>
+    <string name="tutorial_step_categories_tips">श्रेणियों में संदर्भ जोड़ें</string>
+    <string name="tutorial_step_categories_tips_body">हर श्रेणी को अधिक संदर्भ देने के लिए विवरण, लिंक और संलग्नक का उपयोग करें।</string>
+    <string name="settings_button_label">ट्यूटोरियल पुनः आरंभ करें</string>
+    <string name="tags_label">टैग</string>
+    <string name="tags_hint">कार्य महत्वपूर्ण, व्यक्तिगत</string>
+    <string name="tag_colors_button_label">RGB</string>
+    <string name="tag_colors_edit_label">संपादन करना</string>
+    <string name="tag_colors_dialog_title">रंग टैग करें</string>
+    <string name="tag_colors_dialog_help">किसी टैग का रंग संपादित करने के लिए उसे टैप करें.</string>
+    <string name="tag_colors_empty_state">रंगों को अनुकूलित करने के लिए पहले टैग जोड़ें।</string>
+    <string name="tag_color_picker_title">%1$s के लिए रंग</string>
+    <string name="tag_color_saved">%1$s के लिए रंग सहेजा गया</string>
+    <string name="tag_color_cleared">%1$s के लिए स्वतः रंग पुनर्स्थापित किया गया</string>
+    <string name="tag_color_auto_label">AUTO</string>
+    <string name="tag_colors_tab_rgb">RGB</string>
+    <string name="tag_colors_tab_hex">HEX</string>
+    <string name="tag_colors_tab_selector">चयनकर्ता</string>
+    <string name="tag_color_hex_hint">#RRGGBB</string>
+    <string name="tag_color_hex_help">एक हेक्स रंग टाइप करें और यह लाइव अपडेट हो जाता है।</string>
+    <string name="tag_color_selector_help">मानचित्र में खींचें: क्षैतिज परिवर्तन संतृप्ति और ऊर्ध्वाधर परिवर्तन चमक। नीचे रंग समायोजित करें.</string>
+    <string name="tag_color_hue_label">रंग</string>
+    <string name="persistent_reminder_label">लगातार अनुस्मारक</string>
+    <string name="notification_action_complete">हो गया</string>
+    <string name="notification_action_snooze">स्नूज़ 15एम</string>
+    <string name="settings_dialog_title">ट्यूटोरियल</string>
+    <string name="settings_tutorial_relaunch_message">क्या आप ट्यूटोरियल पुनः आरंभ करना चाहते हैं?</string>
+    <string name="settings_tutorial_relaunch_label">ट्यूटोरियल पुनः आरंभ करें</string>
+    <string name="tutorial_restart_hint">बायीं पट्टी ट्यूटोरियल पुष्टिकरण खोलती है।</string>
+    <string name="tutorial_dialog_title">पहली दौड़</string>
+    <string name="tutorial_step_welcome_title">ओपीयूएसएजेंडा में आपका स्वागत है</string>
+    <string name="tutorial_step_welcome_body">शक्तिशाली सुविधाओं और टर्मिनल-प्रेरित डिज़ाइन वाला एक स्थानीय-प्रथम कार्य प्रबंधक।</string>
+    <string name="tutorial_step_interface_title">इंटरफ़ेस</string>
+    <string name="tutorial_step_interface_body">मुख्य स्क्रीन आपके कार्यों और सारांश को दिखाती है।</string>
+    <string name="tutorial_step_font_title">फ़ॉन्ट विकल्प</string>
+    <string name="tutorial_step_font_body">ऐप के स्वरूप और अनुभव को अनुकूलित करने के लिए 5 अद्वितीय फ़ॉन्ट में से चुनें। आपका चयन विजेट्स सहित पूरे इंटरफ़ेस पर लागू किया जाएगा।</string>
+    <string name="tutorial_step_import_title">डेटा आयात करें</string>
+    <string name="tutorial_step_import_body">शीघ्रता से आरंभ करने के लिए विभिन्न स्रोतों से कार्यों को आसानी से आयात करें। कार्य विशिष्ट कार्यों के लिए उपयोगी और उन्हें अपने दैनिक कार्यों के साथ न मिलाएं (चेतावनी पढ़ें)</string>
+    <string name="tutorial_step_export_title">डेटा निर्यात करें</string>
+    <string name="tutorial_step_export_body">बैकअप या साझाकरण के लिए अपने कार्यों को एक फ़ाइल में निर्यात करें। निर्यात की गई फ़ाइल में सभी कार्य विवरण, अनुलग्नक और श्रेणियां शामिल हैं।</string>
+    <string name="tutorial_step_quick_links_title">त्वरित सम्पक</string>
+    <string name="tutorial_step_quick_links_body">ऐप में अपने महत्वपूर्ण लिंक सहेजें और व्यवस्थित करें। मुख्य स्क्रीन और विजेट से उन तक शीघ्रता से पहुंचें। ऊपरी दाएं कोने में + बटन का उपयोग करके एक नया त्वरित लिंक जोड़ें।</string>
+    <string name="tutorial_step_filters_title">फिल्टर</string>
+    <string name="tutorial_step_filters_body">जो महत्वपूर्ण है उस पर ध्यान केंद्रित करने के लिए ALL और TODAY फ़िल्टर का उपयोग करें।</string>
+    <string name="tutorial_step_all_title">सभी फ़िल्टर</string>
+    <string name="tutorial_step_all_body">सूची में सभी कार्यों को नियत तिथि और महत्व के अनुसार क्रमबद्ध करके दिखाया गया है।</string>
+    <string name="tutorial_step_today_title">आज फ़िल्टर</string>
+    <string name="tutorial_step_today_body">उन कार्यों पर ध्यान केंद्रित करें जो आज या अतिदेय हैं। आपकी दैनिक योजना के लिए बिल्कुल सही.</string>
+    <string name="tutorial_step_create_title">कार्य बनाएँ</string>
+    <string name="tutorial_step_create_body">इस बटन से नए कार्य शीघ्रता से जोड़ें। तेजी से बने रहने के लिए प्रविष्टियाँ छोटी रखें।</string>
+    <string name="tutorial_step_create_tips">संदर्भ जोड़ें</string>
+    <string name="tutorial_step_create_tips_body">सभी कार्य विवरण एक ही स्थान पर रखने के लिए विवरण, लिंक और अनुलग्नकों का उपयोग करें।</string>
+    <string name="tutorial_step_importance_title">महत्त्व</string>
+    <string name="tutorial_step_importance_body">कार्यों को प्राथमिकता के आधार पर क्रमबद्ध और फ़िल्टर करने के लिए महत्व स्तर निर्धारित करें।</string>
+    <string name="tutorial_step_reminders_title">रिमाइंडर</string>
+    <string name="tutorial_step_reminders_body">आज फ़िल्टर और संपादक आपको स्थानीय स्तर पर उचित कार्य, अनुस्मारक और दोहराव का प्रबंधन करने में मदद करते हैं।</string>
+    <string name="tutorial_step_persistence_title">लगातार अनुस्मारक</string>
+    <string name="tutorial_step_persistence_body">महत्वपूर्ण कार्यों में शीर्ष पर बने रहने के लिए लगातार अनुस्मारक सेट करें। इसे तब तक ख़ारिज नहीं किया जाएगा जब तक कि आप इसे पूर्ण के रूप में चिह्नित नहीं कर देते।</string>
+    <string name="tutorial_step_categories_title">श्रेणियाँ</string>
+    <string name="tutorial_step_categories_body">सूची को व्यवस्थित रखने के लिए संबंधित कार्यों को श्रेणियों में समूहित करें।</string>
+    <string name="tutorial_step_search_title">खोज</string>
+    <string name="tutorial_step_search_body">कार्य पाठ, नोट्स, लिंक, अनुलग्नक और टैग द्वारा खोजें।</string>
+    <string name="tutorial_step_tags_title">टैग</string>
+    <string name="tutorial_step_tags_body">कस्टम फ़िल्टर बनाने और अपने काम को व्यवस्थित करने के लिए कार्यों और श्रेणियों में टैग जोड़ें।</string>
+    <string name="tutorial_step_summary_title">सारांश</string>
+    <string name="tutorial_step_summary_body">शीर्ष पर सारांश आपको आपके खुले और जरूरी कार्यों का त्वरित अवलोकन देता है।</string>
+    <string name="tutorial_step_widgets_title">विजेट्स</string>
+    <string name="tutorial_step_widgets_body">विजेट समान स्थानीय डेटा का उपयोग करते हैं, इसलिए वे इंटरनेट के बिना भी सिंक में रहते हैं।</string>
+    <string name="tutorial_step_end_title">अंत?</string>
+    <string name="tutorial_step_end_body">ट्यूटोरियल के लिए बस इतना ही। OpusAgenda का उपयोग करके आनंद लें!</string>
+    <string name="tutorial_counter_format">%1$d/%2$d</string>
+    <string name="tutorial_prev_label">पहले का</string>
+    <string name="tutorial_next_label">अगला</string>
+    <string name="tutorial_finish_label">ट्यूटोरियल समाप्त करें</string>
 </resources>
-
-
-
-

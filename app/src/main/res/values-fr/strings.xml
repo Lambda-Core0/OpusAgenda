@@ -1,11 +1,28 @@
 <resources>
     <string name="app_name">OpusAgenda</string>
 
-    <string name="app_header_title">♱ OpusAgenda v1.4</string>
+    <string name="app_header_title">♱ OpusAgenda v1.5</string>
 
     <string name="app_font_family">PirateOne</string>
 
-    <string name="search_hint">tâches de recherche...</string>
+    <string name="search_hint">rechercher des tâches ou des étiquettes...</string>
+
+    <string name="tag_colors_button_label">RGB</string>
+    <string name="tag_colors_edit_label">MODIFIER</string>
+    <string name="tag_colors_dialog_title">Couleurs des étiquettes</string>
+    <string name="tag_colors_dialog_help">Touchez une étiquette pour modifier sa couleur.</string>
+    <string name="tag_colors_empty_state">Ajoutez d\'abord des étiquettes pour personnaliser les couleurs.</string>
+    <string name="tag_color_picker_title">Couleur pour %1$s</string>
+    <string name="tag_color_saved">Couleur enregistrée pour %1$s</string>
+    <string name="tag_color_cleared">Couleur automatique restaurée pour %1$s</string>
+    <string name="tag_color_auto_label">AUTO</string>
+    <string name="tag_colors_tab_rgb">RGB</string>
+    <string name="tag_colors_tab_hex">HEX</string>
+    <string name="tag_colors_tab_selector">SÉLECTEUR</string>
+    <string name="tag_color_hex_hint">#RRGGBB</string>
+    <string name="tag_color_hex_help">Saisissez une couleur hexadécimale et elle se met à jour en direct.</string>
+    <string name="tag_color_selector_help">Faites glisser dans la zone : l\'axe horizontal change la saturation et l\'axe vertical la luminosité. Ajustez la teinte ci-dessous.</string>
+    <string name="tag_color_hue_label">TEINTE</string>
 
     <string name="empty_state_all">Aucune tâche pour l\'instant. Utilisez NEW pour en créer un</string>
 
@@ -217,6 +234,17 @@
 
     <string name="font_applied">Police appliquée : %1$s</string>
 
+    <string name="backup_replace_label">REMPLACER</string>
+    <string name="backup_import_warning_title">Importer la liste des tâches</string>
+    <string name="backup_import_warning_message">L\'importation d\'une sauvegarde supprimera toutes les tâches actuelles avant de charger la nouvelle liste. Continuer ?</string>
+    <string name="backup_export_success">Sauvegarde exportée : %1$d éléments</string>
+    <string name="backup_export_failed">Impossible d\'exporter la sauvegarde</string>
+    <string name="backup_import_success">Sauvegarde importée : %1$d éléments</string>
+    <string name="backup_import_failed">Impossible d\'importer la sauvegarde</string>
+    <string name="backup_open_failed">Impossible d\'ouvrir le fichier de sauvegarde sélectionné</string>
+    <string name="backup_invalid_archive">Le fichier sélectionné n\'est pas une sauvegarde OpusAgenda valide</string>
+    <string name="backup_unsupported_version">Ce format de sauvegarde n\'est pas pris en charge par la version actuelle de l\'application</string>
+    <string name="backup_attachment_export_failed">Impossible d\'inclure la pièce jointe dans la sauvegarde : %1$s</string>
     <string name="new_category_label">NOUVEAU CHAT</string>
 
     <string name="new_subcategory_label">NOUVEAU SUBC</string>
@@ -339,9 +367,61 @@
     <string name="font_button_label">Changer la police</string>
     <string name="import_button_label">Importer la sauvegarde</string>
     <string name="export_button_label">Exporter la sauvegarde</string>
+    <string name="settings_button_label">RELANCER LE TUTORIEL</string>
+    <string name="tags_label">ÉTIQUETTES</string>
+    <string name="tags_hint">Travail important, Personnel</string>
+    <string name="persistent_reminder_label">Rappel persistant</string>
+    <string name="notification_action_complete">FAIT</string>
+    <string name="notification_action_snooze">REPORTER 15 MIN</string>
+    <string name="settings_dialog_title">TUTORIEL</string>
+    <string name="settings_tutorial_relaunch_message">Voulez-vous relancer le tutoriel ?</string>
+    <string name="settings_tutorial_relaunch_label">RELANCER LE TUTORIEL</string>
+    <string name="tutorial_restart_hint">La barre gauche ouvre la confirmation du tutoriel.</string>
+    <string name="tutorial_dialog_title">PREMIER LANCEMENT</string>
+    <string name="tutorial_step_welcome_title">BIENVENUE SUR OPUSAGENDA</string>
+    <string name="tutorial_step_welcome_body">Un gestionnaire de tâches local d\'abord, rapide, avec un design inspiré du terminal.</string>
+    <string name="tutorial_step_interface_title">INTERFACE</string>
+    <string name="tutorial_step_interface_body">L\'écran principal affiche vos tâches et le résumé.</string>
+    <string name="tutorial_step_font_title">OPTIONS DE POLICE</string>
+    <string name="tutorial_step_font_body">Choisissez parmi 5 polices uniques pour personnaliser l\'apparence de l\'application. Votre choix s\'appliquera à toute l\'interface, y compris les widgets.</string>
+    <string name="tutorial_step_import_title">IMPORTER DES DONNÉES</string>
+    <string name="tutorial_step_import_body">Importez facilement des tâches depuis différentes sources pour démarrer vite. Utile pour les tâches de travail et pour ne pas les mélanger avec vos tâches quotidiennes (LIRE LES AVERTISSEMENTS)</string>
+    <string name="tutorial_step_export_title">EXPORTER DES DONNÉES</string>
+    <string name="tutorial_step_export_body">Exportez vos tâches dans un fichier pour la sauvegarde ou le partage. Le fichier exporté inclut tous les détails, pièces jointes et catégories.</string>
+    <string name="tutorial_step_quick_links_title">LIENS RAPIDES</string>
+    <string name="tutorial_step_quick_links_body">Enregistrez et organisez vos liens importants dans l\'application. Accédez-y rapidement depuis l\'écran principal et les widgets. Créez-en un nouveau avec le bouton +.</string>
+    <string name="tutorial_step_filters_title">FILTRES</string>
+    <string name="tutorial_step_filters_body">Utilisez les filtres TOUT et AUJOURD\'HUI pour vous concentrer sur l\'essentiel.</string>
+    <string name="tutorial_step_all_title">FILTRE TOUT</string>
+    <string name="tutorial_step_all_body">Affiche toutes les tâches dans la liste, triées par date d\'échéance et importance.</string>
+    <string name="tutorial_step_today_title">FILTRE AUJOURD\'HUI</string>
+    <string name="tutorial_step_today_body">Concentrez-vous sur les tâches dues aujourd\'hui ou en retard. Parfait pour planifier la journée.</string>
+    <string name="tutorial_step_create_title">CRÉER UNE TÂCHE</string>
+    <string name="tutorial_step_create_body">Ajoutez de nouvelles tâches rapidement depuis ce bouton. Gardez les entrées courtes pour rester rapide.</string>
+    <string name="tutorial_step_create_tips">AJOUTER DU CONTEXTE</string>
+    <string name="tutorial_step_create_tips_body">Utilisez la description, les liens et les pièces jointes pour garder tous les détails au même endroit.</string>
+    <string name="tutorial_step_importance_title">IMPORTANCE</string>
+    <string name="tutorial_step_importance_body">Définissez des niveaux d\'importance pour trier et filtrer les tâches par priorité.</string>
+    <string name="tutorial_step_reminders_title">RAPPELS</string>
+    <string name="tutorial_step_reminders_body">Les filtres AUJOURD\'HUI et l\'éditeur vous aident à gérer localement les échéances, rappels et répétitions.</string>
+    <string name="tutorial_step_persistence_title">RAPPELS PERSISTANTS</string>
+    <string name="tutorial_step_persistence_body">Configurez des rappels persistants pour garder un œil sur les tâches importantes. Ils ne disparaîtront pas tant que la tâche n\'est pas marquée comme terminée.</string>
+    <string name="tutorial_step_categories_title">CATÉGORIES</string>
+    <string name="tutorial_step_categories_body">Regroupez les tâches liées en catégories pour garder la liste organisée.</string>
+    <string name="tutorial_step_categories_tips">SOUS-CATÉGORIES</string>
+    <string name="tutorial_step_categories_tips_body">Créez des sous-catégories pour mieux découper le travail sans perdre en vitesse.</string>
+    <string name="tutorial_step_search_title">RECHERCHE</string>
+    <string name="tutorial_step_search_body">Recherchez par texte de la tâche, notes, liens, pièces jointes et étiquettes.</string>
+    <string name="tutorial_step_tags_title">ÉTIQUETTES</string>
+    <string name="tutorial_step_tags_body">Vous pouvez associer plusieurs étiquettes à une tâche et les filtrer depuis la recherche.</string>
+    <string name="tutorial_step_summary_title">RÉSUMÉ</string>
+    <string name="tutorial_step_summary_body">Le résumé en haut affiche l\'état général de vos tâches en temps réel.</string>
+    <string name="tutorial_step_widgets_title">WIDGETS</string>
+    <string name="tutorial_step_widgets_body">Les widgets utilisent les mêmes données locales, donc ils restent synchronisés sans Internet.</string>
+    <string name="tutorial_step_end_title">PRÊT</string>
+    <string name="tutorial_step_end_body">Vous pouvez maintenant commencer à utiliser OpusAgenda.</string>
+    <string name="tutorial_counter_format">%1$d/%2$d</string>
+    <string name="tutorial_prev_label">PRÉCÉDENT</string>
+    <string name="tutorial_next_label">SUIVANT</string>
+    <string name="tutorial_finish_label">TERMINER LE TUTORIEL</string>
 </resources>
-
-
-
-
-

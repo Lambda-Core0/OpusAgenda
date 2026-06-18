@@ -31,7 +31,7 @@ class TaskRepeatReceiver : BroadcastReceiver() {
                 dao.update(updated)
 
                 val scheduler = TaskReminderScheduler(appContext)
-                scheduler.show(updated.id, updated.text)
+                scheduler.show(updated)
                 scheduler.sync(updated)
                 WidgetRefresh.notifyTaskWidgets(appContext)
             } finally {

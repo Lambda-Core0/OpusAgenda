@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <style name="Widget_OpusAgenda_ScrollIndicator">
+        <item name="android:scrollbarStyle">insideOverlay</item>
+        <item name="android:scrollbarSize">4dp</item>
+        <item name="android:fadeScrollbars">false</item>
+        <item name="android:scrollbarThumbVertical">@drawable/scrollbar_thumb</item>
+        <item name="android:scrollbarTrackVertical">@drawable/scrollbar_track</item>
+        <item name="android:scrollbarThumbHorizontal">@drawable/scrollbar_thumb</item>
+        <item name="android:scrollbarTrackHorizontal">@drawable/scrollbar_track</item>
+    </style>
+</resources>

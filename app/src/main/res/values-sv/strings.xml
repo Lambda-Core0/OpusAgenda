@@ -1,291 +1,156 @@
+<?xml version="1.0" encoding="utf-8"?>
 <resources>
     <string name="app_name">OpusAgenda</string>
-
-    <string name="app_header_title">♱ OpusAgenda v1.4</string>
-
+    <string name="app_header_title">♱ OpusAgenda v1.5</string>
     <string name="app_font_family">PirateOne</string>
-
-    <string name="search_hint">sökuppgifter...</string>
-
+    <string name="search_hint">sök uppgifter eller taggar...</string>
     <string name="empty_state_all">Inga uppgifter ännu. Använd NEW för att skapa en</string>
-
     <string name="empty_state_today">Inga akuta uppgifter idag</string>
-
     <string name="all_label">ALLA</string>
-
     <string name="today_label">IDAG</string>
-
     <string name="new_task_label">NYTT</string>
-
     <string name="run_command_label">KÖR</string>
-
     <string name="task_text_hint">Uppgiftstext</string>
-
     <string name="category_text_hint">Kategorinamn</string>
-
     <string name="save_label">SPARA</string>
-
     <string name="cancel_label">AVBRYT</string>
-
     <string name="pick_due_date_label">FÖRSLUTSDATUM</string>
-
     <string name="clear_due_date_label">RÄSTA FÖRSLAG</string>
-
     <string name="pinned_label">FÄST</string>
-
     <string name="completed_label">Avslutad</string>
-
     <string name="importance_label">Betydelse</string>
-
     <string name="task_dialog_title_new">Ny uppgift</string>
-
     <string name="task_dialog_title_edit">Redigera uppgift</string>
-
     <string name="category_dialog_title_new">Ny kategori</string>
-
     <string name="category_dialog_title_edit">Redigera kategori</string>
-
     <string name="task_text_required">Ange uppgiftstext</string>
-
     <string name="default_category_name">Kategori</string>
-
     <string name="category_badge_label">KATT</string>
-
     <string name="category_edit_label">REDIGERA</string>
-
     <string name="category_due_label">kategori</string>
-
     <string name="category_meta_format">underobjekt: %1$d  vikt: %2$d</string>
-
     <string name="category_move_invalid">Den flyttningen skulle skapa en ogiltig kapslad kategori</string>
-
     <string name="task_due_label">förfaller: %1$s</string>
-
     <string name="task_reminder_value_label">påminnelse: %1$s</string>
-
     <string name="task_date_with_relative">%1$s - %2$s</string>
-
     <string name="no_due_date">inget förfallodatum</string>
-
     <string name="no_reminder">ingen</string>
-
     <string name="due_relative_overdue">försenad %1$dd</string>
-
     <string name="due_relative_today">idag</string>
-
     <string name="due_relative_tomorrow">imorgon</string>
-
     <string name="due_relative_in">i %1$dd</string>
-
     <string name="pick_reminder_label">PÅMINN MIG</string>
-
     <string name="pick_repeat_label">REPETERA</string>
-
     <string name="clear_reminder_label">TYDLIG PÅMINNELSE</string>
-
     <string name="reminder_dialog_title">Välj påminnelse</string>
-
     <string name="reminder_option_none">Ingen påminnelse</string>
-
     <string name="reminder_option_hour">1 timme innan</string>
-
     <string name="reminder_option_day">1 dag innan</string>
-
     <string name="reminder_option_week">1 vecka innan</string>
-
     <string name="reminder_option_month">1 månad innan</string>
-
     <string name="reminder_option_custom">Anpassat datum och tid</string>
-
     <string name="reminder_summary_with_datetime">%1$s (%2$s)</string>
-
     <string name="reminder_requires_due_date">Ställ in ett förfallodatum först för att använda förinställningar</string>
-
     <string name="reminder_time_in_past">Påminnelsetiden måste ligga i framtiden</string>
-
     <string name="reminder_custom_date_title">Påminnelsedatum</string>
-
     <string name="reminder_custom_time_title">Påminnelsetid</string>
-
     <string name="reminder_channel_name">Uppgiftspåminnelser</string>
-
     <string name="reminder_channel_description">Aviseringar för schemalagda uppgiftspåminnelser</string>
-
     <string name="reminder_notification_title">Uppgiftspåminnelse</string>
-
     <string name="notifications_permission_denied">Aviseringstillstånd krävs för påminnelser</string>
-
     <string name="task_repeat_value_label">upprepa: %1$s</string>
-
     <string name="repeat_none">ingen</string>
-
     <string name="repeat_dialog_title">Välj upprepning</string>
-
     <string name="repeat_option_none">Ingen upprepning</string>
-
     <string name="repeat_option_hour">Varje timme</string>
-
     <string name="repeat_option_day">Varje dag</string>
-
     <string name="repeat_option_week">Varje vecka</string>
-
     <string name="repeat_option_month">Varje månad</string>
-
     <string name="repeat_option_year">Varje år</string>
-
     <string name="repeat_option_custom">Anpassat intervall</string>
-
     <string name="repeat_requires_reminder">Ställ in en påminnelse först för att använda upprepning</string>
-
     <string name="repeat_custom_title">Anpassad upprepning</string>
-
     <string name="repeat_custom_amount_hint">Intervallbelopp</string>
-
     <string name="repeat_custom_amount_invalid">Ange ett giltigt upprepningsbelopp</string>
-
     <string name="repeat_unit_minutes_label">Protokoll</string>
-
     <string name="repeat_unit_days_label">dagar</string>
-
     <string name="repeat_unit_hours_label">Timmar</string>
-
     <string name="repeat_unit_weeks_label">Veckor</string>
-
     <string name="repeat_unit_months_label">månader</string>
-
     <string name="repeat_unit_years_label">år</string>
-
     <string name="link_open_label">ÖPPEN</string>
-
     <string name="link_missing">Ingen länk tillgänglig att öppna</string>
-
     <string name="invalid_command">Ogiltigt kommando</string>
-
     <string name="task_saved">Uppgiften sparad</string>
-
     <string name="task_deleted">Uppgiften raderad</string>
-
     <string name="task_completed">Uppgiften uppdaterad</string>
-
     <string name="task_failed">Det gick inte att uppdatera uppgiften</string>
-
     <string name="summary_format">öppna: %1$d  idag: %2$d  totalt: %3$d</string>
-
     <string name="task_meta_format">vikt: %1$d  förfaller: %2$s  poäng: %3$d</string>
-
     <string name="task_pin_label">PIN-KOD</string>
-
     <string name="task_unpin_label">LOSSA</string>
-
     <string name="task_edit_label">REDIGERA</string>
-
     <string name="task_delete_label">TA BORT</string>
-
     <string name="quick_links_title">SNABLÄNKAR</string>
-
     <string name="new_link_label">NY LÄNK</string>
-
     <string name="quick_link_label_hint">Kort namn</string>
-
     <string name="quick_link_url_hint">https://quick.link</string>
-
     <string name="quick_link_new_title">Ny snabblänk</string>
-
     <string name="quick_link_edit_title">Redigera snabblänk</string>
-
     <string name="quick_link_saved">Snabblänk sparad</string>
-
     <string name="quick_link_deleted">Snabblänk raderad</string>
-
     <string name="quick_link_invalid">Ange ett giltigt namn och URL</string>
-
     <string name="quick_link_delete_label">TA BORT</string>
-
     <string name="widget_tasks_title">UPPGIFTER</string>
-
     <string name="widget_tasks_description">Uppgiftslista med ALLA- och IDAG-filter. Tryck på en rad för att växla klart</string>
-
     <string name="widget_quick_links_description">Snabblänkar sparade i OpusAgenda. Tryck för att öppna i webbläsaren</string>
-
     <string name="widget_quick_links_empty">Inga snabblänkar. Lägg till dem i appen</string>
-
     <string name="clock_time_placeholder">00:00:00</string>
-
     <string name="clock_date_placeholder">10 Apr 2026</string>
-
     <string name="font_dialog_title">Välj teckensnitt</string>
-
     <string name="font_applied">Teckensnitt tillämpat: %1$s</string>
-
+    <string name="backup_replace_label">ERSÄTT</string>
+    <string name="backup_import_warning_title">Importera uppgiftslista</string>
+    <string name="backup_import_warning_message">Import av en säkerhetskopia kommer att ta bort alla aktuella uppgifter innan den nya listan laddas. Fortsätta?</string>
+    <string name="backup_export_success">Säkerhetskopia exporterad: %1$d objekt</string>
+    <string name="backup_export_failed">Det gick inte att exportera säkerhetskopian</string>
+    <string name="backup_import_success">Säkerhetskopia importerad: %1$d objekt</string>
+    <string name="backup_import_failed">Det gick inte att importera säkerhetskopian</string>
+    <string name="backup_open_failed">Det gick inte att öppna den valda säkerhetskopiefilen</string>
+    <string name="backup_invalid_archive">Den valda filen är inte en giltig OpusAgenda-säkerhetskopia</string>
+    <string name="backup_unsupported_version">Det här säkerhetskopieringsformatet stöds inte av den aktuella appversionen</string>
+    <string name="backup_attachment_export_failed">Det gick inte att inkludera bilagan i säkerhetskopian: %1$s</string>
     <string name="new_category_label">NY KATT</string>
-
     <string name="new_subcategory_label">NY SUBC</string>
-
     <string name="new_child_task_label">NY UPPGIFT</string>
-
     <string name="task_description_label">Beskrivning</string>
-
     <string name="task_description_hint">Lägg till lite sammanhang för denna uppgift</string>
-
-
-
-
-
     <string name="task_description_title">Uppgiftsbeskrivning</string>
-
     <string name="task_description_icon_label">Öppna beskrivning</string>
-
     <string name="task_link_label">Tillhörande länk</string>
-
     <string name="task_link_hint">https://linked.resource</string>
-
-
-
-
-
     <string name="task_link_title">Uppgiftslänk</string>
-
     <string name="task_link_icon_label">Öppna länkdetaljer</string>
-
     <string name="task_attachment_label">Bifogad fil</string>
-
     <string name="task_attachment_empty">Ingen fil har valts</string>
-
     <string name="task_attachment_pick">VÄLJ FIL</string>
-
     <string name="task_attachment_clear">RENSA FIL</string>
-
-    <string name="task_attachment_record">RECORD</string>
-
-    <string name="task_attachment_stop_record">STOP</string>
-
-    <string name="task_attachment_recording">Recording…</string>
-
-    <string name="task_attachment_record_failed">Could not record audio</string>
-
-    <string name="task_attachment_record_permission_denied">Microphone permission is required to record audio</string>
-
-    <string name="task_attachment_finish_recording">Stop recording before saving the task</string>
+    <string name="task_attachment_record">SPELA IN</string>
+    <string name="task_attachment_stop_record">STOPP</string>
+    <string name="task_attachment_recording">Inspelning…</string>
+    <string name="task_attachment_record_failed">Kunde inte spela in ljud</string>
+    <string name="task_attachment_record_permission_denied">Mikrofontillstånd krävs för att spela in ljud</string>
+    <string name="task_attachment_finish_recording">Stoppa inspelningen innan du sparar uppgiften</string>
     <string name="task_attachment_saved">Fil bifogad</string>
-
     <string name="task_attachment_picker_failed">Det gick inte att läsa den valda filen</string>
-
     <string name="task_attachment_open_failed">Ingen app kan öppna den bilagan</string>
-
     <string name="task_attachment_title">Uppgiftsbilaga</string>
-
     <string name="task_attachment_icon_label">Öppna bifogad information</string>
-
     <string name="task_attachment_name_label">fil: %1$s</string>
-
     <string name="task_attachment_type_label">typ: %1$s</string>
-
     <string name="play_label">SPELA</string>
-
     <string name="stop_label">STOPP</string>
-
     <string name="task_attachment_no_preview">Ingen förhandsvisning tillgänglig</string>
-
     <string-array name="font_option_labels">
         <item>Inter</item>
         <item>Geo</item>
@@ -293,57 +158,113 @@
         <item>Octosquares</item>
         <item>PirateOne</item>
     </string-array>
-
     <string-array name="importance_options">
         <item>1 LÅG</item>
         <item>2 NORMAL</item>
         <item>3 HÖG</item>
         <item>4 KRITISKT</item>
     </string-array>
-
     <plurals name="repeat_unit_minutes">
         <item quantity="one">%1$d minut</item>
         <item quantity="other">%1$d minuter</item>
     </plurals>
-
     <plurals name="repeat_unit_hours">
         <item quantity="one">%1$d timme</item>
         <item quantity="other">%1$d timmar</item>
     </plurals>
-
     <plurals name="repeat_unit_days">
         <item quantity="one">%1$d dag</item>
         <item quantity="other">%1$d dagar</item>
     </plurals>
-
     <plurals name="repeat_unit_weeks">
         <item quantity="one">%1$d vecka</item>
         <item quantity="other">%1$d veckor</item>
     </plurals>
-
     <plurals name="repeat_unit_months">
         <item quantity="one">%1$d månad</item>
         <item quantity="other">%1$d månader</item>
     </plurals>
-
     <plurals name="repeat_unit_years">
         <item quantity="one">%1$d år</item>
         <item quantity="other">%1$d år</item>
     </plurals>
-
     <string name="previous_label">FÖREG</string>
-
     <string name="next_label">NÄSTA</string>
-
     <string name="pdf_page_indicator">Sida %1$d / %2$d</string>
     <string name="font_button_label">Byt teckensnitt</string>
     <string name="import_button_label">Importera säkerhetskopia</string>
     <string name="export_button_label">Exportera säkerhetskopia</string>
+    <string name="tutorial_step_categories_tips">Lägg till kontext i kategorier</string>
+    <string name="tutorial_step_categories_tips_body">Använd beskrivning, länkar och bilagor för att ge varje kategori mer kontext.</string>
+    <string name="settings_button_label">STARTA OM TUTORIAL</string>
+    <string name="tags_label">TAGGAR</string>
+    <string name="tags_hint">Arbete viktigt, personligt</string>
+    <string name="tag_colors_button_label">RGB</string>
+    <string name="tag_colors_edit_label">REDIGERA</string>
+    <string name="tag_colors_dialog_title">Tag färger</string>
+    <string name="tag_colors_dialog_help">Tryck på en tagg för att redigera dess färg.</string>
+    <string name="tag_colors_empty_state">Lägg till taggar först för att anpassa färger.</string>
+    <string name="tag_color_picker_title">Färg för %1$s</string>
+    <string name="tag_color_saved">Färgen sparad för %1$s</string>
+    <string name="tag_color_cleared">Automatisk färg återställd för %1$s</string>
+    <string name="tag_color_auto_label">AUTO</string>
+    <string name="tag_colors_tab_rgb">RGB</string>
+    <string name="tag_colors_tab_hex">HEX</string>
+    <string name="tag_colors_tab_selector">VÄLJARE</string>
+    <string name="tag_color_hex_hint">#RRGGBB</string>
+    <string name="tag_color_hex_help">Skriv en hex-färg och den uppdateras live.</string>
+    <string name="tag_color_selector_help">Dra i kartan: horisontell ändrar mättnad och vertikal ändrar ljusstyrka. Justera nyansen nedan.</string>
+    <string name="tag_color_hue_label">NYANS</string>
+    <string name="persistent_reminder_label">Ihållande påminnelse</string>
+    <string name="notification_action_complete">GJORT</string>
+    <string name="notification_action_snooze">SNOOZE 15M</string>
+    <string name="settings_dialog_title">HANDLEDNING</string>
+    <string name="settings_tutorial_relaunch_message">Vill du starta om handledningen?</string>
+    <string name="settings_tutorial_relaunch_label">STARTA OM TUTORIAL</string>
+    <string name="tutorial_restart_hint">Vänster remsa öppnar handledningsbekräftelse.</string>
+    <string name="tutorial_dialog_title">FÖRSTA LÖP</string>
+    <string name="tutorial_step_welcome_title">VÄLKOMMEN TILL OPUSAGENDA</string>
+    <string name="tutorial_step_welcome_body">En lokal-första uppgiftshanterare med kraftfulla funktioner och en terminalinspirerad design.</string>
+    <string name="tutorial_step_interface_title">GRÄNSSNITT</string>
+    <string name="tutorial_step_interface_body">Huvudskärmen visar dina uppgifter och en sammanfattning.</string>
+    <string name="tutorial_step_font_title">ALTERNATIV FÖR TECKENSNITT</string>
+    <string name="tutorial_step_font_body">Välj mellan 5 unika typsnitt för att anpassa utseendet och känslan av appen. Ditt val kommer att tillämpas i hela gränssnittet, inklusive widgets.</string>
+    <string name="tutorial_step_import_title">IMPORTERA DATA</string>
+    <string name="tutorial_step_import_body">Importera enkelt uppgifter från olika källor för att snabbt komma igång. Användbart för arbetsspecifika uppgifter och för att inte blanda dem med dina dagliga uppgifter (LÄS VARNINGAR)</string>
+    <string name="tutorial_step_export_title">EXPORTERA DATA</string>
+    <string name="tutorial_step_export_body">Exportera dina uppgifter till en fil för säkerhetskopiering eller delning. Den exporterade filen innehåller all uppgiftsinformation, bilagor och kategorier.</string>
+    <string name="tutorial_step_quick_links_title">SNABLÄNKAR</string>
+    <string name="tutorial_step_quick_links_body">Spara och organisera dina viktiga länkar i appen. Få åtkomst till dem snabbt från huvudskärmen och widgets. Lägg till en ny snabblänk med +-knappen i det övre högra hörnet.</string>
+    <string name="tutorial_step_filters_title">FILTER</string>
+    <string name="tutorial_step_filters_body">Använd ALLA- och IDAG-filter för att fokusera på det som är viktigt.</string>
+    <string name="tutorial_step_all_title">ALLA FILTER</string>
+    <string name="tutorial_step_all_body">Visar alla uppgifter i listan, sorterade efter förfallodatum och vikt.</string>
+    <string name="tutorial_step_today_title">IDAG FILTER</string>
+    <string name="tutorial_step_today_body">Fokusera på uppgifter som är förfallna idag eller försenade. Perfekt för din dagliga planering.</string>
+    <string name="tutorial_step_create_title">SKAPA UPPGIFT</string>
+    <string name="tutorial_step_create_body">Lägg till nya uppgifter snabbt från den här knappen. Håll inlägg korta för att vara snabba.</string>
+    <string name="tutorial_step_create_tips">LÄGG TILL KONTEXT</string>
+    <string name="tutorial_step_create_tips_body">Använd beskrivningar, länkar och bilagor för att hålla all uppgiftsinformation på ett ställe.</string>
+    <string name="tutorial_step_importance_title">BETYDELSE</string>
+    <string name="tutorial_step_importance_body">Ställ in viktnivåer för att sortera och filtrera uppgifter efter prioritet.</string>
+    <string name="tutorial_step_reminders_title">PÅMINNELSER</string>
+    <string name="tutorial_step_reminders_body">Idag hjälper filter och redigeraren dig att hantera förfallna arbeten, påminnelser och upprepningar lokalt.</string>
+    <string name="tutorial_step_persistence_title">IDRAGANDE PÅMINNELSER</string>
+    <string name="tutorial_step_persistence_body">Ställ in ihållande påminnelser för att hålla koll på viktiga uppgifter. Den kommer inte att avvisas förrän du markerar den som klar.</string>
+    <string name="tutorial_step_categories_title">KATEGORIER</string>
+    <string name="tutorial_step_categories_body">Gruppera relaterade uppgifter i kategorier för att hålla listan organiserad.</string>
+    <string name="tutorial_step_search_title">SÖKA</string>
+    <string name="tutorial_step_search_body">Sök efter uppgiftstext, anteckningar, länkar, bilagor och taggar.</string>
+    <string name="tutorial_step_tags_title">TAGGAR</string>
+    <string name="tutorial_step_tags_body">Lägg till taggar i uppgifter och kategorier för att skapa anpassade filter och organisera ditt arbete.</string>
+    <string name="tutorial_step_summary_title">SAMMANFATTNING</string>
+    <string name="tutorial_step_summary_body">Sammanfattningen högst upp ger dig en snabb överblick över dina öppna och akuta uppgifter.</string>
+    <string name="tutorial_step_widgets_title">WIDGETAR</string>
+    <string name="tutorial_step_widgets_body">Widgetar använder samma lokala data, så de förblir synkroniserade utan internet.</string>
+    <string name="tutorial_step_end_title">SLUTET?</string>
+    <string name="tutorial_step_end_body">Det är allt för handledningen. Njut av att använda OpusAgenda!</string>
+    <string name="tutorial_counter_format">%1$d/%2$d</string>
+    <string name="tutorial_prev_label">TIDIGARE</string>
+    <string name="tutorial_next_label">NÄSTA</string>
+    <string name="tutorial_finish_label">AVSLUTA TUTORIAL</string>
 </resources>
-
-
-
-
-
-
-

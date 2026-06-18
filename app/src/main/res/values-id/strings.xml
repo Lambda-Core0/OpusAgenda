@@ -1,291 +1,156 @@
+<?xml version="1.0" encoding="utf-8"?>
 <resources>
     <string name="app_name">OpusAgenda</string>
-
-    <string name="app_header_title">♱ OpusAgenda v1.4</string>
-
+    <string name="app_header_title">♱ OpusAgenda v1.5</string>
     <string name="app_font_family">PirateOne</string>
-
-    <string name="search_hint">tugas pencarian...</string>
-
+    <string name="search_hint">cari tugas atau tag...</string>
     <string name="empty_state_all">Belum ada tugas. Gunakan BARU untuk membuatnya</string>
-
     <string name="empty_state_today">Tidak ada tugas mendesak untuk hari ini</string>
-
     <string name="all_label">SEMUA</string>
-
     <string name="today_label">HARI INI</string>
-
     <string name="new_task_label">BARU</string>
-
     <string name="run_command_label">LARI</string>
-
     <string name="task_text_hint">Teks tugas</string>
-
     <string name="category_text_hint">Nama kategori</string>
-
     <string name="save_label">SIMPAN</string>
-
     <string name="cancel_label">BATAL</string>
-
     <string name="pick_due_date_label">TANGGAL JATUH</string>
-
     <string name="clear_due_date_label">JELASKAN UTANG</string>
-
     <string name="pinned_label">DIPISIN</string>
-
     <string name="completed_label">Selesai</string>
-
     <string name="importance_label">Pentingnya</string>
-
     <string name="task_dialog_title_new">Tugas baru</string>
-
     <string name="task_dialog_title_edit">Sunting tugas</string>
-
     <string name="category_dialog_title_new">Kategori baru</string>
-
     <string name="category_dialog_title_edit">Sunting kategori</string>
-
     <string name="task_text_required">Masukkan teks tugas</string>
-
     <string name="default_category_name">Kategori</string>
-
     <string name="category_badge_label">KUCING</string>
-
     <string name="category_edit_label">SUNTING</string>
-
     <string name="category_due_label">kategori</string>
-
     <string name="category_meta_format">anak: %1$d  kepentingan: %2$d</string>
-
     <string name="category_move_invalid">Perpindahan tersebut akan membuat kategori bertingkat menjadi tidak valid</string>
-
     <string name="task_due_label">jatuh tempo: %1$s</string>
-
     <string name="task_reminder_value_label">pengingat: %1$s</string>
-
     <string name="task_date_with_relative">%1$s - %2$s</string>
-
     <string name="no_due_date">tidak ada tanggal jatuh tempo</string>
-
     <string name="no_reminder">tidak ada</string>
-
     <string name="due_relative_overdue">terlambat %1$dd</string>
-
     <string name="due_relative_today">hari ini</string>
-
     <string name="due_relative_tomorrow">besok</string>
-
     <string name="due_relative_in">di %1$dd</string>
-
     <string name="pick_reminder_label">INGATKAN SAYA</string>
-
     <string name="pick_repeat_label">ULANGI</string>
-
     <string name="clear_reminder_label">PENGINGAT YANG JELAS</string>
-
     <string name="reminder_dialog_title">Pilih pengingat</string>
-
     <string name="reminder_option_none">Tidak ada pengingat</string>
-
     <string name="reminder_option_hour">1 jam sebelumnya</string>
-
     <string name="reminder_option_day">1 hari sebelumnya</string>
-
     <string name="reminder_option_week">1 minggu sebelumnya</string>
-
     <string name="reminder_option_month">1 bulan sebelumnya</string>
-
     <string name="reminder_option_custom">Tanggal dan waktu khusus</string>
-
     <string name="reminder_summary_with_datetime">%1$s (%2$s)</string>
-
     <string name="reminder_requires_due_date">Tetapkan tanggal jatuh tempo terlebih dahulu untuk menggunakan preset</string>
-
     <string name="reminder_time_in_past">Waktu pengingat harus di masa depan</string>
-
     <string name="reminder_custom_date_title">Tanggal pengingat</string>
-
     <string name="reminder_custom_time_title">Waktu pengingat</string>
-
     <string name="reminder_channel_name">Pengingat tugas</string>
-
     <string name="reminder_channel_description">Pemberitahuan untuk pengingat tugas terjadwal</string>
-
     <string name="reminder_notification_title">Pengingat tugas</string>
-
     <string name="notifications_permission_denied">Izin pemberitahuan diperlukan untuk pengingat</string>
-
     <string name="task_repeat_value_label">ulangi: %1$s</string>
-
     <string name="repeat_none">tidak ada</string>
-
     <string name="repeat_dialog_title">Pilih pengulangan</string>
-
     <string name="repeat_option_none">Tidak ada pengulangan</string>
-
     <string name="repeat_option_hour">Setiap jam</string>
-
     <string name="repeat_option_day">Setiap hari</string>
-
     <string name="repeat_option_week">Setiap minggu</string>
-
     <string name="repeat_option_month">Setiap bulan</string>
-
     <string name="repeat_option_year">Setiap tahun</string>
-
     <string name="repeat_option_custom">Interval khusus</string>
-
     <string name="repeat_requires_reminder">Atur pengingat terlebih dahulu untuk menggunakan pengulangan</string>
-
     <string name="repeat_custom_title">Pengulangan khusus</string>
-
     <string name="repeat_custom_amount_hint">Jumlah interval</string>
-
     <string name="repeat_custom_amount_invalid">Masukkan jumlah pengulangan yang valid</string>
-
     <string name="repeat_unit_minutes_label">Menit</string>
-
     <string name="repeat_unit_days_label">hari</string>
-
     <string name="repeat_unit_hours_label">Jam</string>
-
     <string name="repeat_unit_weeks_label">Minggu</string>
-
     <string name="repeat_unit_months_label">Bulan</string>
-
     <string name="repeat_unit_years_label">Bertahun-tahun</string>
-
     <string name="link_open_label">BUKA</string>
-
     <string name="link_missing">Tidak ada tautan yang tersedia untuk dibuka</string>
-
     <string name="invalid_command">Perintah tidak valid</string>
-
     <string name="task_saved">Tugas disimpan</string>
-
     <string name="task_deleted">Tugas dihapus</string>
-
     <string name="task_completed">Tugas diperbarui</string>
-
     <string name="task_failed">Tidak dapat memperbarui tugas</string>
-
     <string name="summary_format">terbuka: %1$d  hari ini: %2$d  total: %3$d</string>
-
     <string name="task_meta_format">kepentingan: %1$d  tenggat: %2$s  skor: %3$d</string>
-
     <string name="task_pin_label">SEMATKAN</string>
-
     <string name="task_unpin_label">LEPASKAN PIN</string>
-
     <string name="task_edit_label">SUNTING</string>
-
     <string name="task_delete_label">HAPUS</string>
-
     <string name="quick_links_title">LINK CEPAT</string>
-
     <string name="new_link_label">TAUTAN BARU</string>
-
     <string name="quick_link_label_hint">Nama pendek</string>
-
     <string name="quick_link_url_hint">https://quick.link</string>
-
     <string name="quick_link_new_title">Tautan cepat baru</string>
-
     <string name="quick_link_edit_title">Edit tautan cepat</string>
-
     <string name="quick_link_saved">Tautan cepat disimpan</string>
-
     <string name="quick_link_deleted">Tautan cepat dihapus</string>
-
     <string name="quick_link_invalid">Masukkan nama dan URL yang valid</string>
-
     <string name="quick_link_delete_label">HAPUS</string>
-
     <string name="widget_tasks_title">TUGAS</string>
-
     <string name="widget_tasks_description">Daftar tugas dengan filter SEMUA dan HARI INI. Ketuk satu baris untuk beralih selesai</string>
-
     <string name="widget_quick_links_description">Tautan cepat disimpan di OpusAgenda. Ketuk untuk membuka di browser</string>
-
     <string name="widget_quick_links_empty">Tidak ada tautan cepat. Tambahkan mereka di aplikasi</string>
-
     <string name="clock_time_placeholder">00:00:00</string>
-
     <string name="clock_date_placeholder">10 Apr 2026</string>
-
     <string name="font_dialog_title">Pilih font</string>
-
     <string name="font_applied">Font yang diterapkan: %1$s</string>
-
+    <string name="backup_replace_label">GANTI</string>
+    <string name="backup_import_warning_title">Impor daftar tugas</string>
+    <string name="backup_import_warning_message">Mengimpor cadangan akan menghapus semua tugas saat ini sebelum memuat daftar baru. Lanjutkan?</string>
+    <string name="backup_export_success">Cadangan diekspor: %1$d item</string>
+    <string name="backup_export_failed">Cadangan tidak dapat diekspor</string>
+    <string name="backup_import_success">Cadangan diimpor: %1$d item</string>
+    <string name="backup_import_failed">Cadangan tidak dapat diimpor</string>
+    <string name="backup_open_failed">File cadangan yang dipilih tidak dapat dibuka</string>
+    <string name="backup_invalid_archive">File yang dipilih bukan cadangan OpusAgenda yang valid</string>
+    <string name="backup_unsupported_version">Format cadangan ini tidak didukung oleh versi aplikasi saat ini</string>
+    <string name="backup_attachment_export_failed">Lampiran tidak dapat disertakan dalam cadangan: %1$s</string>
     <string name="new_category_label">KUCING BARU</string>
-
     <string name="new_subcategory_label">SUBC BARU</string>
-
     <string name="new_child_task_label">TUGAS BARU</string>
-
     <string name="task_description_label">Deskripsi</string>
-
     <string name="task_description_hint">Tambahkan beberapa konteks untuk tugas ini</string>
-
-
-
-
-
     <string name="task_description_title">Deskripsi tugas</string>
-
     <string name="task_description_icon_label">Buka deskripsi</string>
-
     <string name="task_link_label">Tautan terkait</string>
-
     <string name="task_link_hint">https://linked.resource</string>
-
-
-
-
-
     <string name="task_link_title">Tautan tugas</string>
-
     <string name="task_link_icon_label">Buka detail tautan</string>
-
     <string name="task_attachment_label">File terlampir</string>
-
     <string name="task_attachment_empty">Tidak ada berkas yang dipilih</string>
-
     <string name="task_attachment_pick">PILIH FILE</string>
-
     <string name="task_attachment_clear">HAPUS FILE</string>
-
-    <string name="task_attachment_record">RECORD</string>
-
-    <string name="task_attachment_stop_record">STOP</string>
-
-    <string name="task_attachment_recording">Recording…</string>
-
-    <string name="task_attachment_record_failed">Could not record audio</string>
-
-    <string name="task_attachment_record_permission_denied">Microphone permission is required to record audio</string>
-
-    <string name="task_attachment_finish_recording">Stop recording before saving the task</string>
+    <string name="task_attachment_record">CATATAN</string>
+    <string name="task_attachment_stop_record">BERHENTI</string>
+    <string name="task_attachment_recording">Rekaman…</string>
+    <string name="task_attachment_record_failed">Tidak dapat merekam audio</string>
+    <string name="task_attachment_record_permission_denied">Izin mikrofon diperlukan untuk merekam audio</string>
+    <string name="task_attachment_finish_recording">Hentikan perekaman sebelum menyimpan tugas</string>
     <string name="task_attachment_saved">File terlampir</string>
-
     <string name="task_attachment_picker_failed">Tidak dapat membaca file yang dipilih</string>
-
     <string name="task_attachment_open_failed">Tidak ada aplikasi yang dapat membuka lampiran itu</string>
-
     <string name="task_attachment_title">Lampiran tugas</string>
-
     <string name="task_attachment_icon_label">Buka detail lampiran</string>
-
     <string name="task_attachment_name_label">berkas: %1$s</string>
-
     <string name="task_attachment_type_label">ketik: %1$s</string>
-
     <string name="play_label">MAINKAN</string>
-
     <string name="stop_label">BERHENTI</string>
-
     <string name="task_attachment_no_preview">Tidak ada pratinjau yang tersedia</string>
-
     <string-array name="font_option_labels">
         <item>Inter</item>
         <item>Geo</item>
@@ -293,55 +158,113 @@
         <item>Octosquares</item>
         <item>PirateOne</item>
     </string-array>
-
     <string-array name="importance_options">
         <item>1 RENDAH</item>
         <item>2 NORMAL</item>
         <item>3 TINGGI</item>
         <item>4 KRITIS</item>
     </string-array>
-
     <plurals name="repeat_unit_minutes">
         <item quantity="one">%1$d menit</item>
         <item quantity="other">%1$d menit</item>
     </plurals>
-
     <plurals name="repeat_unit_hours">
         <item quantity="one">jam %1$d</item>
         <item quantity="other">%1$d jam</item>
     </plurals>
-
     <plurals name="repeat_unit_days">
         <item quantity="one">%1$d hari</item>
         <item quantity="other">%1$d hari</item>
     </plurals>
-
     <plurals name="repeat_unit_weeks">
         <item quantity="one">minggu %1$d</item>
         <item quantity="other">%1$d minggu</item>
     </plurals>
-
     <plurals name="repeat_unit_months">
         <item quantity="one">%1$d bulan</item>
         <item quantity="other">%1$d bulan</item>
     </plurals>
-
     <plurals name="repeat_unit_years">
         <item quantity="one">%1$d tahun</item>
         <item quantity="other">%1$d tahun</item>
     </plurals>
-
     <string name="previous_label">SEBELUMNYA</string>
-
     <string name="next_label">BERIKUTNYA</string>
-
     <string name="pdf_page_indicator">Halaman %1$d / %2$d</string>
     <string name="font_button_label">Ubah font</string>
     <string name="import_button_label">Impor cadangan</string>
     <string name="export_button_label">Ekspor cadangan</string>
+    <string name="tutorial_step_categories_tips">Tambahkan konteks ke kategori</string>
+    <string name="tutorial_step_categories_tips_body">Gunakan deskripsi, tautan, dan lampiran untuk memberi setiap kategori lebih banyak konteks.</string>
+    <string name="settings_button_label">TUTORIAL MULAI ULANG</string>
+    <string name="tags_label">TAG</string>
+    <string name="tags_hint">Pekerjaan itu penting, Pribadi</string>
+    <string name="tag_colors_button_label">RGB</string>
+    <string name="tag_colors_edit_label">Sunting</string>
+    <string name="tag_colors_dialog_title">Tandai warna</string>
+    <string name="tag_colors_dialog_help">Ketuk tag untuk mengedit warnanya.</string>
+    <string name="tag_colors_empty_state">Tambahkan tag terlebih dahulu untuk menyesuaikan warna.</string>
+    <string name="tag_color_picker_title">Warna untuk %1$s</string>
+    <string name="tag_color_saved">Warna disimpan untuk %1$s</string>
+    <string name="tag_color_cleared">Warna otomatis dipulihkan untuk %1$s</string>
+    <string name="tag_color_auto_label">AUTO</string>
+    <string name="tag_colors_tab_rgb">RGB</string>
+    <string name="tag_colors_tab_hex">HEX</string>
+    <string name="tag_colors_tab_selector">PEMILIH</string>
+    <string name="tag_color_hex_hint">#RRGGBB</string>
+    <string name="tag_color_hex_help">Ketikkan warna hex dan itu akan diperbarui secara langsung.</string>
+    <string name="tag_color_selector_help">Seret peta: horizontal mengubah saturasi dan vertikal mengubah kecerahan. Sesuaikan rona di bawah.</string>
+    <string name="tag_color_hue_label">WARNA</string>
+    <string name="persistent_reminder_label">Pengingat terus-menerus</string>
+    <string name="notification_action_complete">SELESAI</string>
+    <string name="notification_action_snooze">TUNDA 15M</string>
+    <string name="settings_dialog_title">TUTORIAL</string>
+    <string name="settings_tutorial_relaunch_message">Apakah Anda ingin memulai kembali tutorialnya?</string>
+    <string name="settings_tutorial_relaunch_label">TUTORIAL MULAI ULANG</string>
+    <string name="tutorial_restart_hint">Strip kiri membuka konfirmasi tutorial.</string>
+    <string name="tutorial_dialog_title">LARI PERTAMA</string>
+    <string name="tutorial_step_welcome_title">SELAMAT DATANG DI OPUSAGENDA</string>
+    <string name="tutorial_step_welcome_body">Manajer tugas lokal pertama dengan fitur canggih dan desain yang terinspirasi terminal.</string>
+    <string name="tutorial_step_interface_title">ANTARMUKA</string>
+    <string name="tutorial_step_interface_body">Layar utama menampilkan tugas dan ringkasan Anda.</string>
+    <string name="tutorial_step_font_title">OPSI FONT</string>
+    <string name="tutorial_step_font_body">Pilih dari 5 font unik untuk menyesuaikan tampilan dan nuansa aplikasi. Pilihan Anda akan diterapkan di seluruh antarmuka, termasuk widget.</string>
+    <string name="tutorial_step_import_title">IMPOR DATA</string>
+    <string name="tutorial_step_import_body">Impor tugas dengan mudah dari berbagai sumber untuk memulai dengan cepat. Berguna untuk tugas-tugas tertentu dan tidak mencampurkannya dengan tugas sehari-hari Anda (BACA PERINGATAN)</string>
+    <string name="tutorial_step_export_title">EKSPOR DATA</string>
+    <string name="tutorial_step_export_body">Ekspor tugas Anda ke file untuk dicadangkan atau dibagikan. File yang diekspor mencakup semua detail tugas, lampiran, dan kategori.</string>
+    <string name="tutorial_step_quick_links_title">LINK CEPAT</string>
+    <string name="tutorial_step_quick_links_body">Simpan dan atur tautan penting Anda di aplikasi. Akses dengan cepat dari layar utama dan widget. Tambahkan tautan cepat baru menggunakan tombol + di pojok kanan atas.</string>
+    <string name="tutorial_step_filters_title">FILTER</string>
+    <string name="tutorial_step_filters_body">Gunakan filter SEMUA dan HARI INI untuk fokus pada hal yang penting.</string>
+    <string name="tutorial_step_all_title">SEMUA FILTER</string>
+    <string name="tutorial_step_all_body">Menampilkan semua tugas dalam daftar, diurutkan berdasarkan tanggal jatuh tempo dan kepentingannya.</string>
+    <string name="tutorial_step_today_title">FILTER HARI INI</string>
+    <string name="tutorial_step_today_body">Fokus pada tugas yang harus diselesaikan hari ini atau sudah lewat waktu. Sempurna untuk perencanaan harian Anda.</string>
+    <string name="tutorial_step_create_title">BUAT TUGAS</string>
+    <string name="tutorial_step_create_body">Tambahkan tugas baru dengan cepat dari tombol ini. Buat entri singkat agar tetap cepat.</string>
+    <string name="tutorial_step_create_tips">TAMBAHKAN KONTEKS</string>
+    <string name="tutorial_step_create_tips_body">Gunakan deskripsi, tautan, dan lampiran untuk menyimpan semua detail tugas di satu tempat.</string>
+    <string name="tutorial_step_importance_title">PENTINGNYA</string>
+    <string name="tutorial_step_importance_body">Tetapkan tingkat kepentingan untuk mengurutkan dan memfilter tugas berdasarkan prioritas.</string>
+    <string name="tutorial_step_reminders_title">PENGINGAT</string>
+    <string name="tutorial_step_reminders_body">Filter hari ini dan editor membantu Anda mengelola tugas, pengingat, dan pengulangan secara lokal.</string>
+    <string name="tutorial_step_persistence_title">PENGINGAT YANG PERSISTEN</string>
+    <string name="tutorial_step_persistence_body">Atur pengingat terus-menerus untuk terus memantau tugas-tugas penting. Ini tidak akan ditutup sampai Anda menandainya sebagai selesai.</string>
+    <string name="tutorial_step_categories_title">KATEGORI</string>
+    <string name="tutorial_step_categories_body">Kelompokkan tugas terkait ke dalam kategori agar daftar tetap teratur.</string>
+    <string name="tutorial_step_search_title">MENCARI</string>
+    <string name="tutorial_step_search_body">Cari berdasarkan teks tugas, catatan, tautan, lampiran, dan tag.</string>
+    <string name="tutorial_step_tags_title">TAG</string>
+    <string name="tutorial_step_tags_body">Tambahkan tag ke tugas dan kategori untuk membuat filter khusus dan mengatur pekerjaan Anda.</string>
+    <string name="tutorial_step_summary_title">RINGKASAN</string>
+    <string name="tutorial_step_summary_body">Ringkasan di atas memberi Anda gambaran singkat tentang tugas-tugas Anda yang terbuka dan mendesak.</string>
+    <string name="tutorial_step_widgets_title">WIDGET</string>
+    <string name="tutorial_step_widgets_body">Widget menggunakan data lokal yang sama, sehingga tetap tersinkron tanpa internet.</string>
+    <string name="tutorial_step_end_title">AKHIR?</string>
+    <string name="tutorial_step_end_body">Itu saja untuk tutorialnya. Selamat menggunakan OpusAgenda!</string>
+    <string name="tutorial_counter_format">%1$d/%2$d</string>
+    <string name="tutorial_prev_label">SEBELUMNYA</string>
+    <string name="tutorial_next_label">BERIKUTNYA</string>
+    <string name="tutorial_finish_label">SELESAI TUTORIAL</string>
 </resources>
-
-
-
-
-

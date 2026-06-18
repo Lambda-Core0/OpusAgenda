@@ -93,6 +93,10 @@ class TaskBackupManager(
                 }
             }
 
+            parsedBackup.tagColors?.let { colors ->
+                runCatching { TagColorStore.replaceAll(appContext, colors) }
+            }
+
             previousTasks.forEach { reminderScheduler.cancel(it.id) }
             importedTasks.forEach(reminderScheduler::sync)
             cleanupManagedAttachments(previousTasks)
@@ -142,8 +146,14 @@ class TaskBackupManager(
             val manifest = manifestContent ?: throw TaskBackupException(
                 appContext.getString(R.string.backup_invalid_archive)
             )
+            val manifestJson = try {
+                JSONObject(manifest)
+            } catch (exception: Exception) {
+                throw TaskBackupException(appContext.getString(R.string.backup_invalid_archive), exception)
+            }
             ParsedBackup(
                 tasks = parseManifest(manifest),
+                tagColors = parseTagColors(manifestJson.optJSONObject(KEY_TAG_COLORS)),
                 attachmentFiles = extractedFiles,
                 tempDirectory = tempDirectory
             )
@@ -161,7 +171,7 @@ class TaskBackupManager(
         }
 
         val version = manifest.optInt(KEY_FORMAT_VERSION, -1)
-        if (version != BACKUP_FORMAT_VERSION) {
+        if (version !in 1..BACKUP_FORMAT_VERSION) {
             throw TaskBackupException(appContext.getString(R.string.backup_unsupported_version))
         }
 
@@ -194,7 +204,9 @@ class TaskBackupManager(
                         dueDate = item.optNullableLong(KEY_DUE_DATE),
                         description = item.optNullableString(KEY_DESCRIPTION),
                         link = item.optNullableString(KEY_LINK),
+                        tags = item.optNullableString(KEY_TAGS),
                         pinned = item.optBoolean(KEY_PINNED, false),
+                        persistentReminder = item.optBoolean(KEY_PERSISTENT_REMINDER, false),
                         reminderAt = item.optNullableLong(KEY_REMINDER_AT),
                         repeatAmount = item.optNullableInt(KEY_REPEAT_AMOUNT),
                         repeatUnit = item.optNullableString(KEY_REPEAT_UNIT),
@@ -252,9 +264,11 @@ class TaskBackupManager(
             attachmentName = materializedAttachment?.name,
             attachmentMimeType = materializedAttachment?.mimeType,
             pinned = task.pinned,
+            persistentReminder = task.persistentReminder,
             reminderAt = task.reminderAt,
             repeatAmount = task.repeatAmount,
             repeatUnit = task.repeatUnit,
+            tags = task.tags,
             createdAt = task.createdAt
         )
     }
@@ -308,6 +322,7 @@ class TaskBackupManager(
         return JSONObject().apply {
             put(KEY_FORMAT_VERSION, BACKUP_FORMAT_VERSION)
             put(KEY_EXPORTED_AT, System.currentTimeMillis())
+            put(KEY_TAG_COLORS, buildTagColorsObject())
             put(
                 KEY_TASKS,
                 JSONArray().apply {
@@ -325,7 +340,9 @@ class TaskBackupManager(
                                 put(KEY_DUE_DATE, task.dueDate)
                                 put(KEY_DESCRIPTION, task.description)
                                 put(KEY_LINK, task.link)
+                                put(KEY_TAGS, task.tags)
                                 put(KEY_PINNED, task.pinned)
+                                put(KEY_PERSISTENT_REMINDER, task.persistentReminder)
                                 put(KEY_REMINDER_AT, task.reminderAt)
                                 put(KEY_REPEAT_AMOUNT, task.repeatAmount)
                                 put(KEY_REPEAT_UNIT, task.repeatUnit)
@@ -338,6 +355,26 @@ class TaskBackupManager(
                     }
                 }
             )
+        }
+    }
+
+    private fun buildTagColorsObject(): JSONObject {
+        return JSONObject().apply {
+            TagColorStore.snapshot(appContext).forEach { (tag, color) ->
+                put(tag, color)
+            }
+        }
+    }
+
+    private fun parseTagColors(tagColorsJson: JSONObject?): Map<String, Int>? {
+        return tagColorsJson?.let { json ->
+            mutableMapOf<String, Int>().apply {
+                val keys = json.keys()
+                while (keys.hasNext()) {
+                    val key = keys.next()
+                    put(key, json.optInt(key))
+                }
+            }
         }
     }
 
@@ -393,7 +430,9 @@ class TaskBackupManager(
         val dueDate: Long?,
         val description: String?,
         val link: String?,
+        val tags: String?,
         val pinned: Boolean,
+        val persistentReminder: Boolean,
         val reminderAt: Long?,
         val repeatAmount: Int?,
         val repeatUnit: String?,
@@ -405,6 +444,7 @@ class TaskBackupManager(
 
     private data class ParsedBackup(
         val tasks: List<BackupTask>,
+        val tagColors: Map<String, Int>?,
         val attachmentFiles: Map<String, File>,
         val tempDirectory: File
     )
@@ -421,7 +461,7 @@ class TaskBackupManager(
     ) : IllegalStateException(message, cause)
 
     private companion object {
-        private const val BACKUP_FORMAT_VERSION = 1
+        private const val BACKUP_FORMAT_VERSION = 3
         private const val MANIFEST_ENTRY_NAME = "opusagenda_backup.json"
 
         private const val KEY_FORMAT_VERSION = "formatVersion"
@@ -438,7 +478,10 @@ class TaskBackupManager(
         private const val KEY_DUE_DATE = "dueDate"
         private const val KEY_DESCRIPTION = "description"
         private const val KEY_LINK = "link"
+        private const val KEY_TAGS = "tags"
+        private const val KEY_TAG_COLORS = "tagColors"
         private const val KEY_PINNED = "pinned"
+        private const val KEY_PERSISTENT_REMINDER = "persistentReminder"
         private const val KEY_REMINDER_AT = "reminderAt"
         private const val KEY_REPEAT_AMOUNT = "repeatAmount"
         private const val KEY_REPEAT_UNIT = "repeatUnit"

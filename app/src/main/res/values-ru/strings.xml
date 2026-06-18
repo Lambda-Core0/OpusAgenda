@@ -1,291 +1,156 @@
+<?xml version="1.0" encoding="utf-8"?>
 <resources>
     <string name="app_name">OpusAgenda</string>
-
-    <string name="app_header_title">♱ OpusAgenda v1.4</string>
-
+    <string name="app_header_title">♱ OpusAgenda v1.5</string>
     <string name="app_font_family">PirateOne</string>
-
-    <string name="search_hint">поиск задач...</string>
-
+    <string name="search_hint">поиск задач или тегов...</string>
     <string name="empty_state_all">Заданий пока нет. Используйте NEW, чтобы создать его.</string>
-
     <string name="empty_state_today">На сегодня нет срочных задач</string>
-
     <string name="all_label">ВСЕ</string>
-
     <string name="today_label">СЕГОДНЯ</string>
-
     <string name="new_task_label">НОВЫЙ</string>
-
     <string name="run_command_label">БЕГАТЬ</string>
-
     <string name="task_text_hint">Текст задачи</string>
-
     <string name="category_text_hint">Название категории</string>
-
     <string name="save_label">СОХРАНИТЬ</string>
-
     <string name="cancel_label">ОТМЕНА</string>
-
     <string name="pick_due_date_label">СРОК СДАЧИ</string>
-
     <string name="clear_due_date_label">ЧИСТЫЙ СРОК</string>
-
     <string name="pinned_label">ПРИКРЕПЛЕНО</string>
-
     <string name="completed_label">Завершено</string>
-
     <string name="importance_label">Важность</string>
-
     <string name="task_dialog_title_new">Новая задача</string>
-
     <string name="task_dialog_title_edit">Изменить задачу</string>
-
     <string name="category_dialog_title_new">Новая категория</string>
-
     <string name="category_dialog_title_edit">Изменить категорию</string>
-
     <string name="task_text_required">Введите текст задачи</string>
-
     <string name="default_category_name">Категория</string>
-
     <string name="category_badge_label">КОТ</string>
-
     <string name="category_edit_label">РЕДАКТИРОВАТЬ</string>
-
     <string name="category_due_label">категория</string>
-
     <string name="category_meta_format">дочерние: %1$d  важн.: %2$d</string>
-
     <string name="category_move_invalid">Этот шаг приведет к созданию недопустимой вложенной категории.</string>
-
     <string name="task_due_label">срок погашения: %1$s</string>
-
     <string name="task_reminder_value_label">напоминание: %1$s</string>
-
     <string name="task_date_with_relative">%1$s - %2$s</string>
-
     <string name="no_due_date">нет срока</string>
-
     <string name="no_reminder">нет</string>
-
     <string name="due_relative_overdue">просроченный %1$dd</string>
-
     <string name="due_relative_today">сегодня</string>
-
     <string name="due_relative_tomorrow">завтра</string>
-
     <string name="due_relative_in">в %1$dd</string>
-
     <string name="pick_reminder_label">НАПОМНИ МНЕ</string>
-
     <string name="pick_repeat_label">ПОВТОРИТЬ</string>
-
     <string name="clear_reminder_label">ЧЕТКОЕ НАПОМИНАНИЕ</string>
-
     <string name="reminder_dialog_title">Выберите напоминание</string>
-
     <string name="reminder_option_none">Нет напоминаний</string>
-
     <string name="reminder_option_hour">за 1 час до</string>
-
     <string name="reminder_option_day">1 день назад</string>
-
     <string name="reminder_option_week">за 1 неделю до</string>
-
     <string name="reminder_option_month">1 месяц назад</string>
-
     <string name="reminder_option_custom">Пользовательская дата и время</string>
-
     <string name="reminder_summary_with_datetime">%1$s (%2$s)</string>
-
     <string name="reminder_requires_due_date">Сначала установите дату выполнения, чтобы использовать предустановки</string>
-
     <string name="reminder_time_in_past">Время напоминания должно быть в будущем</string>
-
     <string name="reminder_custom_date_title">Дата напоминания</string>
-
     <string name="reminder_custom_time_title">Время напоминания</string>
-
     <string name="reminder_channel_name">Напоминания о задачах</string>
-
     <string name="reminder_channel_description">Уведомления о напоминаниях о запланированных задачах</string>
-
     <string name="reminder_notification_title">Напоминание о задаче</string>
-
     <string name="notifications_permission_denied">Для напоминаний требуется разрешение на уведомления.</string>
-
     <string name="task_repeat_value_label">повторяю: %1$s</string>
-
     <string name="repeat_none">нет</string>
-
     <string name="repeat_dialog_title">Выберите повторение</string>
-
     <string name="repeat_option_none">Нет повтора</string>
-
     <string name="repeat_option_hour">Каждый час</string>
-
     <string name="repeat_option_day">Каждый день</string>
-
     <string name="repeat_option_week">Каждую неделю</string>
-
     <string name="repeat_option_month">Каждый месяц</string>
-
     <string name="repeat_option_year">Каждый год</string>
-
     <string name="repeat_option_custom">Пользовательский интервал</string>
-
     <string name="repeat_requires_reminder">Сначала установите напоминание, чтобы использовать повторение</string>
-
     <string name="repeat_custom_title">Пользовательское повторение</string>
-
     <string name="repeat_custom_amount_hint">Сумма интервала</string>
-
     <string name="repeat_custom_amount_invalid">Введите допустимое количество повторений</string>
-
     <string name="repeat_unit_minutes_label">Минуты</string>
-
     <string name="repeat_unit_days_label">Дни</string>
-
     <string name="repeat_unit_hours_label">Часы</string>
-
     <string name="repeat_unit_weeks_label">Недели</string>
-
     <string name="repeat_unit_months_label">Месяцы</string>
-
     <string name="repeat_unit_years_label">Годы</string>
-
     <string name="link_open_label">ОТКРЫТЬ</string>
-
     <string name="link_missing">Нет ссылки для открытия</string>
-
     <string name="invalid_command">Неверная команда</string>
-
     <string name="task_saved">Задача сохранена.</string>
-
     <string name="task_deleted">Задача удалена</string>
-
     <string name="task_completed">Задача обновлена</string>
-
     <string name="task_failed">Не удалось обновить задачу</string>
-
     <string name="summary_format">открыто: %1$d  сегодня: %2$d  всего: %3$d</string>
-
     <string name="task_meta_format">важн.: %1$d  срок: %2$s  балл: %3$d</string>
-
     <string name="task_pin_label">ПИН-КОД</string>
-
     <string name="task_unpin_label">ОТПИНИТЬ</string>
-
     <string name="task_edit_label">РЕДАКТИРОВАТЬ</string>
-
     <string name="task_delete_label">ДЕЛ</string>
-
     <string name="quick_links_title">БЫСТРЫЕ ССЫЛКИ</string>
-
     <string name="new_link_label">НОВАЯ ССЫЛКА</string>
-
     <string name="quick_link_label_hint">Короткое имя</string>
-
     <string name="quick_link_url_hint">https://quick.link</string>
-
     <string name="quick_link_new_title">Новая быстрая ссылка</string>
-
     <string name="quick_link_edit_title">Изменить быструю ссылку</string>
-
     <string name="quick_link_saved">Быстрая ссылка сохранена.</string>
-
     <string name="quick_link_deleted">Быстрая ссылка удалена</string>
-
     <string name="quick_link_invalid">Введите действительное имя и URL-адрес.</string>
-
     <string name="quick_link_delete_label">УДАЛИТЬ</string>
-
     <string name="widget_tasks_title">ЗАДАЧИ</string>
-
     <string name="widget_tasks_description">Список задач с фильтрами ВСЕ и СЕГОДНЯ. Коснитесь строки, чтобы перейти к выполнению</string>
-
     <string name="widget_quick_links_description">Быстрые ссылки сохранены в OpusAgenda. Нажмите, чтобы открыть в браузере</string>
-
     <string name="widget_quick_links_empty">Никаких быстрых ссылок. Добавьте их в приложение</string>
-
     <string name="clock_time_placeholder">00:00:00</string>
-
     <string name="clock_date_placeholder">10 Apr 2026</string>
-
     <string name="font_dialog_title">Выберите шрифт</string>
-
     <string name="font_applied">Примененный шрифт: %1$s</string>
-
+    <string name="backup_replace_label">ЗАМЕНИТЬ</string>
+    <string name="backup_import_warning_title">Импортировать список задач</string>
+    <string name="backup_import_warning_message">Импорт резервной копии удалит все текущие задачи перед загрузкой нового списка. Продолжить?</string>
+    <string name="backup_export_success">Резервная копия экспортирована: %1$d элементов</string>
+    <string name="backup_export_failed">Не удалось экспортировать резервную копию</string>
+    <string name="backup_import_success">Резервная копия импортирована: %1$d элементов</string>
+    <string name="backup_import_failed">Не удалось импортировать резервную копию</string>
+    <string name="backup_open_failed">Не удалось открыть выбранный файл резервной копии</string>
+    <string name="backup_invalid_archive">Выбранный файл не является допустимой резервной копией OpusAgenda</string>
+    <string name="backup_unsupported_version">Этот формат резервной копии не поддерживается текущей версией приложения</string>
+    <string name="backup_attachment_export_failed">Не удалось включить вложение в резервную копию: %1$s</string>
     <string name="new_category_label">НОВЫЙ КОТ</string>
-
     <string name="new_subcategory_label">НОВЫЙ СУБК</string>
-
     <string name="new_child_task_label">НОВАЯ ЗАДАЧА</string>
-
     <string name="task_description_label">Описание</string>
-
     <string name="task_description_hint">Добавьте контекст для этой задачи</string>
-
-
-
-
-
     <string name="task_description_title">Описание задачи</string>
-
     <string name="task_description_icon_label">Открыть описание</string>
-
     <string name="task_link_label">Связанная ссылка</string>
-
     <string name="task_link_hint">https://linked.resource</string>
-
-
-
-
-
     <string name="task_link_title">Ссылка на задачу</string>
-
     <string name="task_link_icon_label">Открыть детали ссылки</string>
-
     <string name="task_attachment_label">Прикрепленный файл</string>
-
     <string name="task_attachment_empty">Файл не выбран</string>
-
     <string name="task_attachment_pick">ВЫБРАТЬ ФАЙЛ</string>
-
     <string name="task_attachment_clear">ОЧИСТИТЬ ФАЙЛ</string>
-
-    <string name="task_attachment_record">RECORD</string>
-
-    <string name="task_attachment_stop_record">STOP</string>
-
-    <string name="task_attachment_recording">Recording…</string>
-
-    <string name="task_attachment_record_failed">Could not record audio</string>
-
-    <string name="task_attachment_record_permission_denied">Microphone permission is required to record audio</string>
-
-    <string name="task_attachment_finish_recording">Stop recording before saving the task</string>
+    <string name="task_attachment_record">ЗАПИСЫВАТЬ</string>
+    <string name="task_attachment_stop_record">ОСТАНАВЛИВАТЬСЯ</string>
+    <string name="task_attachment_recording">Запись…</string>
+    <string name="task_attachment_record_failed">Не удалось записать звук</string>
+    <string name="task_attachment_record_permission_denied">Для записи звука требуется разрешение микрофона</string>
+    <string name="task_attachment_finish_recording">Остановить запись перед сохранением задачи</string>
     <string name="task_attachment_saved">Файл прикреплён</string>
-
     <string name="task_attachment_picker_failed">Не удалось прочитать выбранный файл</string>
-
     <string name="task_attachment_open_failed">Ни одно приложение не может открыть это вложение.</string>
-
     <string name="task_attachment_title">Вложение задачи</string>
-
     <string name="task_attachment_icon_label">Открыть сведения о вложении</string>
-
     <string name="task_attachment_name_label">файл: %1$s</string>
-
     <string name="task_attachment_type_label">тип: %1$s</string>
-
     <string name="play_label">ИГРАТЬ</string>
-
     <string name="stop_label">СТОП</string>
-
     <string name="task_attachment_no_preview">Предварительный просмотр недоступен</string>
-
     <string-array name="font_option_labels">
         <item>Inter</item>
         <item>Geo</item>
@@ -293,53 +158,113 @@
         <item>Octosquares</item>
         <item>PirateOne</item>
     </string-array>
-
     <string-array name="importance_options">
         <item>1 НИЗКИЙ</item>
         <item>2 НОРМАЛЬНЫЙ</item>
         <item>3 ВЫСОКИЙ</item>
         <item>4 КРИТИЧЕСКОЕ</item>
     </string-array>
-
     <plurals name="repeat_unit_minutes">
         <item quantity="one">%1$d минута</item>
         <item quantity="other">%1$d минут</item>
     </plurals>
-
     <plurals name="repeat_unit_hours">
         <item quantity="one">%1$d час</item>
         <item quantity="other">%1$d часов</item>
     </plurals>
-
     <plurals name="repeat_unit_days">
         <item quantity="one">%1$d день</item>
         <item quantity="other">%1$d дней</item>
     </plurals>
-
     <plurals name="repeat_unit_weeks">
         <item quantity="one">%1$d неделя</item>
         <item quantity="other">%1$d недель</item>
     </plurals>
-
     <plurals name="repeat_unit_months">
         <item quantity="one">%1$d месяц</item>
         <item quantity="other">%1$d месяцев</item>
     </plurals>
-
     <plurals name="repeat_unit_years">
         <item quantity="one">%1$d год</item>
         <item quantity="other">%1$d лет</item>
     </plurals>
-
     <string name="previous_label">НАЗАД</string>
-
     <string name="next_label">СЛЕДУЮЩИЙ</string>
-
     <string name="pdf_page_indicator">Страница %1$d / %2$d</string>
     <string name="font_button_label">Изменить шрифт</string>
     <string name="import_button_label">Импортировать резервную копию</string>
     <string name="export_button_label">Экспортировать резервную копию</string>
+    <string name="tutorial_step_categories_tips">Добавьте контекст к категориям</string>
+    <string name="tutorial_step_categories_tips_body">Используйте описание, ссылки и вложения, чтобы дать каждой категории больше контекста.</string>
+    <string name="settings_button_label">ПЕРЕЗАПУСТИТЬ ОБУЧЕНИЕ</string>
+    <string name="tags_label">ТЕГИ</string>
+    <string name="tags_hint">Работа важная, Личное</string>
+    <string name="tag_colors_button_label">RGB</string>
+    <string name="tag_colors_edit_label">РЕДАКТИРОВАТЬ</string>
+    <string name="tag_colors_dialog_title">Цвета тегов</string>
+    <string name="tag_colors_dialog_help">Коснитесь тега, чтобы изменить его цвет.</string>
+    <string name="tag_colors_empty_state">Сначала добавьте теги, чтобы настроить цвета.</string>
+    <string name="tag_color_picker_title">Цвет для %1$s</string>
+    <string name="tag_color_saved">Цвет для %1$s сохранён</string>
+    <string name="tag_color_cleared">Автоматический цвет восстановлен для %1$s</string>
+    <string name="tag_color_auto_label">AUTO</string>
+    <string name="tag_colors_tab_rgb">RGB</string>
+    <string name="tag_colors_tab_hex">HEX</string>
+    <string name="tag_colors_tab_selector">СЕЛЕКТОР</string>
+    <string name="tag_color_hex_hint">#RRGGBB</string>
+    <string name="tag_color_hex_help">Введите шестнадцатеричный цвет, и он обновится в реальном времени.</string>
+    <string name="tag_color_selector_help">Перетащите карту: по горизонтали изменится насыщенность, по вертикали — яркость. Отрегулируйте оттенок ниже.</string>
+    <string name="tag_color_hue_label">ХЮЭ</string>
+    <string name="persistent_reminder_label">Постоянное напоминание</string>
+    <string name="notification_action_complete">СДЕЛАННЫЙ</string>
+    <string name="notification_action_snooze">ОТЛОЖИТЬ НА 15 М</string>
+    <string name="settings_dialog_title">Учебник</string>
+    <string name="settings_tutorial_relaunch_message">Хотите перезапустить обучение?</string>
+    <string name="settings_tutorial_relaunch_label">ПЕРЕЗАПУСТИТЬ ОБУЧЕНИЕ</string>
+    <string name="tutorial_restart_hint">Левая полоска открывает подтверждение обучения.</string>
+    <string name="tutorial_dialog_title">ПЕРВЫЙ ЗАПУСК</string>
+    <string name="tutorial_step_welcome_title">ДОБРО ПОЖАЛОВАТЬ В ОПУСАГЕНДА</string>
+    <string name="tutorial_step_welcome_body">Локальный менеджер задач с мощными функциями и дизайном, вдохновленным терминалом.</string>
+    <string name="tutorial_step_interface_title">ИНТЕРФЕЙС</string>
+    <string name="tutorial_step_interface_body">На главном экране отображаются ваши задачи и сводка.</string>
+    <string name="tutorial_step_font_title">ВАРИАНТЫ ШРИФТОВ</string>
+    <string name="tutorial_step_font_body">Выберите один из 5 уникальных шрифтов, чтобы настроить внешний вид приложения. Ваш выбор будет применен ко всему интерфейсу, включая виджеты.</string>
+    <string name="tutorial_step_import_title">ИМПОРТ ДАННЫХ</string>
+    <string name="tutorial_step_import_body">Легко импортируйте задачи из различных источников, чтобы быстро приступить к работе. Полезно для конкретных рабочих задач и не смешивайте их с повседневными задачами (ЧИТАЙТЕ ПРЕДУПРЕЖДЕНИЯ)</string>
+    <string name="tutorial_step_export_title">ЭКСПОРТ ДАННЫХ</string>
+    <string name="tutorial_step_export_body">Экспортируйте свои задачи в файл для резервного копирования или совместного использования. Экспортированный файл включает все сведения о задаче, вложения и категории.</string>
+    <string name="tutorial_step_quick_links_title">БЫСТРЫЕ ССЫЛКИ</string>
+    <string name="tutorial_step_quick_links_body">Сохраняйте и систематизируйте важные ссылки в приложении. Получите к ним быстрый доступ с главного экрана и виджетов. Добавьте новую быструю ссылку, используя кнопку + в правом верхнем углу.</string>
+    <string name="tutorial_step_filters_title">ФИЛЬТРЫ</string>
+    <string name="tutorial_step_filters_body">Используйте фильтры ВСЕ и СЕГОДНЯ, чтобы сосредоточиться на том, что важно.</string>
+    <string name="tutorial_step_all_title">ВСЕ ФИЛЬТР</string>
+    <string name="tutorial_step_all_body">Показывает все задачи в списке, отсортированные по сроку выполнения и важности.</string>
+    <string name="tutorial_step_today_title">СЕГОДНЯ ФИЛЬТР</string>
+    <string name="tutorial_step_today_body">Сосредоточьтесь на задачах, которые должны быть выполнены сегодня или просрочены. Идеально подходит для ежедневного планирования.</string>
+    <string name="tutorial_step_create_title">СОЗДАТЬ ЗАДАЧУ</string>
+    <string name="tutorial_step_create_body">Быстро добавляйте новые задачи с помощью этой кнопки. Делайте записи короткими, чтобы оставаться быстрыми.</string>
+    <string name="tutorial_step_create_tips">ДОБАВИТЬ КОНТЕКСТ</string>
+    <string name="tutorial_step_create_tips_body">Используйте описание, ссылки и вложения, чтобы хранить все сведения о задаче в одном месте.</string>
+    <string name="tutorial_step_importance_title">ВАЖНОСТЬ</string>
+    <string name="tutorial_step_importance_body">Установите уровни важности, чтобы сортировать и фильтровать задачи по приоритету.</string>
+    <string name="tutorial_step_reminders_title">НАПОМИНАНИЯ</string>
+    <string name="tutorial_step_reminders_body">Сегодня фильтры и редактор помогают вам локально управлять своевременной работой, напоминаниями и повторами.</string>
+    <string name="tutorial_step_persistence_title">НАСТОЯЩИЕ НАПОМИНАНИЯ</string>
+    <string name="tutorial_step_persistence_body">Установите постоянные напоминания, чтобы всегда быть в курсе важных задач. Оно не будет закрыто, пока вы не отметите его как завершенное.</string>
+    <string name="tutorial_step_categories_title">КАТЕГОРИИ</string>
+    <string name="tutorial_step_categories_body">Группируйте связанные задачи по категориям, чтобы список был организован.</string>
+    <string name="tutorial_step_search_title">ПОИСК</string>
+    <string name="tutorial_step_search_body">Поиск по тексту задачи, заметкам, ссылкам, вложениям и тегам.</string>
+    <string name="tutorial_step_tags_title">ТЕГИ</string>
+    <string name="tutorial_step_tags_body">Добавляйте теги к задачам и категориям, чтобы создавать собственные фильтры и систематизировать свою работу.</string>
+    <string name="tutorial_step_summary_title">КРАТКОЕ СОДЕРЖАНИЕ</string>
+    <string name="tutorial_step_summary_body">Сводка вверху дает вам краткий обзор ваших открытых и срочных задач.</string>
+    <string name="tutorial_step_widgets_title">ВИДЖЕТЫ</string>
+    <string name="tutorial_step_widgets_body">Виджеты используют одни и те же локальные данные, поэтому синхронизируются без Интернета.</string>
+    <string name="tutorial_step_end_title">КОНЕЦ?</string>
+    <string name="tutorial_step_end_body">Это все, что касается урока. Наслаждайтесь использованием OpusAgenda!</string>
+    <string name="tutorial_counter_format">%1$d/%2$d</string>
+    <string name="tutorial_prev_label">ПРЕДЫДУЩИЙ</string>
+    <string name="tutorial_next_label">СЛЕДУЮЩИЙ</string>
+    <string name="tutorial_finish_label">ЗАВЕРШИТЬ ОБУЧЕНИЕ</string>
 </resources>
-
-
-

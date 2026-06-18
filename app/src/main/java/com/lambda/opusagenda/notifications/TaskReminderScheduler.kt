@@ -8,6 +8,8 @@ import android.app.PendingIntent
 import android.content.Context
 import android.content.Intent
 import android.content.pm.PackageManager
+import android.graphics.Bitmap
+import android.graphics.BitmapFactory
 import android.os.Build
 import androidx.core.app.NotificationCompat
 import androidx.core.app.NotificationManagerCompat
@@ -16,6 +18,7 @@ import com.lambda.opusagenda.R
 import com.lambda.opusagenda.data.TaskEntity
 import com.lambda.opusagenda.ui.MainActivity
 import com.lambda.opusagenda.util.TaskRepeatCalculator
+import com.lambda.opusagenda.util.TaskTagUtils
 
 /**
  * Programa, cancela y publica recordatorios locales de tareas.
@@ -33,7 +36,14 @@ class TaskReminderScheduler(
         }
 
         val reminderAt = task.reminderAt
-        if (reminderAt == null || reminderAt <= System.currentTimeMillis()) {
+        if (reminderAt == null) {
+            return
+        }
+
+        if (reminderAt <= System.currentTimeMillis()) {
+            if (!task.completed && task.persistentReminder) {
+                show(task)
+            }
             return
         }
 
@@ -62,7 +72,7 @@ class TaskReminderScheduler(
         NotificationManagerCompat.from(context).cancel(taskId)
     }
 
-    fun show(taskId: Int, taskText: String) {
+    fun show(task: TaskEntity) {
         createNotificationChannel()
         if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.TIRAMISU &&
             ContextCompat.checkSelfPermission(context, Manifest.permission.POST_NOTIFICATIONS) != PackageManager.PERMISSION_GRANTED
@@ -75,22 +85,82 @@ class TaskReminderScheduler(
         }
         val contentIntent = PendingIntent.getActivity(
             context,
-            taskId,
+            task.id,
             openAppIntent,
             PendingIntent.FLAG_UPDATE_CURRENT or PendingIntent.FLAG_IMMUTABLE
         )
 
-        val notification = NotificationCompat.Builder(context, CHANNEL_ID)
-            .setSmallIcon(R.drawable.opus_notification)
-            .setContentTitle(context.getString(R.string.reminder_notification_title))
-            .setContentText(taskText)
-            .setStyle(NotificationCompat.BigTextStyle().bigText(taskText))
-            .setPriority(NotificationCompat.PRIORITY_HIGH)
-            .setAutoCancel(true)
-            .setContentIntent(contentIntent)
-            .build()
+        val accentColor = resolveAccentColor(task)
+        val builder = buildBaseBuilder(task, contentIntent, accentColor)
+            .setStyle(NotificationCompat.BigTextStyle().bigText(task.text))
 
-        NotificationManagerCompat.from(context).notify(taskId, notification)
+        NotificationManagerCompat.from(context).notify(task.id, builder.build())
+    }
+
+    private fun buildBaseBuilder(
+        task: TaskEntity,
+        contentIntent: PendingIntent,
+        accentColor: Int
+    ): NotificationCompat.Builder {
+        return NotificationCompat.Builder(context, CHANNEL_ID)
+            .setSmallIcon(R.drawable.opus_notification)
+            .setLargeIcon(loadNotificationLogo())
+            .setContentTitle(
+                if (task.persistentReminder) {
+                    context.getString(R.string.persistent_reminder_label)
+                } else {
+                    context.getString(R.string.reminder_notification_title)
+                }
+            )
+            .setContentText(task.text)
+            .setPriority(if (task.persistentReminder) NotificationCompat.PRIORITY_MAX else NotificationCompat.PRIORITY_HIGH)
+            .setOnlyAlertOnce(true)
+            .setContentIntent(contentIntent)
+            .setColor(accentColor)
+            .setColorized(true)
+            .setCategory(if (task.persistentReminder) NotificationCompat.CATEGORY_CALL else NotificationCompat.CATEGORY_REMINDER)
+            .apply {
+                if (task.persistentReminder) {
+                    setVisibility(NotificationCompat.VISIBILITY_PUBLIC)
+                    setFullScreenIntent(contentIntent, true)
+                    setAutoCancel(false)
+                    setOngoing(true)
+                    addAction(
+                        android.R.drawable.checkbox_on_background,
+                        context.getString(R.string.notification_action_complete),
+                        buildActionPendingIntent(task.id, TaskReminderActionReceiver.ACTION_COMPLETE)
+                    )
+                    addAction(
+                        android.R.drawable.ic_lock_idle_alarm,
+                        context.getString(R.string.notification_action_snooze),
+                        buildActionPendingIntent(task.id, TaskReminderActionReceiver.ACTION_SNOOZE)
+                    )
+                } else {
+                    setAutoCancel(true)
+                }
+            }
+    }
+
+    private fun resolveAccentColor(task: TaskEntity): Int {
+        if (task.persistentReminder) {
+            return ContextCompat.getColor(context, R.color.terminal_red)
+        }
+
+        val tags = TaskTagUtils.parseTags(task.tags)
+        if (tags.isNotEmpty()) {
+            return TaskTagUtils.colorForTag(context, tags.first())
+        }
+
+        return when (task.importance) {
+            4 -> ContextCompat.getColor(context, R.color.terminal_red)
+            3 -> ContextCompat.getColor(context, R.color.terminal_yellow)
+            2 -> ContextCompat.getColor(context, R.color.terminal_green)
+            else -> ContextCompat.getColor(context, R.color.terminal_green_dim)
+        }
+    }
+
+    private fun loadNotificationLogo(): Bitmap? {
+        return BitmapFactory.decodeResource(context.resources, R.drawable.opus_notification)
     }
 
     fun createNotificationChannel() {
@@ -158,8 +228,26 @@ class TaskReminderScheduler(
         )
     }
 
+    private fun buildActionPendingIntent(taskId: Int, action: String): PendingIntent {
+        val intent = Intent(context, TaskReminderActionReceiver::class.java).apply {
+            this.action = action
+            putExtra(EXTRA_TASK_ID, taskId)
+        }
+        val requestCode = when (action) {
+            TaskReminderActionReceiver.ACTION_COMPLETE -> actionRequestCode(taskId, 1)
+            TaskReminderActionReceiver.ACTION_SNOOZE -> actionRequestCode(taskId, 2)
+            else -> actionRequestCode(taskId, 0)
+        }
+        return PendingIntent.getBroadcast(
+            context,
+            requestCode,
+            intent,
+            PendingIntent.FLAG_UPDATE_CURRENT or PendingIntent.FLAG_IMMUTABLE
+        )
+    }
+
     companion object {
-        const val CHANNEL_ID = "task_reminders"
+        const val CHANNEL_ID = "task_reminders_v2"
         const val ACTION_TASK_REMINDER = "com.lambda.opusagenda.action.TASK_REMINDER"
         const val ACTION_TASK_REACTIVATION = "com.lambda.opusagenda.action.TASK_REACTIVATION"
         const val EXTRA_TASK_ID = "extra_task_id"
@@ -168,5 +256,7 @@ class TaskReminderScheduler(
         private fun reminderRequestCode(taskId: Int): Int = taskId * 2
 
         private fun reactivationRequestCode(taskId: Int): Int = (taskId * 2) + 1
+
+        private fun actionRequestCode(taskId: Int, offset: Int): Int = (taskId * 10) + offset
     }
 }

@@ -13,6 +13,14 @@
         android:gravity="center_vertical"
         android:orientation="horizontal">
 
+        <com.lambda.opusagenda.ui.TagStripeView
+            android:id="@+id/viewTags"
+            android:layout_width="wrap_content"
+            android:layout_height="24dp"
+            android:layout_marginEnd="8dp"
+            android:layout_gravity="center_vertical"
+            android:visibility="gone" />
+
         <TextView
             android:id="@+id/textExpandIndicator"
             android:layout_width="wrap_content"
@@ -38,51 +46,51 @@
             android:textSize="17sp"
             android:textStyle="bold" />
 
-            <LinearLayout
-                android:id="@+id/layoutContentActions"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:orientation="horizontal"
-                android:gravity="center_vertical">
+        <LinearLayout
+            android:id="@+id/layoutContentActions"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:gravity="center_vertical"
+            android:orientation="horizontal">
 
-                <ImageButton
-                    android:id="@+id/buttonDescription"
-                    android:layout_width="32dp"
-                    android:layout_height="32dp"
-                    android:background="@android:color/transparent"
-                    android:contentDescription="@string/task_description_icon_label"
-                    android:padding="4dp"
-                    android:paddingStart="16dp"
-                    android:paddingEnd="16dp"
-                    android:src="@drawable/desc_btn"
-                    android:visibility="gone" />
+            <ImageButton
+                android:id="@+id/buttonDescription"
+                android:layout_width="32dp"
+                android:layout_height="32dp"
+                android:background="@android:color/transparent"
+                android:contentDescription="@string/task_description_icon_label"
+                android:padding="4dp"
+                android:paddingStart="16dp"
+                android:paddingEnd="16dp"
+                android:src="@drawable/desc_btn"
+                android:visibility="gone" />
 
-                <ImageButton
-                    android:id="@+id/buttonLink"
-                    android:layout_width="32dp"
-                    android:layout_height="32dp"
-                    android:layout_marginStart="8dp"
-                    android:background="@android:color/transparent"
-                    android:contentDescription="@string/task_link_icon_label"
-                    android:padding="4dp"
-                    android:paddingStart="16dp"
-                    android:paddingEnd="16dp"
-                    android:src="@drawable/link_btn"
-                    android:visibility="gone" />
+            <ImageButton
+                android:id="@+id/buttonLink"
+                android:layout_width="32dp"
+                android:layout_height="32dp"
+                android:layout_marginStart="8dp"
+                android:background="@android:color/transparent"
+                android:contentDescription="@string/task_link_icon_label"
+                android:padding="4dp"
+                android:paddingStart="16dp"
+                android:paddingEnd="16dp"
+                android:src="@drawable/link_btn"
+                android:visibility="gone" />
 
-                <ImageButton
-                    android:id="@+id/buttonAttachment"
-                    android:layout_width="32dp"
-                    android:layout_height="32dp"
-                    android:layout_marginStart="8dp"
-                    android:background="@android:color/transparent"
-                    android:contentDescription="@string/task_attachment_icon_label"
-                    android:padding="4dp"
-                    android:paddingStart="16dp"
-                    android:paddingEnd="16dp"
-                    android:src="@drawable/file_btn"
-                    android:visibility="gone" />
-            </LinearLayout>
+            <ImageButton
+                android:id="@+id/buttonAttachment"
+                android:layout_width="32dp"
+                android:layout_height="32dp"
+                android:layout_marginStart="8dp"
+                android:background="@android:color/transparent"
+                android:contentDescription="@string/task_attachment_icon_label"
+                android:padding="4dp"
+                android:paddingStart="16dp"
+                android:paddingEnd="16dp"
+                android:src="@drawable/file_btn"
+                android:visibility="gone" />
+        </LinearLayout>
         <TextView
             android:id="@+id/textBadge"
             android:layout_width="wrap_content"

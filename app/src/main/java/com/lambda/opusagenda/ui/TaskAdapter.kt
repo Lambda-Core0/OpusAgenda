@@ -96,6 +96,18 @@ class TaskAdapter(
             binding.textMeta.text = item.metaLine
             binding.textMeta.setTextColor(ContextCompat.getColor(context, metaColor))
 
+            val hasTags = item.tags.isNotEmpty()
+            binding.viewTags.visibility = if (hasTags) View.VISIBLE else View.GONE
+            if (hasTags) {
+                binding.viewTags.setTags(item.tags)
+                binding.viewTags.setOnClickListener {
+                    actions.onShowTags(item)
+                }
+            } else {
+                binding.viewTags.setTags(emptyList())
+                binding.viewTags.setOnClickListener(null)
+            }
+
             binding.textBadge.visibility = when {
                 item.isCategory -> View.VISIBLE
                 item.pinned -> View.VISIBLE
@@ -201,5 +213,6 @@ class TaskAdapter(
         fun onShowDescription(item: TaskListItem)
         fun onShowLink(item: TaskListItem)
         fun onShowAttachment(item: TaskListItem)
+        fun onShowTags(item: TaskListItem)
     }
 }
