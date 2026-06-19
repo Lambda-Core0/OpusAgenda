@@ -39,7 +39,7 @@
 
                         <Button
                             android:id="@+id/buttonSettings"
-                            android:layout_width="6dp"
+                            android:layout_width="8dp"
                             android:layout_height="match_parent"
                             android:layout_marginEnd="12dp"
                             android:background="@drawable/bg_terminal_action"

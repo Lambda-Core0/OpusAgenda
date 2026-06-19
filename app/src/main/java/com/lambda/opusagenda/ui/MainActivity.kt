@@ -888,7 +888,7 @@ class MainActivity : AppCompatActivity(), TaskAdapter.TaskItemActions {
                 backgroundTintList = null
                 text = getString(R.string.tag_colors_edit_label)
                 isAllCaps = false
-                setTextColor(getColor(R.color.terminal_black))
+                setTextColor(getColor(R.color.terminal_green))
             }
 
             val openEditor = {
@@ -944,9 +944,21 @@ class MainActivity : AppCompatActivity(), TaskAdapter.TaskItemActions {
             420.dp
         )
 
-        val root = LinearLayout(this).apply {
+        val rootBody = LinearLayout(this).apply {
             orientation = LinearLayout.VERTICAL
             setPadding(20.dp)
+        }
+
+        val root = NestedScrollView(this).apply {
+            isFillViewport = true
+            applyScrollIndicator(vertical = true)
+            addView(
+                rootBody,
+                ViewGroup.LayoutParams(
+                    ViewGroup.LayoutParams.MATCH_PARENT,
+                    ViewGroup.LayoutParams.WRAP_CONTENT
+                )
+            )
         }
 
         val summaryRow = LinearLayout(this).apply {
@@ -1127,6 +1139,7 @@ class MainActivity : AppCompatActivity(), TaskAdapter.TaskItemActions {
 
         val hexPanel = NestedScrollView(this).apply {
             isFillViewport = true
+            visibility = View.GONE
             applyScrollIndicator(vertical = true)
             addView(
                 hexPanelBody,
@@ -1139,7 +1152,7 @@ class MainActivity : AppCompatActivity(), TaskAdapter.TaskItemActions {
 
         val selectorPanelBody = LinearLayout(this).apply {
             orientation = LinearLayout.VERTICAL
-            setPadding(4.dp, 4.dp, 4.dp, 12.dp)
+            setPadding(4.dp, 8.dp, 4.dp, 16.dp)
         }
 
         val selectorHelp = TextView(this).apply {
@@ -1148,15 +1161,37 @@ class MainActivity : AppCompatActivity(), TaskAdapter.TaskItemActions {
             textSize = 13f
         }
 
-        val selectorMapView = TagColorMapView(this).apply {
+        val selectorHelpCard = LinearLayout(this).apply {
+            orientation = LinearLayout.VERTICAL
             layoutParams = LinearLayout.LayoutParams(
                 ViewGroup.LayoutParams.MATCH_PARENT,
-                220.dp
+                ViewGroup.LayoutParams.WRAP_CONTENT
+            )
+            background = ContextCompat.getDrawable(this@MainActivity, R.drawable.bg_terminal_panel)
+            setPadding(12.dp)
+        }
+
+        selectorHelpCard.addView(selectorHelp)
+
+        val selectorMapCard = FrameLayout(this).apply {
+            layoutParams = LinearLayout.LayoutParams(
+                ViewGroup.LayoutParams.MATCH_PARENT,
+                ViewGroup.LayoutParams.WRAP_CONTENT
             ).apply {
                 topMargin = 12.dp
             }
+            background = ContextCompat.getDrawable(this@MainActivity, R.drawable.bg_terminal_panel)
+            setPadding(8.dp)
+        }
+
+        val selectorMapView = TagColorMapView(this).apply {
+            layoutParams = FrameLayout.LayoutParams(
+                ViewGroup.LayoutParams.MATCH_PARENT,
+                220.dp
+            )
             background = ContextCompat.getDrawable(this@MainActivity, R.drawable.bg_terminal_input)
         }
+        selectorMapCard.addView(selectorMapView)
 
         val hueHeader = LinearLayout(this).apply {
             orientation = LinearLayout.HORIZONTAL
@@ -1164,9 +1199,7 @@ class MainActivity : AppCompatActivity(), TaskAdapter.TaskItemActions {
             layoutParams = LinearLayout.LayoutParams(
                 ViewGroup.LayoutParams.MATCH_PARENT,
                 ViewGroup.LayoutParams.WRAP_CONTENT
-            ).apply {
-                topMargin = 12.dp
-            }
+            )
         }
 
         val hueLabel = TextView(this).apply {
@@ -1198,8 +1231,24 @@ class MainActivity : AppCompatActivity(), TaskAdapter.TaskItemActions {
             }
         }
 
+        val hueSection = LinearLayout(this).apply {
+            orientation = LinearLayout.VERTICAL
+            layoutParams = LinearLayout.LayoutParams(
+                ViewGroup.LayoutParams.MATCH_PARENT,
+                ViewGroup.LayoutParams.WRAP_CONTENT
+            ).apply {
+                topMargin = 12.dp
+            }
+            background = ContextCompat.getDrawable(this@MainActivity, R.drawable.bg_terminal_panel)
+            setPadding(12.dp)
+        }
+
+        hueSection.addView(hueHeader)
+        hueSection.addView(hueSeekBar)
+
         val selectorPanel = NestedScrollView(this).apply {
             isFillViewport = true
+            visibility = View.GONE
             applyScrollIndicator(vertical = true)
             addView(
                 selectorPanelBody,
@@ -1210,10 +1259,9 @@ class MainActivity : AppCompatActivity(), TaskAdapter.TaskItemActions {
             )
         }
 
-        selectorPanelBody.addView(selectorHelp)
-        selectorPanelBody.addView(selectorMapView)
-        selectorPanelBody.addView(hueHeader)
-        selectorPanelBody.addView(hueSeekBar)
+        selectorPanelBody.addView(selectorHelpCard)
+        selectorPanelBody.addView(selectorMapCard)
+        selectorPanelBody.addView(hueSection)
 
         contentHost.addView(
             rgbPanel,
@@ -1243,6 +1291,8 @@ class MainActivity : AppCompatActivity(), TaskAdapter.TaskItemActions {
                 panel.visibility = if (panelIndex == index) View.VISIBLE else View.GONE
             }
         }
+
+        showPanel(0)
 
         fun syncViewsFromCurrentColor() {
             if (isUiSyncing) return
@@ -1349,9 +1399,9 @@ class MainActivity : AppCompatActivity(), TaskAdapter.TaskItemActions {
             override fun onTabReselected(tab: TabLayout.Tab) = Unit
         })
 
-        root.addView(summaryRow)
-        root.addView(tabLayout)
-        root.addView(contentHost)
+        rootBody.addView(summaryRow)
+        rootBody.addView(tabLayout)
+        rootBody.addView(contentHost)
 
         tabLayout.getTabAt(0)?.select()
         syncViewsFromCurrentColor()

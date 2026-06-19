@@ -9,9 +9,11 @@ import android.graphics.RectF
 import android.graphics.Shader
 import android.util.AttributeSet
 import android.view.MotionEvent
+import android.view.ViewConfiguration
 import android.view.View
 import androidx.core.content.ContextCompat
 import com.lambda.opusagenda.R
+import kotlin.math.abs
 
 /**
  * Mapa HSV compacto para elegir color con un arrastre 2D:
@@ -37,6 +39,11 @@ class TagColorMapView @JvmOverloads constructor(
     private var saturation: Float = 1f
     private var value: Float = 1f
     private var onColorChangedListener: ((Int) -> Unit)? = null
+    private val touchSlop = ViewConfiguration.get(context).scaledTouchSlop
+    private var downX = 0f
+    private var downY = 0f
+    private var gestureResolved = false
+    private var horizontalGesture = false
 
     private val cornerRadius = 14.dp.toFloat()
     private val pointerRadius = 12.dp.toFloat()
@@ -144,18 +151,40 @@ class TagColorMapView @JvmOverloads constructor(
         }
 
         when (event.actionMasked) {
-            MotionEvent.ACTION_DOWN -> parent?.requestDisallowInterceptTouchEvent(true)
-            MotionEvent.ACTION_MOVE -> updateFromTouch(event.x, event.y)
-            MotionEvent.ACTION_UP -> {
-                updateFromTouch(event.x, event.y)
-                parent?.requestDisallowInterceptTouchEvent(false)
-                performClick()
+            MotionEvent.ACTION_DOWN -> {
+                downX = event.x
+                downY = event.y
+                gestureResolved = false
+                horizontalGesture = false
+                return true
             }
-            MotionEvent.ACTION_CANCEL -> parent?.requestDisallowInterceptTouchEvent(false)
-        }
+            MotionEvent.ACTION_MOVE -> {
+                if (!gestureResolved) {
+                    val dx = event.x - downX
+                    val dy = event.y - downY
+                    if (dx * dx + dy * dy >= touchSlop * touchSlop) {
+                        gestureResolved = true
+                        horizontalGesture = abs(dx) >= abs(dy)
+                        parent?.requestDisallowInterceptTouchEvent(horizontalGesture)
+                    }
+                }
 
-        if (event.actionMasked == MotionEvent.ACTION_DOWN) {
-            updateFromTouch(event.x, event.y)
+                if (horizontalGesture) {
+                    updateFromTouch(event.x, event.y)
+                }
+            }
+            MotionEvent.ACTION_UP -> {
+                if (!gestureResolved || horizontalGesture) {
+                    updateFromTouch(event.x, event.y)
+                    performClick()
+                }
+                parent?.requestDisallowInterceptTouchEvent(false)
+                resetGestureState()
+            }
+            MotionEvent.ACTION_CANCEL -> {
+                parent?.requestDisallowInterceptTouchEvent(false)
+                resetGestureState()
+            }
         }
 
         return true
@@ -179,6 +208,11 @@ class TagColorMapView @JvmOverloads constructor(
     private fun normalizeHue(newHue: Float): Float {
         val normalized = newHue % 360f
         return if (normalized < 0f) normalized + 360f else normalized
+    }
+
+    private fun resetGestureState() {
+        gestureResolved = false
+        horizontalGesture = false
     }
 
     private val Int.dp: Int
