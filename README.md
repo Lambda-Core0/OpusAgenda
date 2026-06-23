@@ -28,3 +28,7 @@ OpusAgenda es una app Android de agenda y tareas con enfoque local, pensada para
 ## Estado del proyecto
 
 Proyecto Android nativo sin backend externo. El foco actual esta en productividad personal, uso offline y acceso rápido desde widgets y notificaciones
+
+## Politica de Privacidad
+
+https://lambda-core0.github.io/OpusAgenda-privacy/
