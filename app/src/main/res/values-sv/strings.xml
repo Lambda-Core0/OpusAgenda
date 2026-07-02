@@ -25,7 +25,7 @@
     <string name="category_dialog_title_edit">Redigera kategori</string>
     <string name="task_text_required">Ange uppgiftstext</string>
     <string name="default_category_name">Kategori</string>
-    <string name="category_badge_label">KATT</string>
+    <string name="category_badge_label">CAT</string>
     <string name="category_edit_label">REDIGERA</string>
     <string name="category_due_label">kategori</string>
     <string name="category_meta_format">underobjekt: %1$d  vikt: %2$d</string>
@@ -120,9 +120,9 @@
     <string name="backup_invalid_archive">Den valda filen är inte en giltig OpusAgenda-säkerhetskopia</string>
     <string name="backup_unsupported_version">Det här säkerhetskopieringsformatet stöds inte av den aktuella appversionen</string>
     <string name="backup_attachment_export_failed">Det gick inte att inkludera bilagan i säkerhetskopian: %1$s</string>
-    <string name="new_category_label">NY KATT</string>
-    <string name="new_subcategory_label">NY SUBC</string>
-    <string name="new_child_task_label">NY UPPGIFT</string>
+    <string name="new_category_label">Ny kategori</string>
+    <string name="new_subcategory_label">Ny underkategori</string>
+    <string name="new_child_task_label">Ny uppgift</string>
     <string name="task_description_label">Beskrivning</string>
     <string name="task_description_hint">Lägg till lite sammanhang för denna uppgift</string>
     <string name="task_description_title">Uppgiftsbeskrivning</string>

@@ -25,7 +25,7 @@
     <string name="category_dialog_title_edit">Editați categoria</string>
     <string name="task_text_required">Introduceți textul sarcinii</string>
     <string name="default_category_name">categorie</string>
-    <string name="category_badge_label">PISICĂ</string>
+    <string name="category_badge_label">CAT</string>
     <string name="category_edit_label">EDITARE</string>
     <string name="category_due_label">categorie</string>
     <string name="category_meta_format">subelemente: %1$d  imp: %2$d</string>
@@ -120,9 +120,9 @@
     <string name="backup_invalid_archive">Fișierul selectat nu este o copie de rezervă validă OpusAgenda</string>
     <string name="backup_unsupported_version">Acest format de copie de rezervă nu este acceptat de versiunea curentă a aplicației</string>
     <string name="backup_attachment_export_failed">Nu s-a putut include atașamentul în copia de rezervă: %1$s</string>
-    <string name="new_category_label">CAT NOU</string>
-    <string name="new_subcategory_label">NOU SUBC</string>
-    <string name="new_child_task_label">SARCINA NOUĂ</string>
+    <string name="new_category_label">Categorie nouă</string>
+    <string name="new_subcategory_label">Subcategorie nouă</string>
+    <string name="new_child_task_label">Sarcină nouă</string>
     <string name="task_description_label">Descriere</string>
     <string name="task_description_hint">Adăugați un context pentru această sarcină</string>
     <string name="task_description_title">Descrierea sarcinii</string>
@@ -201,7 +201,7 @@
     <string name="tags_hint">Munca importantă, personală</string>
     <string name="tag_colors_button_label">RGB</string>
     <string name="tag_colors_edit_label">EDITA</string>
-    <string name="tag_colors_dialog_title">Etichetați culorile</string>
+    <string name="tag_colors_dialog_title">Culorile etichetelor</string>
     <string name="tag_colors_dialog_help">Atingeți o etichetă pentru a-i edita culoarea.</string>
     <string name="tag_colors_empty_state">Adăugați mai întâi etichete pentru a personaliza culorile.</string>
     <string name="tag_color_picker_title">Culoare pentru %1$s</string>

@@ -25,7 +25,7 @@
     <string name="category_dialog_title_edit">カテゴリを編集する</string>
     <string name="task_text_required">タスクのテキストを入力してください</string>
     <string name="default_category_name">カテゴリ</string>
-    <string name="category_badge_label">猫</string>
+    <string name="category_badge_label">CAT</string>
     <string name="category_edit_label">編集</string>
     <string name="category_due_label">カテゴリ</string>
     <string name="category_meta_format">子項: %1$d  重要度: %2$d</string>
@@ -120,8 +120,8 @@
     <string name="backup_invalid_archive">選択したファイルは有効な OpusAgenda バックアップではありません</string>
     <string name="backup_unsupported_version">このバックアップ形式は現在のアプリ版ではサポートされていません</string>
     <string name="backup_attachment_export_failed">添付ファイルをバックアップに含められませんでした: %1$s</string>
-    <string name="new_category_label">新しい猫</string>
-    <string name="new_subcategory_label">新しいサブチャンネル</string>
+    <string name="new_category_label">新しいカテゴリ</string>
+    <string name="new_subcategory_label">新しいサブカテゴリ</string>
     <string name="new_child_task_label">新しいタスク</string>
     <string name="task_description_label">説明</string>
     <string name="task_description_hint">このタスクにコンテキストを追加します</string>

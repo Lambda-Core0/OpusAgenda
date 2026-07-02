@@ -1,15 +1,15 @@
 <?xml version="1.0" encoding="utf-8"?>
-<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     android:layout_width="match_parent"
     android:layout_height="wrap_content"
     android:background="@color/terminal_panel"
-    android:orientation="vertical"
     android:padding="16dp">
 
     <!-- Alias corto visible en el botón del link rápido. -->
     <EditText
         android:id="@+id/editQuickLinkLabel"
-        android:layout_width="match_parent"
+        android:layout_width="0dp"
         android:layout_height="wrap_content"
         android:background="@drawable/bg_terminal_input"
         android:hint="@string/quick_link_label_hint"
@@ -17,12 +17,15 @@
         android:minHeight="48dp"
         android:padding="12dp"
         android:textColor="@color/terminal_text"
-        android:textColorHint="@color/terminal_text_muted" />
+        android:textColorHint="@color/terminal_text_muted"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent" />
 
     <!-- URL real que la app abrirá al tocar el acceso rápido. -->
     <EditText
         android:id="@+id/editQuickLinkUrl"
-        android:layout_width="match_parent"
+        android:layout_width="0dp"
         android:layout_height="wrap_content"
         android:layout_marginTop="12dp"
         android:background="@drawable/bg_terminal_input"
@@ -31,5 +34,8 @@
         android:minHeight="48dp"
         android:padding="12dp"
         android:textColor="@color/terminal_text"
-        android:textColorHint="@color/terminal_text_muted" />
-</LinearLayout>
+        android:textColorHint="@color/terminal_text_muted"
+        app:layout_constraintTop_toBottomOf="@id/editQuickLinkLabel"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent" />
+</androidx.constraintlayout.widget.ConstraintLayout>

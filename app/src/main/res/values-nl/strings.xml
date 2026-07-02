@@ -25,7 +25,7 @@
     <string name="category_dialog_title_edit">Categorie bewerken</string>
     <string name="task_text_required">Voer taaktekst in</string>
     <string name="default_category_name">Categorie</string>
-    <string name="category_badge_label">KAT</string>
+    <string name="category_badge_label">CAT</string>
     <string name="category_edit_label">BEWERK</string>
     <string name="category_due_label">categorie</string>
     <string name="category_meta_format">onderdelen: %1$d  belang: %2$d</string>
@@ -120,9 +120,9 @@
     <string name="backup_invalid_archive">Het geselecteerde bestand is geen geldige OpusAgenda-back-up</string>
     <string name="backup_unsupported_version">Dit back-upformaat wordt niet ondersteund door de huidige appversie</string>
     <string name="backup_attachment_export_failed">Bijlage kon niet worden opgenomen in de back-up: %1$s</string>
-    <string name="new_category_label">NIEUWE KAT</string>
-    <string name="new_subcategory_label">NIEUWE SUB</string>
-    <string name="new_child_task_label">NIEUWE TAAK</string>
+    <string name="new_category_label">Nieuwe categorie</string>
+    <string name="new_subcategory_label">Nieuwe subcategorie</string>
+    <string name="new_child_task_label">Nieuwe taak</string>
     <string name="task_description_label">Beschrijving</string>
     <string name="task_description_hint">Voeg wat context toe voor deze taak</string>
     <string name="task_description_title">Taakbeschrijving</string>

@@ -1,17 +1,21 @@
 <?xml version="1.0" encoding="utf-8"?>
-<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     android:layout_width="match_parent"
     android:layout_height="wrap_content"
     android:layout_marginBottom="12dp"
     android:background="@drawable/bg_terminal_panel"
-    android:orientation="vertical"
     android:padding="14dp">
 
     <LinearLayout
-        android:layout_width="match_parent"
+        android:id="@+id/layoutTaskHeader"
+        android:layout_width="0dp"
         android:layout_height="wrap_content"
         android:gravity="center_vertical"
-        android:orientation="horizontal">
+        android:orientation="horizontal"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintEnd_toEndOf="parent">
 
         <com.lambda.opusagenda.ui.TagStripeView
             android:id="@+id/viewTags"
@@ -60,8 +64,7 @@
                 android:background="@android:color/transparent"
                 android:contentDescription="@string/task_description_icon_label"
                 android:padding="4dp"
-                android:paddingStart="16dp"
-                android:paddingEnd="16dp"
+                android:scaleType="centerInside"
                 android:src="@drawable/desc_btn"
                 android:visibility="gone" />
 
@@ -73,8 +76,7 @@
                 android:background="@android:color/transparent"
                 android:contentDescription="@string/task_link_icon_label"
                 android:padding="4dp"
-                android:paddingStart="16dp"
-                android:paddingEnd="16dp"
+                android:scaleType="centerInside"
                 android:src="@drawable/link_btn"
                 android:visibility="gone" />
 
@@ -86,8 +88,7 @@
                 android:background="@android:color/transparent"
                 android:contentDescription="@string/task_attachment_icon_label"
                 android:padding="4dp"
-                android:paddingStart="16dp"
-                android:paddingEnd="16dp"
+                android:scaleType="centerInside"
                 android:src="@drawable/file_btn"
                 android:visibility="gone" />
         </LinearLayout>
@@ -100,28 +101,34 @@
             android:paddingTop="4dp"
             android:paddingEnd="8dp"
             android:paddingBottom="4dp"
-            android:text="@string/task_pin_label"
+            android:text="@string/pinned_label"
             android:textColor="@color/terminal_yellow"
             android:textSize="11sp" />
     </LinearLayout>
 
     <TextView
         android:id="@+id/textMeta"
-        android:layout_width="wrap_content"
+        android:layout_width="0dp"
         android:layout_height="wrap_content"
         android:layout_marginTop="8dp"
         android:textColor="@color/terminal_text_muted"
-        android:textSize="12sp" />
+        android:textSize="12sp"
+        app:layout_constraintTop_toBottomOf="@id/layoutTaskHeader"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent" />
 
 
     <LinearLayout
         android:id="@+id/layoutCategoryActions"
-        android:layout_width="match_parent"
+        android:layout_width="0dp"
         android:layout_height="wrap_content"
         android:layout_marginTop="12dp"
         android:gravity="end"
         android:orientation="horizontal"
-        android:visibility="gone">
+        android:visibility="gone"
+        app:layout_constraintTop_toBottomOf="@id/textMeta"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent">
 
         <TextView
             android:id="@+id/actionNewCategorySecondary"
@@ -144,11 +151,14 @@
     </LinearLayout>
 
     <LinearLayout
-        android:layout_width="match_parent"
+        android:layout_width="0dp"
         android:layout_height="wrap_content"
         android:layout_marginTop="6dp"
         android:gravity="end"
-        android:orientation="horizontal">
+        android:orientation="horizontal"
+        app:layout_constraintTop_toBottomOf="@id/layoutCategoryActions"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent">
 
         <TextView
             android:id="@+id/actionPin"
@@ -201,4 +211,4 @@
             android:textColor="@color/terminal_red"
             android:textSize="12sp" />
     </LinearLayout>
-</LinearLayout>
+</androidx.constraintlayout.widget.ConstraintLayout>

@@ -66,7 +66,7 @@
 
     <string name="default_category_name">Catégorie</string>
 
-    <string name="category_badge_label">CHAT</string>
+    <string name="category_badge_label">CAT</string>
 
     <string name="category_edit_label">MODIFIER</string>
 
@@ -245,11 +245,11 @@
     <string name="backup_invalid_archive">Le fichier sélectionné n\'est pas une sauvegarde OpusAgenda valide</string>
     <string name="backup_unsupported_version">Ce format de sauvegarde n\'est pas pris en charge par la version actuelle de l\'application</string>
     <string name="backup_attachment_export_failed">Impossible d\'inclure la pièce jointe dans la sauvegarde : %1$s</string>
-    <string name="new_category_label">NOUVEAU CHAT</string>
+    <string name="new_category_label">Nouvelle catégorie</string>
 
-    <string name="new_subcategory_label">NOUVEAU SUBC</string>
+    <string name="new_subcategory_label">Nouvelle sous-catégorie</string>
 
-    <string name="new_child_task_label">NOUVELLE TÂCHE</string>
+    <string name="new_child_task_label">Nouvelle tâche</string>
 
     <string name="task_description_label">Descriptif</string>
 

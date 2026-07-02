@@ -1,4 +1,4 @@
-﻿<?xml version="1.0" encoding="utf-8"?>
+<?xml version="1.0" encoding="utf-8"?>
 <resources>
     <string name="app_name">OpusAgenda</string>
     <string name="app_header_title">♱ OpusAgenda v1.5</string>
@@ -14,9 +14,9 @@
     <string name="category_text_hint">Nombre de la categoría</string>
     <string name="tag_colors_button_label">RGB</string>
     <string name="tag_colors_edit_label">EDITAR</string>
-    <string name="tag_colors_dialog_title">Colores de tags</string>
-    <string name="tag_colors_dialog_help">Toca un tag para editar su color.</string>
-    <string name="tag_colors_empty_state">Añade tags primero para personalizar colores.</string>
+    <string name="tag_colors_dialog_title">Colores de etiquetas</string>
+    <string name="tag_colors_dialog_help">Toca una etiqueta para editar su color.</string>
+    <string name="tag_colors_empty_state">Añade etiquetas primero para personalizar colores.</string>
     <string name="tag_color_picker_title">Color para %1$s</string>
     <string name="tag_color_saved">Color guardado para %1$s</string>
     <string name="tag_color_cleared">Color automático restaurado para %1$s</string>
@@ -41,7 +41,7 @@
     <string name="category_dialog_title_edit">Editar categoría</string>
     <string name="task_text_required">Ingresa el texto de la tarea</string>
     <string name="default_category_name">Categoría</string>
-    <string name="category_badge_label">GATO</string>
+    <string name="category_badge_label">CAT</string>
     <string name="category_edit_label">EDITAR</string>
     <string name="category_due_label">categoría</string>
     <string name="category_meta_format">hijos: %1$d  imp: %2$d</string>
@@ -108,13 +108,13 @@
     <string name="task_edit_label">EDITAR</string>
     <string name="task_delete_label">BORRAR</string>
     <string name="quick_links_title">ACCESOS RÁPIDOS</string>
-    <string name="new_link_label">NUEVO LINK</string>
+    <string name="new_link_label">NUEVO ENLACE</string>
     <string name="quick_link_label_hint">Nombre corto</string>
     <string name="quick_link_url_hint">https://enlace.rapido</string>
     <string name="quick_link_new_title">Nuevo acceso rápido</string>
     <string name="quick_link_edit_title">Editar acceso rápido</string>
-    <string name="quick_link_saved">Link rápido guardado</string>
-    <string name="quick_link_deleted">Link rápido eliminado</string>
+    <string name="quick_link_saved">Enlace rápido guardado</string>
+    <string name="quick_link_deleted">Enlace rápido eliminado</string>
     <string name="quick_link_invalid">Completa un nombre y una URL válidos</string>
     <string name="quick_link_delete_label">BORRAR</string>
     <string name="widget_tasks_title">TAREAS</string>
@@ -146,10 +146,10 @@
     <string name="task_description_hint">Agrega contexto para esta tarea</string>
     <string name="task_description_title">Descripción de la tarea</string>
     <string name="task_description_icon_label">Abrir descripción</string>
-    <string name="task_link_label">Link asociado</string>
+    <string name="task_link_label">Enlace asociado</string>
     <string name="task_link_hint">https://recurso.asociado</string>
-    <string name="task_link_title">Link de la tarea</string>
-    <string name="task_link_icon_label">Abrir detalle del link</string>
+    <string name="task_link_title">Enlace de la tarea</string>
+    <string name="task_link_icon_label">Abrir detalle del enlace</string>
     <string name="task_attachment_label">Archivo adjunto</string>
     <string name="task_attachment_empty">No hay archivo seleccionado</string>
     <string name="task_attachment_pick">ELEGIR ARCHIVO</string>
@@ -259,7 +259,7 @@
     <string name="tutorial_step_tags_body">Puedes asociar varias etiquetas a una tarea y filtrarlas desde la búsqueda.</string>
     <string name="tutorial_step_summary_title">RESUMEN</string>
     <string name="tutorial_step_summary_body">El resumen superior muestra el estado general de tus tareas en tiempo real.</string>
-    <string name="tutorial_step_widgets_title">APARATOS</string>
+    <string name="tutorial_step_widgets_title">WIDGETS</string>
     <string name="tutorial_step_widgets_body">Los widgets usan los mismos datos locales, así que se mantienen sincronizados sin Internet.</string>
     <string name="tutorial_step_end_title">LISTO</string>
     <string name="tutorial_step_end_body">Ya puedes empezar a usar OpusAgenda.</string>

@@ -25,7 +25,7 @@
     <string name="category_dialog_title_edit">تحرير الفئة</string>
     <string name="task_text_required">أدخل نص المهمة</string>
     <string name="default_category_name">الفئة</string>
-    <string name="category_badge_label">قطة</string>
+    <string name="category_badge_label">CAT</string>
     <string name="category_edit_label">تحرير</string>
     <string name="category_due_label">فئة</string>
     <string name="category_meta_format">العناصر الفرعية: %1$d  الأهمية: %2$d</string>
@@ -120,8 +120,8 @@
     <string name="backup_invalid_archive">الملف المحدد ليس نسخة احتياطية صالحة من OpusAgenda</string>
     <string name="backup_unsupported_version">تنسيق النسخة الاحتياطية هذا غير مدعوم من إصدار التطبيق الحالي</string>
     <string name="backup_attachment_export_failed">تعذّر تضمين المرفق في النسخة الاحتياطية: %1$s</string>
-    <string name="new_category_label">قطة جديدة</string>
-    <string name="new_subcategory_label">فرعية جديدة</string>
+    <string name="new_category_label">فئة جديدة</string>
+    <string name="new_subcategory_label">فئة فرعية جديدة</string>
     <string name="new_child_task_label">مهمة جديدة</string>
     <string name="task_description_label">الوصف</string>
     <string name="task_description_hint">أضف بعض السياق لهذه المهمة</string>

@@ -25,7 +25,7 @@
     <string name="category_dialog_title_edit">Sunting kategori</string>
     <string name="task_text_required">Masukkan teks tugas</string>
     <string name="default_category_name">Kategori</string>
-    <string name="category_badge_label">KUCING</string>
+    <string name="category_badge_label">CAT</string>
     <string name="category_edit_label">SUNTING</string>
     <string name="category_due_label">kategori</string>
     <string name="category_meta_format">anak: %1$d  kepentingan: %2$d</string>
@@ -120,9 +120,9 @@
     <string name="backup_invalid_archive">File yang dipilih bukan cadangan OpusAgenda yang valid</string>
     <string name="backup_unsupported_version">Format cadangan ini tidak didukung oleh versi aplikasi saat ini</string>
     <string name="backup_attachment_export_failed">Lampiran tidak dapat disertakan dalam cadangan: %1$s</string>
-    <string name="new_category_label">KUCING BARU</string>
-    <string name="new_subcategory_label">SUBC BARU</string>
-    <string name="new_child_task_label">TUGAS BARU</string>
+    <string name="new_category_label">Kategori Baru</string>
+    <string name="new_subcategory_label">Subkategori Baru</string>
+    <string name="new_child_task_label">Tugas Baru</string>
     <string name="task_description_label">Deskripsi</string>
     <string name="task_description_hint">Tambahkan beberapa konteks untuk tugas ini</string>
     <string name="task_description_title">Deskripsi tugas</string>
@@ -201,7 +201,7 @@
     <string name="tags_hint">Pekerjaan itu penting, Pribadi</string>
     <string name="tag_colors_button_label">RGB</string>
     <string name="tag_colors_edit_label">Sunting</string>
-    <string name="tag_colors_dialog_title">Tandai warna</string>
+    <string name="tag_colors_dialog_title">Warna tag</string>
     <string name="tag_colors_dialog_help">Ketuk tag untuk mengedit warnanya.</string>
     <string name="tag_colors_empty_state">Tambahkan tag terlebih dahulu untuk menyesuaikan warna.</string>
     <string name="tag_color_picker_title">Warna untuk %1$s</string>

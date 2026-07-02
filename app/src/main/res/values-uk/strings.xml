@@ -25,7 +25,7 @@
     <string name="category_dialog_title_edit">Редагувати категорію</string>
     <string name="task_text_required">Введіть текст завдання</string>
     <string name="default_category_name">Категорія</string>
-    <string name="category_badge_label">КІШКА</string>
+    <string name="category_badge_label">CAT</string>
     <string name="category_edit_label">РЕДАГУВАТИ</string>
     <string name="category_due_label">категорія</string>
     <string name="category_meta_format">дочірні: %1$d  важл.: %2$d</string>
@@ -120,9 +120,9 @@
     <string name="backup_invalid_archive">Вибраний файл не є дійсною резервною копією OpusAgenda</string>
     <string name="backup_unsupported_version">Цей формат резервної копії не підтримується поточною версією програми</string>
     <string name="backup_attachment_export_failed">Не вдалося додати вкладення до резервної копії: %1$s</string>
-    <string name="new_category_label">НОВИЙ КІТ</string>
-    <string name="new_subcategory_label">НОВИЙ СУБЦ</string>
-    <string name="new_child_task_label">НОВЕ ЗАВДАННЯ</string>
+    <string name="new_category_label">Нова категорія</string>
+    <string name="new_subcategory_label">Нова підкатегорія</string>
+    <string name="new_child_task_label">Нове завдання</string>
     <string name="task_description_label">опис</string>
     <string name="task_description_hint">Додайте контекст для цього завдання</string>
     <string name="task_description_title">Опис завдання</string>

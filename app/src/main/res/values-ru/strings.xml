@@ -25,7 +25,7 @@
     <string name="category_dialog_title_edit">Изменить категорию</string>
     <string name="task_text_required">Введите текст задачи</string>
     <string name="default_category_name">Категория</string>
-    <string name="category_badge_label">КОТ</string>
+    <string name="category_badge_label">CAT</string>
     <string name="category_edit_label">РЕДАКТИРОВАТЬ</string>
     <string name="category_due_label">категория</string>
     <string name="category_meta_format">дочерние: %1$d  важн.: %2$d</string>
@@ -120,9 +120,9 @@
     <string name="backup_invalid_archive">Выбранный файл не является допустимой резервной копией OpusAgenda</string>
     <string name="backup_unsupported_version">Этот формат резервной копии не поддерживается текущей версией приложения</string>
     <string name="backup_attachment_export_failed">Не удалось включить вложение в резервную копию: %1$s</string>
-    <string name="new_category_label">НОВЫЙ КОТ</string>
-    <string name="new_subcategory_label">НОВЫЙ СУБК</string>
-    <string name="new_child_task_label">НОВАЯ ЗАДАЧА</string>
+    <string name="new_category_label">Новая категория</string>
+    <string name="new_subcategory_label">Новая подкатегория</string>
+    <string name="new_child_task_label">Новая задача</string>
     <string name="task_description_label">Описание</string>
     <string name="task_description_hint">Добавьте контекст для этой задачи</string>
     <string name="task_description_title">Описание задачи</string>

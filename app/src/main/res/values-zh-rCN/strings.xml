@@ -25,7 +25,7 @@
     <string name="category_dialog_title_edit">编辑类别</string>
     <string name="task_text_required">输入任务文本</string>
     <string name="default_category_name">类别</string>
-    <string name="category_badge_label">计算机辅助翻译</string>
+    <string name="category_badge_label">CAT</string>
     <string name="category_edit_label">编辑</string>
     <string name="category_due_label">类别</string>
     <string name="category_meta_format">子项：%1$d  重要度：%2$d</string>
@@ -120,8 +120,8 @@
     <string name="backup_invalid_archive">所选文件不是有效的 OpusAgenda 备份</string>
     <string name="backup_unsupported_version">当前应用版本不支持此备份格式</string>
     <string name="backup_attachment_export_failed">无法将附件包含到备份中：%1$s</string>
-    <string name="new_category_label">新猫</string>
-    <string name="new_subcategory_label">新子BC</string>
+    <string name="new_category_label">新分类</string>
+    <string name="new_subcategory_label">新子分类</string>
     <string name="new_child_task_label">新任务</string>
     <string name="task_description_label">描述</string>
     <string name="task_description_hint">为此任务添加一些上下文</string>

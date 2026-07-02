@@ -25,7 +25,7 @@
     <string name="category_dialog_title_edit">แก้ไขหมวดหมู่</string>
     <string name="task_text_required">ป้อนข้อความงาน</string>
     <string name="default_category_name">หมวดหมู่</string>
-    <string name="category_badge_label">กสท</string>
+    <string name="category_badge_label">CAT</string>
     <string name="category_edit_label">แก้ไข</string>
     <string name="category_due_label">หมวดหมู่</string>
     <string name="category_meta_format">รายการย่อย: %1$d  ความสำคัญ: %2$d</string>
@@ -120,8 +120,8 @@
     <string name="backup_invalid_archive">ไฟล์ที่เลือกไม่ใช่ข้อมูลสำรอง OpusAgenda ที่ถูกต้อง</string>
     <string name="backup_unsupported_version">รูปแบบข้อมูลสำรองนี้ไม่รองรับโดยแอปเวอร์ชันปัจจุบัน</string>
     <string name="backup_attachment_export_failed">ไม่สามารถรวมไฟล์แนบในข้อมูลสำรองได้: %1$s</string>
-    <string name="new_category_label">แมวตัวใหม่</string>
-    <string name="new_subcategory_label">ใหม่</string>
+    <string name="new_category_label">หมวดหมู่ใหม่</string>
+    <string name="new_subcategory_label">หมวดหมู่ย่อยใหม่</string>
     <string name="new_child_task_label">งานใหม่</string>
     <string name="task_description_label">คำอธิบาย</string>
     <string name="task_description_hint">เพิ่มบริบทสำหรับงานนี้</string>

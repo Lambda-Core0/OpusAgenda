@@ -25,7 +25,7 @@
     <string name="category_dialog_title_edit">Chỉnh sửa danh mục</string>
     <string name="task_text_required">Nhập văn bản nhiệm vụ</string>
     <string name="default_category_name">Danh mục</string>
-    <string name="category_badge_label">MÈO</string>
+    <string name="category_badge_label">CAT</string>
     <string name="category_edit_label">CHỈNH SỬA</string>
     <string name="category_due_label">thể loại</string>
     <string name="category_meta_format">mục con: %1$d  quan trọng: %2$d</string>
@@ -120,14 +120,14 @@
     <string name="backup_invalid_archive">Tệp đã chọn không phải là bản sao lưu OpusAgenda hợp lệ</string>
     <string name="backup_unsupported_version">Định dạng bản sao lưu này không được hỗ trợ bởi phiên bản ứng dụng hiện tại</string>
     <string name="backup_attachment_export_failed">Không thể đưa tệp đính kèm vào bản sao lưu: %1$s</string>
-    <string name="new_category_label">MÈO MỚI</string>
-    <string name="new_subcategory_label">SUBC MỚI</string>
-    <string name="new_child_task_label">NHIỆM VỤ MỚI</string>
+    <string name="new_category_label">Danh mục mới</string>
+    <string name="new_subcategory_label">Danh mục phụ mới</string>
+    <string name="new_child_task_label">Nhiệm vụ mới</string>
     <string name="task_description_label">Mô tả</string>
     <string name="task_description_hint">Thêm một số ngữ cảnh cho nhiệm vụ này</string>
     <string name="task_description_title">Mô tả nhiệm vụ</string>
     <string name="task_description_icon_label">Mở mô tả</string>
-    <string name="task_link_label">Liên kết liên kết</string>
+    <string name="task_link_label">Liên kết liên quan</string>
     <string name="task_link_hint">https://linked.resource</string>
     <string name="task_link_title">Liên kết nhiệm vụ</string>
     <string name="task_link_icon_label">Mở chi tiết liên kết</string>

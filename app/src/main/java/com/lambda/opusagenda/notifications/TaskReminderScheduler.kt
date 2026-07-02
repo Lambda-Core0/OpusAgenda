@@ -9,11 +9,12 @@ import android.content.Context
 import android.content.Intent
 import android.content.pm.PackageManager
 import android.graphics.Bitmap
-import android.graphics.BitmapFactory
 import android.os.Build
+import androidx.appcompat.content.res.AppCompatResources
 import androidx.core.app.NotificationCompat
 import androidx.core.app.NotificationManagerCompat
 import androidx.core.content.ContextCompat
+import androidx.core.graphics.drawable.toBitmap
 import com.lambda.opusagenda.R
 import com.lambda.opusagenda.data.TaskEntity
 import com.lambda.opusagenda.ui.MainActivity
@@ -160,7 +161,10 @@ class TaskReminderScheduler(
     }
 
     private fun loadNotificationLogo(): Bitmap? {
-        return BitmapFactory.decodeResource(context.resources, R.drawable.opus_notification)
+        val drawable = AppCompatResources.getDrawable(context, R.drawable.opus_notification) ?: return null
+        val width = if (drawable.intrinsicWidth > 0) drawable.intrinsicWidth else 96
+        val height = if (drawable.intrinsicHeight > 0) drawable.intrinsicHeight else 96
+        return drawable.toBitmap(width, height, Bitmap.Config.ARGB_8888)
     }
 
     fun createNotificationChannel() {

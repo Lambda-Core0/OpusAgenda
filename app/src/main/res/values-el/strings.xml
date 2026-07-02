@@ -25,7 +25,7 @@
     <string name="category_dialog_title_edit">Επεξεργασία κατηγορίας</string>
     <string name="task_text_required">Εισαγάγετε κείμενο εργασίας</string>
     <string name="default_category_name">Κατηγορία</string>
-    <string name="category_badge_label">ΚΑΤ</string>
+    <string name="category_badge_label">CAT</string>
     <string name="category_edit_label">ΕΠΕΞΕΡΓΑΣΙΑ</string>
     <string name="category_due_label">κατηγορία</string>
     <string name="category_meta_format">θυγατρικά: %1$d  σημαντ.: %2$d</string>
@@ -120,9 +120,9 @@
     <string name="backup_invalid_archive">Το επιλεγμένο αρχείο δεν είναι έγκυρο αντίγραφο ασφαλείας του OpusAgenda</string>
     <string name="backup_unsupported_version">Αυτός ο τύπος αντιγράφου ασφαλείας δεν υποστηρίζεται από την τρέχουσα έκδοση της εφαρμογής</string>
     <string name="backup_attachment_export_failed">Δεν ήταν δυνατή η συμπερίληψη του συνημμένου στο αντίγραφο ασφαλείας: %1$s</string>
-    <string name="new_category_label">ΝΕΑ ΓΑΤ</string>
-    <string name="new_subcategory_label">ΝΕΟ ΥΠΟΒΚ</string>
-    <string name="new_child_task_label">ΝΕΑ ΕΡΓΑΣΙΑ</string>
+    <string name="new_category_label">Νέα κατηγορία</string>
+    <string name="new_subcategory_label">Νέα υποκατηγορία</string>
+    <string name="new_child_task_label">Νέα εργασία</string>
     <string name="task_description_label">Περιγραφή</string>
     <string name="task_description_hint">Προσθέστε κάποιο πλαίσιο για αυτήν την εργασία</string>
     <string name="task_description_title">Περιγραφή εργασίας</string>

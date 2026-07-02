@@ -25,7 +25,7 @@
     <string name="category_dialog_title_edit">Upravit kategorii</string>
     <string name="task_text_required">Zadejte text úkolu</string>
     <string name="default_category_name">Kategorie</string>
-    <string name="category_badge_label">KOCOUR</string>
+    <string name="category_badge_label">CAT</string>
     <string name="category_edit_label">UPRAVIT</string>
     <string name="category_due_label">kategorie</string>
     <string name="category_meta_format">podřízené: %1$d  důl.: %2$d</string>
@@ -120,9 +120,9 @@
     <string name="backup_invalid_archive">Vybraný soubor není platná záloha OpusAgenda</string>
     <string name="backup_unsupported_version">Tento formát zálohy není podporován aktuální verzí aplikace</string>
     <string name="backup_attachment_export_failed">Do zálohy se nepodařilo zahrnout přílohu: %1$s</string>
-    <string name="new_category_label">NOVÁ KOČKA</string>
-    <string name="new_subcategory_label">NOVÉ SUBC</string>
-    <string name="new_child_task_label">NOVÝ ÚKOL</string>
+    <string name="new_category_label">Nová kategorie</string>
+    <string name="new_subcategory_label">Nová podkategorie</string>
+    <string name="new_child_task_label">Nový úkol</string>
     <string name="task_description_label">Popis</string>
     <string name="task_description_hint">Přidejte k tomuto úkolu kontext</string>
     <string name="task_description_title">Popis úkolu</string>
@@ -201,7 +201,7 @@
     <string name="tags_hint">Práce důležitá, osobní</string>
     <string name="tag_colors_button_label">RGB</string>
     <string name="tag_colors_edit_label">UPRAVIT</string>
-    <string name="tag_colors_dialog_title">Označit barvy</string>
+    <string name="tag_colors_dialog_title">Barvy značek</string>
     <string name="tag_colors_dialog_help">Klepnutím na značku upravíte její barvu.</string>
     <string name="tag_colors_empty_state">Nejprve přidejte značky, abyste přizpůsobili barvy.</string>
     <string name="tag_color_picker_title">Barva pro %1$s</string>

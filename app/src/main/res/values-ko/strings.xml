@@ -25,7 +25,7 @@
     <string name="category_dialog_title_edit">카테고리 수정</string>
     <string name="task_text_required">작업 텍스트를 입력하세요</string>
     <string name="default_category_name">카테고리</string>
-    <string name="category_badge_label">고양이</string>
+    <string name="category_badge_label">CAT</string>
     <string name="category_edit_label">편집하다</string>
     <string name="category_due_label">카테고리</string>
     <string name="category_meta_format">하위 항목: %1$d  중요도: %2$d</string>
@@ -120,9 +120,9 @@
     <string name="backup_invalid_archive">선택한 파일은 유효한 OpusAgenda 백업이 아닙니다</string>
     <string name="backup_unsupported_version">이 백업 형식은 현재 앱 버전에서 지원되지 않습니다</string>
     <string name="backup_attachment_export_failed">백업에 첨부 파일을 포함할 수 없습니다: %1$s</string>
-    <string name="new_category_label">새로운 고양이</string>
-    <string name="new_subcategory_label">새로운 하위</string>
-    <string name="new_child_task_label">새로운 임무</string>
+    <string name="new_category_label">새 카테고리</string>
+    <string name="new_subcategory_label">새 하위 카테고리</string>
+    <string name="new_child_task_label">새 작업</string>
     <string name="task_description_label">설명</string>
     <string name="task_description_hint">이 작업에 대한 컨텍스트를 추가하세요.</string>
     <string name="task_description_title">작업 설명</string>

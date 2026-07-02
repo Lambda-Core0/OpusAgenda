@@ -25,7 +25,7 @@
     <string name="category_dialog_title_edit">Kategorie bearbeiten</string>
     <string name="task_text_required">Geben Sie den Aufgabentext ein</string>
     <string name="default_category_name">Kategorie</string>
-    <string name="category_badge_label">KATZE</string>
+    <string name="category_badge_label">CAT</string>
     <string name="category_edit_label">BEARBEITEN</string>
     <string name="category_due_label">Kategorie</string>
     <string name="category_meta_format">Kinder: %1$d  Wicht.: %2$d</string>
@@ -120,9 +120,9 @@
     <string name="backup_invalid_archive">Die ausgewählte Datei ist keine gültige OpusAgenda-Sicherung</string>
     <string name="backup_unsupported_version">Dieses Sicherungsformat wird von der aktuellen App-Version nicht unterstützt</string>
     <string name="backup_attachment_export_failed">Anhang konnte nicht in die Sicherung aufgenommen werden: %1$s</string>
-    <string name="new_category_label">NEUER KAT</string>
-    <string name="new_subcategory_label">NEUES UNTERBUCH</string>
-    <string name="new_child_task_label">NEUE AUFGABE</string>
+    <string name="new_category_label">Neue Kategorie</string>
+    <string name="new_subcategory_label">Neue Unterkategorie</string>
+    <string name="new_child_task_label">Neue Aufgabe</string>
     <string name="task_description_label">Beschreibung</string>
     <string name="task_description_hint">Fügen Sie etwas Kontext für diese Aufgabe hinzu</string>
     <string name="task_description_title">Aufgabenbeschreibung</string>

@@ -25,7 +25,7 @@
     <string name="category_dialog_title_edit">Kategória szerkesztése</string>
     <string name="task_text_required">Írja be a feladat szövegét</string>
     <string name="default_category_name">Kategória</string>
-    <string name="category_badge_label">MACSKA</string>
+    <string name="category_badge_label">CAT</string>
     <string name="category_edit_label">SZERKESZTÉS</string>
     <string name="category_due_label">kategória</string>
     <string name="category_meta_format">alárendeltek: %1$d  font.: %2$d</string>
@@ -120,9 +120,9 @@
     <string name="backup_invalid_archive">A kiválasztott fájl nem érvényes OpusAgenda biztonsági mentés</string>
     <string name="backup_unsupported_version">Ezt a biztonsági mentési formátumot az alkalmazás jelenlegi verziója nem támogatja</string>
     <string name="backup_attachment_export_failed">A mellékletet nem sikerült belefoglalni a biztonsági mentésbe: %1$s</string>
-    <string name="new_category_label">ÚJ CAT</string>
-    <string name="new_subcategory_label">ÚJ SUBC</string>
-    <string name="new_child_task_label">ÚJ FELADAT</string>
+    <string name="new_category_label">Új kategória</string>
+    <string name="new_subcategory_label">Új alkategória</string>
+    <string name="new_child_task_label">Új feladat</string>
     <string name="task_description_label">Leírás</string>
     <string name="task_description_hint">Adjon hozzá némi kontextust ehhez a feladathoz</string>
     <string name="task_description_title">Feladat leírása</string>

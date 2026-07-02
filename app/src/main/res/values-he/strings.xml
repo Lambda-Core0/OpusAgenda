@@ -25,7 +25,7 @@
     <string name="category_dialog_title_edit">ערוך קטגוריה</string>
     <string name="task_text_required">הזן טקסט משימה</string>
     <string name="default_category_name">קטגוריה</string>
-    <string name="category_badge_label">חָתוּל</string>
+    <string name="category_badge_label">CAT</string>
     <string name="category_edit_label">ערוך</string>
     <string name="category_due_label">קטגוריה</string>
     <string name="category_meta_format">פריטי משנה: %1$d  חשיבות: %2$d</string>
@@ -120,8 +120,8 @@
     <string name="backup_invalid_archive">הקובץ שנבחר אינו גיבוי תקין של OpusAgenda</string>
     <string name="backup_unsupported_version">תבנית הגיבוי הזו אינה נתמכת על ידי גרסת האפליקציה הנוכחית</string>
     <string name="backup_attachment_export_failed">לא ניתן לכלול את הקובץ המצורף בגיבוי: %1$s</string>
-    <string name="new_category_label">חתול חדש</string>
-    <string name="new_subcategory_label">SUBC חדש</string>
+    <string name="new_category_label">קטגוריה חדשה</string>
+    <string name="new_subcategory_label">תת־קטגוריה חדשה</string>
     <string name="new_child_task_label">משימה חדשה</string>
     <string name="task_description_label">תיאור</string>
     <string name="task_description_hint">הוסף קצת הקשר למשימה זו</string>

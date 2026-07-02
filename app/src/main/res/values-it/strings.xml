@@ -66,7 +66,7 @@
 
     <string name="default_category_name">Categoria</string>
 
-    <string name="category_badge_label">GATTO</string>
+    <string name="category_badge_label">CAT</string>
 
     <string name="category_edit_label">MODIFICA</string>
 
@@ -245,11 +245,11 @@
     <string name="backup_invalid_archive">Il file selezionato non è un backup valido di OpusAgenda</string>
     <string name="backup_unsupported_version">Questo formato di backup non è supportato dalla versione attuale dell\'app</string>
     <string name="backup_attachment_export_failed">Impossibile includere l\'allegato nel backup: %1$s</string>
-    <string name="new_category_label">NUOVO GATTO</string>
+    <string name="new_category_label">Nuova categoria</string>
 
-    <string name="new_subcategory_label">NUOVA SOTTOSC</string>
+    <string name="new_subcategory_label">Nuova sottocategoria</string>
 
-    <string name="new_child_task_label">NUOVO COMPITO</string>
+    <string name="new_child_task_label">Nuova attività</string>
 
     <string name="task_description_label">Descrizione</string>
 

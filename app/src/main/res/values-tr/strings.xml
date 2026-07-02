@@ -25,7 +25,7 @@
     <string name="category_dialog_title_edit">Kategoriyi düzenle</string>
     <string name="task_text_required">Görev metnini girin</string>
     <string name="default_category_name">Kategori</string>
-    <string name="category_badge_label">KEDİ</string>
+    <string name="category_badge_label">CAT</string>
     <string name="category_edit_label">DÜZENLE</string>
     <string name="category_due_label">kategori</string>
     <string name="category_meta_format">alt öğeler: %1$d  önem: %2$d</string>
@@ -120,9 +120,9 @@
     <string name="backup_invalid_archive">Seçilen dosya geçerli bir OpusAgenda yedeği değil</string>
     <string name="backup_unsupported_version">Bu yedek biçimi uygulamanın mevcut sürümü tarafından desteklenmiyor</string>
     <string name="backup_attachment_export_failed">Ek, yedeğe dahil edilemedi: %1$s</string>
-    <string name="new_category_label">YENİ KEDİ</string>
-    <string name="new_subcategory_label">YENİ ALT</string>
-    <string name="new_child_task_label">YENİ GÖREV</string>
+    <string name="new_category_label">Yeni kategori</string>
+    <string name="new_subcategory_label">Yeni alt kategori</string>
+    <string name="new_child_task_label">Yeni görev</string>
     <string name="task_description_label">Açıklama</string>
     <string name="task_description_hint">Bu görev için biraz bağlam ekleyin</string>
     <string name="task_description_title">Görev açıklaması</string>
@@ -201,7 +201,7 @@
     <string name="tags_hint">Önemli iş, Kişisel</string>
     <string name="tag_colors_button_label">RGB</string>
     <string name="tag_colors_edit_label">DÜZENLEMEK</string>
-    <string name="tag_colors_dialog_title">Renkleri etiketleyin</string>
+    <string name="tag_colors_dialog_title">Etiket renkleri</string>
     <string name="tag_colors_dialog_help">Rengini düzenlemek için bir etikete dokunun.</string>
     <string name="tag_colors_empty_state">Renkleri özelleştirmek için önce etiketleri ekleyin.</string>
     <string name="tag_color_picker_title">%1$s için renk</string>

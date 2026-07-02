@@ -25,7 +25,7 @@
     <string name="category_dialog_title_edit">Editar categoria</string>
     <string name="task_text_required">Insira o texto da tarefa</string>
     <string name="default_category_name">Categoria</string>
-    <string name="category_badge_label">GATO</string>
+    <string name="category_badge_label">CAT</string>
     <string name="category_edit_label">EDITAR</string>
     <string name="category_due_label">categoria</string>
     <string name="category_meta_format">filhos: %1$d  imp: %2$d</string>
@@ -120,9 +120,9 @@
     <string name="backup_invalid_archive">O arquivo selecionado não é um backup válido do OpusAgenda</string>
     <string name="backup_unsupported_version">Este formato de backup não é compatível com a versão atual do aplicativo</string>
     <string name="backup_attachment_export_failed">Não foi possível incluir o anexo no backup: %1$s</string>
-    <string name="new_category_label">NOVO GATO</string>
-    <string name="new_subcategory_label">NOVO SUBBC</string>
-    <string name="new_child_task_label">NOVA TAREFA</string>
+    <string name="new_category_label">Nova categoria</string>
+    <string name="new_subcategory_label">Nova subcategoria</string>
+    <string name="new_child_task_label">Nova tarefa</string>
     <string name="task_description_label">Descrição</string>
     <string name="task_description_hint">Adicione algum contexto para esta tarefa</string>
     <string name="task_description_title">Descrição da tarefa</string>
@@ -201,7 +201,7 @@
     <string name="tags_hint">Trabalho importante, pessoal</string>
     <string name="tag_colors_button_label">RGB</string>
     <string name="tag_colors_edit_label">EDITAR</string>
-    <string name="tag_colors_dialog_title">Cores da etiqueta</string>
+    <string name="tag_colors_dialog_title">Cores das tags</string>
     <string name="tag_colors_dialog_help">Toque em uma tag para editar sua cor.</string>
     <string name="tag_colors_empty_state">Adicione tags primeiro para personalizar as cores.</string>
     <string name="tag_color_picker_title">Cor para %1$s</string>

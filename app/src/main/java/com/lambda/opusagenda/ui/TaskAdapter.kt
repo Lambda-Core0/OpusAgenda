@@ -115,7 +115,7 @@ class TaskAdapter(
             }
             binding.textBadge.text = when {
                 item.isCategory -> context.getString(R.string.category_badge_label)
-                else -> context.getString(R.string.task_pin_label)
+                else -> context.getString(R.string.pinned_label)
             }
             binding.textBadge.setTextColor(
                 ContextCompat.getColor(
@@ -155,10 +155,10 @@ class TaskAdapter(
                     ContextCompat.getColor(
                         context,
                         when (attachmentKind) {
-                            TaskAttachmentKind.IMAGE -> R.color.terminal_green
-                            TaskAttachmentKind.VIDEO -> R.color.terminal_green
-                            TaskAttachmentKind.AUDIO -> R.color.terminal_green
-                            TaskAttachmentKind.FILE -> R.color.terminal_green
+                            TaskAttachmentKind.IMAGE -> R.color.terminal_dark_green
+                            TaskAttachmentKind.VIDEO -> R.color.terminal_dark_green
+                            TaskAttachmentKind.AUDIO -> R.color.terminal_dark_green
+                            TaskAttachmentKind.FILE -> R.color.terminal_dark_green
                         }
                     )
                 )
